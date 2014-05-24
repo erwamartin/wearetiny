@@ -1,0 +1,42 @@
+/* Imports */
+@import 'reset';
+@import 'fonts';
+
+/* Mixins */
+@mixin background($imgpath, $position:0 0, $size: auto auto, $repeat: no-repeat){
+	background: {
+		image: image-url($imgpath);
+		position: $position;
+		repeat: $repeat;
+		size: $size;
+	}
+}
+
+/* Variables */
+$main-font-color : #FFF;
+
+
+/* Styles */
+html{
+	height: 100%;
+	body{
+		height: 100%;
+		color: $main-font-color;
+		@include background('background.jpg', center center, 100% 100%);
+		.landing_page{
+			h2{
+				position : absolute;
+				top: 50%;
+				margin-top: -.5em;
+				width: 100%;
+				line-height: 100%;
+				text-align: center;
+				font-family: 'MohaveRegular', Arial, sans-serif;
+				font-size : 4em;
+				span {
+					font-family: 'MohaveBold', Arial, sans-serif;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+/* Imports */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../sass/reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../sass/reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../sass/reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../sass/reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../sass/reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'MohaveRegular';
+  src: url("../fonts/Mohave_regular/mohave.eot");
+  src: url("../fonts/Mohave_regular/mohave.eot") format("embedded-opentype"), url("../fonts/Mohave_regular/mohave.woff") format("woff"), url("../fonts/Mohave_regular/mohave.ttf") format("truetype"), url("../fonts/Mohave_regular/mohave.svg#MohaveRegular") format("svg");
+}
+
+@font-face {
+  font-family: 'MohaveBold';
+  src: url("../fonts/Mohave_bold/mohave-bold.eot");
+  src: url("../fonts/Mohave_bold/mohave-bold.eot") format("embedded-opentype"), url("../fonts/Mohave_bold/mohave-bold.woff") format("woff"), url("../fonts/Mohave_bold/mohave-bold.ttf") format("truetype"), url("../fonts/Mohave_bold/mohave-bold.svg#MohaveBold") format("svg");
+}
+
+/* Mixins */
+/* Variables */
+/* Styles */
+/* line 20, ../sass/style.scss */
+html {
+  height: 100%;
+}
+/* line 22, ../sass/style.scss */
+html body {
+  height: 100%;
+  color: white;
+  background-image: url('../images/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 27, ../sass/style.scss */
+html body .landing_page h2 {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  width: 100%;
+  line-height: 100%;
+  text-align: center;
+  font-family: 'MohaveRegular', Arial, sans-serif;
+  font-size: 4em;
+}
+/* line 36, ../sass/style.scss */
+html body .landing_page h2 span {
+  font-family: 'MohaveBold', Arial, sans-serif;
+}

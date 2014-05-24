@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'MohaveRegular';
+    src: url('../fonts/Mohave_regular/mohave.eot');
+    src: url('../fonts/Mohave_regular/mohave.eot') format('embedded-opentype'),
+         url('../fonts/Mohave_regular/mohave.woff') format('woff'),
+         url('../fonts/Mohave_regular/mohave.ttf') format('truetype'),
+         url('../fonts/Mohave_regular/mohave.svg#MohaveRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'MohaveBold';
+    src: url('../fonts/Mohave_bold/mohave-bold.eot');
+    src: url('../fonts/Mohave_bold/mohave-bold.eot') format('embedded-opentype'),
+         url('../fonts/Mohave_bold/mohave-bold.woff') format('woff'),
+         url('../fonts/Mohave_bold/mohave-bold.ttf') format('truetype'),
+         url('../fonts/Mohave_bold/mohave-bold.svg#MohaveBold') format('svg');
+}
