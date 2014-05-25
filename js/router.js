@@ -13,8 +13,9 @@ define([
       '*actions': 'default'
     },
 
-    goTo : function(params){
-      $extend(true, params, {path : '', callback : function(){}})
+    goTo : function(params_in){
+      var params = {path : '', callback : function(){}};
+      $.extend(true, params, params_in);
       var locale = localStorage.getItem('locale');
       this.navigate('#/'+locale+'/'+params.path, {trigger: true});
       params.callback.call(this);
