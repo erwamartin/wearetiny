@@ -1,5 +1,12 @@
 {
 	"views" : {
-		"punchline" : "We live among <span>14 billions</span> of stars"
+		"landing_page" : {
+			"punchline" : "We live among <span>14 billions</span> of stars",
+			"solar_system_arrow" : "Somewhere over there  in this tiny county"
+		},
+		"solar_system" : {
+			"welcome_title" : "Welcome in the solar system",
+			"welcome_subtitle" : "Our pretty little home in space"
+		}
 	}
 }

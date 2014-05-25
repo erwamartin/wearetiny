@@ -72,6 +72,12 @@ table {
   src: url("../fonts/Mohave_bold/mohave-bold.eot") format("embedded-opentype"), url("../fonts/Mohave_bold/mohave-bold.woff") format("woff"), url("../fonts/Mohave_bold/mohave-bold.ttf") format("truetype"), url("../fonts/Mohave_bold/mohave-bold.svg#MohaveBold") format("svg");
 }
 
+@font-face {
+  font-family: 'PacificoRegular';
+  src: url("../fonts/Pacifico_regular/pacifico-webfont.eot");
+  src: url("../fonts/Pacifico_regular/pacifico-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Pacifico_regular/pacifico-webfont.woff") format("woff"), url("../fonts/Pacifico_regular/pacifico-webfont.ttf") format("truetype"), url("../fonts/Pacifico_regular/pacifico-webfont.svg#pacificoregular") format("svg");
+}
+
 /* Mixins */
 /* Variables */
 /* Styles */
@@ -102,4 +108,118 @@ html body .landing_page h2 {
 /* line 36, ../sass/style.scss */
 html body .landing_page h2 span {
   font-family: 'MohaveBold', Arial, sans-serif;
+}
+/* line 40, ../sass/style.scss */
+html body .landing_page .solar_system {
+  position: absolute;
+  right: 20%;
+  bottom: 10%;
+  padding-top: 2em;
+  background-image: url('../images/solarsystem-location-arrow.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+}
+/* line 46, ../sass/style.scss */
+html body .landing_page .solar_system span {
+  float: left;
+  width: 1em;
+  height: 1em;
+  margin-top: 1em;
+  border-radius: 50%;
+  background: #FFF;
+  cursor: pointer;
+  animation: glitter 2.5s linear 0s infinite normal;
+  -webkit-animation: glitter 2.5s linear 0s infinite normal;
+  -moz-animation: glitter 2.5s linear 0s infinite normal;
+  -ms-animation: glitter 2.5s linear 0s infinite normal;
+  -o-animation: glitter 2.5s linear 0s infinite normal;
+}
+/* line 60, ../sass/style.scss */
+html body .landing_page .solar_system p {
+  float: right;
+  margin-left: 4.5em;
+  font-family: 'PacificoRegular', Arial, sans-serif;
+  font-size: 14px;
+}
+
+/*CSS3 keyframes for glittering effect*/
+@-webkit-keyframes glitter {
+  /* line 73, ../sass/style.scss */
+  0% {
+    -webkit-box-shadow: 0px 0px 10px 1px #ffffff;
+    opacity: 0.8;
+  }
+
+  /* line 74, ../sass/style.scss */
+  50% {
+    -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+    opacity: 0.95;
+  }
+
+  /* line 75, ../sass/style.scss */
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 1px #ffffff;
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes glitter {
+  /* line 78, ../sass/style.scss */
+  0% {
+    -webkit-box-shadow: 0px 0px 10px 1px #ffffff;
+    opacity: 0.8;
+  }
+
+  /* line 79, ../sass/style.scss */
+  50% {
+    -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+    opacity: 0.95;
+  }
+
+  /* line 80, ../sass/style.scss */
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 1px #ffffff;
+    opacity: 0.8;
+  }
+}
+
+@-o-keyframes glitter {
+  /* line 83, ../sass/style.scss */
+  0% {
+    -webkit-box-shadow: 0px 0px 10px 1px #ffffff;
+    opacity: 0.8;
+  }
+
+  /* line 84, ../sass/style.scss */
+  50% {
+    -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+    opacity: 0.95;
+  }
+
+  /* line 85, ../sass/style.scss */
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 1px #ffffff;
+    opacity: 0.8;
+  }
+}
+
+@keyframes glitter {
+  /* line 88, ../sass/style.scss */
+  0% {
+    -webkit-box-shadow: 0px 0px 10px 1px #ffffff;
+    opacity: 0.8;
+  }
+
+  /* line 89, ../sass/style.scss */
+  50% {
+    -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+    opacity: 0.95;
+  }
+
+  /* line 90, ../sass/style.scss */
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 1px #ffffff;
+    opacity: 0.8;
+  }
 }

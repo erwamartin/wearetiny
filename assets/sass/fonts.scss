@@ -15,3 +15,12 @@
          url('../fonts/Mohave_bold/mohave-bold.ttf') format('truetype'),
          url('../fonts/Mohave_bold/mohave-bold.svg#MohaveBold') format('svg');
 }
+
+@font-face {
+    font-family: 'PacificoRegular';
+    src: url('../fonts/Pacifico_regular/pacifico-webfont.eot');
+    src: url('../fonts/Pacifico_regular/pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Pacifico_regular/pacifico-webfont.woff') format('woff'),
+         url('../fonts/Pacifico_regular/pacifico-webfont.ttf') format('truetype'),
+         url('../fonts/Pacifico_regular/pacifico-webfont.svg#pacificoregular') format('svg');
+}
