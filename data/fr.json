@@ -7,6 +7,16 @@
 		"solar_system" : {
 			"welcome_title" : "Welcome in the solar system",
 			"welcome_subtitle" : "Our pretty little home in space"
+		},
+		"planets" : {
+			"earth" : {
+				"welcome_title" : "Welcome on earth",
+				"welcome_subtitle" : "Our pretty little home in space"
+			},
+			"mars" : {
+				"welcome_title" : "Welcome in the solar system",
+				"welcome_subtitle" : "Our pretty little home in space"
+			},  
 		}
 	}
 }
