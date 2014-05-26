@@ -52,7 +52,8 @@ define([
           
           var planetView = new PlanetView();
           planetView.render({
-            translations : translations
+            translations : translations,
+            planet : planet
           });
         },
         locale : lang

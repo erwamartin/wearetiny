@@ -1,36 +1,78 @@
 {
 	"planets" : {
+		"sun" : {
+			"size" : ,
+			"distance_solar" : 0,
+			"orbit_radius" : ,
+			"planet_radius" : ,
+			"color1" : "#EEC326",
+			"color2" : "#FFD747"
+
+		},
 		"mercury" : {
 			"size" : 4879,
-			"distance_solar" : 57900000
+			"distance_solar" : 57900000,
+			"orbit_radius" : ,
+			"planet_radius" : ,
+			"color1" : "#BAA67D",
+			"color2" : "#E8D19E"
+
 		},
 		"venus" : {
 			"size" : 12104,
-			"distance_solar" : 108200000
+			"distance_solar" : 108200000,
+			"orbit_radius" : ,
+			"planet_radius" : ,
+			"color1" : "#C1876F",
+			"color2" : "#EAB18B"
 		},
 		"earth" : {
 			"size" : 12756,
-			"distance_solar" : 149600000
+			"distance_solar" : 149600000,
+			"orbit_radius" : 2.5,
+			"planet_radius" : 32,
+			"color1" : "#1B87A8",
+			"color2" : "#31A4DD"
 		},
 		"mars" : {
 			"size" : 6792,
-			"distance_solar" : 227900000
+			"distance_solar" : 227900000,
+			"orbit_radius" : ,
+			"planet_radius" : ,
+			"color1" : "#D13333",
+			"color2" : "#FF5647"
 		},
 		"jupiter" : {
 			"size" : 142984,
-			"distance_solar" : 778600000
+			"distance_solar" : 778600000,
+			"orbit_radius" : ,
+			"planet_radius" : ,
+			"color1" : "#85C6BA",
+			"color2" : "#DCB992"
 		},
 		"saturn" : {
 			"size" : 120536,
-			"distance_solar" : 1433500000
+			"distance_solar" : 1433500000,
+			"orbit_radius" : ,
+			"planet_radius" : ,
+			"color1" : "#CC902F",
+			"color2" : "#F9AF0B"
 		},
 		"uranus" : {
 			"size" : 51118,
-			"distance_solar" : 2872500000
+			"distance_solar" : 2872500000,
+			"orbit_radius" : ,
+			"planet_radius" : ,
+			"color1" "#48B5AF": ,
+			"color2" : "#58DBDB"
 		},
 		"neptune" : {
 			"size" : 49528,
-			"distance_solar" : 4495100000
+			"distance_solar" : 4495100000,
+			"orbit_radius" : ,
+			"planet_radius" : ,
+			"color1" : "#193FB2",
+			"color2" : "#2E59BC"
 		}
 	}
 }

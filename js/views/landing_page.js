@@ -11,7 +11,7 @@ define([
       'click .solar_system' : 'loadSolarSystem'
     },
     render: function(params){
-      var compiledTemplate = _.template( LandingPageTemplate, params );
+      var compiledTemplate = _.template( LandingPageTemplate, params.translations );
       this.$el.html(compiledTemplate);
     },
     loadSolarSystem : function(evt){
