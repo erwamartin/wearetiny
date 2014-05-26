@@ -12,19 +12,8 @@ define([
     },
 
     render: function(params){
-      var compiledTemplate = _.template( SolarSystemTemplate, params.translations );
+      var compiledTemplate = _.template( SolarSystemTemplate, params );
       this.$el.html(compiledTemplate);
-
-      var system = d3.select(this.el);
-
-      var width = 960,
-          height = 500,
-          radius = Math.min(width, height);
-      var svg = system.append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .append("g")
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
     }
   });
   return SolarSystemView;
