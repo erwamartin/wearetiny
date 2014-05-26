@@ -3,13 +3,15 @@ define([
   'underscore',
   'backbone',
   'views/landing_page',
-  'views/solar_system'
-], function($, _, Backbone, LandingPageView, SolarSystemView){
+  'views/solar_system',
+  'views/planet'
+], function($, _, Backbone, LandingPageView, SolarSystemView, PlanetView){
   var AppRouter = Backbone.Router.extend({
     routes: {
       '': 'localeRedirection',
       ':lang/': 'landingPage',
       ':lang/solar-system/': 'solarSystem',
+      ':lang/solar-system/:planet/': 'planet',
       '*actions': 'default'
     },
 
@@ -37,6 +39,19 @@ define([
         callback : function(translations){
           var solarSystemView = new SolarSystemView();
           solarSystemView.render({
+            translations : translations
+          });
+        },
+        locale : lang
+      });
+    },
+    planet : function(lang, planet){
+      console.log(planet);
+      getTranslations.call(this, {
+        callback : function(translations){
+          
+          var planetView = new PlanetView();
+          planetView.render({
             translations : translations
           });
         },
