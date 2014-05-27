@@ -12,8 +12,8 @@
 			"leave_time_bottom_sentence" : "For us to leave it with a  <span>spacecraft</span> !",
 			"leave_distance_value" : "<span class='number'>4503000000</span> km",
 			"leave_distance_sentence" : "To get ouside, which means",
-			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights"
-
+			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights",
+			"compare" : "Compare"
 		},
 		"planets" : {
 			"mercury" : {
