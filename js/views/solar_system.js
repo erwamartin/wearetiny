@@ -33,13 +33,17 @@ define([
           .attr("width", width+(sun.radius*2))
           .attr("height", height+(sun.radius*2))
           .append("g")
+            .attr("class", "solar_system_g")
             .attr("transform", "translate(" + (width+(sun.radius*2)) / 2 + "," + (height+(sun.radius*2)) / 2 + ")");
 
         // Sun
-        svg.append("circle")
+        svg.append("image")
           .attr("class", "sun")
-          .attr("r", sun.radius)
-          .style("fill", "rgba(255, 204, 0, 1.0)");
+          .attr("width", sun.radius*2)
+          .attr("height", sun.radius*2)
+          .attr("x",  - sun.radius)
+          .attr("y",  - sun.radius)
+          .attr("xlink:href", "assets/images/planets/sun.svg");
 
         for(var planet in data.planets){
 
@@ -64,11 +68,14 @@ define([
             .style("fill", "rgba(22, 68, 90, 0.75)");
 
           // Planet
-          svg.append("circle")
+          svg.append("image")
             .attr("class", planet)
-            .attr("r", data.planets[planet].size_px)
+            .attr("width", data.planets[planet].size_px*2)
+            .attr("height", data.planets[planet].size_px*2)
+            .attr("x", -data.planets[planet].size_px)
+            .attr("y", -data.planets[planet].size_px)
             .attr("transform", "translate(0," +(data.planets[planet].distance_px*-1)+ ")")
-            .style("fill", "rgba(113, 170, 255, 1.0)");
+            .attr("xlink:href", "assets/images/planets/"+planet+".svg");
         }
         
         var now = new Date();
