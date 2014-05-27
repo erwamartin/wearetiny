@@ -19,8 +19,8 @@ define([
         console.log(data);
 
         var solar_system = d3.select('.solar_system_orbits');
-        var width = 800,
-            height = 800,
+        var width = 600,
+            height = 600,
             radius = Math.min(width, height)/2;
 
         var sun = {
