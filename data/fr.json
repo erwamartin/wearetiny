@@ -1,7 +1,7 @@
 {
 	"views" : {
 		"landing_page" : {
-			"punchline" : "Nous vivons parmi <span>14 milliards</span> d'étoiles",
+			"punchline" : "We live among <span>14 billions</span> of stars",
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
 		"solar_system" : {
@@ -9,14 +9,38 @@
 			"welcome_subtitle" : "Our pretty little home in space"
 		},
 		"planets" : {
+			"mercury" : {
+				"planet_title" : "Welcome on Mercury",
+				"planet_subtitle" : "Our pretty little home in space"
+			},
+			"venus" : {
+				"planet_title" : "Welcome on Venus",
+				"planet_subtitle" : "Our pretty little home in space"
+			},
 			"earth" : {
-				"welcome_title" : "Welcome on earth",
-				"welcome_subtitle" : "Our pretty little home in space"
+				"planet_title" : "Welcome on Earth",
+				"planet_subtitle" : "Our pretty little home in space"
 			},
 			"mars" : {
-				"welcome_title" : "Welcome in the solar system",
-				"welcome_subtitle" : "Our pretty little home in space"
-			}  
+				"planet_title" : "Welcome on Mars",
+				"planet_subtitle" : "Our pretty little home in space"
+			},
+			"jupiter" : {
+				"planet_title" : "Welcome on Jupiter",
+				"planet_subtitle" : "Our pretty little home in space"
+			},
+			"saturn" : {
+				"planet_title" : "Welcome on Saturn",
+				"planet_subtitle" : "Our pretty little home in space"
+			},
+			"uranus" : {
+				"planet_title" : "Welcome on Uranus",
+				"planet_subtitle" : "Our pretty little home in space"
+			},
+			"neptune" : {
+				"planet_title" : "Welcome on Neptune",
+				"planet_subtitle" : "Our pretty little home in space"
+			}
 		}
 	}
 }
