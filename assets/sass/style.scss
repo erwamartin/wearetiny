@@ -17,6 +17,9 @@ $main-font-color : #FFF;
 
 
 /* Styles */
+.uppercase{
+	text-transform: uppercase;
+}
 html{
 	height: 100%;
 	body{
@@ -25,6 +28,7 @@ html{
 		@include background('background.jpg', center center, 100% 100%);
 		#main{
 			height: 100%;
+			overflow: hidden;
 			.landing_page{
 				height: 100%;
 				@include background('background_landing.jpg', center center, auto);
@@ -90,6 +94,59 @@ html{
 					svg{
 						display: block;
 						margin: 1em auto 0 auto;
+					}
+				}
+				.left_sidebar{
+					position: absolute;
+					top:50%;
+					left: 0;
+					margin-top: -10.688em;
+					padding-left: 1.5em;
+					div+div{
+						border-top: 2px solid #FFF;
+					}
+					p{
+						font-family: 'PlutoSansCondLight', Arial, sans-serif;
+						font-size: 0.875em;
+						color: #FFF;
+					}
+					.blue span{
+						color: #addee0;
+					}
+					.value{
+						margin: .650em 0;
+						.number{
+							font-family: 'MohaveBold', Arial, sans-serif;
+							font-size: 2.625em;
+						}
+					}
+					.value.uppercase{
+						font-family: 'MohaveRegular', Arial, sans-serif;
+						font-size: 1.625em;
+						.number{
+							font-size: 1.615em;
+						}
+					}
+					ul.vehicules{
+						margin: 1.25em 0;
+						li{
+							display: inline-block;
+							margin-right: .5em;
+							a{
+								display: block;
+								width: 2.313em;
+								height: 2.313em;
+							}
+							.spacecraft{
+								@include background('icons/spacecraft.svg', center center, 100% 100%);
+							}
+							.aircraft{
+								@include background('icons/aircraft.svg', center center, 100% 100%);
+							}
+							.paper-plane{
+								@include background('icons/paper-plane.svg', center center, 100% 100%);
+							}
+						}
 					}
 				}
 			}

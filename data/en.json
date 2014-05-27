@@ -5,39 +5,54 @@
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
 		"solar_system" : {
-			"welcome_title" : "Welcome in the solar system",
-			"welcome_subtitle" : "Our pretty little home in space"
+ 			"welcome_title" : "Welcome in the solar system",
+			"welcome_subtitle" : "Our pretty little home in space",
+			"leave_time_top_sentence" : "Humans live a little bit too far to leave it soon!",
+			"leave_time_value" : "<span class='number'>29004</span> months",
+			"leave_time_bottom_sentence" : "For us to leave it with a  <span>spacecraft</span> !",
+			"leave_distance_value" : "<span class='number'>4503000000</span> km",
+			"leave_distance_sentence" : "To get ouside, which means",
+			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights"
+
 		},
 		"planets" : {
 			"mercury" : {
+				"planet_name" : "Mercury",
 				"planet_title" : "Welcome on Mercury",
 				"planet_subtitle" : "Our pretty little home in space"
 			},
 			"venus" : {
+				"planet_name" : "Venus",
 				"planet_title" : "Welcome on Venus",
 				"planet_subtitle" : "Our pretty little home in space"
 			},
 			"earth" : {
+				"planet_name" : "Earth",
 				"planet_title" : "Welcome on Earth",
 				"planet_subtitle" : "Our pretty little home in space"
 			},
 			"mars" : {
+				"planet_name" : "Mars",
 				"planet_title" : "Welcome on Mars",
 				"planet_subtitle" : "Our pretty little home in space"
 			},
 			"jupiter" : {
+				"planet_name" : "Jupiter",
 				"planet_title" : "Welcome on Jupiter",
 				"planet_subtitle" : "Our pretty little home in space"
 			},
 			"saturn" : {
+				"planet_name" : "Saturn",
 				"planet_title" : "Welcome on Saturn",
 				"planet_subtitle" : "Our pretty little home in space"
 			},
 			"uranus" : {
+				"planet_name" : "Uranus",
 				"planet_title" : "Welcome on Uranus",
 				"planet_subtitle" : "Our pretty little home in space"
 			},
 			"neptune" : {
+				"planet_name" : "Neptune",
 				"planet_title" : "Welcome on Neptune",
 				"planet_subtitle" : "Our pretty little home in space"
 			}
