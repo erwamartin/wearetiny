@@ -12,12 +12,13 @@ define([
     },
 
     render: function(params){
-      console.log(params);
-      var compiledTemplate = _.template( PlanetTemplate, params );
-      this.$el.html(compiledTemplate);
+      var _this = this;
 
-      d3.json('data/data.json', function(data){
-          console.log(data);
+      var compiledTemplate = _.template( PlanetTemplate, params );
+       _this.$el.html(compiledTemplate);
+       
+      $.getJSON('data/data.json', function(data){
+        console.log(data);
 
         var now = new Date(d3.time.year.floor(new Date()));
 
@@ -44,12 +45,14 @@ define([
           .attr("r", radius*0.075)
           .style("fill", "rgba(255, 204, 0, 1.0)");
 
-              data.planets[params.planet].distance_px = radius*data.planets[params.planet].solar_system.distance_solar_coef;
-              data.planets[params.planet].size_px = sun.radius*data.planets[params.planet].solar_system.size_coef;
+              data.planets[params.params.planet].distance_px = radius*data.planets[params.params.planet].solar_system.distance_solar_coef;
+              data.planets[params.params.planet].size_px = sun.radius*data.planets[params.params.planet].solar_system.size_coef;
 
               var radii = {
-                "earthOrbit": data.planets[params.planet].distance_px,
-                "earth": data.planets[params.planet].size_px ,
+                "earthOrbit": data.planets[params.params.planet].distance_px,
+                "earth": data.planets[params.params.planet].size_px ,
+                "moonOrbit": radius / 16,
+                "moon": radius / 96
               };
 
               // Earth's orbit
@@ -90,7 +93,7 @@ define([
                 .style("fill", "rgba(53, 110, 195, 1.0)");
 
         // Update the clock every second
-        setInterval(function () {
+        _this.animation_timer = setInterval(function () {
           now = new Date();
           
           var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI * d3.time.hours(d3.time.year.floor(now), now).length / d3.time.hours(d3.time.year.floor(now), d3.time.year.ceil(now)).length));
@@ -98,8 +101,6 @@ define([
           var interpolateDay = d3.interpolate(day.endAngle()(), (2 * Math.PI * d3.time.seconds(d3.time.day.floor(now), now).length / d3.time.seconds(d3.time.day.floor(now), d3.time.day.ceil(now)).length));
                     
           d3.transition().tween("orbit", function (d, i) {
-            console.log(d);
-            console.log(i);
             return function (t) {
               //console.log('tween', t);
               // Animate Earth orbit position
@@ -123,6 +124,9 @@ define([
           });
         }, 1000);
     });
+    },
+    close: function(view){
+      if(view.animation_timer) clearInterval(view.animation_timer);
     }
   });
   return PlanetView;

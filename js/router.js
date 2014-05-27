@@ -11,7 +11,7 @@ define([
     routes: {
       '': 'landingPage',
       'solar-system': 'solarSystem',
-      'solar-system/:planet/': 'planet',
+      'solar-system/:planet': 'planet',
       '*actions': 'default'
     },
     landingPage : function(){
