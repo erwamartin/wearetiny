@@ -7,77 +7,67 @@ define([
   'views/planet'
 ], function($, _, Backbone, LandingPageView, SolarSystemView, PlanetView){
   var AppRouter = Backbone.Router.extend({
+    current_view : null,
     routes: {
-      '': 'localeRedirection',
-      ':lang/': 'landingPage',
-      ':lang/solar-system/': 'solarSystem',
-      ':lang/solar-system/:planet/': 'planet',
+      '': 'landingPage',
+      'solar-system': 'solarSystem',
+      'solar-system/:planet/': 'planet',
       '*actions': 'default'
     },
-
-    goTo : function(params_in){
-      var params = {path : '', callback : function(){}};
-      $.extend(true, params, params_in);
-      var locale = localStorage.getItem('locale');
-      this.navigate('#/'+locale+'/'+params.path, {trigger: true});
-      params.callback.call(this);
-    },
-
-    landingPage : function(lang){
-      getTranslations.call(this, {
-        callback : function(translations){
-          var landingPageView = new LandingPageView();
-          landingPageView.render({
-            translations : translations
-          });
-        },
-        locale : lang
+    landingPage : function(){
+      renderView.call(this, {
+        view : new LandingPageView()
       });
     },
-    solarSystem : function(lang){
-      getTranslations.call(this, {
-        callback : function(translations){
-          var solarSystemView = new SolarSystemView();
-          solarSystemView.render({
-            translations : translations
-          });
-        },
-        locale : lang
+    solarSystem : function(){
+      renderView.call(this, {
+        view : new SolarSystemView()
       });
     },
-    planet : function(lang, planet){
-      console.log(planet);
-      getTranslations.call(this, {
-        callback : function(translations){
-          
-          var planetView = new PlanetView();
-          planetView.render({
-            translations : translations,
-            planet : planet
-          });
-        },
-        locale : lang
+    planet : function(planet){
+      renderView.call(this, {
+        view : new PlanetView(), 
+        params : {
+          'planet' : planet
+        }
       });
-    },
-    localeRedirection : function(){
-      var locale = localStorage.getItem('locale') || 'en';
-      window.location.href = '/#/'+locale+'/';
     },
     default : function(actions){}
   });
 
   var initialize = function(){
+    if(!localStorage.getItem('locale')) localStorage.setItem('locale', 'en');
     var app_router = new AppRouter;
     Backbone.history.start();
     return app_router;
   };
 
-  var getTranslations = function(params){
-    localStorage.setItem('locale', params.locale);
-    $.getJSON('data/' + params.locale + '.json', function(translations){
-      params.callback.call(this, translations);
+  var renderView = function(params_in){
+    var params = {params : {}};
+    $.extend(true, params, params_in);
+    getTranslations.call(this, {
+      callback : function(translations){
+        
+        // Callback of last view
+        if(AppRouter.current_view && AppRouter.current_view.close)
+           AppRouter.current_view.close.call(this, AppRouter.current_view); 
+
+        AppRouter.current_view = params.view;
+        AppRouter.current_view.render({
+          translations : translations,
+          params : params.params
+        });
+      }
     });
   }
+
+  var getTranslations = function(params){
+    var locale = localStorage.getItem('locale');
+    $.getJSON('data/' + locale + '.json', function(translations){
+      params.callback.call(this, translations);
+    });
+  };
+
 
   return {
     initialize: initialize

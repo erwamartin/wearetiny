@@ -15,10 +15,7 @@ define([
       this.$el.html(compiledTemplate);
     },
     loadSolarSystem : function(evt){
-      //alert('test');
-      app.router.goTo({'path' : 'solar-system/'});
-      //window.location.href = '/#/solar-system/';
-      //$('.landing_page .solar_system span').zoomTo({targetsize:0.75, duration:1200});
+      window.location.href = '#solar-system';
       evt.preventDefault();
     }
   });
