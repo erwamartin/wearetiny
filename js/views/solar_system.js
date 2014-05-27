@@ -16,10 +16,11 @@ define([
       this.$el.html(compiledTemplate);
 
       $.getJSON('data/data.json', function(data){
+        console.log(data);
 
         var solar_system = d3.select('.solar_system_orbits');
-        var width = 600,
-            height = 600,
+        var width = 800,
+            height = 800,
             radius = Math.min(width, height)/2;
 
         var sun = {
@@ -78,7 +79,7 @@ define([
 
                   // Calculate the next angle
                   var last_angle = parseFloat(d3.select("."+planet+"OrbitPosition").attr("angle")) || (2 * Math.PI * d3.time.hours(d3.time.year.floor(now), now).length / d3.time.hours(d3.time.year.floor(now), d3.time.year.ceil(now)).length);
-                  var new_angle = last_angle + (1 /data.planets[planet].speed) /200;
+                  var new_angle = last_angle + (1 /data.planets[planet].speed) /50;
                   d3.select("."+planet+"OrbitPosition").attr("angle", new_angle);
 
                   var orbitPosition = data.planets[planet].orbitPosition;
