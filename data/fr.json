@@ -1,12 +1,18 @@
 {
 	"views" : {
 		"landing_page" : {
-			"punchline" : "Nous vivons parmi <span>14 milliards</span> d'étoiles",
+			"punchline" : "We live among <span>14 billions</span> of stars",
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
 		"solar_system" : {
 			"welcome_title" : "Welcome in the solar system",
-			"welcome_subtitle" : "Our pretty little home in space"
+			"welcome_subtitle" : "Our pretty little home in space",
+			"leave_time_top_sentence" : "Humans live a little bit too far to leave it soon!",
+			"leave_time_value" : "<span class='number'>29004</span> months",
+			"leave_time_bottom_sentence" : "For us to leave it with a  <span>spacecraft</span> !",
+			"leave_distance_value" : "<span class='number'>4503000000</span> km",
+			"leave_distance_sentence" : "To get ouside, which means",
+			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights"
 		},
 		"planets" : {
 			"earth" : {
@@ -16,7 +22,7 @@
 			"mars" : {
 				"welcome_title" : "Welcome in the solar system",
 				"welcome_subtitle" : "Our pretty little home in space"
-			}  
+			}
 		}
 	}
 }
