@@ -7,20 +7,21 @@ define([
 ], function($, _, Backbone, d3, SolarSystemTemplate){
   var SolarSystemView = Backbone.View.extend({
     el: $('#main'),
-
-    initialize : function(){      
+    initialize : function(){
     },
 
     render: function(params){
+
+      var _this = this;
+
       var compiledTemplate = _.template( SolarSystemTemplate, params );
-      this.$el.html(compiledTemplate);
+      _this.$el.html(compiledTemplate);
 
       $.getJSON('data/data.json', function(data){
-        console.log(data);
 
         var solar_system = d3.select('.solar_system_orbits');
-        var width = 800,
-            height = 800,
+        var width = 600,
+            height = 600,
             radius = Math.min(width, height)/2;
 
         var sun = {
@@ -72,31 +73,36 @@ define([
         
         var now = new Date();
 
-        setInterval(function () {
+        _this.animation_timer = setInterval(function () {
+          console.log('interval');
           d3.transition().duration(50).tween("orbit", function () {
               return function (t) {
                 for(var planet in data.planets){
 
                   // Calculate the next angle
-                  var last_angle = parseFloat(d3.select("."+planet+"OrbitPosition").attr("angle")) || (2 * Math.PI * d3.time.hours(d3.time.year.floor(now), now).length / d3.time.hours(d3.time.year.floor(now), d3.time.year.ceil(now)).length);
-                  var new_angle = last_angle + (1 /data.planets[planet].speed) /50;
-                  d3.select("."+planet+"OrbitPosition").attr("angle", new_angle);
+                  if(!d3.select("."+planet+"OrbitPosition").empty()){
+                    var last_angle = parseFloat(d3.select("."+planet+"OrbitPosition").attr("angle")) || (2 * Math.PI * d3.time.hours(d3.time.year.floor(now), now).length / d3.time.hours(d3.time.year.floor(now), d3.time.year.ceil(now)).length);
+                    var new_angle = last_angle + (1 /data.planets[planet].speed) /50;
+                    d3.select("."+planet+"OrbitPosition").attr("angle", new_angle);
 
-                  var orbitPosition = data.planets[planet].orbitPosition;
-                  var interpolateOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle);
+                    var orbitPosition = data.planets[planet].orbitPosition;
+                    var interpolateOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle);
 
-                  // Animate Earth orbit position
-                  d3.select("."+planet+"OrbitPosition").attr("d", orbitPosition.endAngle(interpolateOrbitPosition(t)));
+                    // Animate Earth orbit position
+                    d3.select("."+planet+"OrbitPosition").attr("d", orbitPosition.endAngle(interpolateOrbitPosition(t)));
 
-                  // Transition Earth
-                  d3.select("."+planet)
-                    .attr("transform", "translate(" + data.planets[planet].distance_px * Math.sin(interpolateOrbitPosition(t) - data.planets[planet].orbitPosition.startAngle()()) + "," + -data.planets[planet].distance_px * Math.cos(interpolateOrbitPosition(t) - data.planets[planet].orbitPosition.startAngle()()) + ")");
-                  
+                    // Transition Earth
+                    d3.select("."+planet)
+                      .attr("transform", "translate(" + data.planets[planet].distance_px * Math.sin(interpolateOrbitPosition(t) - data.planets[planet].orbitPosition.startAngle()()) + "," + -data.planets[planet].distance_px * Math.cos(interpolateOrbitPosition(t) - data.planets[planet].orbitPosition.startAngle()()) + ")");
+                  }
                 }
               }
             });
         }, 50); 
       });
+    },
+    close: function(view){
+      if(view.animation_timer) clearInterval(view.animation_timer);
     }
   });
   return SolarSystemView;

@@ -1,7 +1,7 @@
 {
 	"views" : {
 		"landing_page" : {
-			"punchline" : "We live among <span>14 billions</span> of stars",
+			"punchline" : "Nous vivons parmi <span>14 milliards</span> d'étoiles",
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
 		"solar_system" : {
@@ -16,7 +16,7 @@
 			"mars" : {
 				"welcome_title" : "Welcome in the solar system",
 				"welcome_subtitle" : "Our pretty little home in space"
-			},  
+			}  
 		}
 	}
 }

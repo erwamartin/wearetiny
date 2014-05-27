@@ -23,45 +23,74 @@ html{
 		height: 100%;
 		color: $main-font-color;
 		@include background('background.jpg', center center, 100% 100%);
-		.landing_page{
-			h2{
-				position : absolute;
-				top: 50%;
-				margin-top: -.5em;
-				width: 100%;
-				line-height: 100%;
-				text-align: center;
-				font-family: 'MohaveRegular', Arial, sans-serif;
-				font-size : 4em;
-				span {
-					font-family: 'MohaveBold', Arial, sans-serif;
+		#main{
+			height: 100%;
+			.landing_page{
+				height: 100%;
+				@include background('background_landing.jpg', center center, auto);
+				h2{
+					position : absolute;
+					top: 50%;
+					margin-top: -.5em;
+					width: 100%;
+					line-height: 100%;
+					text-align: center;
+					font-family: 'MohaveRegular', Arial, sans-serif;
+					font-size : 4em;
+					span {
+						font-family: 'MohaveBold', Arial, sans-serif;
+					}
+				}
+				.solar_system{
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-left: 195px;
+					margin-top: 312px;
+					padding-top: 2em;
+					@include background('solarsystem-location-arrow.png', top left);
+					span{
+						float: left;
+						width: .65em;
+						height: .65em;
+						margin-top: 1em;
+						border-radius: 50%;
+						background: #FFF;
+						cursor: pointer;
+						animation: glitter 1.5s linear 0s infinite normal;
+						-webkit-animation: glitter 1.5s linear 0s infinite normal;
+						-moz-animation: glitter 1.5s linear 0s infinite normal;
+						-ms-animation: glitter 1.5s linear 0s infinite normal;
+						-o-animation: glitter 1.5s linear 0s infinite normal;
+					}
+					p{
+						float: right;
+						margin-left: 4.5em; 
+						font-family: 'PacificoRegular', Arial, sans-serif;
+						font-size: 14px;
+					}
 				}
 			}
 			.solar_system{
-				position: absolute;
-				right: 20%;
-				bottom: 10%;
-				padding-top: 2em;
-				@include background('solarsystem-location-arrow.png', top left);
-				span{
-					float: left;
-					width: 1em;
-					height: 1em;
-					margin-top: 1em;
-					border-radius: 50%;
-					background: #FFF;
-					cursor: pointer;
-					animation: glitter 2.5s linear 0s infinite normal;
-					-webkit-animation: glitter 2.5s linear 0s infinite normal;
-					-moz-animation: glitter 2.5s linear 0s infinite normal;
-					-ms-animation: glitter 2.5s linear 0s infinite normal;
-					-o-animation: glitter 2.5s linear 0s infinite normal;
+				h2, h3{
+					width: 100%;
+					text-align: center;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 				}
-				p{
-					float: right;
-					margin-left: 4.5em; 
-					font-family: 'PacificoRegular', Arial, sans-serif;
-					font-size: 14px;
+				h2{
+					margin-top: .5em;
+					text-transform: uppercase;
+					font-size : 4em;
+				}
+				h3{
+					margin-top: .2em;
+					font-size : 1.125em;
+				}
+				.solar_system_orbits{
+					svg{
+						display: block;
+						margin: 1em auto 0 auto;
+					}
 				}
 			}
 		}
@@ -70,22 +99,22 @@ html{
 
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-	0%   { -webkit-box-shadow: 0px 0px 10px 1px #ffffff; opacity: 0.8; }
-	50%  { -webkit-box-shadow: 0px 0px 10px 5px #ffffff; opacity: 0.95; }
-	100% { -webkit-box-shadow: 0px 0px 10px 1px #ffffff; opacity: 0.8; }
+	0%   { -webkit-box-shadow: 0px 0px 15px 1px #ffffff; opacity: 0.8; }
+	50%  { -webkit-box-shadow: 0px 0px 15px 5px #ffffff; opacity: 0.95; }
+	100% { -webkit-box-shadow: 0px 0px 15px 1px #ffffff; opacity: 0.8; }
 }
 @-moz-keyframes glitter {
-	0%   { -webkit-box-shadow: 0px 0px 10px 1px #ffffff; opacity: 0.8; }
-	50%  { -webkit-box-shadow: 0px 0px 10px 5px #ffffff; opacity: 0.95; }
-	100% { -webkit-box-shadow: 0px 0px 10px 1px #ffffff; opacity: 0.8; }
+	0%   { -webkit-box-shadow: 0px 0px 15px 1px #ffffff; opacity: 0.8; }
+	50%  { -webkit-box-shadow: 0px 0px 15px 5px #ffffff; opacity: 0.95; }
+	100% { -webkit-box-shadow: 0px 0px 15px 1px #ffffff; opacity: 0.8; }
 }
 @-o-keyframes glitter {
-	0%   { -webkit-box-shadow: 0px 0px 10px 1px #ffffff; opacity: 0.8; }
-	50%  { -webkit-box-shadow: 0px 0px 10px 5px #ffffff; opacity: 0.95; }
-	100% { -webkit-box-shadow: 0px 0px 10px 1px #ffffff; opacity: 0.8; }
+	0%   { -webkit-box-shadow: 0px 0px 15px 1px #ffffff; opacity: 0.8; }
+	50%  { -webkit-box-shadow: 0px 0px 15px 5px #ffffff; opacity: 0.95; }
+	100% { -webkit-box-shadow: 0px 0px 15px 1px #ffffff; opacity: 0.8; }
 }
 @keyframes glitter {
-	0%   { -webkit-box-shadow: 0px 0px 10px 1px #ffffff; opacity: 0.8; }
-	50%  { -webkit-box-shadow: 0px 0px 10px 5px #ffffff; opacity: 0.95; }
-	100% { -webkit-box-shadow: 0px 0px 10px 1px #ffffff; opacity: 0.8; }
+	0%   { -webkit-box-shadow: 0px 0px 15px 1px #ffffff; opacity: 0.8; }
+	50%  { -webkit-box-shadow: 0px 0px 15px 5px #ffffff; opacity: 0.95; }
+	100% { -webkit-box-shadow: 0px 0px 15px 1px #ffffff; opacity: 0.8; }
 }
