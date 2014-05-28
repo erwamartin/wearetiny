@@ -1,0 +1,139 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'MohaveRegular';
+  src: url("../fonts/Mohave_regular/mohave.eot");
+  src: url("../fonts/Mohave_regular/mohave.eot") format("embedded-opentype"), url("../fonts/Mohave_regular/mohave.woff") format("woff"), url("../fonts/Mohave_regular/mohave.ttf") format("truetype"), url("../fonts/Mohave_regular/mohave.svg#MohaveRegular") format("svg");
+}
+
+@font-face {
+  font-family: 'MohaveBold';
+  src: url("../fonts/Mohave_bold/mohave-bold.eot");
+  src: url("../fonts/Mohave_bold/mohave-bold.eot") format("embedded-opentype"), url("../fonts/Mohave_bold/mohave-bold.woff") format("woff"), url("../fonts/Mohave_bold/mohave-bold.ttf") format("truetype"), url("../fonts/Mohave_bold/mohave-bold.svg#MohaveBold") format("svg");
+}
+
+@font-face {
+  font-family: 'PacificoRegular';
+  src: url("../fonts/Pacifico_regular/pacifico-webfont.eot");
+  src: url("../fonts/Pacifico_regular/pacifico-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Pacifico_regular/pacifico-webfont.woff") format("woff"), url("../fonts/Pacifico_regular/pacifico-webfont.ttf") format("truetype"), url("../fonts/Pacifico_regular/pacifico-webfont.svg#pacificoregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PlutoSansCondMedium';
+  src: url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.eot");
+  src: url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.eot?#iefix") format("embedded-opentype"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.woff") format("woff"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.ttf") format("truetype"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.svg#PlutoSansCondMedium") format("svg");
+}
+
+@font-face {
+  font-family: 'PlutoSansCondLight';
+  src: url("../fonts/PlutoSans_cond_light/plutosanscondlight.eot");
+  src: url("../fonts/PlutoSans_cond_light/plutosanscondlight.eot?#iefix") format("embedded-opentype"), url("../fonts/PlutoSans_cond_light/plutosanscondlight.woff") format("woff"), url("../fonts/PlutoSans_cond_light/plutosanscondlight.ttf") format("truetype"), url("../fonts/PlutoSans_cond_light/plutosanscondlight.svg#PlutoSansCondLight") format("svg");
+}
+
+@font-face {
+  font-family: 'PlutoSansCondBold';
+  src: url("../fonts/PlutoSans_cond_bold/plutosanscondbold.eot");
+  src: url("../fonts/PlutoSans_cond_bold/plutosanscondbold.eot?#iefix") format("embedded-opentype"), url("../fonts/PlutoSans_cond_bold/plutosanscondbold.woff") format("woff"), url("../fonts/PlutoSans_cond_bold/plutosanscondbold.ttf") format("truetype"), url("../fonts/PlutoSans_cond_bold/plutosanscondbold.svg#PlutoSansCondLight") format("svg");
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+html body {
+  overflow: hidden;
+  height: 100%;
+  color: white;
+  background-image: url('../images/background_landing.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+html body>div{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -5em;
+}
+html body p{
+  display: block;
+  text-align: center;
+  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-size: 1.375em;
+}
+html body p.countdown {
+  font-family: 'MohaveRegular', Arial, sans-serif;
+  font-size: 4em;
+}
+html body p.countdown span {
+  font-family: 'MohaveBold', Arial, sans-serif;
+}
+html body p.countdown span+span {
+  margin-left: .2em;
+}
+html body p.headline{
+  margin-top: 2em;
+}
+html body div div{
+  width: 100%;
+  margin-top: 5em;
+  text-align: center;
+}
+html body a{
+  display: inline-block;
+  padding: .9em 2.5em;
+  border: 2px solid #FFF;
+  color: #FFF;
+  text-decoration:  none;
+  font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+  font-size: 0.938em;
+}
+html body a:hover{
+  background: #FFF;
+  color: #133141;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}

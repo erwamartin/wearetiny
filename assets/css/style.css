@@ -382,7 +382,7 @@ html body #main .solar_system .right_sidebar ul li.neptune .icon {
 }
 /* line 230, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.compare .icon {
-  background-image: url('../images/planets/neptune.svg');
+  background-image: url('../images/planets/compare.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
