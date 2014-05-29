@@ -1,9 +1,32 @@
 <section class="planet">
-	<h1>COUCOU</h1>
-	<h1><%= translations.views.planets[params.planet].planet %></h1>
 	<h2><%= translations.views.planets[params.planet].planet_title %></h2>
 	<h3><%= translations.views.planets[params.planet].planet_subtitle %></h3>
-	<div class="planet">
-		
+	<div class="planet_orbit"></div>
+	<div class="left_sidebar">
+		<div>
+			<p class="text"><%= translations.views.planets.attending_sentence %></p>
+			<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.attending_value %></p>
+		</div>
+		<div class="info_planet">
+			<p class="text"><%= translations.views.planets.age_sentence %></p>
+			<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.age_value %></p>
+			<p class="text"><%= translations.views.planets.weight_sentence %></p>
+			<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.weight_value %></p>
+			<p class="text"><%= translations.views.planets.temperature_sentence %></p>
+			<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.temperature_value %></p>
+		</div>
+	</div>
+	<div class="right_sidebar">
+		<ul>
+			<li class="mercury"><a href="" class="name"><%= translations.views.planets.mercury.planet_name %></a><a href="" class="icon"></a></li>
+			<li class="venus"><a href="" class="name"><%= translations.views.planets.venus.planet_name %></a><a href="" class="icon"></a></li>
+			<li class="earth"><a href="" class="name"><%= translations.views.planets.earth.planet_name %></a><a href="" class="icon"></a></li>
+			<li class="mars"><a href="" class="name"><%= translations.views.planets.mars.planet_name %></a><a href="" class="icon"></a></li>
+			<li class="jupiter"><a href="" class="name"><%= translations.views.planets.jupiter.planet_name %></a><a href="" class="icon"></a></li>
+			<li class="saturn"><a href="" class="name"><%= translations.views.planets.saturn.planet_name %></a><a href="" class="icon"></a></li>
+			<li class="uranus"><a href="" class="name"><%= translations.views.planets.uranus.planet_name %></a><a href="" class="icon"></a></li>
+			<li class="neptune"><a href="" class="name"><%= translations.views.planets.neptune.planet_name %></a><a href="" class="icon"></a></li>
+			<li class="compare"><a href="" class="name"><%= translations.views.solar_system.compare %></a><a href="" class="icon"></a></li>
+		</ul>
 	</div>
 </div>

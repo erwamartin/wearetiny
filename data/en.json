@@ -16,6 +16,14 @@
 			"compare" : "Compare"
 		},
 		"planets" : {
+			"attending_sentence" : "Thank you for attending this",
+			"attending_value" : "months flight",
+			"age_sentence" : "You're now",
+			"age_value" : "years old",
+			"weight_sentence" : "Your new weight is",
+			"weight_value" : "kg",
+			"temperature_sentence" : "Average temperature on surface is",
+			"temperature_value" : "°C",
 			"mercury" : {
 				"planet_name" : "Mercury",
 				"planet_title" : "Welcome on Mercury",

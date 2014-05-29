@@ -280,6 +280,175 @@ html{
 					}
 				}
 			}
+			.planet{
+				h2, h3{
+					width: 100%;
+					text-align: center;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+				}
+				h2{
+					margin-top: .5em;
+					text-transform: uppercase;
+					font-size : 4em;
+				}
+				h3{
+					margin-top: .2em;
+					font-size : 1.125em;
+				}
+				.planet_orbit{
+					svg{
+						display: block;
+						margin: 1em auto 0 auto;
+					}
+				}
+				.left_sidebar{
+					position: absolute;
+					top:50%;
+					left: 0;
+					margin-top: -10.688em;
+					padding-left: 1.5em;
+					div+div{
+						border-top: 2px solid #FFF;
+					}
+					p{
+						font-family: 'PlutoSansCondLight', Arial, sans-serif;
+						font-size: 0.875em;
+						color: #FFF;
+					}
+					
+					div+div p:first-child{
+						margin-top: 1em;
+					}
+
+					.blue span{
+						color: #addee0;
+					}
+					.value{
+						margin: .650em 0;
+						.number{
+							font-family: 'MohaveBold', Arial, sans-serif;
+							font-size: 2.625em;
+							letter-spacing : .05em;
+						}
+						.number+span{
+							margin-left: .5em;
+						}
+					}
+					.value.uppercase{
+						font-family: 'MohaveRegular', Arial, sans-serif;
+						font-size: 1.625em;
+						.number{
+							font-size: 1.615em;
+						}
+					}
+					ul.vehicules{
+						margin: 1.25em 0;
+						li{
+							display: inline-block;
+							margin-right: .5em;
+							a{
+								display: block;
+								width: 2.313em;
+								height: 2.313em;
+							}
+							.spacecraft{
+								@include background('icons/spacecraft.svg', center center, 100% 100%);
+							}
+							.aircraft{
+								@include background('icons/aircraft.svg', center center, 100% 100%);
+							}
+							.paper-plane{
+								@include background('icons/paper-plane.svg', center center, 100% 100%);
+							}
+						}
+					}
+				}
+				.right_sidebar{
+					position: absolute;
+					top:50%;
+					right: 0;
+					margin-top: -15em;
+					ul{
+						padding: 2.500em 0.938em;
+						background: #19262c;
+						li{
+							position: relative;
+							display: block;
+							margin: 0.719em 0;
+							a{
+								display: block;
+								color: #FFF;
+								font-family: 'PlutoSansCondBold', Arial, sans-serif;
+								text-transform: uppercase;
+								text-decoration: none;
+							}
+							a.icon{
+								width: 2.313em;
+								height: 2.313em;
+							}
+							a.name{
+								position: absolute;
+								right: 6.5em;
+								line-height: 4.02600em;
+								height: 3.82600em;
+								vertical-align: middle;
+								font-size: 0.625em;
+								text-align: right;
+							}
+						}
+						li:hover{
+							a{
+								color: #8f8f8f;
+							}
+						}
+						li.mercury{
+							.icon{
+								@include background('planets/mercury.svg', center center, 100% 100%);
+							}
+						}
+						li.venus{
+							.icon{
+								@include background('planets/venus.svg', center center, 100% 100%);
+							}
+						}
+						li.earth{
+							.icon{
+								@include background('planets/earth.svg', center center, 100% 100%);
+							}
+						}
+						li.mars{
+							.icon{
+								@include background('planets/mars.svg', center center, 100% 100%);
+							}
+						}
+						li.jupiter{
+							.icon{
+								@include background('planets/jupiter.svg', center center, 100% 100%);
+							}
+						}
+						li.saturn{
+							.icon{
+								@include background('planets/saturn.svg', center center, 100% 100%);
+							}
+						}
+						li.uranus{
+							.icon{
+								@include background('planets/uranus.svg', center center, 100% 100%);
+							}
+						}
+						li.neptune{
+							.icon{
+								@include background('planets/neptune.svg', center center, 100% 100%);
+							}
+						}
+						li.compare{
+							.icon{
+								@include background('planets/compare.svg', center center, 100% 100%);
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
