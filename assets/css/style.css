@@ -325,84 +325,139 @@ html body #main .solar_system .right_sidebar ul li a.name {
   text-align: right;
 }
 /* line 190, ../sass/style.scss */
+html body #main .solar_system .right_sidebar ul li:hover a {
+  color: #8f8f8f;
+}
+/* line 195, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.mercury .icon {
   background-image: url('../images/planets/mercury.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 195, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.venus .icon {
   background-image: url('../images/planets/venus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 200, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.earth .icon {
   background-image: url('../images/planets/earth.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 205, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.mars .icon {
   background-image: url('../images/planets/mars.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 210, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.jupiter .icon {
   background-image: url('../images/planets/jupiter.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 215, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.saturn .icon {
   background-image: url('../images/planets/saturn.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 220, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.uranus .icon {
   background-image: url('../images/planets/uranus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 225, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.neptune .icon {
   background-image: url('../images/planets/neptune.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 230, ../sass/style.scss */
+/* line 235, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.compare .icon {
   background-image: url('../images/planets/compare.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+/* line 241, ../sass/style.scss */
+html body #main .solar_system footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+/* line 246, ../sass/style.scss */
+html body #main .solar_system footer .distance_scales {
+  position: relative;
+  width: 100%;
+}
+/* line 249, ../sass/style.scss */
+html body #main .solar_system footer .distance_scales div {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+/* line 254, ../sass/style.scss */
+html body #main .solar_system footer .distance_scales div p {
+  display: inline-block;
+  line-height: 1.875em;
+  vertical-align: middle;
+  text-align: center;
+  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-size: 0.925em;
+}
+/* line 262, ../sass/style.scss */
+html body #main .solar_system footer .distance_scales div a {
+  display: inline-block;
+  width: 1.875em;
+  height: 1.875em;
+  margin-left: 1em;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-image: url('../images/./icons/learn-more.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+/* line 273, ../sass/style.scss */
+html body #main .solar_system footer .distance_scales div.svg {
+  z-index: 2;
+}
+/* line 276, ../sass/style.scss */
+html body #main .solar_system footer .distance_scales svg {
+  display: block;
+  margin: 0 auto 0 auto;
+}
 
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 243, ../sass/style.scss */
+  /* line 289, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 244, ../sass/style.scss */
+  /* line 290, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 245, ../sass/style.scss */
+  /* line 291, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -410,19 +465,19 @@ html body #main .solar_system .right_sidebar ul li.compare .icon {
 }
 
 @-moz-keyframes glitter {
-  /* line 248, ../sass/style.scss */
+  /* line 294, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 249, ../sass/style.scss */
+  /* line 295, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 250, ../sass/style.scss */
+  /* line 296, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -430,19 +485,19 @@ html body #main .solar_system .right_sidebar ul li.compare .icon {
 }
 
 @-o-keyframes glitter {
-  /* line 253, ../sass/style.scss */
+  /* line 299, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 254, ../sass/style.scss */
+  /* line 300, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 255, ../sass/style.scss */
+  /* line 301, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -450,19 +505,19 @@ html body #main .solar_system .right_sidebar ul li.compare .icon {
 }
 
 @keyframes glitter {
-  /* line 258, ../sass/style.scss */
+  /* line 304, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 259, ../sass/style.scss */
+  /* line 305, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 260, ../sass/style.scss */
+  /* line 306, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
