@@ -147,12 +147,14 @@ define([
             .attr("class", "distance_scales_g")
             .attr("transform", "translate("+ distance_scales.sun.radius +"," + distance_scales.params.height / 2 + ")");
 
+        distance_scales.params.distance_first_point = distance_scales.sun.radius+(distance_scales.params.innerWidth/distance_scales.points.number-distance_scales.points.radius/2);
+
         // Points
         for(var cpt=0; cpt<60; cpt++){
           distance_scales.svg.append("circle")
             .attr("class", "point")
             .attr("r", distance_scales.points.radius)
-            .attr("transform", "translate(" + (((distance_scales.params.innerWidth/distance_scales.points.number)*cpt)+distance_scales.points.radius) + ", 0)")
+            .attr("transform", "translate(" + ((((distance_scales.params.innerWidth-distance_scales.params.distance_first_point)/distance_scales.points.number)*cpt)+distance_scales.points.radius+distance_scales.params.distance_first_point) + ", 0)")
             .style("fill", "rgba(156, 163, 157, 1.0)");
         }
 
