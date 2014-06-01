@@ -6,7 +6,7 @@ define([
   'text!templates/distances_graph.html'
 ], function($, _, Backbone, d3, DistancesGraphTemplate){
   var DistancesGraphView = Backbone.View.extend({
-    el: $('#modal'),
+    el: $('#main'),
     initialize : function(){
       
     },
@@ -92,6 +92,9 @@ define([
         // Planets
 
         var ua = data.planets['earth'].distance_solar;
+        var line_width = distances_graph.params.width-distances_graph.sun.width;
+        var line_height = distances_graph.points.distance_h;
+        var line_x = distances_graph.sun.width - distances_graph.points.radius*2;
 
         var count_planets = 0;
         for(var planet in data.planets){
@@ -102,6 +105,14 @@ define([
               .attr("class", "line");
 
           var in_way = true; // The planet is further
+
+          var line_y = y_transform - line_height/2;
+          line.append("rect")
+            .attr("width", line_width)
+            .attr("height",  line_height)
+            .attr("class", "line_container")
+            .attr("fill-opacity", 0)
+            .attr("transform", "translate(" +line_x+ ", "+line_y+")");
 
           for(var cpt=0; cpt<distances_graph.points.number; cpt++){
             var x_transform = distances_graph.sun.width+(distances_graph.points.distance_w*cpt)-distances_graph.points.radius;
