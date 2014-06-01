@@ -12,7 +12,7 @@
 		<div class="svg"></div>	
 	</div>
 	<div class="planet_infos">
-		<p><span class="planet_name"><%= distances_graph.planet.name %></span> <%= translations.views.global.is %> <span class="ua_distance"><%= distances_graph.planet.solar_distance.ua %> U.A</span> <%= translations.views.global.from_us %>, <%= translations.views.global.or %></p>
+		<p><span class="planet_name"><%= distances_graph.planet.name %></span> <%= translations.views.global.is %> <span class="ua_distance"><span class="value"><%= distances_graph.planet.solar_distance.ua %></span> U.A</span> <%= translations.views.global.from_us %>, <%= translations.views.global.or %></p>
 		<p><span class='km_distance'><%= distances_graph.planet.solar_distance.km %></span> km away from us</p>
 	</div>
 </section>

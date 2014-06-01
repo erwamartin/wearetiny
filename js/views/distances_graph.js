@@ -6,8 +6,9 @@ define([
   'text!templates/distances_graph.html'
 ], function($, _, Backbone, d3, DistancesGraphTemplate){
   var DistancesGraphView = Backbone.View.extend({
-    el: $('#main'),
+    el: $('#modal'),
     initialize : function(){
+      
     },
 
     render: function(params){
@@ -16,17 +17,13 @@ define([
 
       $.getJSON('data/data.json', function(data){
 
-        console.log(params);
-
 
         params.distances_graph = {
-          planet : {
-            name : params.translations.views.planets['uranus'].planet_name,
-            solar_distance : {
-              ua : Math.round(data.planets['uranus'].distance_solar/data.planets['earth'].distance_solar*100)/100,
-              km : data.planets['uranus'].distance_solar
-            }
-          }
+          planet : _this.get_planet_infos({
+            translations : params.translations,
+            planets : data.planets,
+            planet_name : 'uranus'
+          })
         }
 
         var compiledTemplate = _.template( DistancesGraphTemplate, params );
@@ -134,9 +131,14 @@ define([
 
           line.on('mouseover', function(){
             var planet_name = d3.select(this).attr('id');
-            $('.planet_infos .planet_name').text(params.translations.views.planets[planet_name].planet_name);
-            $('.planet_infos .ua_distance').text(Math.round(data.planets[planet_name].distance_solar/data.planets['earth'].distance_solar*100)/100);
-            $('.planet_infos .km_distance').text(data.planets[planet_name].distance_solar);
+            var planet_infos = _this.get_planet_infos({
+              translations : params.translations,
+              planets : data.planets,
+              planet_name : planet_name
+            });
+            $('.planet_infos .planet_name').text(planet_infos.name);
+            $('.planet_infos .ua_distance .value').text(planet_infos.solar_distance.ua);
+            $('.planet_infos .km_distance').text(planet_infos.solar_distance.km);
           });
 
           count_planets++;
@@ -173,6 +175,15 @@ define([
         
 
       });
+    },
+    get_planet_infos : function(params){
+      return {
+        name : params.translations.views.planets[params.planet_name].planet_name,
+        solar_distance : {
+          ua : Math.round(params.planets[params.planet_name].distance_solar/params.planets['earth'].distance_solar*100)/100,
+          km : params.planets[params.planet_name].distance_solar.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+        }
+      };
     },
     close: function(view){
       if(view.animation_timer) clearInterval(view.animation_timer);
