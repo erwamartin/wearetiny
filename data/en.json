@@ -1,5 +1,11 @@
 {
 	"views" : {
+		"global" : {
+			"or" : "or",
+			"is" : "is",
+			"from_us" : "from us",
+			"away" : "away"
+		},
 		"landing_page" : {
 			"punchline" : "We live among <span>14 billions</span> of stars",
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
@@ -14,6 +20,10 @@
 			"leave_distance_sentence" : "To get ouside, which means",
 			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights",
 			"compare" : "Compare"
+		},
+		"distances_graph" : {
+ 			"welcome_title" : "Where are our neighbours?",
+			"welcome_subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called U.A."
 		},
 		"planets" : {
 			"attending_sentence" : "Thank you for attending this",

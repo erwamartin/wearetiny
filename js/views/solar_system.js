@@ -150,7 +150,7 @@ define([
         distance_scales.params.distance_first_point = distance_scales.sun.radius+(distance_scales.params.innerWidth/distance_scales.points.number-distance_scales.points.radius/2);
 
         // Points
-        for(var cpt=0; cpt<60; cpt++){
+        for(var cpt=0; cpt<distance_scales.points.number; cpt++){
           distance_scales.svg.append("circle")
             .attr("class", "point")
             .attr("r", distance_scales.points.radius)
