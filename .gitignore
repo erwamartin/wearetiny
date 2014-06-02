@@ -6,3 +6,6 @@
 *.swp
 Thumbs.db
 assets/.sass-cache/
+.sass-cache/ac62c0b89015398b44e68253ae9ce2fb109086e8/fonts.scssc
+.sass-cache/ac62c0b89015398b44e68253ae9ce2fb109086e8/reset.scssc
+.sass-cache/ac62c0b89015398b44e68253ae9ce2fb109086e8/style.scssc

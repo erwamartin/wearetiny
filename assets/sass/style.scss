@@ -563,75 +563,134 @@ html{
 					}
 				}
 			}
-			.planet{
-				.planet_orbit{
-					svg{
-						display: block;
-						margin: 1em auto 0 auto;
-					}
+						.planet{
+				h2, h3, h4{
+					width: 100%;
+					text-align: center;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 				}
-				.left_sidebar{
-					position: absolute;
-					top:50%;
-					left: 0;
-					margin-top: -10.688em;
-					padding-left: 1.5em;
-					div+div{
-						border-top: 2px solid #FFF;
-					}
-					p{
-						font-family: 'PlutoSansCondLight', Arial, sans-serif;
-						font-size: 0.875em;
-						color: #FFF;
-					}
-					
-					div+div p:first-child{
-						margin-top: 1em;
-					}
+				h2{
+					margin-top: .5em;
+					text-transform: uppercase;
+					font-size : 4em;
+				}
+				h3{
+					text-align: left;
+					margin-top: .5em;
+					text-transform: uppercase;
+					font-size : 2em;
+					border-bottom: 3px solid rgba(255,255,255, 0.1);
+					display: block;
+				}
+				h4{
+					margin-top: .2em;
+					font-size : 1.125em;
 
-					.blue span{
-						color: #addee0;
-					}
-					.value{
-						margin: .650em 0;
-						.number{
-							font-family: 'MohaveBold', Arial, sans-serif;
-							font-size: 2.625em;
-							letter-spacing : .05em;
+				}
+				svg{
+					display: block;
+					//margin: 1em auto 0 auto;
+				}
+				.content-planet {
+					position: absolute;
+					left: 50%;
+					width: 1100px;
+					margin-left: -550px;
+					margin-top: 4em;
+					.top-content{
+						width: 1020px;
+						margin-left: 24px;
+						background: rgba(255,255,255, 0.1);
+						text-align: center;
+						padding: 2em 1em 2em 1em ;
+						div{
+							width: 336px;
+							display: inline-block;	
 						}
-						.number+span{
-							margin-left: .5em;
+						p{
+							font-family: 'PlutoSansCondLight', Arial, sans-serif;
+							font-size: 0.875em;
+							color: #FFF;
+						}
+						.value{
+							margin: .650em 0;
+							.number{
+								font-family: 'MohaveBold', Arial, sans-serif;
+								font-size: 2.625em;
+								letter-spacing : .05em;
+							}
+							.number+span{
+								margin-left: .5em;
+							}
+						}
+						.value.uppercase{
+							font-family: 'MohaveRegular', Arial, sans-serif;
+							font-size: 1.625em;
+							.number{
+								font-size: 1.615em;
+							}
 						}
 					}
-					.value.uppercase{
-						font-family: 'MohaveRegular', Arial, sans-serif;
-						font-size: 1.625em;
-						.number{
-							font-size: 1.615em;
-						}
-					}
-					ul.vehicules{
-						margin: 1.25em 0;
-						li{
+					.bottom-content{
+						
+						left: 14%;
+						padding: 3em 1em 3em 1em ;
+						div{
+							width: 333px;
+							height: 333px;
 							display: inline-block;
-							margin-right: .5em;
-							a{
-								display: block;
-								width: 2.313em;
-								height: 2.313em;
+							//padding-right: 5px;
+							//padding-left: 7px;
+						}
+						.bottom-content-block{
+							width: 333px;
+							height: 333px;
+							display: inline-block;
+							margin-left: 10px;
+							margin-right: 10px;
+						}
+
+						.area {
+							svg {
+								margin-top : 50px;
 							}
-							.spacecraft{
-								@include background('icons/spacecraft.svg', center center, 100% 100%);
+							.area-graph rect {
+								fill: steelblue;
 							}
-							.aircraft{
-								@include background('icons/aircraft.svg', center center, 100% 100%);
+						}
+
+						p{
+							font-family: 'PlutoSansCondLight', Arial, sans-serif;
+							font-size: 0.875em;
+							color: #FFF;
+						}
+
+						div p{
+							text-align: center;
+						}
+						.value{
+							margin: .650em 0;
+							.number{
+								font-family: 'MohaveBold', Arial, sans-serif;
+								font-size: 2.625em;
+								letter-spacing : .05em;
 							}
-							.paper-plane{
-								@include background('icons/paper-plane.svg', center center, 100% 100%);
+							.number+span{
+								margin-left: .5em;
+							}
+						}
+						.value.uppercase{
+							font-family: 'MohaveRegular', Arial, sans-serif;
+							font-size: 1.625em;
+							.number{
+								font-size: 1.615em;
 							}
 						}
 					}
 				}
+				
+
+
 				.right_sidebar{
 					position: absolute;
 					top:50%;

@@ -16,15 +16,17 @@ define([
 
       var compiledTemplate = _.template( PlanetTemplate, params );
        _this.$el.html(compiledTemplate);
-       
-      $.getJSON('data/data.json', function(data){
-        console.log(data);
 
+      //D3JS
+
+      $.getJSON('data/data.json', function(data){
+        //console.log(data);
+        console.log(d3.select('.calendar-graph'));
         var space_time = {
-          svg_element : d3.select('.planet_orbit'),
+          svg_element : d3.select('.calendar-graph'),
           params : {
-            width : ($('body').innerWidth()-$('.left_sidebar').innerWidth()-$('.right_sidebar').innerWidth())*120/100,
-            height : (($('body').innerHeight()-$('h2').innerHeight()-$('h3').innerHeight())-100)*120/100,
+            width : ($('.calendar').innerWidth()-10),
+            height : ($('.calendar').innerHeight()-10),
           }
         }
         space_time.params.radius = Math.min(space_time.params.width, space_time.params.height)/2;
@@ -32,9 +34,9 @@ define([
         var now = new Date(d3.time.year.floor(new Date()));
 
         var radii = {
-          "sun": space_time.params.radius / 8,
-          "earthOrbit": space_time.params.radius / 2.5,
-          "earth": space_time.params.radius / 22,
+          "sun": space_time.params.radius / 6,
+          "earthOrbit": space_time.params.radius / 1.875,
+          "earth": space_time.params.radius / 16.5,
         };
 
         // Space
@@ -118,6 +120,60 @@ define([
             };
           });
         }, 1000);
+        
+        // AREA //
+
+        var data = [
+          {name: "Locke",    value:  4},
+          {name: "Kwon",     value: 2}
+        ];
+
+
+        var area = {
+          svg_element : d3.select('.area-graph'),
+          params : {
+            width : ($('.area').innerWidth()-20),
+            height : ($('.area').innerHeight()-100),
+          }
+        }
+
+        var y = d3.scale.linear()
+            .range([area.params.height, 0]) 
+            .domain([0, d3.max(data, function(d) { return d.value; })]);
+
+       area.svg = area.svg_element.append("svg")
+            .attr("width", area.params.width)
+            .attr("height", area.params.height);
+
+        var barWidth = 112;
+
+        var bar = area.svg.selectAll("g")
+            .data(data)
+            .enter().append("g")
+            .attr("transform", function(d, i) { return "translate(" + i * barWidth + ",0)"; });
+
+        bar.append("rect")
+            .attr("x", 45)
+            .attr("y", function(d) { return y(d.value); })
+            .attr("height", function(d) { return area.params.height - y(d.value); })
+            .attr("width", barWidth - 4);
+
+            console.log( );
+
+            d3.max(data, function(d) { return area.params.height - y(d.value); })
+
+        bar.append("rect")
+           
+            .attr("y",  d3.max(data, function(d) { return area.params.height - y(d.value); })-3)
+            .attr("height", 2 )
+            .attr("width", 290)
+            .style("fill", "rgba(255, 255, 255,  1)")
+            .style("stroke", "rgba(255, 255, 255,  1)");
+
+        function type(d) {
+          d.value = +d.value; // coerce to number
+          return d;
+        }
 
         
       });
