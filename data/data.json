@@ -6,6 +6,8 @@
 		"mercury" : {
 			"size" : 4879,
 			"distance_solar" : 57900000,
+			"sun_angle" : 207.875,
+			"rotation_time" : 88,
 			"speed" : 0.24,
 			"temperature" : 167,
 			"solar_system" : {
@@ -18,6 +20,8 @@
 		"venus" : {
 			"size" : 12104,
 			"distance_solar" : 108200000,
+			"sun_angle" : 372.1654206,
+			"rotation_time" : 224.7,
 			"speed" : 0.62,
 			"temperature" : 464,
 			"solar_system" : {
@@ -30,6 +34,8 @@
 		"earth" : {
 			"size" : 12756,
 			"distance_solar" : 149600000,
+			"sun_angle" : 0,
+			"rotation_time" : 365.2,
 			"speed" : 1,
 			"temperature" : 15,
 			"solar_system" : {
@@ -42,6 +48,8 @@
 		"mars" : {
 			"size" : 6792,
 			"distance_solar" : 227900000,
+			"sun_angle" : 251.1816594,
+			"rotation_time" : 687,
 			"speed" : 1.88,
 			"temperature" : -65,
 			"solar_system" : {
@@ -54,6 +62,8 @@
 		"jupiter" : {
 			"size" : 142984,
 			"distance_solar" : 778600000,
+			"sun_angle" : 345.8853844,
+			"rotation_time" : 4331,
 			"speed" : 11.86,
 			"temperature" : -100,
 			"solar_system" : {
@@ -66,6 +76,8 @@
 		"saturn" : {
 			"size" : 120536,
 			"distance_solar" : 1433500000,
+			"sun_angle" : 136.0568066,
+			"rotation_time" : 10747,
 			"speed" : 29.43,
 			"temperature" : -140,
 			"solar_system" : {
@@ -78,6 +90,8 @@
 		"uranus" : {
 			"size" : 51118,
 			"distance_solar" : 2872500000,
+			"sun_angle" : 78.62535879,
+			"rotation_time" : 30589,
 			"speed" : 83.76,
 			"temperature" : -195,
 			"solar_system" : {
@@ -90,6 +104,8 @@
 		"neptune" : {
 			"size" : 49528,
 			"distance_solar" : 4495100000,
+			"sun_angle" : 115.5641237,
+			"rotation_time" : 59800,
 			"speed" : 163.75,
 			"temperature" : -200,
 			"solar_system" : {

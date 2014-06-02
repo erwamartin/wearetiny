@@ -101,6 +101,7 @@ define([
             .attr("xlink:href", "assets/images/planets/"+planet+".svg");
         }
         
+        var origin = new Date(2014, 0, 0, 0, 1, 0, 0);;
         var now = new Date();
 
         _this.animation_timer = setInterval(function () {
@@ -110,7 +111,7 @@ define([
 
                   // Calculate the next angle
                   if(!d3.select("."+planet+"OrbitPosition").empty()){
-                    var last_angle = parseFloat(d3.select("."+planet+"OrbitPosition").attr("angle")) || (2 * Math.PI * d3.time.hours(d3.time.year.floor(now), now).length / d3.time.hours(d3.time.year.floor(now), d3.time.year.ceil(now)).length);
+                    var last_angle = parseFloat(d3.select("."+planet+"OrbitPosition").attr("angle")) || newAngle(origin, now, data.planets[planet].rotation_time, data.planets[planet].sun_angle);
                     var new_angle = last_angle + (1 /data.planets[planet].speed) /50;
                     d3.select("."+planet+"OrbitPosition").attr("angle", new_angle);
 
@@ -198,3 +199,8 @@ define([
   });
   return SolarSystemView;
 });
+
+function newAngle(origin, now, rotation, oldAngle){
+  timeInterval = (now.getTime() - origin.getTime())/(1000*3600*24); //temps en jours
+  return (oldAngle+((timeInterval*360)/rotation))%360;
+}
