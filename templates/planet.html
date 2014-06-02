@@ -1,21 +1,44 @@
 <section class="planet">
 	<h2><%= translations.views.planets[params.planet].planet_title %></h2>
-	<h3><%= translations.views.planets[params.planet].planet_subtitle %></h3>
-	<div class="planet_orbit"></div>
-	<div class="left_sidebar">
-		<div>
-			<p class="text"><%= translations.views.planets.attending_sentence %></p>
-			<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.attending_value %></p>
+	<h4><%= translations.views.planets[params.planet].planet_subtitle %></h4>
+	
+	<div class="content-planet">
+		<div class="top-content">
+			<div class="old_age">
+				<p class="text"><%= translations.views.planets.age_sentence %></p>
+				<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.age_value %></p>
+			</div>
+			<div class="new_age">
+				<p class="text"><%= translations.views.planets.age_sentence %></p>
+				<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.age_value %></p>
+			</div>
+			<div class="weight">
+				<p class="text"><%= translations.views.planets.weight_sentence %></p>
+				<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.weight_value %></p>
+			</div>
 		</div>
-		<div class="info_planet">
-			<p class="text"><%= translations.views.planets.age_sentence %></p>
-			<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.age_value %></p>
-			<p class="text"><%= translations.views.planets.weight_sentence %></p>
-			<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.weight_value %></p>
-			<p class="text"><%= translations.views.planets.temperature_sentence %></p>
-			<p class="value uppercase"><span class='number'>29004</span> <%= translations.views.planets.temperature_value %></p>
+		<div class="bottom-content">
+			<div class="calendar bottom-content-block">
+				<h3>Calendar</h3>
+				<div class="calendar-graph"></div>
+				<p class="text"><%= translations.views.planets.age_sentence %></p>
+				<p class="value uppercase"><span class=''>29004</span> <%= translations.views.planets.age_value %></p>
+			</div>
+			<div class="area bottom-content-block">
+				<h3>Area</h3>
+				<div class="area-graph"></div>
+				<p class="text"><%= translations.views.planets.age_sentence %></p>
+				<p class="value uppercase"><span class=''>29004</span> <%= translations.views.planets.age_value %></p>
+			</div>
+			<div class="weather bottom-content-block">
+				<h3>Weather</h3>
+				<div class="weather-graph"></div>
+				<p class="text"><%= translations.views.planets.age_sentence %></p>
+				<p class="value uppercase"><span class=''>29004</span> <%= translations.views.planets.age_value %></p>
+			</div>
 		</div>
 	</div>
+
 	<div class="right_sidebar">
 		<ul>
 			<li class="mercury"><a href="" class="name"><%= translations.views.planets.mercury.planet_name %></a><a href="" class="icon"></a></li>
