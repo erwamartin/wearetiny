@@ -43,8 +43,11 @@ html{
 				margin-top: .2em;
 				font-size : 1.125em;
 			}
-			.landing_page{
+			section{
+				width: 100%;
 				height: 100%;
+			}
+			.landing_page{
 				@include background('background_landing.jpg', center center, auto);
 				h2{
 					position : absolute;
@@ -280,6 +283,213 @@ html{
 					}
 				}
 			}
+			.boarding_pass{
+				opacity: 0;
+				position: fixed;
+				top: 0; right: 0; left: 0;
+				height: 0;
+				z-index: 4;
+				@include background('background.jpg', center center, 100% 100%);
+				-webkit-transition: opacity 0.3s ease-in;
+				-moz-transition: opacity 0.3s ease-in;
+				transition: opacity 0.3s ease-in;
+				div.modal{
+					visibility: hidden;
+					position: absolute;
+					width: 18.750em;
+					top: 50%; 
+					left: 50%;
+					/*margin-top: -14.219em;
+					margin-left: -9.375em;*/
+					color: #343131;
+					-webkit-backface-visibility: hidden;
+					-moz-backface-visibility: hidden;
+					backface-visibility: hidden;
+					-webkit-transform: translateX(-50%) translateY(-50%);
+					-moz-transform: translateX(-50%) translateY(-50%);
+					-ms-transform: translateX(-50%) translateY(-50%);
+					transform: translateX(-50%) translateY(-50%);
+					-webkit-perspective: 1300px;
+					-moz-perspective: 1300px;
+					perspective: 1300px;
+					div.content{
+						height: 100%;
+						background: #f3f0ed;
+						border-radius: 0.250em;
+						-webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 1);
+						-moz-box-shadow:    0px 6px 24px 0px rgba(0, 0, 0, 1);
+						box-shadow:         0px 6px 24px 0px rgba(0, 0, 0, 1);
+						-webkit-transform-style: preserve-3d;
+						-moz-transform-style: preserve-3d;
+						transform-style: preserve-3d;
+						-webkit-transform: translate(30%) translateZ(600px) rotate(10deg);
+						-moz-transform: translate(30%) translateZ(600px) rotate(10deg);
+						-ms-transform: translate(30%) translateZ(600px) rotate(10deg);
+						transform: translate(30%) translateZ(600px) rotate(10deg);
+						opacity: 0;
+						> p:first-child{
+							line-height: 4.375em;
+							vertical-align: middle;
+							text-align: center;
+							font-family: 'PlutoSansCondBold', Arial, sans-serif;
+							font-size: 0.875em;
+							text-transform: uppercase;
+						}
+						.label{
+							line-height: 2.500em;
+							vertical-align: middle;
+							text-align: center;
+							background:#242424;
+							font-family: 'MohaveBold', Arial, sans-serif;
+							font-size: 1.500em;
+							color: #f3f0ed;
+							span{
+								display: inline-block;
+							}
+							.icon{
+								width: 0.833em;
+								height: 0.833em;
+								margin: 0 0.833em;
+								color: #343131;
+								@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
+							}
+						}
+						.infos{
+							margin-top: 1.563em;
+							vertical-align: middle;
+							text-align: center;
+							div{
+								display: inline-block;
+								padding: 0 0.750em;
+								text-align: left;
+								.title{
+									font-family: 'PlutoSansCondBold', Arial, sans-serif;
+									font-size: 0.875em;
+									text-transform: uppercase;
+								}
+								input{
+									display: inline-block;
+									width: 1em;
+									font-family: 'MohaveBold', Arial, sans-serif;
+									font-size: 2.313em;
+									color: #242424;
+									::-webkit-input-placeholder {color: #d6d3d1;}
+									:-ms-input-placeholder {color: #d6d3d1;}
+									:-moz-placeholder {
+									    color:    #d6d3d1;
+									    opacity:  1;
+									}
+									::-moz-placeholder {
+									    color:    #d6d3d1;
+									    opacity:  1;
+									}
+									border:none;
+									background: transparent;
+								}
+								.unit{
+									display: inline-block;
+									font-family: 'MohaveBold', Arial, sans-serif;
+									font-size: 1.063em;
+									text-transform: uppercase;
+								}
+							}
+							div+div{
+								border-left: 1px solid #d6d3d1;
+							}
+						}
+						.transportation{
+							margin: 1.875em auto;
+							text-align: center;
+							input[type="radio"]{
+								display: none;
+							}
+							label{
+								display: inline-block;
+								width: 1.250em;
+								height: 1.250em;
+								margin: 0 0.688em;
+								cursor: pointer;
+							}
+							#aircraft{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
+								}
+							}
+							#aircraft:checked{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
+								}
+							}
+							#spacecraft{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
+								}
+							}
+							#spacecraft:checked{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
+								}
+							}
+							#paper-plane{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
+								}
+							}
+							#paper-plane:checked{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
+								}
+							}
+						}
+						a{
+							display: block;
+							width: 62%;
+							margin: 0 auto;
+							line-height: 2.500em;
+							vertical-align: middle;
+							border: 2px solid #242424;
+							font-family: 'PlutoSansCondBold', Arial, sans-serif;
+							font-size: 0.875em;
+							color: #242424;
+							text-align: center;
+							text-decoration: none;
+							text-transform: uppercase;
+						}
+						a:hover{
+							background: #242424;
+							color: #f3f0ed;
+							-webkit-transition: all .5s ease;
+							-moz-transition: all .5s ease;
+							-o-transition: all .5s ease;
+							transition: all .5s ease;
+						}
+						.barcode{
+							width: 53.3333333%;
+							height: 3.625em;
+							margin: 1.875em auto;
+							@include background('codebar.png', center center, 100% 100%);
+						}
+					}
+				}
+			}
+			.boarding_pass.on{
+				height: 100%;
+				opacity: 1;
+				.modal{
+					visibility: visible;
+					.content{
+						-webkit-transition: all 0.3s ease-in 0.1s;
+						-moz-transition: all 0.3s ease-in 0.1s;
+						transition: all 0.3s ease-in 0.1s;
+						-webkit-transform: translate(0%) translateZ(0) rotate(0deg);
+						-moz-transform: translate(0%) translateZ(0) rotate(0deg);
+						-ms-transform: translate(0%) translateZ(0) rotate(0deg);
+						transform: translate(0%) translateZ(0) rotate(0deg);
+						opacity: 1;
+						perspective: 1300px;
+					}
+				}
+			}
 			.distances_graph{
 				h3{
 					max-width: 30em;
@@ -502,6 +712,19 @@ html{
 				}
 			}
 		}
+	}
+}
+
+/* Retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+	html body #main .boarding_pass div.modal .barcode{
+		@include background('codebar@2x.png', center center, 100% 100%);
 	}
 }
 

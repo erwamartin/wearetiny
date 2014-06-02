@@ -17,6 +17,19 @@ define([
       var compiledTemplate = _.template( SolarSystemTemplate, params );
       _this.$el.html(compiledTemplate);
 
+      $('.right_sidebar li a').on('click', function(evt){
+        if(!localStorage.getItem('user')){
+          evt.preventDefault();
+          $('.boarding_pass').addClass('on');
+          $('.boarding_pass .modal a#travel').attr('href', $(this).attr('href'));
+        }
+      });
+
+      $('.boarding_pass').on('click', function(evt){
+        if( evt.target !== this ) return;
+        $('.boarding_pass').removeClass('on');
+      })
+
       $.getJSON('data/data.json', function(data){
 
 

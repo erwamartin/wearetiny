@@ -21,15 +21,15 @@
 	</div>
 	<div class="right_sidebar">
 		<ul>
-			<li class="mercury"><a href="" class="name"><%= translations.views.planets.mercury.planet_name %></a><a href="" class="icon"></a></li>
-			<li class="venus"><a href="" class="name"><%= translations.views.planets.venus.planet_name %></a><a href="" class="icon"></a></li>
-			<li class="earth"><a href="" class="name"><%= translations.views.planets.earth.planet_name %></a><a href="" class="icon"></a></li>
-			<li class="mars"><a href="" class="name"><%= translations.views.planets.mars.planet_name %></a><a href="" class="icon"></a></li>
-			<li class="jupiter"><a href="" class="name"><%= translations.views.planets.jupiter.planet_name %></a><a href="" class="icon"></a></li>
-			<li class="saturn"><a href="" class="name"><%= translations.views.planets.saturn.planet_name %></a><a href="" class="icon"></a></li>
-			<li class="uranus"><a href="" class="name"><%= translations.views.planets.uranus.planet_name %></a><a href="" class="icon"></a></li>
-			<li class="neptune"><a href="" class="name"><%= translations.views.planets.neptune.planet_name %></a><a href="" class="icon"></a></li>
-			<li class="compare"><a href="" class="name"><%= translations.views.solar_system.compare %></a><a href="" class="icon"></a></li>
+			<li class="mercury"><a href="#solar-system/mercury" class="name"><%= translations.views.planets.mercury.planet_name %></a><a href="#solar-system/mercury" class="icon"></a></li>
+			<li class="venus"><a href="#solar-system/venus" class="name"><%= translations.views.planets.venus.planet_name %></a><a href="#solar-system/venus" class="icon"></a></li>
+			<li class="earth"><a href="#solar-system/earth" class="name"><%= translations.views.planets.earth.planet_name %></a><a href="#solar-system/earth" class="icon"></a></li>
+			<li class="mars"><a href="#solar-system/mars" class="name"><%= translations.views.planets.mars.planet_name %></a><a href="#solar-system/mars" class="icon"></a></li>
+			<li class="jupiter"><a href="#solar-system/jupiter" class="name"><%= translations.views.planets.jupiter.planet_name %></a><a href="#solar-system/jupiter" class="icon"></a></li>
+			<li class="saturn"><a href="#solar-system/saturn" class="name"><%= translations.views.planets.saturn.planet_name %></a><a href="#solar-system/saturn" class="icon"></a></li>
+			<li class="uranus"><a href="#solar-system/uranus" class="name"><%= translations.views.planets.uranus.planet_name %></a><a href="#solar-system/uranus" class="icon"></a></li>
+			<li class="neptune"><a href="#solar-system/neptune" class="name"><%= translations.views.planets.neptune.planet_name %></a><a href="#solar-system/neptune" class="icon"></a></li>
+			<li class="compare"><a href="#solar-system/compare" class="name"><%= translations.views.solar_system.compare %></a><a href="#solar-system/compare" class="icon"></a></li>
 		</ul>
 	</div>
 	<footer>
@@ -41,4 +41,38 @@
 			<div class="svg"></div>	
 		</div>
 	</footer>
+</section>
+<section class="boarding_pass">
+	<div class="modal">
+		<div class="content">
+			<p><%= translations.views.solar_system.boarding_pass.title %></p>
+			<p class="label">
+				<span><%= translations.views.solar_system.boarding_pass.boarding_code_prefix %></span>
+				<span class="icon"></span>
+				<span><%= translations.views.solar_system.boarding_pass.boarding_code_suffix %></span>
+			</p>
+			<div class="infos">
+				<div class="age">
+					<p class="title"><%= translations.views.global.age %></p>
+					<input type="text" name="age" placeholder="34">
+					<p class="unit"><%= translations.views.solar_system.boarding_pass.y_o %></p>
+				</div>
+				<div class="weight">
+					<p class="title"><%= translations.views.global.weight %></p>
+					<input type="text" name="weight" placeholder="65">
+					<p class="unit">kg</p>
+				</div>
+			</div>
+			<div class="transportation">
+				<input type="radio" name="transportation" value="aircraft" id="aircraft">
+				<label for="aircraft"></label>
+				<input type="radio" name="transportation" value="spacecraft" id="spacecraft" checked>
+				<label for="spacecraft"></label>
+				<input type="radio" name="transportation" value="paper-plane" id="paper-plane">
+				<label for="paper-plane"></label>
+			</div>
+			<a href="" id="travel"><%= translations.views.solar_system.boarding_pass.travel %></a>
+			<div class="barcode"></div>
+		</div>
+	</div>
 </section>
