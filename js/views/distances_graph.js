@@ -192,7 +192,7 @@ define([
         name : params.translations.views.planets[params.planet_name].planet_name,
         solar_distance : {
           ua : Math.round(params.planets[params.planet_name].distance_solar/params.planets['earth'].distance_solar*100)/100,
-          km : params.planets[params.planet_name].distance_solar.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+          km : params.planets[params.planet_name].distance_solar.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
         }
       };
     },

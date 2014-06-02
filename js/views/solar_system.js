@@ -18,7 +18,7 @@ define([
       _this.$el.html(compiledTemplate);
 
       $('.right_sidebar li a').on('click', function(evt){
-        if(!localStorage.getItem('user')){
+        if(!localStorage.getItem('user') && $(this).parents('li').attr('class')!='compare'){
           evt.preventDefault();
           $('.boarding_pass').addClass('on');
           $('.boarding_pass .modal .planet_code').text($(this).parents('li').attr('class').substring(0, 3));
@@ -29,7 +29,29 @@ define([
       $('.boarding_pass').on('click', function(evt){
         if( evt.target !== this ) return;
         $('.boarding_pass').removeClass('on');
-      })
+      });
+
+      $('.boarding_pass .modal input[type="text"]').on('focus', function(evt){
+        $(this).data('placeholder', $(this).attr('placeholder'));
+        $(this).attr('placeholder', '');
+      });
+
+      $('.boarding_pass .modal input[type="text"]').on('blur', function(evt){
+        $(this).attr('placeholder', $(this).data('placeholder'));
+      });
+
+      $('.boarding_pass .modal #travel').on('click', function(evt){
+        var age = Math.parseInt($('.boarding_pass .modal input[type="age"]').val());
+        var weight = Math.parseInt($('.boarding_pass .modal input[type="weight"]').val());
+        var transportation = $('.boarding_pass .modal input[type="weight"]').val();
+        if(age<1 || age>122){
+          
+        }else if(weight<1 || weight>600){
+          
+        }
+        evt.preventDefault();
+
+      });
 
       $.getJSON('data/data.json', function(data){
 

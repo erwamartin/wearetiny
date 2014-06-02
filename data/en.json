@@ -24,7 +24,7 @@
 			"compare" : "Compare",
 			"boarding_pass" : {
 				"title" : "Your boarding pass",
-				"boarding_code_suffix" : "SPC",
+				"boarding_code_prefix" : "EAR",
 				"y_o" : "Y-O",
 				"travel" : "Travel"
 			}
