@@ -21,6 +21,7 @@ define([
         if(!localStorage.getItem('user')){
           evt.preventDefault();
           $('.boarding_pass').addClass('on');
+          $('.boarding_pass .modal .planet_code').text($(this).parents('li').attr('class').substring(0, 3));
           $('.boarding_pass .modal a#travel').attr('href', $(this).attr('href'));
         }
       });
