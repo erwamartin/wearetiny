@@ -135,7 +135,7 @@ html body #main h2, html body #main h3 {
 html body #main h2 {
   margin-top: .5em;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 3.125em;
 }
 /* line 45, ../sass/style.scss */
 html body #main h3 {

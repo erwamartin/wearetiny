@@ -107,6 +107,7 @@ define([
             .innerRadius(data.planets[planet].distance_px - 1)
             .startAngle(0)
             .endAngle(0);
+
           solar_system.svg.append("path")
             .attr("class", planet+"OrbitPosition")
             .attr("d", data.planets[planet].orbitPosition)

@@ -62,6 +62,10 @@ define([
         AppRouter.current_view = params.view;
         AppRouter.current_view.render({
           translations : translations,
+          functions : {
+            test : 'test',
+            formatNumber : formatNumber
+          },
           params : params.params
         });
       }
@@ -74,6 +78,10 @@ define([
       params.callback.call(this, translations);
     });
   };
+
+  var formatNumber = function(number, separator){
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+  }
 
 
   return {

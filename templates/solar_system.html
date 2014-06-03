@@ -5,7 +5,7 @@
 	<div class="left_sidebar">
 		<div>
 			<p class="text"><%= translations.views.solar_system.leave_time_top_sentence %></p>
-			<p class="value blue uppercase"><%= translations.views.solar_system.leave_time_value %></p>
+			<p class="value blue uppercase"><%= functions.formatNumber(translations.views.solar_system.leave_time_value, translations.views.global.number_separator) %></p>
 			<p class="text blue"><%= translations.views.solar_system.leave_time_bottom_sentence %></p>
 			<ul class="vehicules">
 				<li><a href="" class="spacecraft"></a></li>
@@ -14,9 +14,9 @@
 			</ul>
 		</div>
 		<div>
-			<p class="value uppercase"><%= translations.views.solar_system.leave_distance_value %></p>
+			<p class="value uppercase"><%= functions.formatNumber(translations.views.solar_system.leave_distance_value, translations.views.global.number_separator) %></p>
 			<p class="text"><%= translations.views.solar_system.leave_distance_sentence %></p>
-			<p class="value blue"><%= translations.views.solar_system.leave_distance_flights_value %></p>
+			<p class="value blue"><%= functions.formatNumber(translations.views.solar_system.leave_distance_flights_value, translations.views.global.number_separator) %></p>
 		</div>
 	</div>
 	<div class="right_sidebar">

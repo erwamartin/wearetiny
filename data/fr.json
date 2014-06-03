@@ -1,6 +1,7 @@
 {
 	"views" : {
 		"global" : {
+			"number_separator" : " ",
 			"or" : "ou",
 			"is" : "est",
 			"from_us" : "de nous",
