@@ -566,6 +566,20 @@ html{
 					}
 				}
 			}
+			.compare_graph{
+				.graph{
+					.svg{
+						svg{
+							text{
+								font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+							}
+							.comparator_container{
+								cursor : pointer;
+							}
+						}
+					}
+				}
+			}
 			.planet{
 				h2, h3, h4{
 					width: 100%;

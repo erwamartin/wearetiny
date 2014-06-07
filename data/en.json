@@ -41,7 +41,17 @@
 		},
 		"compare_graph" : {
  			"title" : "Planet comparaison",
-			"subtitle" : "Here’s an overall view of our planets data"
+			"subtitle" : "Here’s an overall view of our planets data",
+			"comparators" : {
+				"size" : "PLANET SIZE",
+				"revolution_period" : "REVOLUTION",
+				"missions" : "MISSIONS",
+				"mass" : "WEIGHT",
+				"moons" : "No. OF MOONS",
+				"gravity" : "GRAVITY",
+				"day_length" : "DAY LENGTH",
+				"temperature" : "TEMPERATURE"
+			}
 		},
 		"planets" : {
 			"left_earth_sentence" : "You're left",
