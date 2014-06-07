@@ -1,13 +1,18 @@
 {
 	"views" : {
 		"global" : {
-			"number_separator" : " ",
-			"or" : "ou",
-			"is" : "est",
-			"from_us" : "de nous",
-			"away" : "loin",
+			"number_separator" : ",",
+			"or" : "or",
+			"is" : "is",
+			"from_us" : "from us",
+			"away" : "away",
 			"age" : "age",
-			"weight" : "weight"
+			"weight" : "weight",
+			"year" : "year", 
+			"years" : "years", 
+			"earth_tall" : "earth tall",
+			"one_day_on": "One day on",
+			"lasts" : "lasts"
 		},
 		"landing_page" : {
 			"punchline" : "We live among <span>14 billions</span> of stars",
@@ -39,53 +44,73 @@
 			"subtitle" : "Here’s an overall view of our planets data"
 		},
 		"planets" : {
-			"attending_sentence" : "Thank you for attending this",
-			"attending_value" : "months flight",
+			"left_earth_sentence" : "You're left",
+			"left_earth_value" : "years ago",
 			"age_sentence" : "You're now",
 			"age_value" : "years old",
-			"weight_sentence" : "Your new weight is",
+			"weight_sentence" : "And your weight on the planet is",
 			"weight_value" : "kg",
+			"calendar_title" : "Calendar",
+			"area_title" : "Area", 
+			"weather_title" : "Weather", 
 			"temperature_sentence" : "Average temperature on surface is",
 			"temperature_value" : "°C",
+			"temperature_average" : "Average temperature",
 			"mercury" : {
 				"planet_name" : "Mercury",
 				"planet_title" : "Welcome on Mercury",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "Our pretty little home in space",
+				"weather_title" : "weather_title",
+				"weather_subtitle" : "weather_subtitle"
 			},
 			"venus" : {
 				"planet_name" : "Venus",
 				"planet_title" : "Welcome on Venus",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "From Venus with love",
+				"weather_title" : "weather_title",
+				"weather_subtitle" : "weather_subtitle"
 			},
 			"earth" : {
 				"planet_name" : "Earth",
 				"planet_title" : "Welcome on Earth",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "There is no place like Earth",
+				"weather_title" : "weather_title",
+				"weather_subtitle" : "weather_subtitle"
 			},
 			"mars" : {
 				"planet_name" : "Mars",
 				"planet_title" : "Welcome on Mars",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "Such a Curiosity",
+				"weather_title" : "weather_title",
+				"weather_subtitle" : "weather_subtitle"
 			},
 			"jupiter" : {
 				"planet_name" : "Jupiter",
 				"planet_title" : "Welcome on Jupiter",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "Our pretty little home in space",
+				"weather_title" : "weather_title",
+				"weather_subtitle" : "weather_subtitle"
 			},
 			"saturn" : {
 				"planet_name" : "Saturn",
 				"planet_title" : "Welcome on Saturn",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "Our pretty little home in space",
+				"weather_title" : "weather_title",
+				"weather_subtitle" : "weather_subtitle"
 			},
 			"uranus" : {
 				"planet_name" : "Uranus",
 				"planet_title" : "Welcome on Uranus",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "Better be cold-blooded",
+				"weather_title" : "weather_title",
+				"weather_subtitle" : "weather_subtitle"
 			},
 			"neptune" : {
 				"planet_name" : "Neptune",
 				"planet_title" : "Welcome on Neptune",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "She's like the wind",
+				"weather_title" : "weather_title",
+				"weather_subtitle" : "weather_subtitle"
 			}
 		}
 	}
