@@ -9,9 +9,10 @@
 			"age" : "age",
 			"weight" : "weight",
 			"year" : "year", 
+			"years" : "years", 
 			"earth_tall" : "earth tall",
 			"one_day_on": "One day on",
-			"lasts" : "lasts", 
+			"lasts" : "lasts"
 		},
 		"landing_page" : {
 			"punchline" : "We live among <span>14 billions</span> of stars",
@@ -47,7 +48,7 @@
 			"weight_value" : "kg",
 			"calendar_title" : "Calendar",
 			"area_title" : "Area", 
-			"temperature_title" : "Temperature", 
+			"weather_title" : "Weather", 
 			"temperature_sentence" : "Average temperature on surface is",
 			"temperature_value" : "°C",
 			"temperature_average" : "Average temperature",
