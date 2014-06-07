@@ -48,7 +48,7 @@
 		"mars" : {
 			"size" : 6792,
 			"distance_solar" : 227900000,
-			"sun_angle" : 251.1816594,
+			"sun_angle" : 300.1816594,
 			"rotation_time" : 687,
 			"speed" : 1.88,
 			"temperature" : -65,
@@ -76,7 +76,7 @@
 		"saturn" : {
 			"size" : 120536,
 			"distance_solar" : 1433500000,
-			"sun_angle" : 136.0568066,
+			"sun_angle" : 222.6568066,
 			"rotation_time" : 10747,
 			"speed" : 29.43,
 			"temperature" : -140,
