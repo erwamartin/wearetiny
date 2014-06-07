@@ -35,12 +35,16 @@
 			"welcome_subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called U.A."
 		},
 		"planets" : {
-			"attending_sentence" : "Thank you for attending this",
-			"attending_value" : "months flight",
+
+			"left_earth_sentence" : "You're left",
+			"left_earth_value" : "years ago",
+
 			"age_sentence" : "You're now",
 			"age_value" : "years old",
-			"weight_sentence" : "Your new weight is",
+
+			"weight_sentence" : "And your weight on the planet is",
 			"weight_value" : "kg",
+
 			"temperature_sentence" : "Average temperature on surface is",
 			"temperature_value" : "°C",
 			"mercury" : {
@@ -51,17 +55,17 @@
 			"venus" : {
 				"planet_name" : "Venus",
 				"planet_title" : "Welcome on Venus",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "From Venus with love"
 			},
 			"earth" : {
 				"planet_name" : "Earth",
 				"planet_title" : "Welcome on Earth",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "There is no place like Earth"
 			},
 			"mars" : {
 				"planet_name" : "Mars",
 				"planet_title" : "Welcome on Mars",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "Such a Curiosity"
 			},
 			"jupiter" : {
 				"planet_name" : "Jupiter",
@@ -76,12 +80,12 @@
 			"uranus" : {
 				"planet_name" : "Uranus",
 				"planet_title" : "Welcome on Uranus",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "Better be cold-blooded"
 			},
 			"neptune" : {
 				"planet_name" : "Neptune",
 				"planet_title" : "Welcome on Neptune",
-				"planet_subtitle" : "Our pretty little home in space"
+				"planet_subtitle" : "She's like the wind"
 			}
 		}
 	}

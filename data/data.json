@@ -6,10 +6,14 @@
 		"mercury" : {
 			"size" : 4879,
 			"distance_solar" : 57900000,
+			"distance_earth": 91700000,
 			"sun_angle" : 207.875,
 			"rotation_time" : 88,
+			"rotation" : 175.94,
 			"speed" : 0.24,
 			"temperature" : 167,
+			"area" : 4879,
+			"gravity" : 3.7,
 			"solar_system" : {
 				"size_coef" : 0.24,
 				"distance_solar_coef" : 0.118
@@ -20,10 +24,15 @@
 		"venus" : {
 			"size" : 12104,
 			"distance_solar" : 108200000,
+			"distance_earth": 41400000,
+			"distance" : 41400000,
 			"sun_angle" : 372.1654206,
 			"rotation_time" : 224.7,
+			"rotation" : 116.75,
 			"speed" : 0.62,
 			"temperature" : 464,
+			"area" : 12104,
+			"gravity" : 8.9,
 			"solar_system" : {
 				"size_coef" : 0.378,
 				"distance_solar_coef" : 0.189
@@ -34,10 +43,14 @@
 		"earth" : {
 			"size" : 12756,
 			"distance_solar" : 149600000,
+			"distance_earth": 0,
 			"sun_angle" : 0,
 			"rotation_time" : 365.2,
+			"rotation" : 1,
 			"speed" : 1,
 			"temperature" : 15,
+			"area" : 12756,
+			"gravity" : 9.8,
 			"solar_system" : {
 				"size_coef" : 0.5,
 				"distance_solar_coef" : 0.27
@@ -48,10 +61,14 @@
 		"mars" : {
 			"size" : 6792,
 			"distance_solar" : 227900000,
+			"distance_earth": 78300000,
 			"sun_angle" : 251.1816594,
 			"rotation_time" : 687,
+			"rotation" : 1.03,
 			"speed" : 1.88,
 			"temperature" : -65,
+			"area" : 6792,
+			"gravity" : 3.7,
 			"solar_system" : {
 				"size_coef" : 0.33,
 				"distance_solar_coef" : 0.3615
@@ -62,10 +79,13 @@
 		"jupiter" : {
 			"size" : 142984,
 			"distance_solar" : 778600000,
+			"distance_earth": 629000000,
 			"sun_angle" : 345.8853844,
 			"rotation_time" : 4331,
+			"rotation" : 0.41,
 			"speed" : 11.86,
 			"temperature" : -100,
+			"gravity" : 23.1,
 			"solar_system" : {
 				"size_coef" : 0.85,
 				"distance_solar_coef" : 0.5473
@@ -76,10 +96,13 @@
 		"saturn" : {
 			"size" : 120536,
 			"distance_solar" : 1433500000,
+			"distance_earth" : 1283900000,
 			"sun_angle" : 136.0568066,
 			"rotation_time" : 10747,
+			"rotation" : 0.44,
 			"speed" : 29.43,
 			"temperature" : -140,
+			"gravity" : 9,
 			"solar_system" : {
 				"size_coef" : 0.56,
 				"distance_solar_coef" : 0.669
@@ -90,10 +113,13 @@
 		"uranus" : {
 			"size" : 51118,
 			"distance_solar" : 2872500000,
+			"distance_earth": 2722900000,
 			"sun_angle" : 78.62535879,
 			"rotation_time" : 30589,
+			"rotation" : 0.72,
 			"speed" : 83.76,
 			"temperature" : -195,
+			"gravity" : 8.7,
 			"solar_system" : {
 				"size_coef" : 0.56,
 				"distance_solar_coef" : 0.8277
@@ -104,10 +130,14 @@
 		"neptune" : {
 			"size" : 49528,
 			"distance_solar" : 4495100000,
+			"distance_earth": 4345500000,
 			"sun_angle" : 115.5641237,
 			"rotation_time" : 59800,
+			"rotation" : 0.67,
 			"speed" : 163.75,
 			"temperature" : -200,
+			"area" : 142984,
+			"gravity" : 11,
 			"solar_system" : {
 				"size_coef" : 0.56,
 				"distance_solar_coef" : 1
@@ -115,5 +145,10 @@
 			"color1" : "#193FB2",
 			"color2" : "#2E59BC"
 		}
+	},
+	"spaceship" : {
+		"SpaceShipTwo" : 4000,
+		"NewHorizons": 58536, 
+		"SolarProbePlus": 720000
 	}
 }
