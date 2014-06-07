@@ -135,7 +135,7 @@ define([
 
                   // Calculate the next angle
                   if(!d3.select("."+planet+"OrbitPosition").empty()){
-                    var last_angle = parseFloat(d3.select("."+planet+"OrbitPosition").attr("angle")) || ((newAngle(origin, now, data.planets[planet].rotation_time, data.planets[planet].sun_angle)*6.28)/360);
+                    var last_angle = parseFloat(d3.select("."+planet+"OrbitPosition").attr("angle")) || ((newAngle(origin, now, data.planets[planet].revolution_period, data.planets[planet].sun_angle)*6.28)/360);
                     var new_angle = last_angle + (1 /(data.planets[planet].revolution_period/365.2)) /50;
 
                     d3.select("."+planet+"OrbitPosition").attr("angle", new_angle);
