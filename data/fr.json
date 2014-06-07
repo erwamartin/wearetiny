@@ -19,8 +19,8 @@
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
 		"solar_system" : {
- 			"welcome_title" : "Welcome in the solar system",
-			"welcome_subtitle" : "Our pretty little home in space",
+ 			"title" : "Welcome in the solar system",
+			"subtitle" : "Our pretty little home in space",
 			"leave_time_top_sentence" : "Humans live a little bit too far to leave it soon!",
 			"leave_time_value" : "<span class='number'>29004</span> months",
 			"leave_time_bottom_sentence" : "For us to leave it with a  <span>spacecraft</span> !",
@@ -36,8 +36,12 @@
 			}
 		},
 		"distances_graph" : {
- 			"welcome_title" : "Where are our neighbours?",
-			"welcome_subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called U.A."
+ 			"title" : "Where are our neighbours?",
+			"subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called U.A."
+		},
+		"compare_graph" : {
+ 			"title" : "Planet comparaison",
+			"subtitle" : "Here’s an overall view of our planets data"
 		},
 		"planets" : {
 			"left_earth_sentence" : "You're left",
