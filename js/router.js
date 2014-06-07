@@ -5,14 +5,16 @@ define([
   'views/landing_page',
   'views/solar_system',
   'views/distances_graph',
+  'views/compare_graph',
   'views/planet'
-], function($, _, Backbone, LandingPageView, SolarSystemView, DistancesGraphView, PlanetView){
+], function($, _, Backbone, LandingPageView, SolarSystemView, DistancesGraphView, CompareGraphView, PlanetView){
   var AppRouter = Backbone.Router.extend({
     current_view : null,
     routes: {
       '': 'landingPage',
       'solar-system': 'solarSystem',
       'solar-system/distances': 'distanceGraph',
+      'solar-system/compare': 'compareGraph',
       'solar-system/:planet': 'planet',
       '*actions': 'default'
     },
@@ -21,14 +23,19 @@ define([
         view : new LandingPageView()
       });
     },
+    solarSystem : function(){
+      renderView.call(this, {
+        view : new SolarSystemView()
+      });
+    },
     distanceGraph : function(){
       renderView.call(this, {
         view : new DistancesGraphView()
       });
     },
-    solarSystem : function(){
+    compareGraph : function(){
       renderView.call(this, {
-        view : new SolarSystemView()
+        view : new CompareGraphView()
       });
     },
     planet : function(planet){
@@ -63,7 +70,6 @@ define([
         AppRouter.current_view.render({
           translations : translations,
           functions : {
-            test : 'test',
             formatNumber : formatNumber
           },
           params : params.params

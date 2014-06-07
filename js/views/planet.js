@@ -157,9 +157,6 @@ define([
             .attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return area.params.height - y(d.value); })
             .attr("width", barWidth - 4);
-
-            console.log( );
-
             d3.max(data, function(d) { return area.params.height - y(d.value); })
 
         bar.append("rect")
