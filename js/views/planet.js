@@ -112,7 +112,6 @@ define([
             .style("fill", data.planets[params.params.planet].color1);
 
         var origin = new Date(2014, 0, 1, 1, 0, 0, 0);
-        console.log(origin);
         var now = new Date();
 
         _this.animation_timer = setInterval(function () {
@@ -121,17 +120,17 @@ define([
 
                   // Calculate the next angle
                   if(!d3.select(".planetOrbitPosition").empty()){
-                    var last_angle = parseFloat(d3.select(".planetOrbitPosition").attr("angle")) || ((newAngle(origin, origin, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
-                    var new_angle = last_angle + (1 /(data.planets[params.params.planet].revolution_period/365.2)) /50;
+                    var last_angle = ((newAngle(origin, now, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
+                    var new_angle = last_angle;
 
-                    var last_angle_day = parseFloat(d3.select(".planetOrbitPosition").attr("angle_day")) || ((newAngle(origin, now, data.planets[params.params.planet].rotation, data.planets[params.params.planet].sun_angle)*6.28)/360);
-                    var new_angle_day = last_angle_day + (1 /(data.planets[params.params.planet].rotation/24)) /50;
+                    var last_angle_day = ((newAngle(origin, now, data.planets[params.params.planet].rotation, 0)*6.28)/360);
+                    var new_angle_day = last_angle_day;
                     d3.select(".planetOrbitPosition").attr("angle", new_angle);
 
                     var orbitPosition = planetOrbitPosition;
-                    var interpolateOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle_day);
+                    var interpolateOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle);
 
-                    var interpolatePlanetDay = d3.interpolate(day.endAngle()(), new_angle);
+                    var interpolatePlanetDay = d3.interpolate(day.endAngle()(), new_angle_day);
 
                     // Animate Planet orbit position
                     d3.select(".planetOrbitPosition").attr("d", orbitPosition.endAngle(interpolateOrbitPosition(t)));
@@ -139,7 +138,7 @@ define([
                     // Transition Planet
                     d3.select(".planet")
                       .attr("transform", "translate(" + radii.planetOrbit * Math.sin(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + "," + -radii.planetOrbit * Math.cos(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + ")");
-                      //.attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
+                      // .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
 
                     // Animate day
                     // Transition day
@@ -216,9 +215,9 @@ define([
     },
     get_planet_infos : function(params){
       return {
-        left_planet : Math.round(((params.planets[params.planet_name].distance_planet/params.spaceships.NewHorizons)/24)/30),
-        age : Math.round(localStorage.getItem("age")+((Math.round(((params.planets[params.planet_name].distance_planet/params.spaceships.NewHorizons)/24)/30))/12)),
-        weight : Math.round(((localStorage.getItem("weight"))/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity),
+        left_planet : (((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30),
+        age : (Math.round(parseFloat(localStorage.getItem("age")))+(Math.round((((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30)/12))),
+        weight : Math.round(((parseFloat(localStorage.getItem("weight")))/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity),
         temperature : params.planets[params.planet_name].temperature
         //(poidsUtilisateur/graviteTerre)*gravitePlanete
           //((distanceDepuisTerre/vitesseVaisseau)/24)/30

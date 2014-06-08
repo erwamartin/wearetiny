@@ -54,8 +54,8 @@
 			}
 		},
 		"planets" : {
-			"left_earth_sentence" : "You're left",
-			"left_earth_value" : "years ago",
+			"left_earth_sentence" : "You've left",
+			"left_earth_value" : "months ago",
 			"age_sentence" : "You're now",
 			"age_value" : "years old",
 			"weight_sentence" : "And your weight on the planet is",

@@ -125,7 +125,6 @@ define([
         }
         
         var origin = new Date(2014, 0, 1, 1, 0, 0, 0);
-        console.log(origin);
         var now = new Date();
 
         _this.animation_timer = setInterval(function () {
@@ -225,6 +224,7 @@ define([
 });
 
 function newAngle(origin, now, rotation, oldAngle){
+  // console.log(origin+" "+now+" "+rotation+" "+oldAngle);
   timeInterval = (now.getTime() - origin.getTime())/(1000*3600*24); //temps en jours
   return (oldAngle+((timeInterval*360)/rotation))%360;
 }
