@@ -210,7 +210,6 @@ define([
         for(var planet in data.planets){
           distance_scales.svg.append("circle")
             .attr("class", planet)
-            //.attr("r", distance_scales.sun.radius*data.planets[planet].solar_system.size_coef)
             .attr("r", distance_scales.planets.radius)
             .attr("transform", "translate(" + ((data.planets[planet].distance_solar*distance_scales.params.coef_distance)+distance_scales.sun.radius) + ", 0)")
             .style("fill", data.planets[planet].color1);
