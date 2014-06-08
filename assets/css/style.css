@@ -99,16 +99,264 @@ table {
 /* Mixins */
 /* Variables */
 /* Styles */
-/* line 20, ../sass/style.scss */
+/* line 17, ../sass/planet.scss */
+.planet h2, .planet h3, .planet h4 {
+  width: 100%;
+  text-align: center;
+  font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+}
+/* line 22, ../sass/planet.scss */
+.planet h2 {
+  margin-top: .5em;
+  text-transform: uppercase;
+  font-size: 4em;
+}
+/* line 27, ../sass/planet.scss */
+.planet h3 {
+  text-align: center;
+  margin-top: .5em;
+  text-transform: uppercase;
+  font-size: 2em;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  display: block;
+}
+/* line 35, ../sass/planet.scss */
+.planet h4 {
+  margin-top: .2em;
+  font-size: 1.125em;
+}
+/* line 40, ../sass/planet.scss */
+.planet svg {
+  display: block;
+}
+/* line 44, ../sass/planet.scss */
+.planet .content-planet {
+  position: absolute;
+  left: 50%;
+  width: 1100px;
+  margin-left: -550px;
+  margin-top: 4em;
+}
+/* line 50, ../sass/planet.scss */
+.planet .content-planet .top-content {
+  width: 1020px;
+  margin-left: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 2em 1em 2em 1em;
+}
+/* line 56, ../sass/planet.scss */
+.planet .content-planet .top-content div {
+  width: 336px;
+  display: inline-block;
+}
+/* line 60, ../sass/planet.scss */
+.planet .content-planet .top-content p {
+  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-size: 0.875em;
+  color: #FFF;
+}
+/* line 65, ../sass/planet.scss */
+.planet .content-planet .top-content .value {
+  margin: .650em 0;
+}
+/* line 67, ../sass/planet.scss */
+.planet .content-planet .top-content .value .number {
+  font-family: 'MohaveBold', Arial, sans-serif;
+  font-size: 2.625em;
+  letter-spacing: .05em;
+}
+/* line 72, ../sass/planet.scss */
+.planet .content-planet .top-content .value .number + span {
+  margin-left: .5em;
+}
+/* line 76, ../sass/planet.scss */
+.planet .content-planet .top-content .value.uppercase {
+  font-family: 'MohaveRegular', Arial, sans-serif;
+  font-size: 1.625em;
+}
+/* line 79, ../sass/planet.scss */
+.planet .content-planet .top-content .value.uppercase .number {
+  font-size: 1.615em;
+}
+/* line 84, ../sass/planet.scss */
+.planet .content-planet .bottom-content {
+  left: 14%;
+  padding: 2em 1em 3em 1em;
+}
+/* line 89, ../sass/planet.scss */
+.planet .content-planet .bottom-content .bottom-content-block {
+  width: 332px;
+  display: inline-table;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 94, ../sass/planet.scss */
+.planet .content-planet .bottom-content .bottom-content-block .graph {
+  height: 185px;
+  width: 332px;
+  display: inline-block;
+}
+/* line 99, ../sass/planet.scss */
+.planet .content-planet .bottom-content .bottom-content-block p:first-child {
+  margin-top: 3em;
+}
+/* line 104, ../sass/planet.scss */
+.planet .content-planet .bottom-content .calendar svg {
+  margin-top: -2em;
+}
+/* line 109, ../sass/planet.scss */
+.planet .content-planet .bottom-content .area svg, .planet .content-planet .bottom-content .weather svg {
+  margin-top: 1.5em;
+}
+/* line 114, ../sass/planet.scss */
+.planet .content-planet .bottom-content p {
+  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-size: 0.875em;
+  color: #FFF;
+  padding-top: 0.5em;
+}
+/* line 123, ../sass/planet.scss */
+.planet .content-planet .bottom-content .value .number {
+  font-family: 'MohaveBold', Arial, sans-serif;
+  font-size: 2.625em;
+  letter-spacing: .05em;
+}
+/* line 128, ../sass/planet.scss */
+.planet .content-planet .bottom-content .value .number + span {
+  margin-left: .5em;
+}
+/* line 132, ../sass/planet.scss */
+.planet .content-planet .bottom-content .value.uppercase {
+  font-family: 'MohaveRegular', Arial, sans-serif;
+  font-size: 1.625em;
+}
+/* line 135, ../sass/planet.scss */
+.planet .content-planet .bottom-content .value.uppercase .number {
+  font-size: 1.615em;
+}
+/* line 144, ../sass/planet.scss */
+.planet .right_sidebar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -15em;
+}
+/* line 149, ../sass/planet.scss */
+.planet .right_sidebar ul {
+  padding: 2.500em 0.938em;
+  background: #19262c;
+}
+/* line 152, ../sass/planet.scss */
+.planet .right_sidebar ul li {
+  position: relative;
+  display: block;
+  margin: 0.719em 0;
+}
+/* line 156, ../sass/planet.scss */
+.planet .right_sidebar ul li a {
+  display: block;
+  color: #FFF;
+  font-family: 'PlutoSansCondBold', Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* line 163, ../sass/planet.scss */
+.planet .right_sidebar ul li a.icon {
+  width: 2.313em;
+  height: 2.313em;
+}
+/* line 167, ../sass/planet.scss */
+.planet .right_sidebar ul li a.name {
+  position: absolute;
+  right: 6.5em;
+  line-height: 4.02600em;
+  height: 3.82600em;
+  vertical-align: middle;
+  font-size: 0.625em;
+  text-align: right;
+}
+/* line 178, ../sass/planet.scss */
+.planet .right_sidebar ul li:hover a {
+  color: #8f8f8f;
+}
+/* line 183, ../sass/planet.scss */
+.planet .right_sidebar ul li.mercury .icon {
+  background-image: url('../images/planets/mercury.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 188, ../sass/planet.scss */
+.planet .right_sidebar ul li.venus .icon {
+  background-image: url('../images/planets/venus.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 193, ../sass/planet.scss */
+.planet .right_sidebar ul li.earth .icon {
+  background-image: url('../images/planets/earth.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 198, ../sass/planet.scss */
+.planet .right_sidebar ul li.mars .icon {
+  background-image: url('../images/planets/mars.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 203, ../sass/planet.scss */
+.planet .right_sidebar ul li.jupiter .icon {
+  background-image: url('../images/planets/jupiter.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 208, ../sass/planet.scss */
+.planet .right_sidebar ul li.saturn .icon {
+  background-image: url('../images/planets/saturn.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 213, ../sass/planet.scss */
+.planet .right_sidebar ul li.uranus .icon {
+  background-image: url('../images/planets/uranus.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 218, ../sass/planet.scss */
+.planet .right_sidebar ul li.neptune .icon {
+  background-image: url('../images/planets/neptune.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* line 223, ../sass/planet.scss */
+.planet .right_sidebar ul li.compare .icon {
+  background-image: url('../images/planets/compare.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Mixins */
+/* Variables */
+/* Styles */
+/* line 21, ../sass/style.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 23, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 html {
   height: 100%;
 }
-/* line 25, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 html body {
   overflow: auto;
   height: 100%;
@@ -121,41 +369,41 @@ html body {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-/* line 33, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 html body #main {
   height: 100%;
   overflow: hidden;
 }
-/* line 37, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 html body #main header h2, html body #main header h3 {
   width: 100%;
   text-align: center;
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
-/* line 42, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 html body #main header h2 {
   padding-top: .5em;
   text-transform: uppercase;
   font-size: 3.125em;
 }
-/* line 47, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 html body #main header h3 {
   padding-top: .2em;
   font-size: 1.125em;
 }
-/* line 52, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 html body #main section {
   width: 100%;
   height: 100%;
 }
-/* line 56, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 html body #main .landing_page {
   background-image: url('../images/background_landing.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
 }
-/* line 58, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 html body #main .landing_page h2 {
   position: absolute;
   top: 50%;
@@ -166,11 +414,11 @@ html body #main .landing_page h2 {
   font-family: 'MohaveRegular', Arial, sans-serif;
   font-size: 4em;
 }
-/* line 67, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 html body #main .landing_page h2 span {
   font-family: 'MohaveBold', Arial, sans-serif;
 }
-/* line 71, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 html body #main .landing_page .solar_system {
   position: absolute;
   left: 50%;
@@ -183,7 +431,7 @@ html body #main .landing_page .solar_system {
   background-repeat: no-repeat;
   background-size: auto auto;
 }
-/* line 79, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 html body #main .landing_page .solar_system span {
   float: left;
   width: .65em;
@@ -198,19 +446,19 @@ html body #main .landing_page .solar_system span {
   -ms-animation: glitter 1.5s linear 0s infinite normal;
   -o-animation: glitter 1.5s linear 0s infinite normal;
 }
-/* line 93, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 html body #main .landing_page .solar_system p {
   float: right;
   margin-left: 4.5em;
   font-family: 'PacificoRegular', Arial, sans-serif;
   font-size: 14px;
 }
-/* line 103, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 html body #main .solar_system .solar_system_orbits svg {
   display: block;
   margin: 1em auto 0 auto;
 }
-/* line 108, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 html body #main .solar_system .left_sidebar {
   position: absolute;
   top: 50%;
@@ -218,98 +466,98 @@ html body #main .solar_system .left_sidebar {
   margin-top: -10.688em;
   padding-left: 1.5em;
 }
-/* line 114, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 html body #main .solar_system .left_sidebar div + div {
   border-top: 2px solid #FFF;
 }
-/* line 117, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 html body #main .solar_system .left_sidebar p {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 0.875em;
   color: #FFF;
 }
-/* line 122, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .blue span {
   color: #addee0;
 }
-/* line 125, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value {
   margin: .650em 0;
 }
-/* line 127, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value .number {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 2.625em;
   letter-spacing: .05em;
 }
-/* line 132, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value .number + span {
   margin-left: .5em;
 }
-/* line 136, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value.uppercase {
   font-family: 'MohaveRegular', Arial, sans-serif;
   font-size: 1.625em;
 }
-/* line 139, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value.uppercase .number {
   font-size: 1.615em;
 }
-/* line 143, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules {
   margin: 1.25em 0;
 }
-/* line 145, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li {
   display: inline-block;
   margin-right: .5em;
 }
-/* line 148, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li a {
   display: block;
   width: 2.313em;
   height: 2.313em;
 }
-/* line 153, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li .spacecraft {
   background-image: url('../images/icons/spacecraft.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 156, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li .aircraft {
   background-image: url('../images/icons/aircraft.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 159, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li .paper-plane {
   background-image: url('../images/icons/paper-plane.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 165, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 html body #main .solar_system .right_sidebar {
   position: absolute;
   top: 50%;
   right: 0;
   margin-top: -15em;
 }
-/* line 170, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul {
   padding: 2.500em 0.938em;
   background: #19262c;
 }
-/* line 173, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li {
   position: relative;
   display: block;
   margin: 0.719em 0;
 }
-/* line 177, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li a {
   display: block;
   color: #FFF;
@@ -317,12 +565,12 @@ html body #main .solar_system .right_sidebar ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 184, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li a.icon {
   width: 2.313em;
   height: 2.313em;
 }
-/* line 188, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li a.name {
   position: absolute;
   right: 6.5em;
@@ -332,93 +580,93 @@ html body #main .solar_system .right_sidebar ul li a.name {
   font-size: 0.625em;
   text-align: right;
 }
-/* line 199, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li:hover a {
   color: #8f8f8f;
 }
-/* line 204, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.mercury .icon {
   background-image: url('../images/planets/mercury.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 209, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.venus .icon {
   background-image: url('../images/planets/venus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 214, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.earth .icon {
   background-image: url('../images/planets/earth.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 219, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.mars .icon {
   background-image: url('../images/planets/mars.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 224, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.jupiter .icon {
   background-image: url('../images/planets/jupiter.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 229, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.saturn .icon {
   background-image: url('../images/planets/saturn.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 234, ../sass/style.scss */
+/* line 235, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.uranus .icon {
   background-image: url('../images/planets/uranus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 239, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.neptune .icon {
   background-image: url('../images/planets/neptune.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 244, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.compare .icon {
   background-image: url('../images/planets/compare.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 250, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 html body #main .solar_system footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100px;
 }
-/* line 255, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales {
   position: relative;
   width: 100%;
 }
-/* line 258, ../sass/style.scss */
+/* line 259, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div {
   position: absolute;
   width: 100%;
   text-align: center;
   z-index: 3;
 }
-/* line 263, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div p {
   display: inline-block;
   line-height: 1.875em;
@@ -427,7 +675,7 @@ html body #main .solar_system footer .distance_scales div p {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 0.925em;
 }
-/* line 271, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div a {
   display: inline-block;
   width: 1.875em;
@@ -441,16 +689,16 @@ html body #main .solar_system footer .distance_scales div a {
   background-size: 100% 100%;
   cursor: pointer;
 }
-/* line 282, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div.svg {
   z-index: 2;
 }
-/* line 285, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales svg {
   display: block;
   margin: 0 auto 0 auto;
 }
-/* line 292, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 html body #main .boarding_pass {
   opacity: 0;
   position: fixed;
@@ -467,7 +715,7 @@ html body #main .boarding_pass {
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
-/* line 302, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 html body #main .boarding_pass div.modal {
   visibility: hidden;
   position: absolute;
@@ -488,7 +736,7 @@ html body #main .boarding_pass div.modal {
   -moz-perspective: 1300px;
   perspective: 1300px;
 }
-/* line 321, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content {
   height: 100%;
   background: #f3f0ed;
@@ -505,7 +753,7 @@ html body #main .boarding_pass div.modal div.content {
   transform: translate(30%) translateZ(600px) rotate(10deg);
   opacity: 0;
 }
-/* line 336, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content > p:first-child {
   line-height: 4.375em;
   vertical-align: middle;
@@ -514,7 +762,7 @@ html body #main .boarding_pass div.modal div.content > p:first-child {
   font-size: 0.875em;
   text-transform: uppercase;
 }
-/* line 344, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label {
   line-height: 2.500em;
   vertical-align: middle;
@@ -524,11 +772,11 @@ html body #main .boarding_pass div.modal div.content .label {
   font-size: 1.500em;
   color: #f3f0ed;
 }
-/* line 352, ../sass/style.scss */
+/* line 353, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label span {
   display: inline-block;
 }
-/* line 355, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label .icon {
   width: 0.833em;
   height: 0.833em;
@@ -539,25 +787,25 @@ html body #main .boarding_pass div.modal div.content .label .icon {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 363, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos {
   margin-top: 1.563em;
   vertical-align: middle;
   text-align: center;
 }
-/* line 367, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div {
   display: inline-block;
   padding: 0 0.750em;
   text-align: left;
 }
-/* line 371, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div .title {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
   font-size: 0.875em;
   text-transform: uppercase;
 }
-/* line 376, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input {
   display: inline-block;
   width: 1em;
@@ -568,49 +816,49 @@ html body #main .boarding_pass div.modal div.content .infos div input {
   border: none;
   background: transparent;
 }
-/* line 382, ../sass/style.scss */
+/* line 383, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input ::-webkit-input-placeholder {
   color: #d6d3d1;
 }
-/* line 383, ../sass/style.scss */
+/* line 384, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input :-ms-input-placeholder {
   color: #d6d3d1;
 }
-/* line 384, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input :-moz-placeholder {
   color: #d6d3d1;
   opacity: 1;
 }
-/* line 388, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input ::-moz-placeholder {
   color: #d6d3d1;
   opacity: 1;
 }
-/* line 396, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input[name="weight"] {
   width: 1.5em;
 }
-/* line 399, ../sass/style.scss */
+/* line 400, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div .unit {
   display: inline-block;
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.063em;
   text-transform: uppercase;
 }
-/* line 406, ../sass/style.scss */
+/* line 407, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div + div {
   border-left: 1px solid #d6d3d1;
 }
-/* line 410, ../sass/style.scss */
+/* line 411, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation {
   margin: 1.875em auto;
   text-align: center;
 }
-/* line 413, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation input[type="radio"] {
   display: none;
 }
-/* line 416, ../sass/style.scss */
+/* line 417, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation label {
   display: inline-block;
   width: 1.250em;
@@ -618,49 +866,49 @@ html body #main .boarding_pass div.modal div.content .transportation label {
   margin: 0 0.688em;
   cursor: pointer;
 }
-/* line 424, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #aircraft + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 429, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #aircraft:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 434, ../sass/style.scss */
+/* line 435, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #spacecraft + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 439, ../sass/style.scss */
+/* line 440, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #spacecraft:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 444, ../sass/style.scss */
+/* line 445, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #paper-plane + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 449, ../sass/style.scss */
+/* line 450, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #paper-plane:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 454, ../sass/style.scss */
+/* line 455, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content a {
   display: block;
   width: 62%;
@@ -675,7 +923,7 @@ html body #main .boarding_pass div.modal div.content a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 468, ../sass/style.scss */
+/* line 469, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content a:hover {
   background: #242424;
   color: #f3f0ed;
@@ -684,7 +932,7 @@ html body #main .boarding_pass div.modal div.content a:hover {
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
-/* line 476, ../sass/style.scss */
+/* line 477, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .barcode {
   width: 53.3333333%;
   height: 3.625em;
@@ -694,16 +942,16 @@ html body #main .boarding_pass div.modal div.content .barcode {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 485, ../sass/style.scss */
+/* line 486, ../sass/style.scss */
 html body #main .boarding_pass.on {
   height: 100%;
   opacity: 1;
 }
-/* line 488, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 html body #main .boarding_pass.on .modal {
   visibility: visible;
 }
-/* line 490, ../sass/style.scss */
+/* line 491, ../sass/style.scss */
 html body #main .boarding_pass.on .modal .content {
   -webkit-transition: all 0.3s ease-in 0.1s;
   -moz-transition: all 0.3s ease-in 0.1s;
@@ -715,39 +963,39 @@ html body #main .boarding_pass.on .modal .content {
   opacity: 1;
   perspective: 1300px;
 }
-/* line 504, ../sass/style.scss */
+/* line 505, ../sass/style.scss */
 html body #main .distances_graph h3 {
   max-width: 30em;
   margin: .8em auto 0 auto;
   font-size: 1.125em;
 }
-/* line 511, ../sass/style.scss */
+/* line 512, ../sass/style.scss */
 html body #main .distances_graph .distances_comparison .svg svg {
   display: block;
   margin: 1em auto 0 auto;
 }
-/* line 514, ../sass/style.scss */
+/* line 515, ../sass/style.scss */
 html body #main .distances_graph .distances_comparison .svg svg .planet_name {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   text-transform: uppercase;
 }
-/* line 521, ../sass/style.scss */
+/* line 522, ../sass/style.scss */
 html body #main .distances_graph .legend {
   margin: 2.188em auto;
   text-align: center;
 }
-/* line 524, ../sass/style.scss */
+/* line 525, ../sass/style.scss */
 html body #main .distances_graph .legend p, html body #main .distances_graph .legend span, html body #main .distances_graph .legend img {
   display: inline-block;
   vertical-align: middle;
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 1.125em;
 }
-/* line 530, ../sass/style.scss */
+/* line 531, ../sass/style.scss */
 html body #main .distances_graph .legend p:first-child {
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
-/* line 533, ../sass/style.scss */
+/* line 534, ../sass/style.scss */
 html body #main .distances_graph .legend span.arrow {
   width: 5.625em;
   height: 1.375em;
@@ -756,308 +1004,60 @@ html body #main .distances_graph .legend span.arrow {
   background-repeat: repeat-x;
   background-size: auto auto;
 }
-/* line 538, ../sass/style.scss */
+/* line 539, ../sass/style.scss */
 html body #main .distances_graph .legend .sun {
   width: 1.313em;
   height: 1.313em;
 }
-/* line 542, ../sass/style.scss */
+/* line 543, ../sass/style.scss */
 html body #main .distances_graph .legend .earth {
   width: 0.813em;
   height: 0.813em;
 }
-/* line 547, ../sass/style.scss */
+/* line 548, ../sass/style.scss */
 html body #main .distances_graph .planet_infos {
   margin: 3.750em auto 0 auto;
   text-align: center;
 }
-/* line 550, ../sass/style.scss */
+/* line 551, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 1.125em;
 }
-/* line 553, ../sass/style.scss */
+/* line 554, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p .ua_distance {
   font-family: 'MohaveBold', Arial, sans-serif;
 }
-/* line 557, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p + p {
   margin-top: .863em;
   text-transform: uppercase;
   font-family: 'MohaveRegular', Arial, sans-serif;
   font-size: 1.625em;
 }
-/* line 562, ../sass/style.scss */
+/* line 563, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p + p .km_distance {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.615em;
 }
-/* line 573, ../sass/style.scss */
+/* line 574, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg text {
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
-/* line 576, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator_container {
   cursor: pointer;
 }
-/* line 579, ../sass/style.scss */
+/* line 580, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .planet_name {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
   font-size: 0.625em;
   text-transform: uppercase;
 }
-/* line 589, ../sass/style.scss */
-html body #main .planet h2, html body #main .planet h3, html body #main .planet h4 {
-  width: 100%;
-  text-align: center;
-  font-family: 'PlutoSansCondMedium', Arial, sans-serif;
-}
-/* line 594, ../sass/style.scss */
-html body #main .planet h2 {
-  margin-top: .5em;
-  text-transform: uppercase;
-  font-size: 4em;
-}
-/* line 599, ../sass/style.scss */
-html body #main .planet h3 {
-  text-align: left;
-  margin-top: .5em;
-  text-transform: uppercase;
-  font-size: 2em;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
-  display: block;
-}
-/* line 607, ../sass/style.scss */
-html body #main .planet h4 {
-  margin-top: .2em;
-  font-size: 1.125em;
-}
-/* line 612, ../sass/style.scss */
-html body #main .planet svg {
-  display: block;
-}
-/* line 616, ../sass/style.scss */
-html body #main .planet .content-planet {
-  position: absolute;
-  left: 50%;
-  width: 1100px;
-  margin-left: -550px;
-  margin-top: 4em;
-}
-/* line 622, ../sass/style.scss */
-html body #main .planet .content-planet .top-content {
-  width: 1020px;
-  margin-left: 24px;
-  background: rgba(255, 255, 255, 0.1);
-  text-align: center;
-  padding: 2em 1em 2em 1em;
-}
-/* line 628, ../sass/style.scss */
-html body #main .planet .content-planet .top-content div {
-  width: 336px;
-  display: inline-block;
-}
-/* line 632, ../sass/style.scss */
-html body #main .planet .content-planet .top-content p {
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
-  font-size: 0.875em;
-  color: #FFF;
-}
-/* line 637, ../sass/style.scss */
-html body #main .planet .content-planet .top-content .value {
-  margin: .650em 0;
-}
-/* line 639, ../sass/style.scss */
-html body #main .planet .content-planet .top-content .value .number {
-  font-family: 'MohaveBold', Arial, sans-serif;
-  font-size: 2.625em;
-  letter-spacing: .05em;
-}
-/* line 644, ../sass/style.scss */
-html body #main .planet .content-planet .top-content .value .number + span {
-  margin-left: .5em;
-}
-/* line 648, ../sass/style.scss */
-html body #main .planet .content-planet .top-content .value.uppercase {
-  font-family: 'MohaveRegular', Arial, sans-serif;
-  font-size: 1.625em;
-}
-/* line 651, ../sass/style.scss */
-html body #main .planet .content-planet .top-content .value.uppercase .number {
-  font-size: 1.615em;
-}
-/* line 656, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content {
-  left: 14%;
-  padding: 3em 1em 3em 1em;
-}
-/* line 660, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content div {
-  width: 333px;
-  height: 333px;
-  display: inline-block;
-}
-/* line 667, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content .bottom-content-block {
-  width: 333px;
-  height: 333px;
-  display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-/* line 676, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content .area svg {
-  margin-top: 50px;
-}
-/* line 679, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content .area .area-graph rect {
-  fill: steelblue;
-}
-/* line 684, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content p {
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
-  font-size: 0.875em;
-  color: #FFF;
-}
-/* line 690, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content div p {
-  text-align: center;
-}
-/* line 693, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content .value {
-  margin: .650em 0;
-}
-/* line 695, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content .value .number {
-  font-family: 'MohaveBold', Arial, sans-serif;
-  font-size: 2.625em;
-  letter-spacing: .05em;
-}
-/* line 700, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content .value .number + span {
-  margin-left: .5em;
-}
-/* line 704, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content .value.uppercase {
-  font-family: 'MohaveRegular', Arial, sans-serif;
-  font-size: 1.625em;
-}
-/* line 707, ../sass/style.scss */
-html body #main .planet .content-planet .bottom-content .value.uppercase .number {
-  font-size: 1.615em;
-}
-/* line 716, ../sass/style.scss */
-html body #main .planet .right_sidebar {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -15em;
-}
-/* line 721, ../sass/style.scss */
-html body #main .planet .right_sidebar ul {
-  padding: 2.500em 0.938em;
-  background: #19262c;
-}
-/* line 724, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li {
-  position: relative;
-  display: block;
-  margin: 0.719em 0;
-}
-/* line 728, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li a {
-  display: block;
-  color: #FFF;
-  font-family: 'PlutoSansCondBold', Arial, sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-/* line 735, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li a.icon {
-  width: 2.313em;
-  height: 2.313em;
-}
-/* line 739, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li a.name {
-  position: absolute;
-  right: 6.5em;
-  line-height: 4.02600em;
-  height: 3.82600em;
-  vertical-align: middle;
-  font-size: 0.625em;
-  text-align: right;
-}
-/* line 750, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li:hover a {
-  color: #8f8f8f;
-}
-/* line 755, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.mercury .icon {
-  background-image: url('../images/planets/mercury.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-/* line 760, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.venus .icon {
-  background-image: url('../images/planets/venus.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-/* line 765, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.earth .icon {
-  background-image: url('../images/planets/earth.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-/* line 770, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.mars .icon {
-  background-image: url('../images/planets/mars.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-/* line 775, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.jupiter .icon {
-  background-image: url('../images/planets/jupiter.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-/* line 780, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.saturn .icon {
-  background-image: url('../images/planets/saturn.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-/* line 785, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.uranus .icon {
-  background-image: url('../images/planets/uranus.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-/* line 790, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.neptune .icon {
-  background-image: url('../images/planets/neptune.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-/* line 795, ../sass/style.scss */
-html body #main .planet .right_sidebar ul li.compare .icon {
-  background-image: url('../images/planets/compare.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 814, ../sass/style.scss */
+  /* line 601, ../sass/style.scss */
   html body #main .boarding_pass div.modal .barcode {
     background-image: url('../images/codebar@2x.png');
     background-position: center center;
@@ -1067,19 +1067,19 @@ html body #main .planet .right_sidebar ul li.compare .icon {
 }
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 821, ../sass/style.scss */
+  /* line 608, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 822, ../sass/style.scss */
+  /* line 609, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 823, ../sass/style.scss */
+  /* line 610, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1087,19 +1087,19 @@ html body #main .planet .right_sidebar ul li.compare .icon {
 }
 
 @-moz-keyframes glitter {
-  /* line 826, ../sass/style.scss */
+  /* line 613, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 827, ../sass/style.scss */
+  /* line 614, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 828, ../sass/style.scss */
+  /* line 615, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1107,19 +1107,19 @@ html body #main .planet .right_sidebar ul li.compare .icon {
 }
 
 @-o-keyframes glitter {
-  /* line 831, ../sass/style.scss */
+  /* line 618, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 832, ../sass/style.scss */
+  /* line 619, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 833, ../sass/style.scss */
+  /* line 620, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1127,19 +1127,19 @@ html body #main .planet .right_sidebar ul li.compare .icon {
 }
 
 @keyframes glitter {
-  /* line 836, ../sass/style.scss */
+  /* line 623, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 837, ../sass/style.scss */
+  /* line 624, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 838, ../sass/style.scss */
+  /* line 625, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
