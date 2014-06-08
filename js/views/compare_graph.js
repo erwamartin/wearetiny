@@ -222,7 +222,7 @@ define([
 
           var banner_value_params = {
             text : data.planets[planet_name][comparator_name]+' '+params.translations.views.compare_graph.comparators[comparator_name].unit,
-            x : parseFloat(comparator.attr('data-x'))+compare_graph.planets.max_size/2, // max height of a planet and margin
+            x : parseFloat(comparator.attr('data-x'))+(compare_graph.graph.cols.width/2)-compare_graph.planets.max_size/1.5, // max height of a planet and margin
             y : compare_graph.graph.lines.height/2
           }
 
@@ -232,7 +232,7 @@ define([
 
           var banner_compare_params = {
             text : compare_value+' X '+params.translations.views.planets[compare_planet].planet_name,
-            x : parseFloat(comparator.attr('data-x'))+compare_graph.planets.max_size*2, // max height of a planet and margin
+            x : parseFloat(comparator.attr('data-x'))+(compare_graph.graph.cols.width/2)+compare_graph.planets.max_size/1.5, // max height of a planet and margin
             y : banner_value_params.y
           }
 
@@ -471,11 +471,17 @@ define([
               var comparator_name = d3.select(this).attr('id');
               display_comparator.call(this, comparator_name);
               comparator.classed('click', true);
+
+              // Hide comparator banner
+              hide_planet_comparator.call(this);
             }else{
               // Remove labels selections
               unselect_all_comparator_label.call(this);
 
               display_all_comparators.call(this);
+
+              // Hide comparator banner
+              hide_planet_comparator.call(this);
             }
           });
 
@@ -520,6 +526,9 @@ define([
             unselect_all_comparator_label.call(this);
 
             display_all_comparators.call(this);
+
+            // Hide comparator banner
+            hide_planet_comparator.call(this);
         });
 
 
