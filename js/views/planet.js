@@ -75,6 +75,12 @@ define([
             .style("fill", "none")
             .style("stroke", "rgba(255, 255, 255, 0.75)");
 
+          data.planets[params.params.planet].orbitPosition = d3.svg.arc()
+            .outerRadius(data.planets[params.params.planet].distance_px + 1)
+            .innerRadius(data.planets[params.params.planet].distance_px - 1)
+            .startAngle(0)
+            .endAngle(0);
+
           // Current position of Earth in its orbit
           var planetOrbitPosition = d3.svg.arc()
             .outerRadius(radii.planetOrbit + 1)
@@ -112,28 +118,36 @@ define([
         _this.animation_timer = setInterval(function () {
           d3.transition().duration(50).tween("orbit", function () {
               return function (t) {
-                for(var planet in data.planets){
 
                   // Calculate the next angle
                   if(!d3.select(".planetOrbitPosition").empty()){
-                    var last_angle = parseFloat(d3.select(".planetOrbitPosition").attr("angle")) || ((newAngle(origin, now, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
+                    var last_angle = parseFloat(d3.select(".planetOrbitPosition").attr("angle")) || ((newAngle(origin, origin, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
                     var new_angle = last_angle + (1 /(data.planets[params.params.planet].revolution_period/365.2)) /50;
 
+                    var last_angle_day = parseFloat(d3.select(".planetOrbitPosition").attr("angle_day")) || ((newAngle(origin, now, data.planets[params.params.planet].rotation, data.planets[params.params.planet].sun_angle)*6.28)/360);
+                    var new_angle_day = last_angle_day + (1 /(data.planets[params.params.planet].rotation/24)) /50;
                     d3.select(".planetOrbitPosition").attr("angle", new_angle);
-                    console.log(last_angle);
-                    console.log(new_angle);
-                    var orbitPosition = data.planets[params.params.planet].orbitPosition;
-                    console.log(orbitPosition);
-                    var interpolateOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle);
+
+                    var orbitPosition = planetOrbitPosition;
+                    var interpolateOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle_day);
+
+                    var interpolatePlanetDay = d3.interpolate(day.endAngle()(), new_angle);
 
                     // Animate Planet orbit position
                     d3.select(".planetOrbitPosition").attr("d", orbitPosition.endAngle(interpolateOrbitPosition(t)));
 
                     // Transition Planet
-                    d3.select("."+planet)
-                      .attr("transform", "translate(" + data.planets[params.params.planet].distance_px * Math.sin(interpolateOrbitPosition(t) - data.planets[params.params.planet].orbitPosition.startAngle()()) + "," + -data.planets[params.params.planet].distance_px * Math.cos(interpolateOrbitPosition(t) - data.planets[params.params.planet].orbitPosition.startAngle()()) + ")");
-                  }
-                }
+                    d3.select(".planet")
+                      .attr("transform", "translate(" + radii.planetOrbit * Math.sin(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + "," + -radii.planetOrbit * Math.cos(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + ")");
+                      //.attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
+
+                    // Animate day
+                    // Transition day
+                    d3.select(".day")
+                      .attr("d", day.endAngle(interpolatePlanetDay(t)))
+                      .attr("transform", "translate(" + radii.planetOrbit * Math.sin(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + "," + -radii.planetOrbit * Math.cos(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + ")");
+                      }
+                
               }
             });
         }, 50); 
