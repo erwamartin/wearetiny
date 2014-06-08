@@ -14,7 +14,6 @@ define([
 
       $.getJSON('data/data.json', function(data){
 
-
         params.planet_page = {
           planet : _this.get_planet_infos({
             translations : params.translations,
@@ -43,10 +42,11 @@ define([
 
           var now = new Date(d3.time.year.floor(new Date()));
 
+
           var radii = {
             "sun": space_time.params.radius / 4,
-            "earthOrbit": space_time.params.radius / 1.875,
-            "earth": space_time.params.radius / 9,
+            "planetOrbit": space_time.params.radius / 1.875,
+            "planet": space_time.params.radius / 9,
           };
 
           // Space
@@ -65,82 +65,84 @@ define([
             .attr("y",  - radii.sun)
             .attr("xlink:href", "assets/images/planets/sun.svg");
 
+          data.planets[params.params.planet].distance_px = space_time.params.radius*data.planets[params.params.planet].solar_system.distance_solar_coef;
+          data.planets[params.params.planet].size_px = radii.sun*data.planets[params.params.planet].solar_system.size_coef;
+
           // Earth's orbit
           space_time.svg.append("circle")
-            .attr("class", "earthOrbit")
-            .attr("r", radii.earthOrbit)
+            .attr("class", "planetOrbit")
+            .attr("r", radii.planetOrbit)
             .style("fill", "none")
             .style("stroke", "rgba(255, 255, 255, 0.75)");
 
           // Current position of Earth in its orbit
-          var earthOrbitPosition = d3.svg.arc()
-            .outerRadius(radii.earthOrbit + 1)
-            .innerRadius(radii.earthOrbit - 1)
+          var planetOrbitPosition = d3.svg.arc()
+            .outerRadius(radii.planetOrbit + 1)
+            .innerRadius(radii.planetOrbit - 1)
             .startAngle(0)
             .endAngle(0);
           space_time.svg.append("path")
-            .attr("class", "earthOrbitPosition")
-            .attr("d", earthOrbitPosition)
+            .attr("class", "planetOrbitPosition")
+            .attr("d", planetOrbitPosition)
             .style("fill", "rgba(255, 204, 0, 0.75)");
 
           // Earth
           space_time.svg.append("circle")
-            .attr("class", "earth")
-            .attr("r", radii.earth)
-            .attr("transform", "translate(0," + -radii.earthOrbit + ")")
+            .attr("class", "planet")
+            .attr("r", radii.planet)
+            .attr("transform", "translate(0," + -radii.planetOrbit + ")")
             .style("fill", data.planets[params.params.planet].color2);
 
           // Time of day
           var day = d3.svg.arc()
-            .outerRadius(radii.earth)
+            .outerRadius(radii.planet)
             .innerRadius(0)
             .startAngle(0)
             .endAngle(0);
           space_time.svg.append("path")
             .attr("class", "day")
             .attr("d", day)
-            .attr("transform", "translate(0," + -radii.earthOrbit + ")")
+            .attr("transform", "translate(0," + -radii.planetOrbit + ")")
             .style("fill", data.planets[params.params.planet].color1);
 
+        var origin = new Date(2014, 0, 1, 1, 0, 0, 0);
+        console.log(origin);
+        var now = new Date();
 
-          // Update the clock every second
-          _this.animation_timer = setInterval(function () {
-            now = new Date();
-            var origin = new Date(2014, 0, 1, 1, 0, 0, 0);
-
-            //var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI * d3.time.hours(d3.time.year.floor(now), now).length / d3.time.hours(d3.time.year.floor(now), d3.time.year.ceil(now)).length));
-            
-            var interpolateDay = d3.interpolate(day.endAngle()(), (2 * Math.PI * d3.time.seconds(d3.time.day.floor(now), now).length / d3.time.seconds(d3.time.day.floor(now), d3.time.day.ceil(now)).length));
-            
-            
-            d3.transition().duration(900).tween("orbit", function () {
+        _this.animation_timer = setInterval(function () {
+          d3.transition().duration(50).tween("orbit", function () {
               return function (t) {
+                for(var planet in data.planets){
 
-
-                    var last_angle = parseFloat(d3.select(".earthOrbitPosition").attr("angle")) || ((newAngle(origin, now, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
+                  // Calculate the next angle
+                  if(!d3.select(".planetOrbitPosition").empty()){
+                    var last_angle = parseFloat(d3.select(".planetOrbitPosition").attr("angle")) || ((newAngle(origin, now, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
                     var new_angle = last_angle + (1 /(data.planets[params.params.planet].revolution_period/365.2)) /50;
 
-                    d3.select(".earthOrbitPosition").attr("angle", new_angle);
-
+                    d3.select(".planetOrbitPosition").attr("angle", new_angle);
+                    console.log(last_angle);
+                    console.log(new_angle);
                     var orbitPosition = data.planets[params.params.planet].orbitPosition;
+                    console.log(orbitPosition);
                     var interpolateOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle);
 
                     // Animate Planet orbit position
-                    d3.select(".earthOrbitPosition").attr("d", orbitPosition.endAngle(interpolateOrbitPosition(t)));
+                    d3.select(".planetOrbitPosition").attr("d", orbitPosition.endAngle(interpolateOrbitPosition(t)));
 
                     // Transition Planet
-                    d3.select(".earth")
+                    d3.select("."+planet)
                       .attr("transform", "translate(" + data.planets[params.params.planet].distance_px * Math.sin(interpolateOrbitPosition(t) - data.planets[params.params.planet].orbitPosition.startAngle()()) + "," + -data.planets[params.params.planet].distance_px * Math.cos(interpolateOrbitPosition(t) - data.planets[params.params.planet].orbitPosition.startAngle()()) + ")");
-                  
-              };
+                  }
+                }
+              }
             });
-          }, 1000);
+        }, 50); 
           
         /******************************************/
         //                  Area                  //
         /******************************************/
 
-          var data = [
+/*          var data = [
             {name: "planet",    value:  data.planets[params.params.planet].size},
             {name: "earth",     value: data.planets["earth"].size }
           ];
@@ -187,79 +189,21 @@ define([
           function type(d) {
             d.value = +d.value; // coerce to number
             return d;
-          }
+          }*/
 
 
           /******************************************/
         //                  Area                  //
         /******************************************/
 
-          var data = [
-            {name: "Locke",    value:  4},
-            {name: "Kwon",     value: 2}
-          ];
-
-
-          var weather = {
-            svg_element : d3.select('.weather-graph'),
-            params : {
-              width : ($('.weather').innerWidth()-20),
-              height : ($('.weather').innerHeight()-95),
-            }
-          }
-
-          var w = 300,                        //width
-          h = 300,                            //height
-          r = 100,                            //radius
-          ir = 50,
-          pi = Math.PI,
-          color = d3.scale.category20c();     
-       
-          data = [{"label":"one", "value":20}, 
-                  {"label":"two", "value":50}, 
-                  {"label":"three", "value":30}];
-          
-          var vis = d3.select("svg") 
-              .data([data])          
-                  .attr("width", w)  
-                  .attr("height", h)
-              .append("svg:g")       
-                  .attr("transform", "translate(" + r + "," + r + ")")    
-       
-          var arc = d3.svg.arc()              
-              .outerRadius(r)
-          .innerRadius(ir);
-       
-          var pie = d3.layout.pie()           
-              .value(function(d) { return d.value; })
-              .startAngle(-90 * (pi/180))
-              .endAngle(90 * (pi/180));
-       
-          var arcs = vis.selectAll("g.slice")     
-              .data(pie)                          
-              .enter()                            
-                  .append("svg:g")                
-                      .attr("class", "slice");    
-       
-              arcs.append("svg:path")
-                      .attr("fill", function(d, i) { return color(i); } ) 
-                      .attr("d", arc);                                    
-       
-              arcs.append("svg:text")                                     
-                      .attr("transform", function(d) {                    
-
-                      return "translate(" + arc.centroid(d) + ")";        
-                  })
-                  .attr("text-anchor", "middle")                          
-                  .text(function(d, i) { return data[i].label; });     
 
         
       });
     },
     get_planet_infos : function(params){
       return {
-        left_earth : Math.round(((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30),
-        age : Math.round(localStorage.getItem("age")+((Math.round(((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30))/12)),
+        left_planet : Math.round(((params.planets[params.planet_name].distance_planet/params.spaceships.NewHorizons)/24)/30),
+        age : Math.round(localStorage.getItem("age")+((Math.round(((params.planets[params.planet_name].distance_planet/params.spaceships.NewHorizons)/24)/30))/12)),
         weight : Math.round(((localStorage.getItem("weight"))/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity),
         temperature : params.planets[params.planet_name].temperature
         //(poidsUtilisateur/graviteTerre)*gravitePlanete
