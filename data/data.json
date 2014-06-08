@@ -180,7 +180,7 @@
 			"color2" : "#2E59BC"
 		}
 	},
-	"spaceship" : {
+	"spaceships" : {
 		"SpaceShipTwo" : 4000,
 		"NewHorizons": 58536, 
 		"SolarProbePlus": 720000
