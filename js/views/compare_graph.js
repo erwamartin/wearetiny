@@ -205,7 +205,8 @@ define([
 
           var comparator_col = compare_graph.graph.g.append('g')
               .attr("transform", "translate("+x_tranform+", 0)")
-              .attr("class", "comparator "+comparator_name);
+              .attr("class", "comparator "+comparator_name)
+              .attr("data-comparator", comparator_name);
 
           /* Planets */
           var planets_counter = 0;
@@ -224,12 +225,77 @@ define([
             planet_params.x = compare_graph.graph.cols.width/2-planet_params.width/2; 
             planet_params.y = compare_graph.graph.lines.height/2-planet_params.height/2+y_tranform; 
 
-            comparator_col.append("image")
-              .attr("class", planet)
+            var planet_image = comparator_col.append("image")
+              .attr("class", "planet "+planet)
               .attr("width", planet_params.width)
               .attr("height", planet_params.height)
+              .attr("data-width", planet_params.width)
+              .attr("data-height", planet_params.width)
+              .attr("data-y", y_tranform)
               .attr("transform", "translate("+planet_params.x+","+planet_params.y+")")
               .attr("xlink:href", "assets/images/planets/"+planet+".svg");
+
+            // Enlarge planet on mouseover
+            planet_image.on('mouseover', function(){
+              var planet = d3.select(this);
+              var planet_params = {
+                width : parseFloat(planet.attr("data-width")),
+                height : parseFloat(planet.attr("data-height"))
+              }
+              planet_params.width = planet_params.width+compare_graph.graph.lines.height*(20/100);
+              planet_params.height = planet_params.height+compare_graph.graph.lines.height*(20/100);
+              planet_params.x = compare_graph.graph.cols.width/2-planet_params.width/2; 
+              planet_params.y = compare_graph.graph.lines.height/2-planet_params.height/2+parseFloat(planet.attr("data-y")); 
+
+              planet.transition()
+                    .duration(300)
+                    .attr("width", planet_params.width)
+                    .attr("height", planet_params.height)
+                    .attr("transform", "translate("+planet_params.x+","+planet_params.y+")");
+            });
+
+            // Reduce planet on mouseout
+            planet_image.on('mouseout', function(){
+              var planet = d3.select(this);
+              var planet_params = {
+                width : parseFloat(planet.attr("data-width")),
+                height : parseFloat(planet.attr("data-height"))
+              }
+              planet_params.x = compare_graph.graph.cols.width/2-planet_params.width/2; 
+              planet_params.y = compare_graph.graph.lines.height/2-planet_params.height/2+parseFloat(planet.attr("data-y")); 
+
+              planet.transition()
+                    .duration(300)
+                    .attr("width", planet_params.width)
+                    .attr("height", planet_params.height)
+                    .attr("transform", "translate("+planet_params.x+","+planet_params.y+")");
+            });
+
+            // Click
+            planet_image.on('click', function(){
+              var planet = d3.select(this);
+              console.log(planet);
+              var comparator = d3.select(this.parentNode);
+              var comparator_name = comparator.attr("data-comparator");
+              
+              // If current comparator isn't already clicked
+              if(!this.classList.contains("click")) {
+
+                var comparator_label = d3.select('#'+comparator_name);
+                select_comparator_label.call(this, comparator_label);
+
+                // Display comparator column
+                display_comparator.call(this, comparator_name);
+                d3.selectAll('.planet').classed('click', false);
+                planet.classed('click', true);
+              }else{
+                // Remove labels selections
+                unselect_all_comparator_label.call(this);
+
+                display_all_comparators.call(this);
+                d3.selectAll('.planet').classed('click', false);
+              }
+            });
 
             planets_counter++;
           }
