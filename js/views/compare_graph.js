@@ -165,9 +165,10 @@ define([
           for(var planet in data.planets){
 
             var y_tranform = planets_counter*compare_graph.graph.lines.height;
+            var max_size = compare_graph.graph.lines.height*85/100;
 
             // planet_size = (((val - val_min)/(val_max-val_min))*(80-5))+5
-            var planet_size = (((data.planets[planet][comparator_name]-data.planets[compare_graph.comparators[comparator].min][comparator_name])/(data.planets[compare_graph.comparators[comparator].max][comparator_name]-data.planets[compare_graph.comparators[comparator].min][comparator_name]))*(80-5))+5;
+            var planet_size = (((data.planets[planet][comparator_name]-data.planets[compare_graph.comparators[comparator].min][comparator_name])/(data.planets[compare_graph.comparators[comparator].max][comparator_name]-data.planets[compare_graph.comparators[comparator].min][comparator_name]))*(max_size-5))+5;
 
             var planet_params = {
               width : planet_size,
