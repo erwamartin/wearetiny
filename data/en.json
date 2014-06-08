@@ -40,7 +40,7 @@
 			"subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called U.A."
 		},
 		"compare_graph" : {
- 			"title" : "Planet comparaison",
+ 			"title" : "Planets comparison",
 			"subtitle" : "Here’s an overall view of our planets data",
 			"comparators" : {
 				"size" : "PLANET SIZE",
