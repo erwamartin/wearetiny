@@ -1064,10 +1064,16 @@ html body #main .compare_graph .graph .svg svg .planet_name {
   font-size: 0.625em;
   text-transform: uppercase;
 }
+/* line 593, ../sass/style.scss */
+html body #main .compare_graph .graph .svg svg .banner_value, html body #main .compare_graph .graph .svg svg .banner_compare {
+  font-family: 'MohaveBold', Arial, sans-serif;
+  font-size: 1.250em;
+  text-transform: uppercase;
+}
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 609, ../sass/style.scss */
+  /* line 614, ../sass/style.scss */
   html body #main .boarding_pass div.modal .barcode {
     background-image: url('../images/codebar@2x.png');
     background-position: center center;
@@ -1077,26 +1083,6 @@ html body #main .compare_graph .graph .svg svg .planet_name {
 }
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 616, ../sass/style.scss */
-  0% {
-    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
-    opacity: 0.8;
-  }
-
-  /* line 617, ../sass/style.scss */
-  50% {
-    -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
-    opacity: 0.95;
-  }
-
-  /* line 618, ../sass/style.scss */
-  100% {
-    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
-    opacity: 0.8;
-  }
-}
-
-@-moz-keyframes glitter {
   /* line 621, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1116,7 +1102,7 @@ html body #main .compare_graph .graph .svg svg .planet_name {
   }
 }
 
-@-o-keyframes glitter {
+@-moz-keyframes glitter {
   /* line 626, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1136,7 +1122,7 @@ html body #main .compare_graph .graph .svg svg .planet_name {
   }
 }
 
-@keyframes glitter {
+@-o-keyframes glitter {
   /* line 631, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1150,6 +1136,26 @@ html body #main .compare_graph .graph .svg svg .planet_name {
   }
 
   /* line 633, ../sass/style.scss */
+  100% {
+    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
+    opacity: 0.8;
+  }
+}
+
+@keyframes glitter {
+  /* line 636, ../sass/style.scss */
+  0% {
+    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
+    opacity: 0.8;
+  }
+
+  /* line 637, ../sass/style.scss */
+  50% {
+    -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
+    opacity: 0.95;
+  }
+
+  /* line 638, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;

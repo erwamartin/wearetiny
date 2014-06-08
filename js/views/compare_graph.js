@@ -20,6 +20,9 @@ define([
         var compiledTemplate = _.template( CompareGraphTemplate, params );
         _this.$el.html(compiledTemplate);
 
+        if(!localStorage.getItem('planet_compare'))
+          localStorage.setItem('planet_compare', 'earth');
+
         var compare_graph = {
           svg_element : d3.select('.graph .svg'),
           params : {
@@ -31,6 +34,8 @@ define([
             lines : {},
             margin : {}
           },
+          banner : {},
+          planets : {},
           sidebars : {
             right : {},
             bottom : {
@@ -39,14 +44,14 @@ define([
             left : {}
           },
           comparators : {
-            'size' : {},
-            'revolution_period' : {},
-            'missions' : {},
-            'mass' : {},
             'moons' : {},
-            'gravity' : {},
+            'revolution_period' : {},
+            'size' : {},
             'day_length' : {},
-            'temperature' : {}
+            'mass' : {},
+            'gravity' : {},
+            'temperature' : {},
+            'missions' : {}
           }
         }
 
@@ -58,6 +63,8 @@ define([
         compare_graph.graph.lines.height = (compare_graph.params.height-compare_graph.sidebars.bottom.height)/(compare_graph.graph.lines.number+1); // Adding margin top and bottom
 
         compare_graph.graph.margin.top = compare_graph.graph.margin.bottom = compare_graph.graph.lines.height/2;
+        
+        compare_graph.planets.max_size = compare_graph.graph.lines.height*85/100;
 
         // svg
         compare_graph.svg = compare_graph.svg_element.append("svg")
@@ -69,6 +76,14 @@ define([
         compare_graph.graph.g = compare_graph.svg.append("g")
           .attr("transform", "translate(0, "+y_transform+")")
           .attr("class", "compare_graph_graph");
+
+        // Planet infos banner background
+        compare_graph.banner.background = compare_graph.graph.g.append("rect")
+          .attr("class", 'banner_background')
+          .attr("width", compare_graph.graph.lines.width)
+          .attr("height", compare_graph.graph.lines.height)
+          .attr("fill", "rgba(2, 20, 31, 0.62)")
+          .attr("fill-opacity", 0);
 
         // Lines
         var planets_counter = 0;
@@ -118,7 +133,22 @@ define([
         }
 
 
+        // Planet infos banner container
+        compare_graph.banner.g = compare_graph.graph.g.append('g')
+            .attr("class", "banner_content")
+            .style("opacity", 0);
 
+        compare_graph.banner.g.append("text")
+              .attr("class", "banner_value")
+              .attr("transform", "translate(0, "+(compare_graph.graph.lines.height/2)+")")
+              .attr("style", "text-anchor: end; dominant-baseline: central;")
+              .attr("fill", "rgba(255, 255, 255, 1)");
+
+        compare_graph.banner.g.append("text")
+              .attr("class", "banner_compare")
+              .attr("transform", "translate(0, "+(compare_graph.graph.lines.height/2)+")")
+              .attr("style", "text-anchor: start; dominant-baseline: central;")
+              .attr("fill", "rgba(255, 255, 255, 1)");      
 
 
         /* Comparators */
@@ -126,6 +156,7 @@ define([
 
         var display_all_comparators =function(){
           d3.selectAll('.comparator').style('opacity', 1);
+          hide_planet_comparator.call(this);
         }
 
         var hide_all_comparators =function(){
@@ -167,6 +198,71 @@ define([
           comparator_separator.style("fill", "rgba(36, 36, 36, 1)");
         }
 
+        var display_planet_comparator = function(planet){
+          var planet_name = planet.attr('data-planet');
+          var comparator = d3.select(this.parentNode);
+          var comparator_name = comparator.attr("data-comparator");
+
+          var background_params = {
+            x : 0,
+            y : planet.attr('data-y')
+          }
+
+          compare_graph.banner.background
+            .transition()
+            .duration(300)
+            .attr("transform", "translate("+background_params.x+","+background_params.y+")")
+            .attr("fill-opacity", 1);
+
+           compare_graph.banner.g
+              .transition()
+              .duration(300)
+              .attr("transform", "translate(0, "+background_params.y+")")
+              .style("opacity", 1);
+
+          var banner_value_params = {
+            text : data.planets[planet_name][comparator_name]+' '+params.translations.views.compare_graph.comparators[comparator_name].unit,
+            x : parseFloat(comparator.attr('data-x'))+compare_graph.planets.max_size/2, // max height of a planet and margin
+            y : compare_graph.graph.lines.height/2
+          }
+
+          var compare_planet = localStorage.getItem('planet_compare');
+          var compare_value = data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
+          compare_value = Math.round(compare_value*10)/10;
+
+          var banner_compare_params = {
+            text : compare_value+' X '+params.translations.views.planets[compare_planet].planet_name,
+            x : parseFloat(comparator.attr('data-x'))+compare_graph.planets.max_size*2, // max height of a planet and margin
+            y : banner_value_params.y
+          }
+
+          compare_graph.banner.g.select('.banner_value')
+            .transition()
+            .duration(300)
+            .text(banner_value_params.text)
+            .attr("transform", "translate("+banner_value_params.x+", "+banner_value_params.y+")");
+
+          compare_graph.banner.g.select('.banner_compare')
+            .transition()
+            .duration(300)
+            .text(banner_compare_params.text)
+            .attr("transform", "translate("+banner_compare_params.x+", "+banner_compare_params.y+")");
+
+          
+        }
+
+        var hide_planet_comparator = function(){
+          compare_graph.banner.background
+            .transition()
+            .duration(300)
+            .attr("fill-opacity", 0);
+
+          compare_graph.banner.g
+              .transition()
+              .duration(300)
+              .style("opacity", 0);
+        }
+
         // Get comparators values for each planet (and get min and max planet)
         for(var comparator in compare_graph.comparators){
           for(var planet in data.planets){
@@ -200,12 +296,13 @@ define([
         for(var comparator in compare_graph.comparators){
 
           var comparator_name = comparator;
-          var comparator_label = params.translations.views.compare_graph.comparators[comparator_name];
+          var comparator_label = params.translations.views.compare_graph.comparators[comparator_name].name;
           var x_tranform = comparators_counter*compare_graph.graph.cols.width;
 
           var comparator_col = compare_graph.graph.g.append('g')
               .attr("transform", "translate("+x_tranform+", 0)")
               .attr("class", "comparator "+comparator_name)
+              .attr("data-x", x_tranform)
               .attr("data-comparator", comparator_name);
 
           /* Planets */
@@ -213,7 +310,7 @@ define([
           for(var planet in data.planets){
 
             var y_tranform = planets_counter*compare_graph.graph.lines.height;
-            var max_size = compare_graph.graph.lines.height*85/100;
+            var max_size = compare_graph.planets.max_size;
 
             // planet_size = (((val - val_min)/(val_max-val_min))*(80-5))+5
             var planet_size = (((data.planets[planet][comparator_name]-data.planets[compare_graph.comparators[comparator].min][comparator_name])/(data.planets[compare_graph.comparators[comparator].max][comparator_name]-data.planets[compare_graph.comparators[comparator].min][comparator_name]))*(max_size-5))+5;
@@ -227,6 +324,7 @@ define([
 
             var planet_image = comparator_col.append("image")
               .attr("class", "planet "+planet)
+              .attr("data-planet", planet)
               .attr("width", planet_params.width)
               .attr("height", planet_params.height)
               .attr("data-width", planet_params.width)
@@ -274,20 +372,22 @@ define([
             // Click
             planet_image.on('click', function(){
               var planet = d3.select(this);
-              console.log(planet);
               var comparator = d3.select(this.parentNode);
               var comparator_name = comparator.attr("data-comparator");
               
               // If current comparator isn't already clicked
               if(!this.classList.contains("click")) {
 
-                var comparator_label = d3.select('#'+comparator_name);
+                var comparator_label = d3.select(d3.select('#'+comparator_name).node().parentNode);
                 select_comparator_label.call(this, comparator_label);
 
                 // Display comparator column
                 display_comparator.call(this, comparator_name);
                 d3.selectAll('.planet').classed('click', false);
                 planet.classed('click', true);
+
+                display_planet_comparator.call(this, planet);
+
               }else{
                 // Remove labels selections
                 unselect_all_comparator_label.call(this);

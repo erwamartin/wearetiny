@@ -43,14 +43,38 @@
  			"title" : "Planets comparison",
 			"subtitle" : "Here’s an overall view of our planets data",
 			"comparators" : {
-				"size" : "PLANET SIZE",
-				"revolution_period" : "REVOLUTION",
-				"missions" : "MISSIONS",
-				"mass" : "WEIGHT",
-				"moons" : "No. OF MOONS",
-				"gravity" : "GRAVITY",
-				"day_length" : "DAY LENGTH",
-				"temperature" : "TEMPERATURE"
+				"size" : {
+					"name" : "PLANET SIZE",
+					"unit" : "KM"
+				},
+				"revolution_period" : {
+					"name" : "REVOLUTION",
+					"unit" : "DAYS"
+				},
+				"missions" : {
+					"name" : "MISSIONS",
+					"unit" : ""
+				},
+				"mass" : {
+					"name" : "WEIGHT",
+					"unit" : "E24 KG"
+				},
+				"moons" : {
+					"name" : "No. OF MOONS",
+					"unit" : ""
+				},
+				"gravity" : {
+					"name" : "GRAVITY",
+					"unit" : "M/S²"
+				},
+				"day_length" : {
+					"name" : "DAY LENGTH",
+					"unit" : "H"
+				},
+				"temperature" : {
+					"name" : "TEMPERATURE",
+					"unit" : "°C"
+				}
 			}
 		},
 		"planets" : {
