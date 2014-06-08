@@ -1045,10 +1045,16 @@ html body #main .compare_graph .graph .svg svg text {
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
 /* line 577, ../sass/style.scss */
-html body #main .compare_graph .graph .svg svg .comparator_container {
+html body #main .compare_graph .graph .svg svg .comparator {
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+/* line 582, ../sass/style.scss */
+html body #main .compare_graph .graph .svg svg .comparator_container, html body #main .compare_graph .graph .svg svg .display_all_container {
   cursor: pointer;
 }
-/* line 580, ../sass/style.scss */
+/* line 585, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .planet_name {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
   font-size: 0.625em;
@@ -1057,7 +1063,7 @@ html body #main .compare_graph .graph .svg svg .planet_name {
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 601, ../sass/style.scss */
+  /* line 606, ../sass/style.scss */
   html body #main .boarding_pass div.modal .barcode {
     background-image: url('../images/codebar@2x.png');
     background-position: center center;
@@ -1067,26 +1073,6 @@ html body #main .compare_graph .graph .svg svg .planet_name {
 }
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 608, ../sass/style.scss */
-  0% {
-    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
-    opacity: 0.8;
-  }
-
-  /* line 609, ../sass/style.scss */
-  50% {
-    -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
-    opacity: 0.95;
-  }
-
-  /* line 610, ../sass/style.scss */
-  100% {
-    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
-    opacity: 0.8;
-  }
-}
-
-@-moz-keyframes glitter {
   /* line 613, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1106,7 +1092,7 @@ html body #main .compare_graph .graph .svg svg .planet_name {
   }
 }
 
-@-o-keyframes glitter {
+@-moz-keyframes glitter {
   /* line 618, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1126,7 +1112,7 @@ html body #main .compare_graph .graph .svg svg .planet_name {
   }
 }
 
-@keyframes glitter {
+@-o-keyframes glitter {
   /* line 623, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1140,6 +1126,26 @@ html body #main .compare_graph .graph .svg svg .planet_name {
   }
 
   /* line 625, ../sass/style.scss */
+  100% {
+    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
+    opacity: 0.8;
+  }
+}
+
+@keyframes glitter {
+  /* line 628, ../sass/style.scss */
+  0% {
+    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
+    opacity: 0.8;
+  }
+
+  /* line 629, ../sass/style.scss */
+  50% {
+    -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
+    opacity: 0.95;
+  }
+
+  /* line 630, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;

@@ -574,7 +574,12 @@ html{
 							text{
 								font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 							}
-							.comparator_container{
+							.comparator{
+								-webkit-transition: opacity 0.3s ease-in;
+								-moz-transition: opacity 0.3s ease-in;
+								transition: opacity 0.3s ease-in;
+							}
+							.comparator_container, .display_all_container{
 								cursor : pointer;
 							}
 							.planet_name{

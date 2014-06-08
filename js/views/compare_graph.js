@@ -119,7 +119,54 @@ define([
 
 
 
+
+
         /* Comparators */
+
+
+        var display_all_comparators =function(){
+          d3.selectAll('.comparator').style('opacity', 1);
+        }
+
+        var hide_all_comparators =function(){
+          d3.selectAll('.comparator').style('opacity', 0);
+        }
+
+        var display_comparator = function(comparator_name){
+          hide_all_comparators.call(this);
+          d3.selectAll('.'+comparator_name).style('opacity', 1);
+        }
+
+        var unselect_all_comparator_label = function(){
+          var comparator_button = d3.selectAll('.comparator_button');
+          
+         unselect_comparator_label.call(this, comparator_button);
+
+          d3.selectAll('.comparator_container').classed('click', false);
+        }
+
+        var unselect_comparator_label = function(comparator){
+          var comparator_background = comparator.select('.comparator_background');
+          comparator_background.attr("fill-opacity", 0);
+
+          var comparator_label = comparator.select('.comparator_label');
+          comparator_label.attr("fill", "rgba(36, 36, 36, 1)");
+
+          var comparator_separator = comparator.select('.comparator_separator');
+          comparator_separator.style("fill", "rgba(216, 213, 214, 1)");
+        }
+
+        var select_comparator_label = function(comparator){
+          var comparator_background = comparator.select('.comparator_background');
+          comparator_background.attr("fill-opacity", 1);
+
+          var comparator_label = comparator.select('.comparator_label');
+          comparator_label.attr("fill", "rgba(257, 247, 245, 1)");
+
+          var comparator_separator = comparator.select('.comparator_separator');
+          comparator_separator.style("fill", "rgba(36, 36, 36, 1)");
+        }
+
         // Get comparators values for each planet (and get min and max planet)
         for(var comparator in compare_graph.comparators){
           for(var planet in data.planets){
@@ -207,6 +254,7 @@ define([
           comparator_g.append("rect")
               .attr("width", 1)
               .attr("height", compare_graph.sidebars.bottom.height)
+              .attr("class", "comparator_separator")
               .style("fill", "rgba(216, 213, 214, 1)");
 
           // Comparator name
@@ -228,43 +276,85 @@ define([
               .attr("fill-opacity", 0);
 
           comparator_container.on('mouseover', function(){
-            var comparator = d3.select(this.parentNode);
-            var comparator_background = comparator.select('.comparator_background');
-            comparator_background.attr("fill-opacity", 1);
-            var comparator_label = comparator.select('.comparator_label');
-            comparator_label.attr("fill", "rgba(257, 247, 245, 1)");
-            var comparator_name = comparator.attr('id');
+            var comparator_label = d3.select(this.parentNode);
+            // Add selection on current label
+            select_comparator_label.call(this, comparator_label);
           });
 
           comparator_container.on('mouseout', function(){
-            var comparator = d3.select(this.parentNode);
-            var comparator_background = comparator.select('.comparator_background');
-            comparator_background.attr("fill-opacity", 0);
-            var comparator_label = comparator.select('.comparator_label');
-            comparator_label.attr("fill", "rgba(36, 36, 36, 1)");
+            var comparator_label = d3.select(this.parentNode);
+            // If current label is not clicked
+            if(!this.classList.contains("click")) {
+              unselect_comparator_label.call(this, comparator_label);
+            }
+          });
+
+          comparator_container.on('click', function(){
+
+            // If current comparator isn't already clicked
+            if(!this.classList.contains("click")) {
+              // Remove other label selection's
+              unselect_all_comparator_label.call(this);
+
+              // Add selection on current label
+              var comparator = d3.select(this);
+              var comparator_label = d3.select(this.parentNode);
+              select_comparator_label.call(this, comparator_label);
+
+              // Display comparator column
+              var comparator_name = d3.select(this).attr('id');
+              display_comparator.call(this, comparator_name);
+              comparator.classed('click', true);
+            }else{
+              // Remove labels selections
+              unselect_all_comparator_label.call(this);
+
+              display_all_comparators.call(this);
+            }
           });
 
           comparators_counter++;
         }
 
-        // All planets
+        /* All planets */
         var x_tranform = comparators_counter*compare_graph.graph.cols.width;
         var display_all_g = compare_graph.graph.g.append('g')
               .attr("transform", "translate("+x_tranform+", "+y_transform+")")
               .attr("class", "display_all");
 
-        display_all_g.append("rect")
-            .attr("width", compare_graph.graph.cols.width)
-            .attr("height", compare_graph.sidebars.bottom.height)
-            .attr("fill-opacity", 0);
-
+        // Separator
         display_all_g.append("rect")
             .attr("width", 1)
             .attr("height", compare_graph.sidebars.bottom.height)
             .style("fill", "rgba(216, 213, 214, 1)");
 
+        var icon_params = {
+          height : compare_graph.sidebars.bottom.height/2,
+        }
+        icon_params.width = icon_params.height/(56/100); // use image ratio
+        icon_params.x = icon_params.width/2;
+        icon_params.y = compare_graph.sidebars.bottom.height/2-icon_params.height/2;
 
+        display_all_g.append("image")
+            .attr("class", 'icon')
+            .attr("width", icon_params.width)
+            .attr("height", icon_params.height)
+            .attr("transform", "translate("+icon_params.x+", "+icon_params.y+")")
+            .attr("xlink:href", "assets/images/icons/all_planets.svg");
 
+        // Click container
+        var display_all_container = display_all_g.append("rect")
+            .attr("class", "display_all_container")
+            .attr("width", compare_graph.graph.cols.width)
+            .attr("height", compare_graph.sidebars.bottom.height)
+            .attr("fill-opacity", 0);
+
+        display_all_container.on('click', function(){
+            // Remove labels selections
+            unselect_all_comparator_label.call(this);
+
+            display_all_comparators.call(this);
+        });
 
 
       });
