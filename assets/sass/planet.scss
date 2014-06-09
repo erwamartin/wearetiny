@@ -14,6 +14,7 @@ $main-font-color : #FFF;
 /* Styles */
 
 .planet{
+
 	h2, h3, h4{
 		width: 100%;
 		text-align: center;
@@ -84,7 +85,7 @@ $main-font-color : #FFF;
 		.bottom-content{
 			
 			left: 14%;
-			padding: 2em 1em 3em 1em ;
+			padding: 2em 1em 0em 1em ;
 
 			.bottom-content-block{
 				width: 332px;
@@ -102,25 +103,54 @@ $main-font-color : #FFF;
 			}
 			.calendar {
 				svg {
-					margin-top: -2em;
+					margin-top: 1.25em;
 				}
-			}
-			.area, .weather {
+			 	p:first-of-type {
+					margin-top: 2.70em;
+
+				}			}
+			.area {
 				svg {
 					margin-top : 1.5em;
 				}
+
+				p:first-of-type {
+					margin-top: 2em;
+				}
 			}
-			
+
+			.weather {
+				svg {
+					margin-top : -2.2em;
+					margin-left: 1em 
+				}
+			 	text {
+					fill: #FFF;
+					font-family: 'PlutoSansCondLight', Arial, sans-serif;
+					font-size: 0.875em;
+					color: #FFF;
+					padding-top: 0.5em;
+			 	}
+
+			 	p:first-of-type {
+			 		padding-top: 1.5em;
+			 		padding-bottom: 0.3em;
+			 	}
+
+			 	p.third-type {
+					margin-top: -1.50em;
+				}
+		 	}
 
 			p{
 				font-family: 'PlutoSansCondLight', Arial, sans-serif;
 				font-size: 0.875em;
 				color: #FFF;
 				padding-top: 0.5em;
+				text-align: center;
 			}
 
 			.value{
-				
 				.number{
 					font-family: 'MohaveBold', Arial, sans-serif;
 					font-size: 2.625em;
