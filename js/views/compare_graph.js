@@ -350,7 +350,7 @@ define([
           if(planet_name!=null){
             var comparator_name = banner_compare.attr('data-comparator');
 
-            var compare_value = data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
+            var compare_value = data.planets[compare_planet][comparator_name]==0?0:data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
             compare_value = Math.round(compare_value*10)/10;
             compare_value = params.functions.formatNumber.call(this, compare_value, params.translations.views.global.number_separator);
 
@@ -444,7 +444,7 @@ define([
           }
 
           var compare_planet = localStorage.getItem('planet_compare');
-          var compare_value = data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
+          var compare_value = data.planets[compare_planet][comparator_name]==0?0:data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
           compare_value = Math.round(compare_value*10)/10;
           compare_value = params.functions.formatNumber.call(this, compare_value, params.translations.views.global.number_separator);
 
