@@ -24,138 +24,132 @@ define([
           })
         }
 
-        /******************************************/
-        //                  Calendar              //
-        /******************************************/
-
         var compiledTemplate = _.template( PlanetTemplate, params );
          _this.$el.html(compiledTemplate);
 
-          var space_time = {
-            svg_element : d3.select('.calendar-graph'),
-            params : {
-              width : ($('.calendar').innerWidth()-10),
-              height : ($('.calendar').innerHeight()-10),
-            }
-          }
-          space_time.params.radius = Math.min(space_time.params.width, space_time.params.height)/2;
+        /*******************************************/
+        //                Calendar                 //
+        /******************************************/
 
-          var now = new Date(d3.time.year.floor(new Date()));
+        var now = new Date(d3.time.year.floor(new Date()));
+
+         var space_time = {
+                    svg_element : d3.select('.calendar-graph'),
+                    params : {
+                      width : ($('.calendar').innerWidth()-10),
+                      height : ($('.calendar').innerHeight()-10),
+                    }
+                  }
+        space_time.params.radius = Math.min(space_time.params.width, space_time.params.height)/2;
+
+        var radii = {
+          "sun": space_time.params.radius / 4,
+          "earthOrbit": space_time.params.radius / 1.875,
+          "earth": space_time.params.radius / 9,
+        };
+
+        // Space
+        space_time.svg = space_time.svg_element.append("svg")
+          .attr("width", space_time.params.width )
+          .attr("height", space_time.params.height)
+          .append("g")
+            .attr("transform", "translate(" + space_time.params.width  / 2 + "," + space_time.params.height / 2 + ")");
+
+        // Sun
+         space_time.svg.append("image")
+          .attr("class", "sun")
+          .attr("width", radii.sun*2)
+          .attr("height", radii.sun*2)
+          .attr("x",  - radii.sun)
+          .attr("y",  - radii.sun)
+          .attr("xlink:href", "assets/images/planets/sun.svg");
+
+        data.planets[params.params.planet].distance_px = space_time.params.radius*data.planets[params.params.planet].solar_system.distance_solar_coef;
+        data.planets[params.params.planet].size_px = radii.sun*data.planets[params.params.planet].solar_system.size_coef;
+
+        // Earth's orbit
+        space_time.svg.append("circle")
+          .attr("class", "earthOrbit")
+          .attr("r", radii.earthOrbit)
+          .style("fill", "none")
+          .style("stroke", "rgba(255, 204, 0, 0.25)");
+
+        // Current position of Earth in its orbit
+        var earthOrbitPosition = d3.svg.arc()
+          .outerRadius(radii.earthOrbit + 1)
+          .innerRadius(radii.earthOrbit - 1)
+          .startAngle(0)
+          .endAngle(0);
+        space_time.svg.append("path")
+          .attr("class", "earthOrbitPosition")
+          .attr("d", earthOrbitPosition)
+          .style("fill", "rgba(255, 204, 0, 0.75)");
+
+        // Earth
+        space_time.svg.append("circle")
+          .attr("class", "earth")
+          .attr("r", radii.earth)
+          .attr("transform", "translate(0," + -radii.earthOrbit + ")")
+          .style("fill", data.planets[params.params.planet].color2);
+
+        // Time of day
+        var day = d3.svg.arc()
+          .outerRadius(radii.earth)
+          .innerRadius(0)
+          .startAngle(0)
+          .endAngle(0);
+        space_time.svg.append("path")
+          .attr("class", "day")
+          .attr("d", day)
+          .attr("transform", "translate(0," + -radii.earthOrbit + ")")
+          .style("fill", data.planets[params.params.planet].color1);
 
 
-          var radii = {
-            "sun": space_time.params.radius / 4,
-            "planetOrbit": space_time.params.radius / 1.875,
-            "planet": space_time.params.radius / 9,
-          };
-
-          // Space
-          space_time.svg = space_time.svg_element.append("svg")
-            .attr("width", space_time.params.width)
-            .attr("height", space_time.params.height)
-            .append("g")
-              .attr("transform", "translate(" + space_time.params.width / 2 + "," + space_time.params.height / 2 + ")");
-
-          // Sun
-           space_time.svg.append("image")
-            .attr("class", "sun")
-            .attr("width", radii.sun*2)
-            .attr("height", radii.sun*2)
-            .attr("x",  - radii.sun)
-            .attr("y",  - radii.sun)
-            .attr("xlink:href", "assets/images/planets/sun.svg");
-
-          data.planets[params.params.planet].distance_px = space_time.params.radius*data.planets[params.params.planet].solar_system.distance_solar_coef;
-          data.planets[params.params.planet].size_px = radii.sun*data.planets[params.params.planet].solar_system.size_coef;
-
-          // Earth's orbit
-          space_time.svg.append("circle")
-            .attr("class", "planetOrbit")
-            .attr("r", radii.planetOrbit)
-            .style("fill", "none")
-            .style("stroke", "rgba(255, 255, 255, 0.75)");
-
-          data.planets[params.params.planet].orbitPosition = d3.svg.arc()
-            .outerRadius(data.planets[params.params.planet].distance_px + 1)
-            .innerRadius(data.planets[params.params.planet].distance_px - 1)
-            .startAngle(0)
-            .endAngle(0);
-
-          // Current position of Earth in its orbit
-          var planetOrbitPosition = d3.svg.arc()
-            .outerRadius(radii.planetOrbit + 1)
-            .innerRadius(radii.planetOrbit - 1)
-            .startAngle(0)
-            .endAngle(0);
-          space_time.svg.append("path")
-            .attr("class", "planetOrbitPosition")
-            .attr("d", planetOrbitPosition)
-            .style("fill", "rgba(255, 204, 0, 0.75)");
-
-          // Earth
-          space_time.svg.append("circle")
-            .attr("class", "planet")
-            .attr("r", radii.planet)
-            .attr("transform", "translate(0," + -radii.planetOrbit + ")")
-            .style("fill", data.planets[params.params.planet].color2);
-
-          // Time of day
-          var day = d3.svg.arc()
-            .outerRadius(radii.planet)
-            .innerRadius(0)
-            .startAngle(0)
-            .endAngle(0);
-          space_time.svg.append("path")
-            .attr("class", "day")
-            .attr("d", day)
-            .attr("transform", "translate(0," + -radii.planetOrbit + ")")
-            .style("fill", data.planets[params.params.planet].color1);
-
-        var origin = new Date(2014, 0, 1, 1, 0, 0, 0);
-        var now = new Date();
-
-        _this.animation_timer = setInterval(function () {
-          d3.transition().duration(50).tween("orbit", function () {
-              return function (t) {
-
-                  // Calculate the next angle
-                  if(!d3.select(".planetOrbitPosition").empty()){
-                    var last_angle = ((newAngle(origin, now, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
-                    var new_angle = last_angle;
-
-                    var last_angle_day = ((newAngle(origin, now, data.planets[params.params.planet].rotation, 0)*6.28)/360);
-                    var new_angle_day = last_angle_day;
-                    d3.select(".planetOrbitPosition").attr("angle", new_angle);
-
-                    var orbitPosition = planetOrbitPosition;
-                    var interpolateOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle);
-
-                    var interpolatePlanetDay = d3.interpolate(day.endAngle()(), new_angle_day);
-
-                    // Animate Planet orbit position
-                    d3.select(".planetOrbitPosition").attr("d", orbitPosition.endAngle(interpolateOrbitPosition(t)));
-
-                    // Transition Planet
-                    d3.select(".planet")
-                      .attr("transform", "translate(" + radii.planetOrbit * Math.sin(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + "," + -radii.planetOrbit * Math.cos(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + ")");
-                      // .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
-
-                    // Animate day
-                    // Transition day
-                    d3.select(".day")
-                      .attr("d", day.endAngle(interpolatePlanetDay(t)))
-                      .attr("transform", "translate(" + radii.planetOrbit * Math.sin(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + "," + -radii.planetOrbit * Math.cos(interpolateOrbitPosition(t) - planetOrbitPosition.startAngle()()) + ")");
-                      }
-                
-              }
-            });
-        }, 50); 
+          var origin = new Date(2014, 0, 1, 1, 0, 0, 0);
+          var now = new Date();
+        // Update the clock every second
+         _this.animation_timer = setInterval(function () {
+          now = new Date();
           
-        /******************************************/
-        //                  Area                  //
+          //var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI * d3.time.hours(d3.time.year.floor(now), now).length / d3.time.hours(d3.time.year.floor(now), d3.time.year.ceil(now)).length));
+          //var interpolateDay = d3.interpolate(day.endAngle()(), (2 * Math.PI * d3.time.seconds(d3.time.day.floor(now), now).length / d3.time.seconds(d3.time.day.floor(now), d3.time.day.ceil(now)).length));
+          
+         
+          d3.transition().tween("orbit", function () {
+            return function (t) {
+
+              var last_angle = ((newAngle(origin, now, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
+              var new_angle = last_angle;
+               var orbitPosition = earthOrbitPosition;
+              var interpolateEarthOrbitPosition = d3.interpolate(orbitPosition.endAngle()(), new_angle);
+
+
+              var last_angle_day = ((newAngle(origin, now, data.planets[params.params.planet].rotation, 0)*6.28)/360);
+              var new_angle_day = last_angle_day;
+              var interpolateDay = d3.interpolate(day.endAngle()(), new_angle_day);
+
+
+              // Animate Earth orbit position
+              d3.select(".earthOrbitPosition").attr("d", earthOrbitPosition.endAngle(interpolateEarthOrbitPosition(t)));
+
+              // Transition Earth
+              d3.select(".earth")
+                .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
+
+              // Animate day
+              // Transition day
+              d3.select(".day")
+                .attr("d", day.endAngle(interpolateDay(t)))
+                .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
+                  };
+          });
+        }, 1000);
+          
+        /*******************************************/
+        //                   Area                  //
         /******************************************/
 
-/*          var data = [
+          var area_data = [
             {name: "planet",    value:  data.planets[params.params.planet].size},
             {name: "earth",     value: data.planets["earth"].size }
           ];
@@ -171,7 +165,7 @@ define([
 
           var y = d3.scale.linear()
               .range([area.params.height, 0]) 
-              .domain([0, d3.max(data, function(d) { return d.value; })]);
+              .domain([0, d3.max(area_data, function(d) { return d.value; })]);
 
          area.svg = area.svg_element.append("svg")
               .attr("width", area.params.width)
@@ -180,7 +174,7 @@ define([
           var barWidth = 112;
 
           var bar = area.svg.selectAll("g")
-              .data(data)
+              .data(area_data)
               .enter().append("g")
               .attr("transform", function(d, i) { return "translate(" + i * barWidth + ",0)"; });
 
@@ -189,11 +183,13 @@ define([
               .attr("y", function(d) { return y(d.value); })
               .attr("height", function(d) { return area.params.height - y(d.value); })
               .attr("width", barWidth - 4);
-              d3.max(data, function(d) { return area.params.height - y(d.value); })
+
+              d3.max(area_data, function(d) { return area.params.height - y(d.value); })
+
 
           bar.append("rect")
              
-              .attr("y",  d3.max(data, function(d) { return area.params.height - y(d.value); })-3)
+              .attr("y",  d3.max(area_data, function(d) { return area.params.height - y(d.value); })-3)
               .attr("height", 2 )
               .attr("width", 290)
               .style("fill", "rgba(255, 255, 255,  1)")
@@ -202,20 +198,277 @@ define([
           function type(d) {
             d.value = +d.value; // coerce to number
             return d;
-          }*/
+          }
 
 
-          /******************************************/
-        //                  Area                  //
+        /********************************************/
+        //                 Weather                 //
         /******************************************/
+/*        var w = 300,                        //width
+            h = 300,                            //height
+            r = 100,                            //radius
+            ir = 50,
+            pi = Math.PI,
+            color = d3.scale.category20c();    
 
 
-        
+        var weather = {
+          svg_element : d3.select('.weather-graph'),
+          params : {
+            width : ($('.calendar').innerWidth()-10),
+            height : ($('.calendar').innerHeight()-10),
+          }
+        }
+        weather.params.radius = Math.min(weather.params.width, weather.params.height)/2;
+
+        weather_data = [
+          {"label":"one", "value":data.planets[params.params.planet].size}, 
+        ];
+
+        // Space
+        weather.svg = weather.svg_element.append("svg")
+        .data([weather_data]) 
+        .attr("width", weather.params.width )
+        .attr("height", weather.params.height)
+        .append("svg:g")       
+        .attr("transform", "translate(" + r + "," + r + ")")   
+
+        var arc = d3.svg.arc()              
+        .outerRadius(r)
+        .innerRadius(ir);
+
+        var pie = d3.layout.pie()           
+        .value(function(d) { return d.value; })
+        .startAngle(-90 * (pi/180))
+        .endAngle(90 * (pi/180));
+
+        var arcs = weather.svg.selectAll("g.slice")     
+        .data(pie)                          
+        .enter()                            
+        .append("svg:g")                
+        .attr("class", "slice");    
+
+        arcs.append("svg:path")
+        .attr("fill", function(d, i) { return color(i); } ) 
+        .attr("d", arc)
+        .attr("x",  100)  ;    
+
+        arcs.append("rect")
+              .attr("x",  -100)
+              .attr("y",  0)
+              .attr("height", 2 )
+              .attr("width", 290)
+              .style("fill", "rgba(255, 255, 255,  1)")
+              .style("stroke", "rgba(255, 255, 255,  1)");  */    
+
+
+
+
+          var gauge = function(container, configuration) {
+           var that = {};
+           this.config = {
+            size      : 200,
+            clipWidth     : ($('.weather').innerWidth()-10),
+            clipHeight     : ($('.weather').innerWidth()-10),
+            ringInset     : 20,
+            ringWidth     : 20,
+            
+            minValue     : -500,
+            maxValue     : 500,
+            
+            minAngle     : -90,
+            maxAngle     : 90,
+            
+            transitionMs    : 1000,
+            
+            majorTicks     : 5,
+            labelFormat     : d3.format(',g'),
+            labelInset     : 10,
+           };
+           
+           
+           var range = undefined;
+           var r = undefined;
+
+           var value = 0;
+           
+           var svg = undefined;
+           var arc = undefined;
+           var scale = undefined;
+           var ticks = undefined;
+           var tickData = undefined;
+           
+           var value = {previous:0, value:0};
+
+           var donut = d3.layout.pie();
+           
+           this.deg2rad = function (deg) {
+            return deg * Math.PI / 180;
+           }
+           
+           this.newAngle =  function(d) {
+            var ratio = scale(d);
+            var newAngle = this.config.minAngle + (ratio * range);
+            return newAngle;
+           }
+           
+           this.configure = function(configuration) {
+            var that = this;
+            var prop = undefined;
+            for ( prop in configuration ) {
+             this.config[prop] = configuration[prop];
+            }
+            
+            range = this.config.maxAngle - this.config.minAngle;
+            r = this.config.size / 2;
+
+            // a linear scale that maps domain values to a percent from 0..1
+            scale = d3.scale.linear()
+             .range([0,1])
+             .domain([this.config.minValue, this.config.maxValue]);
+             
+            ticks = scale.ticks(this.config.majorTicks);
+            tickData=[1];
+            console.log("Tickdata:"+tickData);
+            this.arc = d3.svg.arc()
+             .innerRadius(r - this.config.ringWidth - this.config.ringInset)
+             .outerRadius(r - this.config.ringInset)
+             .startAngle(function(d, i) {
+              var ratio = d * i;
+              var value =that.deg2rad(that.config.minAngle + (ratio * range));
+              console.log('start angle:'+value);
+              return value;
+             })
+             .endAngle(function(d, i) {
+              var ratio = d * (i+1);
+              console.log('minAngle='+that.config.minAngle+', ratio='+ratio+' , range='+range);
+              var value =that.deg2rad(that.config.minAngle + (ratio * range));
+              console.log('end angle:'+value);
+              return that.deg2rad(that.config.minAngle + (ratio * range));
+             });
+             
+            this.arcPointer = d3.svg.arc()
+             .innerRadius(r - this.config.ringWidth - this.config.ringInset)
+             .outerRadius(r - this.config.ringInset)
+             .startAngle(function(d, i) {
+              return that.deg2rad(-90);
+             })
+             .endAngle(function(d, i) {
+              var ratio = scale(d);
+              return that.deg2rad(that.config.minAngle + (ratio * range));
+             });
+           }
+           
+           this.centerTranslation = function centerTranslation() {
+            return 'translate('+r +','+ r +')';
+           }
+           
+           this.isRendered = function() {
+            return (svg !== undefined);
+           }
+
+           
+           this.render = function(newValue) {
+            var that = this;
+            svg = d3.select(container)
+             .append('svg:svg')
+              .attr('class', 'gauge')
+              .attr('width', this.config.clipWidth)
+              .attr('height', this.config.clipHeight);
+            
+            var centerTx = this.centerTranslation();
+            
+            this.arcs = svg.append('g')
+              .attr('class', 'arc')
+              .attr('transform', centerTx);
+            
+            this.arcs.selectAll('path')
+              .data([1])
+             .enter().append('path')
+              .attr('fill', '#FFF')
+              .attr('d', this.arc);
+            
+            var lg = svg.append('g')
+              .attr('class', 'label')
+              .attr('transform', centerTx);
+
+
+            this.arcs2 = svg.append('g')
+             .attr('class', 'arc')
+             .attr('transform', centerTx);
+            
+            var textValue = svg.append('g')
+              .attr('class', 'arc')
+              .attr('transform', centerTx);
+              
+            var titleValue = svg.append('g')
+              .attr('transform', 'translate('+r +','+ (r +25)+')');
+              
+            this.valueTextCenter = textValue.append('text').attr('class','valueText').text('0,0');
+            this.titleTextCenter = titleValue.append('text').attr('class','titleText').text(this.config.title);
+            this.update(newValue === undefined ? 0 : newValue);
+           }
+
+           
+           this.update = function(newValue, newConfiguration) {
+            var that = this;
+            if ( newConfiguration  !== undefined) {
+             this.configure(newConfiguration);
+            }
+            value.previous = value.value;
+            value.value = newValue;
+            this.valueTextCenter.text(newValue.toFixed(0));
+            var ratio = scale(newValue);
+            var newAngle = this.config.minAngle + (ratio * range);
+            
+            indicator = this.arcs2.selectAll('path').data([value.value]);
+            indicator.enter().append("svg:path").transition().ease('linear')
+            .duration(this.config.transitionMs)
+            .attrTween('d', function(a){
+             
+               var i = d3.interpolate(value.previous, a);
+               //this._current = i(0);
+               return function(t) {
+              return that.arcPointer(i(t));
+               };
+
+            });
+            indicator.transition()
+               .ease("linear")
+               .duration(this.config.transitionMs)
+               .attrTween("d", function(a){
+             
+               var i = d3.interpolate(value.previous, a);
+               //this._current = i(0);
+               return function(t) {
+              return that.arcPointer(i(t));
+               };
+
+            }).attr('fill',function(d){
+             return "red";
+            });
+             
+
+           }
+
+           this.configure(configuration);
+           
+          };
+
+           var powerGauge = new gauge('.weather-graph');
+            powerGauge.render(); 
+            powerGauge.update(data.planets[params.params.planet].temperature);
+
+
+
+
+
+ 
       });
     },
     get_planet_infos : function(params){
       return {
-        left_planet : (((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30),
+        left_earth : Math.round(parseFloat((((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30))),
         age : (Math.round(parseFloat(localStorage.getItem("age")))+(Math.round((((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30)/12))),
         weight : Math.round(((parseFloat(localStorage.getItem("weight")))/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity),
         temperature : params.planets[params.planet_name].temperature

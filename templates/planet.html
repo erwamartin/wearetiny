@@ -31,7 +31,10 @@
 			</div>
 			<div class="weather bottom-content-block">
 				<h3><%= translations.views.planets.weather_title %></h3>
-				<div class="weather-graph graph"></div>			
+				<div class="weather-graph graph">
+ 					<div class="semi-circle"></div>
+ 				 	<div class="semi-circle--mask"></div>
+				</div>			
 				<p class="text"><%= translations.views.planets.temperature_average %></p>
 				<p class="value uppercase"><span class='value'><%= planet_page.planet.temperature %></span><%= translations.views.planets.temperature_value %></p>
 
