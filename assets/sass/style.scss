@@ -24,7 +24,7 @@ $main-font-color : #FFF;
 html{
 	height: 100%;
 	body{
-		overflow: auto;
+		overflow: hidden;
 		height: 100%;
 		color: $main-font-color;
 		@include background('background.jpg', center center, 100% 100%);

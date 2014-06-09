@@ -772,7 +772,7 @@ define([
               unselect_all_comparator_label.call(this);
               
               // If current comparator isn't already clicked
-              if(!this.classList.contains("click")) {
+              if(!this.classList || !this.classList.contains("click")) {
 
                 d3.selectAll('.planet').classed('click', false);
 
@@ -847,7 +847,7 @@ define([
           comparator_container.on('mouseout', function(){
             var comparator_label = d3.select(this.parentNode);
             // If current label is not clicked
-            if(!this.classList.contains("click")) {
+            if(!this.classList || !this.classList.contains("click")) {
               unselect_comparator_label.call(this, comparator_label);
             }
           });
@@ -855,7 +855,7 @@ define([
           comparator_container.on('click', function(){
 
             // If current comparator isn't already clicked
-            if(!this.classList.contains("click")) {
+            if(!this.classList || !this.classList.contains("click")) {
               // Remove other label selection's
               unselect_all_comparator_label.call(this);
               d3.selectAll('.planet').classed('click', false);

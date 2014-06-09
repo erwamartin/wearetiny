@@ -389,7 +389,7 @@ html {
 }
 /* line 26, ../sass/style.scss */
 html body {
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   color: white;
   background-image: url('../images/background.jpg');
