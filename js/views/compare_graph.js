@@ -32,7 +32,8 @@ define([
           graph : { 
             cols : {},
             lines : {},
-            margin : {}
+            margin : {},
+            padding : {}
           },
           banner : {},
           planets : {},
@@ -63,16 +64,17 @@ define([
         compare_graph.graph.lines.height = (compare_graph.params.height-compare_graph.sidebars.bottom.height)/(compare_graph.graph.lines.number+1); // Adding margin top and bottom
 
         compare_graph.graph.margin.top = compare_graph.graph.margin.bottom = compare_graph.graph.lines.height/2;
+        compare_graph.graph.padding.top = $('body').outerHeight()-compare_graph.params.height;
         
         compare_graph.planets.max_size = compare_graph.graph.lines.height*85/100;
 
         // svg
         compare_graph.svg = compare_graph.svg_element.append("svg")
           .attr("width", compare_graph.params.width)
-          .attr("height", compare_graph.params.height);
+          .attr("height", $('body').outerHeight());
 
         // graphic
-        var y_transform = compare_graph.graph.margin.top;
+        var y_transform = compare_graph.graph.margin.top+compare_graph.graph.padding.top;
         compare_graph.graph.g = compare_graph.svg.append("g")
           .attr("transform", "translate(0, "+y_transform+")")
           .attr("class", "compare_graph_graph");
@@ -186,13 +188,13 @@ define([
 
         // Select planet compare with   
 
-        compare_graph.banner.select = compare_graph.banner.g.append('g')
+        compare_graph.banner.select = compare_graph.svg.append('g')
             .attr("class", "banner_select");
 
         var select_label_params = {
           text : params.translations.views.compare_graph.select_label,
-          x : compare_graph.params.width-10,
-          y : compare_graph.graph.lines.height/2-compare_graph.graph.lines.height/8
+          x : compare_graph.params.width-compare_graph.graph.cols.width-75,
+          y : compare_graph.graph.padding.top-12
         }
 
         compare_graph.banner.select.append("text")
@@ -208,8 +210,8 @@ define([
 
         var select_value_params = {
           text : params.translations.views.planets[localStorage.getItem('planet_compare')].planet_name,
-          x : compare_graph.params.width-35,
-          y : compare_graph.graph.lines.height/2+compare_graph.graph.lines.height/8
+          x : compare_graph.params.width-compare_graph.graph.cols.width-15,
+          y : select_label_params.y
         }
 
         compare_graph.banner.select_g.append("text")
@@ -229,7 +231,7 @@ define([
           height : 7
         }
         icon_params.y = select_value_params.y - icon_params.height/2;
-        icon_params.x = compare_graph.params.width-icon_params.width-10;
+        icon_params.x = compare_graph.params.width-compare_graph.graph.cols.width;
 
         compare_graph.banner.select_g.append("image")
           .attr("class", 'select_icon')
@@ -345,14 +347,15 @@ define([
           // update comparator banner value
           var banner_compare = compare_graph.banner.g.select('.banner_compare');
           var planet_name = banner_compare.attr('data-planet');
-          var comparator_name = banner_compare.attr('data-comparator');
+          if(planet_name!=null){
+            var comparator_name = banner_compare.attr('data-comparator');
 
-          var compare_value = data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
-          compare_value = Math.round(compare_value*10)/10;
-          compare_value = params.functions.formatNumber.call(this, compare_value, params.translations.views.global.number_separator);
+            var compare_value = data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
+            compare_value = Math.round(compare_value*10)/10;
+            compare_value = params.functions.formatNumber.call(this, compare_value, params.translations.views.global.number_separator);
 
-          banner_compare.text(compare_value+' X '+params.translations.views.planets[compare_planet].planet_name);
-
+            banner_compare.text(compare_value+' X '+params.translations.views.planets[compare_planet].planet_name);
+          }
           close_select_reference_list.call(this);
         }
 

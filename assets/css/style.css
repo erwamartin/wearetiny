@@ -1071,51 +1071,59 @@ html body #main .distances_graph .planet_infos p + p .km_distance {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.615em;
 }
-/* line 574, ../sass/style.scss */
+/* line 573, ../sass/style.scss */
+html body #main .compare_graph .graph .svg svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* line 576, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg text {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
 }
-/* line 577, ../sass/style.scss */
+/* line 579, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator {
   -webkit-transition: opacity 0.3s ease-in;
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
-/* line 582, ../sass/style.scss */
+/* line 584, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator_container, html body #main .compare_graph .graph .svg svg .display_all_container {
   cursor: pointer;
 }
-/* line 586, ../sass/style.scss */
+/* line 588, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator.selected .planet {
   cursor: pointer;
 }
-/* line 590, ../sass/style.scss */
+/* line 592, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .planet_name {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
   font-size: 0.625em;
   text-transform: uppercase;
 }
-/* line 595, ../sass/style.scss */
+/* line 597, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .banner_value, html body #main .compare_graph .graph .svg svg .banner_compare {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.250em;
   text-transform: uppercase;
 }
-/* line 600, ../sass/style.scss */
+/* line 602, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_label, html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 0.625em;
   text-transform: uppercase;
 }
-/* line 605, ../sass/style.scss */
+/* line 607, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
 }
-/* line 608, ../sass/style.scss */
+/* line 610, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_icon, html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item, html body #main .compare_graph .graph .svg svg .previous_planet, html body #main .compare_graph .graph .svg svg .next_planet {
   cursor: pointer;
 }
-/* line 611, ../sass/style.scss */
+/* line 613, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_icon {
   transform-origin: center center;
   -ms-transform-origin: center center;
@@ -1124,7 +1132,7 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 632, ../sass/style.scss */
+  /* line 634, ../sass/style.scss */
   html body #main .boarding_pass div.modal .barcode {
     background-image: url('../images/codebar@2x.png');
     background-position: center center;
@@ -1134,19 +1142,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 639, ../sass/style.scss */
+  /* line 641, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 640, ../sass/style.scss */
+  /* line 642, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 641, ../sass/style.scss */
+  /* line 643, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1154,19 +1162,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @-moz-keyframes glitter {
-  /* line 644, ../sass/style.scss */
+  /* line 646, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 645, ../sass/style.scss */
+  /* line 647, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 646, ../sass/style.scss */
+  /* line 648, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1174,19 +1182,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @-o-keyframes glitter {
-  /* line 649, ../sass/style.scss */
+  /* line 651, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 650, ../sass/style.scss */
+  /* line 652, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 651, ../sass/style.scss */
+  /* line 653, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1194,19 +1202,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @keyframes glitter {
-  /* line 654, ../sass/style.scss */
+  /* line 656, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 655, ../sass/style.scss */
+  /* line 657, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 656, ../sass/style.scss */
+  /* line 658, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
