@@ -45,7 +45,7 @@
 			"select_label" : "Compare with",
 			"comparators" : {
 				"size" : {
-					"name" : "PLANET SIZE",
+					"name" : "DIAMETER",
 					"unit" : "KM"
 				},
 				"revolution_period" : {
@@ -70,7 +70,7 @@
 				},
 				"day_length" : {
 					"name" : "DAY LENGTH",
-					"unit" : "H"
+					"unit" : "DAYS"
 				},
 				"temperature" : {
 					"name" : "TEMPERATURE",

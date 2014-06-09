@@ -249,6 +249,10 @@ define([
               .on('click', function(){
                 var planet_name = d3.select(this).attr('data-name');
                 change_planet_reference.call(this, planet_name);
+              }).on('mouseover', function(){
+                d3.select(this).attr("fill", "rgba(143, 143, 143, 1)")
+              }).on('mouseout', function(){
+                d3.select(this).attr("fill", "rgba(255, 255, 255, 1)")
               });
 
           }
@@ -312,6 +316,7 @@ define([
 
           var compare_value = data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
           compare_value = Math.round(compare_value*10)/10;
+          compare_value = params.functions.formatNumber.call(this, compare_value, params.translations.views.global.number_separator);
 
           banner_compare.text(compare_value+' X '+params.translations.views.planets[compare_planet].planet_name);
 
@@ -328,6 +333,9 @@ define([
 
         var hide_all_comparators =function(){
           d3.selectAll('.comparator').style('opacity', 0);
+
+          // Close select of planet reference
+          close_select_reference_list.call(this);
         }
 
         var display_comparator = function(comparator_name){
@@ -387,8 +395,9 @@ define([
               .attr("transform", "translate(0, "+background_params.y+")")
               .style("opacity", 1);
 
+          var comparator_value = compare_value = params.functions.formatNumber.call(this, data.planets[planet_name][comparator_name], params.translations.views.global.number_separator);
           var banner_value_params = {
-            text : data.planets[planet_name][comparator_name]+' '+params.translations.views.compare_graph.comparators[comparator_name].unit,
+            text : comparator_value+' '+params.translations.views.compare_graph.comparators[comparator_name].unit,
             x : parseFloat(comparator.attr('data-x'))+(compare_graph.graph.cols.width/2)-compare_graph.planets.max_size/1.5, // max height of a planet and margin
             y : compare_graph.graph.lines.height/2
           }
@@ -396,6 +405,7 @@ define([
           var compare_planet = localStorage.getItem('planet_compare');
           var compare_value = data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
           compare_value = Math.round(compare_value*10)/10;
+          compare_value = params.functions.formatNumber.call(this, compare_value, params.translations.views.global.number_separator);
 
           var banner_compare_params = {
             text : compare_value+' X '+params.translations.views.planets[compare_planet].planet_name,
