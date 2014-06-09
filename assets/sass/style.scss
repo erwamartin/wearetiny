@@ -582,8 +582,10 @@ html{
 							.comparator_container, .display_all_container{
 								cursor : pointer;
 							}
-							.planet{
-								cursor: pointer;
+							.comparator.selected{
+								.planet{
+									cursor: pointer;
+								}
 							}
 							.planet_name{
 								font-family: 'PlutoSansCondBold', Arial, sans-serif;

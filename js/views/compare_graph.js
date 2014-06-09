@@ -359,12 +359,16 @@ define([
 
         /* Comparators */
         var display_all_comparators =function(){
-          d3.selectAll('.comparator').style('opacity', 1);
+          d3.selectAll('.comparator')
+            .classed('selected', true)
+            .style('opacity', 1);
           hide_planet_comparator.call(this);
         }
 
         var hide_all_comparators =function(){
-          d3.selectAll('.comparator').style('opacity', 0);
+          d3.selectAll('.comparator')
+            .classed('selected', false)
+            .style('opacity', 0);
 
           // Close select of planet reference
           close_select_reference_list.call(this);
@@ -409,6 +413,8 @@ define([
           var planet_name = planet.attr('data-planet');
           var comparator = d3.select(planet.node().parentNode);
           var comparator_name = comparator.attr("data-comparator");
+
+          comparator.classed('selected', true);
 
           var background_params = {
             x : 0,
@@ -684,7 +690,7 @@ define([
 
           var comparator_col = compare_graph.graph.g.append('g')
               .attr("transform", "translate("+x_tranform+", 0)")
-              .attr("class", "comparator "+comparator_name)
+              .attr("class", "comparator selected "+comparator_name)
               .attr("data-x", x_tranform)
               .attr("data-comparator", comparator_name);
 
@@ -761,10 +767,11 @@ define([
 
               // Remove labels selections
               unselect_all_comparator_label.call(this);
-              d3.selectAll('.planet').classed('click', false);
               
               // If current comparator isn't already clicked
               if(!this.classList.contains("click")) {
+
+                d3.selectAll('.planet').classed('click', false);
 
                 var comparator_label = d3.select(d3.select('#'+comparator_name).node().parentNode);
                 select_comparator_label.call(this, comparator_label);
