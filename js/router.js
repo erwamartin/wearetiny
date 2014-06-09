@@ -70,7 +70,9 @@ define([
         AppRouter.current_view.render({
           translations : translations,
           functions : {
-            formatNumber : formatNumber
+            formatNumber : formatNumber, 
+            getNextKey : getNextKey,
+            getPreviousKey : getPreviousKey
           },
           params : params.params
         });
@@ -87,6 +89,31 @@ define([
 
   var formatNumber = function(number, separator){
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+  }
+
+  var getNextKey = function(array, key){
+      var keys = Object.keys(array),
+          idIndex = keys.indexOf(key),
+          nextIndex = idIndex += 1;
+      if(nextIndex >= keys.length){
+          //we're at the end, there is no next
+          return keys[0];
+      }
+      var nextKey = keys[nextIndex];
+      return nextKey;
+  }
+
+  var getPreviousKey = function(array, key){
+
+    var keys = Object.keys(array),
+        idIndex = keys.indexOf(key),
+        nextIndex = idIndex -= 1;
+    if(idIndex === -1){
+        //we're at the beginning, there is no previous -> return last
+        return keys[keys.length-1];
+    }
+    var nextKey = keys[nextIndex];
+    return nextKey;
   }
 
 

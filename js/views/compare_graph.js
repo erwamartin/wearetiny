@@ -375,7 +375,7 @@ define([
 
         var display_planet_comparator = function(planet){
           var planet_name = planet.attr('data-planet');
-          var comparator = d3.select(this.parentNode);
+          var comparator = d3.select(planet.node().parentNode);
           var comparator_name = comparator.attr("data-comparator");
 
           var background_params = {
@@ -442,6 +442,105 @@ define([
               .style("opacity", 0);
         }
 
+        var go_previous_comparator = function(){
+       
+          var current_planet = d3.select('.planet.click');
+
+          // If a planet was clicked
+          if(!current_planet.empty()){
+            var planet_name = current_planet.attr('data-planet');
+            var comparator_name = current_planet.attr('data-comparator');
+
+            // Remove labels selections
+            unselect_all_comparator_label.call(this);
+            d3.selectAll('.planet').classed('click', false);
+
+            var next_comparator = params.functions.getPreviousKey.call(this, compare_graph.comparators, comparator_name);
+            go_planet.call(this, next_comparator, planet_name);
+          }else{
+            var current_comparator = d3.select('.comparator_container.click');
+
+            // If a comparator was clicked
+            if(!current_comparator.empty()){
+              var comparator_name = current_comparator.attr('id');
+            }else{
+              var comparators = Object.keys(compare_graph.comparators);
+              var comparator_name = comparators[0];
+            }
+
+            // Remove labels selections
+            unselect_all_comparator_label.call(this);
+            d3.selectAll('.planet').classed('click', false);
+
+            var next_comparator = params.functions.getPreviousKey.call(this, compare_graph.comparators, comparator_name);
+            go_comparator.call(this, next_comparator);
+          }
+
+
+        }
+
+        var go_next_comparator = function(){
+
+          var current_planet = d3.select('.planet.click');
+
+          // If a planet was clicked
+          if(!current_planet.empty()){
+            var planet_name = current_planet.attr('data-planet');
+            var comparator_name = current_planet.attr('data-comparator');
+
+            // Remove labels selections
+            unselect_all_comparator_label.call(this);
+            d3.selectAll('.planet').classed('click', false);
+
+            var next_comparator = params.functions.getNextKey.call(this, compare_graph.comparators, comparator_name);
+            go_planet.call(this, next_comparator, planet_name);
+          }else{
+            var current_comparator = d3.select('.comparator_container.click');
+
+            // If a comparator was clicked
+            if(!current_comparator.empty()){
+              var comparator_name = current_comparator.attr('id');
+            }else{
+              var comparators = Object.keys(compare_graph.comparators);
+              var comparator_name = comparators[comparators.length-1];
+            }
+
+            // Remove labels selections
+            unselect_all_comparator_label.call(this);
+            d3.selectAll('.planet').classed('click', false);
+
+            var next_comparator = params.functions.getNextKey.call(this, compare_graph.comparators, comparator_name);
+            go_comparator.call(this, next_comparator);
+          }
+          
+        }
+
+        var go_planet = function(comparator_name, planet_name){
+          var comparator_label = d3.select(d3.select('#'+comparator_name).node().parentNode);
+          select_comparator_label.call(this, comparator_label);
+
+          var next_planet = d3.select('.planet'+'.'+planet_name+'.'+comparator_name);
+
+
+          // Display comparator column
+          display_comparator.call(this, comparator_name);
+          d3.selectAll('.planet').classed('click', false);
+          next_planet.classed('click', true);
+
+          display_planet_comparator.call(this, next_planet);
+        }
+
+        var go_comparator = function(comparator_name){
+          var comparator = d3.select('#'+comparator_name);
+          var comparator_label = d3.select(comparator.node().parentNode);
+          select_comparator_label.call(this, comparator_label);
+
+          comparator.classed('click', true);
+
+          // Display comparator column
+          display_comparator.call(this, comparator_name);
+        }
+
         // Get comparators values for each planet (and get min and max planet)
         for(var comparator in compare_graph.comparators){
           for(var planet in data.planets){
@@ -502,12 +601,13 @@ define([
             planet_params.y = compare_graph.graph.lines.height/2-planet_params.height/2+y_tranform; 
 
             var planet_image = comparator_col.append("image")
-              .attr("class", "planet "+planet)
-              .attr("data-planet", planet)
+              .attr("class", "planet "+planet+" "+comparator_name)
               .attr("width", planet_params.width)
               .attr("height", planet_params.height)
               .attr("data-width", planet_params.width)
               .attr("data-height", planet_params.width)
+              .attr("data-planet", planet)
+              .attr("data-comparator", comparator_name)
               .attr("data-y", y_tranform)
               .attr("transform", "translate("+planet_params.x+","+planet_params.y+")")
               .attr("xlink:href", "assets/images/planets/"+planet+".svg");
@@ -553,6 +653,10 @@ define([
               var planet = d3.select(this);
               var comparator = d3.select(this.parentNode);
               var comparator_name = comparator.attr("data-comparator");
+
+              // Remove labels selections
+              unselect_all_comparator_label.call(this);
+              d3.selectAll('.planet').classed('click', false);
               
               // If current comparator isn't already clicked
               if(!this.classList.contains("click")) {
@@ -563,13 +667,12 @@ define([
                 // Display comparator column
                 display_comparator.call(this, comparator_name);
                 d3.selectAll('.planet').classed('click', false);
+                d3.select('#'+comparator_name).classed('click', true);
                 planet.classed('click', true);
 
                 display_planet_comparator.call(this, planet);
 
               }else{
-                // Remove labels selections
-                unselect_all_comparator_label.call(this);
 
                 display_all_comparators.call(this);
                 d3.selectAll('.planet').classed('click', false);
@@ -640,6 +743,7 @@ define([
             if(!this.classList.contains("click")) {
               // Remove other label selection's
               unselect_all_comparator_label.call(this);
+              d3.selectAll('.planet').classed('click', false);
 
               // Add selection on current label
               var comparator = d3.select(this);
@@ -708,6 +812,26 @@ define([
 
             // Hide comparator banner
             hide_planet_comparator.call(this);
+        });
+
+
+
+        // Keyboard events
+        $(document).keydown(function(e){
+          switch(e.keyCode){
+            case 37:
+              go_previous_comparator.call(this);
+              break;
+            case 38:
+              go_previous_planet.call(this);
+              break;
+            case 39:
+              go_next_comparator.call(this);
+              break;
+            case 40:
+              go_next_planet.call(this);
+              break;
+          }
         });
 
 
