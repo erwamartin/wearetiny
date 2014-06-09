@@ -572,7 +572,7 @@ html{
 					.svg{
 						svg{
 							text{
-								font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+								font-family: 'PlutoSansCondLight', Arial, sans-serif;
 							}
 							.comparator{
 								-webkit-transition: opacity 0.3s ease-in;
@@ -594,6 +594,22 @@ html{
 								font-family: 'MohaveBold', Arial, sans-serif;
 								font-size : 1.250em;
 								text-transform: uppercase;
+							}
+							.select_label, .select_value, .select_item{
+								font-family: 'PlutoSansCondLight', Arial, sans-serif;
+								font-size: 0.625em;
+								text-transform: uppercase;
+							}
+							.select_value, .select_item{
+								font-family: 'PlutoSansCondBold', Arial, sans-serif;
+							}
+							.select_icon, .select_value, .select_item{
+								cursor: pointer;
+							}
+							.select_icon{
+								transform-origin: center center;
+								-ms-transform-origin: center center;
+								-webkit-transform-origin: center center;
 							}
 						}
 					}

@@ -148,12 +148,179 @@ define([
               .attr("class", "banner_compare")
               .attr("transform", "translate(0, "+(compare_graph.graph.lines.height/2)+")")
               .attr("style", "text-anchor: start; dominant-baseline: central;")
-              .attr("fill", "rgba(255, 255, 255, 1)");      
+              .attr("fill", "rgba(255, 255, 255, 1)");  
+
+
+        // Select planet compare with   
+
+        compare_graph.banner.select = compare_graph.banner.g.append('g')
+            .attr("class", "banner_select");
+
+        var select_label_params = {
+          text : params.translations.views.compare_graph.select_label,
+          x : compare_graph.params.width-10,
+          y : compare_graph.graph.lines.height/2-compare_graph.graph.lines.height/8
+        }
+
+        compare_graph.banner.select.append("text")
+              .attr("class", "select_label")
+              .attr("transform", "translate("+select_label_params.x+", "+select_label_params.y+")")
+              .text(select_label_params.text)
+              .attr("style", "text-anchor: end; dominant-baseline: central;")
+              .attr("fill", "rgba(255, 255, 255, 1)");
+
+        // select
+        compare_graph.banner.select_g = compare_graph.banner.select.append('g')
+            .attr("class", "banner_select_g");
+
+        var select_value_params = {
+          text : params.translations.views.planets[localStorage.getItem('planet_compare')].planet_name,
+          x : compare_graph.params.width-35,
+          y : compare_graph.graph.lines.height/2+compare_graph.graph.lines.height/8
+        }
+
+        compare_graph.banner.select_g.append("text")
+          .attr("class", "select_value")
+          .attr("transform", "translate("+select_value_params.x+", "+select_value_params.y+")")
+          .text(select_value_params.text)
+          .attr("data-x", select_value_params.x)
+          .attr("data-y", select_value_params.y)
+          .attr("style", "text-anchor: end; dominant-baseline: central;")
+          .attr("fill", "rgba(255, 255, 255, 1)")
+          .on('click', function(){
+            select_planet_reference.call(this);
+          });
+
+        var icon_params = {
+          width : 14,
+          height : 7
+        }
+        icon_params.y = select_value_params.y - icon_params.height/2;
+        icon_params.x = compare_graph.params.width-icon_params.width-10;
+
+        compare_graph.banner.select_g.append("image")
+          .attr("class", 'select_icon')
+          .attr("width", icon_params.width)
+          .attr("height", icon_params.height)
+          .attr("transform", "translate("+icon_params.x+", "+icon_params.y+")")
+          .attr("data-transform", "translate("+icon_params.x+", "+icon_params.y+")")
+          .attr("xlink:href", "assets/images/icons/arrow-bottom.svg")
+          .on('click', function(){
+            select_planet_reference.call(this);
+          });
+
+        // select list
+        compare_graph.banner.select_list = compare_graph.banner.select.append('g')
+          .attr("class", "banner_select_list")
+          .style('opacity', 0);
+
+
+        var select_planet_reference = function(){
+          if(!compare_graph.banner.select_list.node().classList.contains('open')){
+            open_select_reference_list.call(this);
+          }else{
+            close_select_reference_list.call(this);
+          }
+        }
+
+        var open_select_reference_list = function(){
+          // Remove old elements
+          compare_graph.banner.select_list.selectAll('text').remove();
+
+          var current_planet = localStorage.getItem('planet_compare');
+          var select_value = compare_graph.banner.select_g.select('.select_value');
+          var select_item_params = {
+            x : parseFloat(select_value.attr('data-x')),
+            y : parseFloat(select_value.attr('data-y')),
+          }
+
+          for(var planet in data.planets){
+
+            select_item_params.text = params.translations.views.planets[planet].planet_name;
+            select_item_params.y += compare_graph.graph.lines.height/4;
+
+            compare_graph.banner.select_list.append("text")
+              .attr("class", "select_item")
+              .attr("data-name", planet)
+              .attr("transform", "translate("+select_item_params.x+", "+select_item_params.y+")")
+              .text(select_item_params.text)
+              .attr("style", "text-anchor: end; dominant-baseline: central;")
+              .attr("fill", "rgba(255, 255, 255, 1)")
+              .on('click', function(){
+                var planet_name = d3.select(this).attr('data-name');
+                change_planet_reference.call(this, planet_name);
+              });
+
+          }
+
+          compare_graph.banner.select_list
+            .transition()
+            .duration(300)
+            .style('opacity', 1);
+
+          var select_icon = compare_graph.banner.select_g.select('.select_icon');
+          var select_icon_params = {
+            rotate : {
+              r : -180,
+              x : select_icon.attr('width')/2,
+              y : select_icon.attr('height')/2
+            }
+          }
+          var select_icon_transform = select_icon.attr('data-transform')+' rotate('+select_icon_params.rotate.r+', '+select_icon_params.rotate.x+', '+select_icon_params.rotate.y+')';
+          select_icon
+            .transition()
+            .duration(300)
+            .attr('transform', select_icon_transform);
+          compare_graph.banner.select_list.classed('open', true);
+        }
+
+        var close_select_reference_list = function(){
+          compare_graph.banner.select_list
+            .transition()
+            .duration(300)
+            .style('opacity', 0);
+
+          var select_icon = compare_graph.banner.select_g.select('.select_icon');
+          var select_icon_params = {
+            rotate : {
+              r : 0,
+              x : select_icon.attr('width')/2,
+              y : select_icon.attr('height')/2
+            }
+          }
+          var select_icon_transform = select_icon.attr('data-transform')+' rotate('+select_icon_params.rotate.r+', '+select_icon_params.rotate.x+', '+select_icon_params.rotate.y+')';
+          select_icon
+            .transition()
+            .duration(300)
+            .attr('transform', select_icon_transform);
+
+          compare_graph.banner.select_list.classed('open', false);
+        }
+
+        var change_planet_reference = function(compare_planet){
+
+          localStorage.setItem('planet_compare', compare_planet);
+
+          // update select value
+          compare_graph.banner.select_g.select('.select_value')
+            .text(params.translations.views.planets[compare_planet].planet_name);
+
+          // update comparator banner value
+          var banner_compare = compare_graph.banner.g.select('.banner_compare');
+          var planet_name = banner_compare.attr('data-planet');
+          var comparator_name = banner_compare.attr('data-comparator');
+
+          var compare_value = data.planets[planet_name][comparator_name]/data.planets[compare_planet][comparator_name];
+          compare_value = Math.round(compare_value*10)/10;
+
+          banner_compare.text(compare_value+' X '+params.translations.views.planets[compare_planet].planet_name);
+
+          close_select_reference_list.call(this);
+        }
+
 
 
         /* Comparators */
-
-
         var display_all_comparators =function(){
           d3.selectAll('.comparator').style('opacity', 1);
           hide_planet_comparator.call(this);
@@ -246,6 +413,8 @@ define([
             .transition()
             .duration(300)
             .text(banner_compare_params.text)
+            .attr("data-planet", planet_name)
+            .attr("data-comparator", comparator_name)
             .attr("transform", "translate("+banner_compare_params.x+", "+banner_compare_params.y+")");
 
           
