@@ -129,6 +129,39 @@ define([
               .attr("style", "dominant-baseline: central;")
               .attr("fill", "rgba(255, 255, 255, 1)");
 
+          var icon_params = {
+            width : 25,
+            height : 12.5,
+            y : 0 
+          }
+
+          if(planets_counter==0){
+            icon_params.x = compare_graph.graph.lines.width-icon_params.width-20;
+            line.append("image")
+              .attr("class", 'previous_planet')
+              .attr("width", icon_params.width)
+              .attr("height", icon_params.height)
+              .attr("transform", "translate("+icon_params.x+", "+icon_params.y+")")
+              .attr("data-transform", "translate("+icon_params.x+", "+icon_params.y+")")
+              .attr("xlink:href", "assets/images/icons/arrow-top.svg")
+              .on('click', function(){
+                go_previous_planet.call(this);
+              });
+          }else if(planets_counter==_.size(data.planets)-1){
+            icon_params.x = compare_graph.graph.lines.width-icon_params.width-20;
+            icon_params.y = compare_graph.graph.lines.height-icon_params.height;
+            line.append("image")
+              .attr("class", 'next_planet')
+              .attr("width", icon_params.width)
+              .attr("height", icon_params.height)
+              .attr("transform", "translate("+icon_params.x+", "+icon_params.y+")")
+              .attr("data-transform", "translate("+icon_params.x+", "+icon_params.y+")")
+              .attr("xlink:href", "assets/images/icons/arrow-bottom.svg")
+              .on('click', function(){
+                go_next_planet.call(this);
+              });
+          }
+
           planets_counter++;
         }
 
@@ -322,7 +355,6 @@ define([
 
           close_select_reference_list.call(this);
         }
-
 
 
         /* Comparators */
