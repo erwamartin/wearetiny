@@ -43,6 +43,7 @@
 		"compare_graph" : {
  			"title" : "Planets comparison",
 			"subtitle" : "Here’s an overall view of our planets data",
+			"select_label" : "Compare with",
 			"comparators" : {
 				"size" : {
 					"name" : "PLANET SIZE",
