@@ -37,15 +37,15 @@ define([
                     svg_element : d3.select('.calendar-graph'),
                     params : {
                       width : ($('.calendar').innerWidth()-10),
-                      height : ($('.calendar').innerHeight()-10),
+                      height : 185,
                     }
                   }
         space_time.params.radius = Math.min(space_time.params.width, space_time.params.height)/2;
 
         var radii = {
-          "sun": space_time.params.radius / 4,
-          "earthOrbit": space_time.params.radius / 1.875,
-          "earth": space_time.params.radius / 9,
+          "sun": space_time.params.radius / 2.5,
+          "earthOrbit": space_time.params.radius / 1.2,
+          "earth": space_time.params.radius / 6.15,
         };
 
         // Space
@@ -150,8 +150,16 @@ define([
         /******************************************/
 
           var area_data = [
-            {name: "planet",    value:  data.planets[params.params.planet].size},
-            {name: "earth",     value: data.planets["earth"].size }
+            {
+              name: "planet",    
+              value:  data.planets[params.params.planet].size,
+              color:  data.planets[params.params.planet].color1,
+            },
+            {
+              name: "earth",     
+              value: data.planets["earth"].size,
+              color:  data.planets["earth"].color1,
+            }
           ];
 
 
@@ -159,7 +167,7 @@ define([
             svg_element : d3.select('.area-graph'),
             params : {
               width : ($('.area').innerWidth()-20),
-              height : ($('.area').innerHeight()-95),
+              height : 172,
             }
           }
 
@@ -181,15 +189,20 @@ define([
           bar.append("rect")
               .attr("x", 45)
               .attr("y", function(d) { return y(d.value); })
-              .attr("height", function(d) { return area.params.height - y(d.value); })
-              .attr("width", barWidth - 4);
+              .attr("height", 0)
+              .attr("width", barWidth - 4)
+              .style("fill",  function(d) { return d.color; })
+              .transition()
+                .duration(1000)
+                .ease("linear")
+                .attr("height", function(d) { return area.params.height - y(d.value); });
 
               d3.max(area_data, function(d) { return area.params.height - y(d.value); })
 
 
           bar.append("rect")
              
-              .attr("y",  d3.max(area_data, function(d) { return area.params.height - y(d.value); })-3)
+              .attr("y",  d3.max(area_data, function(d) { return area.params.height - y(d.value); })-2)
               .attr("height", 2 )
               .attr("width", 290)
               .style("fill", "rgba(255, 255, 255,  1)")
@@ -204,72 +217,13 @@ define([
         /********************************************/
         //                 Weather                 //
         /******************************************/
-/*        var w = 300,                        //width
-            h = 300,                            //height
-            r = 100,                            //radius
-            ir = 50,
-            pi = Math.PI,
-            color = d3.scale.category20c();    
-
-
-        var weather = {
-          svg_element : d3.select('.weather-graph'),
-          params : {
-            width : ($('.calendar').innerWidth()-10),
-            height : ($('.calendar').innerHeight()-10),
-          }
-        }
-        weather.params.radius = Math.min(weather.params.width, weather.params.height)/2;
-
-        weather_data = [
-          {"label":"one", "value":data.planets[params.params.planet].size}, 
-        ];
-
-        // Space
-        weather.svg = weather.svg_element.append("svg")
-        .data([weather_data]) 
-        .attr("width", weather.params.width )
-        .attr("height", weather.params.height)
-        .append("svg:g")       
-        .attr("transform", "translate(" + r + "," + r + ")")   
-
-        var arc = d3.svg.arc()              
-        .outerRadius(r)
-        .innerRadius(ir);
-
-        var pie = d3.layout.pie()           
-        .value(function(d) { return d.value; })
-        .startAngle(-90 * (pi/180))
-        .endAngle(90 * (pi/180));
-
-        var arcs = weather.svg.selectAll("g.slice")     
-        .data(pie)                          
-        .enter()                            
-        .append("svg:g")                
-        .attr("class", "slice");    
-
-        arcs.append("svg:path")
-        .attr("fill", function(d, i) { return color(i); } ) 
-        .attr("d", arc)
-        .attr("x",  100)  ;    
-
-        arcs.append("rect")
-              .attr("x",  -100)
-              .attr("y",  0)
-              .attr("height", 2 )
-              .attr("width", 290)
-              .style("fill", "rgba(255, 255, 255,  1)")
-              .style("stroke", "rgba(255, 255, 255,  1)");  */    
-
-
-
 
           var gauge = function(container, configuration) {
            var that = {};
            this.config = {
-            size      : 200,
+            size      : 212,
             clipWidth     : ($('.weather').innerWidth()-10),
-            clipHeight     : ($('.weather').innerWidth()-10),
+            clipHeight     : 212,
             ringInset     : 20,
             ringWidth     : 20,
             
@@ -281,7 +235,7 @@ define([
             
             transitionMs    : 1000,
             
-            majorTicks     : 5,
+            majorTicks     : 0,
             labelFormat     : d3.format(',g'),
             labelInset     : 10,
            };
@@ -330,6 +284,7 @@ define([
             ticks = scale.ticks(this.config.majorTicks);
             tickData=[1];
             console.log("Tickdata:"+tickData);
+
             this.arc = d3.svg.arc()
              .innerRadius(r - this.config.ringWidth - this.config.ringInset)
              .outerRadius(r - this.config.ringInset)
@@ -357,10 +312,13 @@ define([
               var ratio = scale(d);
               return that.deg2rad(that.config.minAngle + (ratio * range));
              });
-           }
-           
-           this.centerTranslation = function centerTranslation() {
-            return 'translate('+r +','+ r +')';
+
+            this.arcZero = d3.svg.arc()
+             .innerRadius(r - this.config.ringWidth - this.config.ringInset)
+             .outerRadius(r - this.config.ringInset)
+             .startAngle(88)
+             .endAngle(92)
+
            }
            
            this.isRendered = function() {
@@ -372,40 +330,57 @@ define([
             var that = this;
             svg = d3.select(container)
              .append('svg:svg')
+                .attr("y",  d3.max(area_data, function(d) { return area.params.height - y(d.value); })-3)
               .attr('class', 'gauge')
               .attr('width', this.config.clipWidth)
               .attr('height', this.config.clipHeight);
             
-            var centerTx = this.centerTranslation();
-            
             this.arcs = svg.append('g')
               .attr('class', 'arc')
-              .attr('transform', centerTx);
+             
+              .attr('transform', 'translate('+145 +','+ (d3.max(area_data, function(d) { return area.params.height - y(d.value); })-2)+')');
             
             this.arcs.selectAll('path')
               .data([1])
+
              .enter().append('path')
               .attr('fill', '#FFF')
               .attr('d', this.arc);
             
             var lg = svg.append('g')
               .attr('class', 'label')
-              .attr('transform', centerTx);
+              .attr('transform', 'translate('+145 +','+ (d3.max(area_data, function(d) { return area.params.height - y(d.value); })-2)+')');
 
 
             this.arcs2 = svg.append('g')
              .attr('class', 'arc')
-             .attr('transform', centerTx);
+             .attr('transform', 'translate('+145 +','+ (d3.max(area_data, function(d) { return area.params.height - y(d.value); })-2)+')');
+
+
+            this.bar = svg.append("rect")
+              .attr("y",  d3.max(area_data, function(d) { return area.params.height - y(d.value); })-3)
+              .attr("height", 2 )
+              .attr("width", 290)
+              .style("fill", "rgba(255, 255, 255,  1)")
+              .style("stroke", "rgba(255, 255, 255,  1)");
             
             var textValue = svg.append('g')
               .attr('class', 'arc')
-              .attr('transform', centerTx);
-              
+              .attr('transform', 'translate('+140 +','+195 +')');
+
             var titleValue = svg.append('g')
-              .attr('transform', 'translate('+r +','+ (r +25)+')');
+              .attr('transform', 'translate('+200+','+195+')');
+
+            var minValue = svg.append('g')
+              .attr('transform', 'translate('+55+','+ 195+')');
+
+            var maxValue = svg.append('g')
+              .attr('transform', 'translate('+200+','+ 195+')');
               
-            this.valueTextCenter = textValue.append('text').attr('class','valueText').text('0,0');
-            this.titleTextCenter = titleValue.append('text').attr('class','titleText').text(this.config.title);
+            this.valueTextCenter = textValue.append('text').attr('class','valueText').text('0');
+            this.minTextCenter = minValue.append('text').attr('class','minText').text(this.config.minValue);
+            this.maxTextCenter = maxValue.append('text').attr('class','maxText').text(this.config.maxValue);
+
             this.update(newValue === undefined ? 0 : newValue);
            }
 
@@ -417,7 +392,7 @@ define([
             }
             value.previous = value.value;
             value.value = newValue;
-            this.valueTextCenter.text(newValue.toFixed(0));
+            //this.valueTextCenter.text(newValue.toFixed(0));
             var ratio = scale(newValue);
             var newAngle = this.config.minAngle + (ratio * range);
             
@@ -445,7 +420,11 @@ define([
                };
 
             }).attr('fill',function(d){
-             return "red";
+                if(d<0){
+                  return 'rgba(66,183,227,1)';
+                }else if(d>0){
+                    return 'rgba(243,68,58,1)';
+                }
             });
              
 
@@ -471,7 +450,9 @@ define([
         left_earth : Math.round(parseFloat((((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30))),
         age : (Math.round(parseFloat(localStorage.getItem("age")))+(Math.round((((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30)/12))),
         weight : Math.round(((parseFloat(localStorage.getItem("weight")))/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity),
-        temperature : params.planets[params.planet_name].temperature
+        temperature : params.planets[params.planet_name].temperature,
+        revolution_period : params.planets[params.planet_name].revolution_period,
+        rotation : params.planets[params.planet_name].rotation*24
         //(poidsUtilisateur/graviteTerre)*gravitePlanete
           //((distanceDepuisTerre/vitesseVaisseau)/24)/30
       };

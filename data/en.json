@@ -12,7 +12,8 @@
 			"years" : "years", 
 			"earth_tall" : "earth tall",
 			"one_day_on": "One day on",
-			"lasts" : "lasts"
+			"lasts" : "lasts", 
+			"hours" : "hours"
 		},
 		"landing_page" : {
 			"punchline" : "We live among <span>14 billions</span> of stars",

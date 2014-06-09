@@ -21,22 +21,21 @@
 			<div class="calendar bottom-content-block">
 				<h3><%= translations.views.planets.calendar_title %></h3>
 				<div class="calendar-graph graph"></div>
-				<p class="text">A Neptune Year </p>
-				<p><span class="text"><%= translations.views.global.one_day_on %> <%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %></span> <span class='value uppercase'>29004</span> <span class" uppercase"><%= translations.views.global.years %></span></p>
+				<p><span class="text"><%= translations.views.global.one_day_on %> <%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %></span> <span class='value uppercase'><%= planet_page.planet.revolution_period %></span> <span class="uppercase"><%= translations.views.global.years %></span></p>
+				<p><span class="text"><%= translations.views.global.one_day_on %> <%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %></span> <span class='value uppercase'><%= planet_page.planet.rotation %></span> <span class="uppercase"><%= translations.views.global.hours %></span></p>
 			</div>
 			<div class="area bottom-content-block">
 				<h3><%= translations.views.planets.area_title %></h3>
 				<div class="area-graph graph "></div>
-				<p><span class="text"><%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %></span> <span class='value uppercase'>29004</span> <span class"uppercase"><%= translations.views.global.earth_tall %></span></p>
+				<p><span class="text"><%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %></span> <span class='value uppercase'>29004</span> <span class="uppercase"><%= translations.views.global.earth_tall %></span></p>
 			</div>
 			<div class="weather bottom-content-block">
 				<h3><%= translations.views.planets.weather_title %></h3>
-				<div class="weather-graph graph">
- 					<div class="semi-circle"></div>
- 				 	<div class="semi-circle--mask"></div>
-				</div>			
-				<p class="text"><%= translations.views.planets.temperature_average %></p>
-				<p class="value uppercase"><span class='value'><%= planet_page.planet.temperature %></span><%= translations.views.planets.temperature_value %></p>
+				<p class="text"><%= translations.views.planets[params.planet].weather_title %></p>
+				<p class="text"><%= translations.views.planets[params.planet].weather_subtitle %></p>
+				<div class="weather-graph graph"></div>			
+				<p class="text third-type"><%= translations.views.planets.temperature_average %></p>
+				<p><span class='value uppercase'><%= planet_page.planet.temperature %></span><span class='value uppercase'><%= translations.views.planets.temperature_value %></span></p>
 
 			</div>
 		</div>
