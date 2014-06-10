@@ -631,6 +631,15 @@ html{
 								-ms-transform-origin: center center;
 								-webkit-transform-origin: center center;
 							}
+							.comparator{
+								opacity: 1;
+							}
+							.comparator.hide{
+								opacity: 0;
+							}
+							.comparator.dimmed{
+								opacity: 0.4;
+							}
 						}
 					}
 				}

@@ -1152,10 +1152,22 @@ html body #main .compare_graph .graph .svg svg .select_icon {
   -ms-transform-origin: center center;
   -webkit-transform-origin: center center;
 }
+/* line 634, ../sass/style.scss */
+html body #main .compare_graph .graph .svg svg .comparator {
+  opacity: 1;
+}
+/* line 637, ../sass/style.scss */
+html body #main .compare_graph .graph .svg svg .comparator.hide {
+  opacity: 0;
+}
+/* line 640, ../sass/style.scss */
+html body #main .compare_graph .graph .svg svg .comparator.dimmed {
+  opacity: 0.4;
+}
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 650, ../sass/style.scss */
+  /* line 659, ../sass/style.scss */
   html body #main .boarding_pass div.modal .barcode {
     background-image: url('../images/codebar@2x.png');
     background-position: center center;
@@ -1165,19 +1177,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 657, ../sass/style.scss */
+  /* line 666, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 658, ../sass/style.scss */
+  /* line 667, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 659, ../sass/style.scss */
+  /* line 668, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1185,19 +1197,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @-moz-keyframes glitter {
-  /* line 662, ../sass/style.scss */
+  /* line 671, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 663, ../sass/style.scss */
+  /* line 672, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 664, ../sass/style.scss */
+  /* line 673, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1205,19 +1217,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @-o-keyframes glitter {
-  /* line 667, ../sass/style.scss */
+  /* line 676, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 668, ../sass/style.scss */
+  /* line 677, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 669, ../sass/style.scss */
+  /* line 678, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1225,19 +1237,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @keyframes glitter {
-  /* line 672, ../sass/style.scss */
+  /* line 681, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 673, ../sass/style.scss */
+  /* line 682, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 674, ../sass/style.scss */
+  /* line 683, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;

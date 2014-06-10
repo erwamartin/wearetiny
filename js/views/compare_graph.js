@@ -333,6 +333,8 @@ define([
             // Enlarge planet on mouseover
             planet_image.on('mouseover', function(){
               var planet = d3.select(this);
+              var comparator_name = planet.attr('data-comparator');
+              var comparator_label = d3.select(d3.select('#'+comparator_name).node().parentNode);
               var planet_params = {
                 width : parseFloat(planet.attr("data-width")),
                 height : parseFloat(planet.attr("data-height"))
@@ -347,6 +349,12 @@ define([
                     .attr("width", planet_params.width)
                     .attr("height", planet_params.height)
                     .attr("transform", "translate("+planet_params.x+","+planet_params.y+")");
+
+              if((!this.classList || !this.classList.contains("click")) && d3.selectAll('.planet.click').empty() && d3.selectAll('.comparator_container.click').empty()){
+                d3.selectAll('.comparator').attr('style', 'opacity: 0.4');
+                d3.select('.comparator.'+comparator_name).attr('style', 'opacity: 1');
+                _this.compare_graph.select_comparator_label.call(this, comparator_label);
+              }
             });
 
             // Reduce planet on mouseout
@@ -364,9 +372,14 @@ define([
                     .attr("width", planet_params.width)
                     .attr("height", planet_params.height)
                     .attr("transform", "translate("+planet_params.x+","+planet_params.y+")");
+
+              if((!this.classList || !this.classList.contains("click")) && d3.selectAll('.planet.click').empty() && d3.selectAll('.comparator_container.click').empty()){
+                d3.selectAll('.comparator').attr('style', 'opacity: 1');
+                _this.compare_graph.unselect_all_comparator_label.call(this);
+              }
             });
 
-            // Click
+            // Click on planet
             planet_image.on('click', function(){
               var planet = d3.select(this);
               var comparator = d3.select(this.parentNode);
@@ -400,7 +413,6 @@ define([
 
             planets_counter++;
           }
-
 
 
 
@@ -680,24 +692,30 @@ define([
 
         _this.compare_graph.unselect_comparator_label = function(comparator){
           var comparator_background = comparator.select('.comparator_background');
-          comparator_background.attr("fill-opacity", 0);
+          comparator_background
+            .transition()
+            .duration(300)
+            .attr("fill-opacity", 0);
 
           var comparator_label = comparator.select('.comparator_label');
-          comparator_label.attr("fill", "rgba(36, 36, 36, 1)");
-
-          var comparator_separator = comparator.select('.comparator_separator');
-          comparator_separator.style("fill", "rgba(216, 213, 214, 1)");
+          comparator_label
+            .transition()
+            .duration(150)
+            .attr("fill", "rgba(36, 36, 36, 1)");
         }
 
         _this.compare_graph.select_comparator_label = function(comparator){
           var comparator_background = comparator.select('.comparator_background');
-          comparator_background.attr("fill-opacity", 1);
+          comparator_background
+            .transition()
+            .duration(300)
+            .attr("fill-opacity", 1);
 
           var comparator_label = comparator.select('.comparator_label');
-          comparator_label.attr("fill", "rgba(257, 247, 245, 1)");
-
-          var comparator_separator = comparator.select('.comparator_separator');
-          comparator_separator.style("fill", "rgba(36, 36, 36, 1)");
+          comparator_label
+            .transition()
+            .duration(150)
+            .attr("fill", "rgba(257, 247, 245, 1)");
         }
 
         _this.compare_graph.display_planet_comparator = function(planet){
