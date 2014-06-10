@@ -18,7 +18,7 @@ define([
       _this.$el.html(compiledTemplate);
 
       $('.right_sidebar li a').on('click', function(evt){
-        if(!localStorage.getItem('user') && $(this).parents('li').attr('class')!='compare'){
+        if((!localStorage.getItem('age') || !localStorage.getItem('weight')) && $(this).parents('li').attr('class')!='compare'){
           evt.preventDefault();
           $('.boarding_pass').addClass('on');
           $('.boarding_pass .modal .planet_code').text($(this).parents('li').attr('class').substring(0, 3));
@@ -41,16 +41,21 @@ define([
       });
 
       $('.boarding_pass .modal #travel').on('click', function(evt){
-        var age = Math.parseInt($('.boarding_pass .modal input[type="age"]').val());
-        var weight = Math.parseInt($('.boarding_pass .modal input[type="weight"]').val());
-        var transportation = $('.boarding_pass .modal input[type="weight"]').val();
-        if(age<1 || age>122){
-          
-        }else if(weight<1 || weight>600){
-          
+        $('.boarding_pass .modal div').removeClass('error');
+        var age = parseInt($('.boarding_pass .modal input[name="age"]').val());
+        var weight = parseInt($('.boarding_pass .modal input[name="weight"]').val());
+        var transportation = $('.boarding_pass .modal input[name="transportation"]:checked').val();
+        if(isNaN(age) || age<1 || age>122){
+          $('.boarding_pass .modal div.age').addClass('error');
+        }else if(isNaN(weight) || weight<1 || weight>600){
+          $('.boarding_pass .modal div.weight').addClass('error');
+        }else{
+          localStorage.setItem('age', age);
+          localStorage.setItem('weight', weight);
+          localStorage.setItem('transportation', transportation);
+          return true;
         }
         evt.preventDefault();
-
       });
 
       $.getJSON('data/data.json', function(data){

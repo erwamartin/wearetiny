@@ -380,19 +380,19 @@ html{
 									font-family: 'MohaveBold', Arial, sans-serif;
 									font-size: 2.313em;
 									color: #242424;
-									::-webkit-input-placeholder {color: #d6d3d1;}
-									:-ms-input-placeholder {color: #d6d3d1;}
-									:-moz-placeholder {
-									    color:    #d6d3d1;
-									    opacity:  1;
-									}
-									::-moz-placeholder {
-									    color:    #d6d3d1;
-									    opacity:  1;
-									}
 									text-align: right;
 									border:none;
 									background: transparent;
+								}
+								input::-webkit-input-placeholder {color: #d6d3d1;}
+								input:-ms-input-placeholder {color: #d6d3d1;}
+								input:-moz-placeholder {
+								    color:    #d6d3d1;
+								    opacity:  1;
+								}
+								input::-moz-placeholder {
+								    color:    #d6d3d1;
+								    opacity:  1;
 								}
 								input[name="weight"]{
 									width: 1.5em;
@@ -406,6 +406,21 @@ html{
 							}
 							div+div{
 								border-left: 1px solid #d6d3d1;
+							}
+							div.error{
+								.title, input{
+									color: #e84c3d;
+								}
+								input::-webkit-input-placeholder {color: #e84c3d;}
+								input:-ms-input-placeholder {color: #e84c3d;}
+								input:-moz-placeholder {
+								    color:    #e84c3d;
+								    opacity:  1;
+								}
+								input::-moz-placeholder {
+								    color:    #e84c3d;
+								    opacity:  1;
+								}
 							}
 						}
 						.transportation{
