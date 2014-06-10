@@ -1,56 +1,60 @@
 {
 	"views" : {
 		"global" : {
-			"number_separator" : ",",
-			"or" : "or",
-			"is" : "is",
-			"from_us" : "from us",
+			"number_separator" : " ",
+			"or" : "ou",
+			"is" : "vaut",
+			"is_distance":"est à",
+			"from_us" : "du soleil",
 			"away" : "away",
-			"age" : "age",
-			"weight" : "weight",
-			"year" : "year", 
-			"years" : "years", 
-			"earth_tall" : "earth tall",
-			"one_day_on": "One day on",
-			"lasts" : "lasts", 
-			"hours" : "hours"
+			"age" : "âge",
+			"weight" : "poids",
+			"year" : "année", 
+			"years" : "années", 
+			"earth_tall" : "fois la Terre",
+			"one_day_on": "Un jour sur",
+			"lasts" : "dure", 
+			"hours" : "heures",
+			"unite_astro" : "UA",
+			"away_from" : "du soleil"
 		},
 		"landing_page" : {
 			"punchline" : "We live among <span>14 billions</span> of stars",
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
 		"solar_system" : {
- 			"title" : "Welcome in the solar system",
-			"subtitle" : "Our pretty little home in space",
-			"leave_time_top_sentence" : "Humans live a little bit too far to leave it soon!",
+ 			"title" : "Bienvenue dans le Système Solaire !",
+			"subtitle" : "Notre petit chez-nous dans l'espace",
+			"leave_time_top_sentence" : "Lorem ipsum !",
 			"leave_time_value" : "<span class='number'>29004</span> months",
-			"leave_time_bottom_sentence" : "For us to leave it with a  <span>spacecraft</span> !",
+			"leave_time_bottom_sentence" : "Pour en sortir avec une <span>fusée</span> !",
 			"leave_distance_value" : "<span class='number'>4503000000</span> km",
-			"leave_distance_sentence" : "To get ouside, which means",
-			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights",
-			"compare" : "Compare",
+			"leave_distance_sentence" : "Pour en sortir, soit",
+			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>vols Paris-New York</span>",
+			"compare" : "Comparer",
+			"real_distance" : "Distances à l'échelle",
 			"boarding_pass" : {
-				"title" : "Your boarding pass",
-				"boarding_code_prefix" : "EAR",
-				"y_o" : "Y-O",
-				"travel" : "Travel"
+				"title" : "Votre carte d'embarquement",
+				"boarding_code_prefix" : "TER",
+				"y_o" : "ans",
+				"travel" : "En route"
 			}
 		},
 		"distances_graph" : {
- 			"title" : "Where are our neighbours?",
-			"subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called U.A."
+ 			"title" : "Où sont nos voisins ?",
+			"subtitle" : "Nous avons du mal à visualier la valeur des km dans le système solaire. Voici donc les Unités Astronomiques, abréviées UA :"
 		},
 		"compare_graph" : {
- 			"title" : "Planets comparison",
-			"subtitle" : "Here’s an overall view of our planets data",
-			"select_label" : "Compare with",
+ 			"title" : "Comparons les planètes",
+			"subtitle" : "Voici un aperçu des données de nos chères planètes",
+			"select_label" : "Comparer avec",
 			"comparators" : {
 				"size" : {
-					"name" : "DIAMETER",
+					"name" : "DIAMÈTRE",
 					"unit" : "KM"
 				},
 				"revolution_period" : {
-					"name" : "REVOLUTION",
+					"name" : "RÉVOLUTION",
 					"unit" : "DAYS"
 				},
 				"missions" : {
@@ -58,23 +62,23 @@
 					"unit" : ""
 				},
 				"mass" : {
-					"name" : "WEIGHT",
+					"name" : "POIDS",
 					"unit" : "E24 KG"
 				},
 				"moons" : {
-					"name" : "No. OF MOONS",
+					"name" : "No. DE LUNES",
 					"unit" : ""
 				},
 				"gravity" : {
-					"name" : "GRAVITY",
+					"name" : "GRAVITÉ",
 					"unit" : "M/S²"
 				},
 				"day_length" : {
-					"name" : "DAY LENGTH",
+					"name" : "DURÉE D'UN JOUR",
 					"unit" : "DAYS"
 				},
 				"temperature" : {
-					"name" : "TEMPERATURE",
+					"name" : "TEMPÉRATURE",
 					"unit" : "°C"
 				}
 			}
@@ -89,14 +93,13 @@
 			"calendar_title" : "Calendrier",
 			"area_title" : "Taille", 
 			"weather_title" : "Météo", 
-			"temperature_sentence" : "Average temperature on surface is",
+			"temperature_sentence" : "La température moyenne à la surface est de",
 			"temperature_value" : "°C",
 			"temperature_average" : "Température moyenne",
 			"fun_fact" : "À savoir : ",
 			"mercury" : {
 				"planet_name" : "Mercure",
 				"planet_title" : "Mercure, un peu plus près de notre étoile",
-				"planet_subtitle" : "Our pretty little home in space",
 				"planet_funfact" : [
 					"Mercure tourne autour du Soleil deux fois plus vite que sur elle-même.",
 					"Sur Mercure le Soleil paraît 3 fois plus grand que sur Terre.",
@@ -110,7 +113,6 @@
 			"venus" : {
 				"planet_name" : "Vénus",
 				"planet_title" : "Bons baisers de Vénus",
-				"planet_subtitle" : "From Venus with love",
 				"planet_funfact" : [
 					"La pression atmosphérique sur Vénus vous aplatirait comme une crêpe.",
 					"Il est difficile de voir plus loin que le bout de son nez à cause de l'atmosphère très dense.",
@@ -121,9 +123,8 @@
 				"weather_subtitle" : "weather_subtitle"
 			},
 			"earth" : {
-				"planet_name" : "Earth",
+				"planet_name" : "La Terre",
 				"planet_title" : "Objectif Terre : bienvenue chez vous",
-				"planet_subtitle" : "There is no place like Earth",
 				"planet_funfact" : [
 					"Il y a la place d'aligner toutes les planètes entre la Terre et la Lune.",
 					"Saviez-vous que la Terre est recouverte d'eau à 70% ?"
@@ -134,7 +135,6 @@
 			"mars" : {
 				"planet_name" : "Mars",
 				"planet_title" : "Venez rencontrer Curiosity sur Mars",
-				"planet_subtitle" : "Such a Curiosity",
 				"planet_funfact" : [
 					"Pour les grimpeur, Olympus Mons est presque 3 fois plus haut que l'Everest.",
 					"On appelle la Mars la Planète Rouge car elle est recouverte d'oxide de fer (c'est-à-dire de rouille).",
@@ -146,7 +146,6 @@
 			"jupiter" : {
 				"planet_name" : "Jupiter",
 				"planet_title" : "Bienvenue sur Jupiter, l'immanquable",
-				"planet_subtitle" : "Our pretty little home in space",
 				"planet_funfact" : [
 					"Jupiter est tellement large qu'on pourrait y caser toutes les autres planètes.",
 					"Il est possible que la vie telle qu'on la connaît existe sur Europe, la plus grande lune de Jupiter.",
@@ -159,7 +158,6 @@
 			"saturn" : {
 				"planet_name" : "Saturne",
 				"planet_title" : "Partez en tournée sur Saturne !",
-				"planet_subtitle" : "Our pretty little home in space",
 				"planet_funfact" : [
 					"Les anneaux de Saturne se composent de poussières, de rochers et de glace en orbite autour de la planète.",
 					"Saturne est si peu dense qu'elle pourrait flotter sur l'eau.",
@@ -171,7 +169,6 @@
 			"uranus" : {
 				"planet_name" : "Uranus",
 				"planet_title" : "Nous amorçons la descente vers Uranus !",
-				"planet_subtitle" : "Better be cold-blooded",
 				"planet_funfact" : [
 					"Uranus possède des anneaux, mais ils sont plus fin que ceux de Saturne.",
 					"L'intérieur de la planète est dissimulé par la forte présence de méthane dans l'atmosphère.",
@@ -184,7 +181,6 @@
 			"neptune" : {
 				"planet_name" : "Neptune",
 				"planet_title" : "Neptune terminus, tous les voyageurs sont invités à descendre",
-				"planet_subtitle" : "She's like the wind",
 				"planet_funfact" : [
 					"Neptune n'a pas toujours été la dernière planète du Système Solaire (coucou Pluton).",
 					"Neptune a été découverte par le calcul avant d'être effectivement observée.",

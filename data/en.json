@@ -13,7 +13,9 @@
 			"earth_tall" : "earth tall",
 			"one_day_on": "One day on",
 			"lasts" : "lasts", 
-			"hours" : "hours"
+			"hours" : "hours",
+			"unite_astro" : "AU",
+			"away_from" : "away from The Sun"
 		},
 		"landing_page" : {
 			"punchline" : "We live among <span>14 billions</span> of stars",
@@ -29,6 +31,7 @@
 			"leave_distance_sentence" : "To get ouside, which means",
 			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights",
 			"compare" : "Compare",
+			"real_distance":"Real Distance Scales",
 			"boarding_pass" : {
 				"title" : "Your boarding pass",
 				"boarding_code_prefix" : "EAR",
@@ -38,7 +41,7 @@
 		},
 		"distances_graph" : {
  			"title" : "Where are our neighbours?",
-			"subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called U.A."
+			"subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called AU:"
 		},
 		"compare_graph" : {
  			"title" : "Planets comparison",

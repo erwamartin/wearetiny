@@ -4,7 +4,7 @@
 		<h3><%= translations.views.distances_graph.subtitle %></h3>
 	</header>
 	<div class="legend">
-		<p>1 U.A = </p>
+		<p>1 <%= translations.views.distances_graph.UA %> = </p>
 		<img src="assets/images/planets/sun.svg" class="sun" />
 		<span class="arrow"></span>
 		<img src="assets/images/planets/earth.svg" class="earth" />
@@ -14,7 +14,7 @@
 		<div class="svg"></div>	
 	</div>
 	<div class="planet_infos">
-		<p><span class="planet_name"><%= distances_graph.planet.name %></span> <%= translations.views.global.is %> <span class="ua_distance"><span class="value"><%= distances_graph.planet.solar_distance.ua %></span> U.A</span> <%= translations.views.global.from_us %>, <%= translations.views.global.or %></p>
-		<p><span class='km_distance'><%= distances_graph.planet.solar_distance.km %></span> km away from us</p>
+		<p><span class="planet_name"><%= distances_graph.planet.name %></span> <%= translations.views.global.is_distance %> <span class="ua_distance"><span class="value"><%= distances_graph.planet.solar_distance.ua %></span> <%= translations.views.global.unite_astro %></span> <%= translations.views.global.from_us %>, <%= translations.views.global.or %></p>
+		<p><span class='km_distance'><%= distances_graph.planet.solar_distance.km %></span> km <%= translations.views.global.away_from %></p>
 	</div>
 </section>
