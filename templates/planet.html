@@ -1,6 +1,6 @@
 <section class="planet">
 	<h2><%= translations.views.planets[params.planet].planet_title %></h2>
-	<h4><%= translations.views.planets[params.planet].planet_subtitle %></h4>
+	<h4><%= translations.views.planets[params.planet].planet_funfact[0] %></h4>
 	
 	<div class="content-planet">
 		<div class="top-content">
@@ -32,7 +32,7 @@
 			<div class="weather bottom-content-block">
 				<h3><%= translations.views.planets.weather_title %></h3>
 				<p class="text"><%= translations.views.planets[params.planet].weather_title %></p>
-				<p class="text"><%= translations.views.planets[params.planet].weather_subtitle %></p>
+			<!-- 	<p class="text"><%= translations.views.planets[params.planet].weather_subtitle %></p> -->
 				<div class="weather-graph graph"></div>			
 				<p class="text third-type"><%= translations.views.planets.temperature_average %></p>
 				<p><span class='value uppercase'><%= planet_page.planet.temperature %></span><span class='value uppercase'><%= translations.views.planets.temperature_value %></span></p>
