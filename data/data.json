@@ -61,7 +61,7 @@
 			"speed" : 1,
 			"temperature" : 15,
 			"missions" : 73,
-			"moons" : 2,
+			"moons" : 1,
 			"solar_system" : {
 				"size_coef" : 0.5,
 				"distance_solar_coef" : 0.27
@@ -181,8 +181,17 @@
 		}
 	},
 	"spaceships" : {
-		"SpaceShipTwo" : 4000,
-		"NewHorizons": 58536, 
-		"SolarProbePlus": 720000
+		"SpaceShipTwo" : {
+			"name" : "SpaceShipTwo",
+			"speed" : 4000
+		},
+		"Voyager2" : {
+			"name" : "Voyager 2",
+			"speed" : 56000
+		},
+		"SolarProbePlus" : {
+			"name" : "Solar Probe Plus",
+			"speed" : 4000
+		}
 	}
 }

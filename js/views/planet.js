@@ -12,6 +12,10 @@ define([
     render: function(params){
       var _this = this;
 
+      if(!localStorage.getItem('age') || !localStorage.getItem('weight') || !localStorage.getItem('transportation')){
+        window.location.href = '#solar-system';
+      }
+
       $.getJSON('data/data.json', function(data){
 
         params.planet_page = {
@@ -446,16 +450,18 @@ define([
       });
     },
     get_planet_infos : function(params){
-      return {
-        left_earth : Math.round(parseFloat((((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30))),
-        age : (Math.round(parseFloat(localStorage.getItem("age")))+(Math.round((((params.planets[params.planet_name].distance_earth/params.spaceships.NewHorizons)/24)/30)/12))),
-        weight : Math.round(((parseFloat(localStorage.getItem("weight")))/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity),
-        temperature : params.planets[params.planet_name].temperature,
-        revolution_period : params.planets[params.planet_name].revolution_period,
-        rotation : params.planets[params.planet_name].rotation*24
-        //(poidsUtilisateur/graviteTerre)*gravitePlanete
-          //((distanceDepuisTerre/vitesseVaisseau)/24)/30
-      };
+      var age = parseFloat(localStorage.getItem("age"));
+      var weight = parseFloat(localStorage.getItem("weight"));
+      var transportation = localStorage.getItem("transportation");
+      var planet_infos = {};
+      planet_infos.left_earth = Math.round(parseFloat((((params.planets[params.planet_name].distance_earth/params.spaceships[transportation].speed)/24)/30)));
+      planet_infos.age = Math.round(age+planet_infos.left_earth/12);
+      planet_infos.weight = Math.round((weight/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity);
+      planet_infos.temperature = params.planets[params.planet_name].temperature;
+      planet_infos.revolution_period = params.planets[params.planet_name].revolution_period;
+      planet_infos.rotation = params.planets[params.planet_name].rotation*24;
+      
+      return planet_infos;
     },
     close: function(view){
       if(view.animation_timer) clearInterval(view.animation_timer);
