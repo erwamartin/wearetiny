@@ -80,72 +80,145 @@
 			}
 		},
 		"planets" : {
-			"left_earth_sentence" : "You've left",
-			"left_earth_value" : "months ago",
-			"age_sentence" : "You're now",
-			"age_value" : "years old",
-			"weight_sentence" : "And your weight on the planet is",
+			"left_earth_sentence" : "Votre voyage a duré",
+			"left_earth_value" : "mois",
+			"age_sentence" : "Vous avez maintenant",
+			"age_value" : "ans",
+			"weight_sentence" : "Et votre poids sur cette planète est de",
 			"weight_value" : "kg",
-			"calendar_title" : "Calendar",
-			"area_title" : "Area", 
-			"weather_title" : "Weather", 
+			"calendar_title" : "Calendrier",
+			"area_title" : "Taille", 
+			"weather_title" : "Météo", 
 			"temperature_sentence" : "Average temperature on surface is",
 			"temperature_value" : "°C",
 			"temperature_average" : "Average temperature",
+			"fun_fact" : "À savoir : ",
 			"mercury" : {
 				"planet_name" : "Mercury",
-				"planet_title" : "Welcome on Mercury",
+				"planet_title" : "Mercure, un peu plus près de notre étoile",
 				"planet_subtitle" : "Our pretty little home in space",
-				"weather_title" : "weather_title",
+				"planet_funfact" : [
+					"Mercury goes around the sun twice as fast as it rotates on itself.",
+					"One Mercury day lasts two Mercury years.",
+					"On Mercury the Sun looks 3 times bigger than on Earth.",
+					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"You’ll feel very light on Mercure, because its gravity is third of Earth’s gravity.",
+					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"There is no wind on Mercury since there is no atmosphere at all."
+				],
+				"weather_title" : "Sortez les lunettes de soleil, ça tape fort par ici",
 				"weather_subtitle" : "weather_subtitle"
 			},
 			"venus" : {
 				"planet_name" : "Venus",
-				"planet_title" : "Welcome on Venus",
+				"planet_title" : "Bons baisers de Vénus",
 				"planet_subtitle" : "From Venus with love",
-				"weather_title" : "weather_title",
+				"planet_funfact" : [
+					"Mercury goes around the sun twice as fast as it rotates on itself.",
+					"One Mercury day lasts two Mercury years.",
+					"On Mercury the Sun looks 3 times bigger than on Earth.",
+					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"You’ll feel very light on Mercure, because its gravity is third of Earth’s gravity.",
+					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"There is no wind on Mercury since there is no atmosphere at all."
+				],
+				"weather_title" : "Il fait un peu chaud par ici, besoin d'un rafraîchissement ?",
 				"weather_subtitle" : "weather_subtitle"
 			},
 			"earth" : {
 				"planet_name" : "Earth",
-				"planet_title" : "Welcome on Earth",
+				"planet_title" : "Objectif Terre : bienvenue chez vous",
 				"planet_subtitle" : "There is no place like Earth",
-				"weather_title" : "weather_title",
+				"planet_funfact" : [
+					"Mercury goes around the sun twice as fast as it rotates on itself.",
+					"One Mercury day lasts two Mercury years.",
+					"On Mercury the Sun looks 3 times bigger than on Earth.",
+					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"You’ll feel very light on Mercure, because its gravity is third of Earth’s gravity.",
+					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"There is no wind on Mercury since there is no atmosphere at all."
+				],
+				"weather_title" : "Êtes-vous équipé pour tous les temps ?",
 				"weather_subtitle" : "weather_subtitle"
 			},
 			"mars" : {
 				"planet_name" : "Mars",
-				"planet_title" : "Welcome on Mars",
+				"planet_title" : "Venez rencontrer Curiosity sur Mars",
 				"planet_subtitle" : "Such a Curiosity",
-				"weather_title" : "weather_title",
+				"planet_funfact" : [
+					"Mercury goes around the sun twice as fast as it rotates on itself.",
+					"One Mercury day lasts two Mercury years.",
+					"On Mercury the Sun looks 3 times bigger than on Earth.",
+					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"You’ll feel very light on Mercure, because its gravity is third of Earth’s gravity.",
+					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"There is no wind on Mercury since there is no atmosphere at all."
+				],
+				"weather_title" : "Comme sur Terre, si on oublie l'eau et l'atmopshère respirable",
 				"weather_subtitle" : "weather_subtitle"
 			},
 			"jupiter" : {
 				"planet_name" : "Jupiter",
-				"planet_title" : "Welcome on Jupiter",
+				"planet_title" : "Bienvenue sur Jupiter, l'immanquable",
 				"planet_subtitle" : "Our pretty little home in space",
-				"weather_title" : "weather_title",
+				"planet_funfact" : [
+					"Mercury goes around the sun twice as fast as it rotates on itself.",
+					"One Mercury day lasts two Mercury years.",
+					"On Mercury the Sun looks 3 times bigger than on Earth.",
+					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"You’ll feel very light on Mercure, because its gravity is third of Earth’s gravity.",
+					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"There is no wind on Mercury since there is no atmosphere at all."
+				],
+				"weather_title" : "Orage imminent, parapluies déconseillés",
 				"weather_subtitle" : "weather_subtitle"
 			},
 			"saturn" : {
 				"planet_name" : "Saturn",
 				"planet_title" : "Welcome on Saturn",
 				"planet_subtitle" : "Our pretty little home in space",
-				"weather_title" : "weather_title",
+				"planet_funfact" : [
+					"Mercury goes around the sun twice as fast as it rotates on itself.",
+					"One Mercury day lasts two Mercury years.",
+					"On Mercury the Sun looks 3 times bigger than on Earth.",
+					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"You’ll feel very light on Mercure, because its gravity is third of Earth’s gravity.",
+					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"There is no wind on Mercury since there is no atmosphere at all."
+				],
+				"weather_title" : "Impossible de voir les anneaux avec tous ces nuages",
 				"weather_subtitle" : "weather_subtitle"
 			},
 			"uranus" : {
 				"planet_name" : "Uranus",
 				"planet_title" : "Welcome on Uranus",
 				"planet_subtitle" : "Better be cold-blooded",
-				"weather_title" : "weather_title",
+				"planet_funfact" : [
+					"Mercury goes around the sun twice as fast as it rotates on itself.",
+					"One Mercury day lasts two Mercury years.",
+					"On Mercury the Sun looks 3 times bigger than on Earth.",
+					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"You’ll feel very light on Mercure, because its gravity is third of Earth’s gravity.",
+					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"There is no wind on Mercury since there is no atmosphere at all."
+				],
+				"weather_title" : "Couvrez-vous, le dégel n'est pas près d'arriver ici",
 				"weather_subtitle" : "weather_subtitle"
 			},
 			"neptune" : {
 				"planet_name" : "Neptune",
-				"planet_title" : "Welcome on Neptune",
+				"planet_title" : "Neptune terminus, tous les voyageurs sont invités à descendre",
 				"planet_subtitle" : "She's like the wind",
-				"weather_title" : "weather_title",
+				"planet_funfact" : [
+					"Mercury goes around the sun twice as fast as it rotates on itself.",
+					"One Mercury day lasts two Mercury years.",
+					"On Mercury the Sun looks 3 times bigger than on Earth.",
+					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"You’ll feel very light on Mercure, because its gravity is third of Earth’s gravity.",
+					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"There is no wind on Mercury since there is no atmosphere at all."
+				],
+				"weather_title" : "Attention, le vent souffle fort dans le coin",
 				"weather_subtitle" : "weather_subtitle"
 			}
 		}
