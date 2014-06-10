@@ -605,6 +605,9 @@ html{
 									cursor: pointer;
 								}
 							}
+							.comparator_label.selected{
+								font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+							}
 							.planet_name{
 								font-family: 'PlutoSansCondBold', Arial, sans-serif;
 								font-size: 0.625em;

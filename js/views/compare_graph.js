@@ -496,6 +496,8 @@ define([
 
               // Hide comparator banner
               _this.compare_graph.hide_planet_comparator.call(this);
+
+              d3.selectAll('.planet').classed('click', false);
             }
           });
 
@@ -543,6 +545,8 @@ define([
 
             // Hide comparator banner
             _this.compare_graph.hide_planet_comparator.call(this);
+
+            d3.selectAll('.planet').classed('click', false);
         });
 
 
@@ -679,7 +683,9 @@ define([
 
         _this.compare_graph.display_comparator = function(comparator_name){
           _this.compare_graph.hide_all_comparators.call(this);
-          d3.selectAll('.'+comparator_name).style('opacity', 1);
+          d3.select('.'+comparator_name)
+            .style('opacity', 1)
+            .classed('selected', true);
         }
 
         _this.compare_graph.unselect_all_comparator_label = function(){
@@ -699,6 +705,7 @@ define([
 
           var comparator_label = comparator.select('.comparator_label');
           comparator_label
+            .classed('selected', false)
             .transition()
             .duration(150)
             .attr("fill", "rgba(36, 36, 36, 1)");
@@ -713,6 +720,7 @@ define([
 
           var comparator_label = comparator.select('.comparator_label');
           comparator_label
+            .classed('selected', true)
             .transition()
             .duration(150)
             .attr("fill", "rgba(257, 247, 245, 1)");
