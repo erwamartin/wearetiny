@@ -610,94 +610,95 @@ html body #main .solar_system .right_sidebar ul li a.name {
   vertical-align: middle;
   font-size: 0.625em;
   text-align: right;
+  white-space: nowrap;
 }
-/* line 200, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li:hover a {
   color: #8f8f8f;
 }
-/* line 205, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.mercury .icon {
   background-image: url('../images/planets/mercury.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 210, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.venus .icon {
   background-image: url('../images/planets/venus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 215, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.earth .icon {
   background-image: url('../images/planets/earth.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 220, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.mars .icon {
   background-image: url('../images/planets/mars.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 225, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.jupiter .icon {
   background-image: url('../images/planets/jupiter.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 230, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.saturn .icon {
   background-image: url('../images/planets/saturn.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 235, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.uranus .icon {
   background-image: url('../images/planets/uranus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 240, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.neptune .icon {
   background-image: url('../images/planets/neptune.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 245, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.compare .icon {
   background-image: url('../images/planets/compare.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 251, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 html body #main .solar_system footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100px;
 }
-/* line 256, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales {
   position: relative;
   width: 100%;
 }
-/* line 259, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div {
   position: absolute;
   width: 100%;
   text-align: center;
   z-index: 3;
 }
-/* line 264, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div p {
   display: inline-block;
   line-height: 1.875em;
@@ -706,7 +707,7 @@ html body #main .solar_system footer .distance_scales div p {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 0.925em;
 }
-/* line 272, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div a {
   display: inline-block;
   width: 1.875em;
@@ -720,16 +721,16 @@ html body #main .solar_system footer .distance_scales div a {
   background-size: 100% 100%;
   cursor: pointer;
 }
-/* line 283, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div.svg {
   z-index: 2;
 }
-/* line 286, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales svg {
   display: block;
   margin: 0 auto 0 auto;
 }
-/* line 293, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 html body #main .boarding_pass {
   opacity: 0;
   position: fixed;
@@ -746,7 +747,7 @@ html body #main .boarding_pass {
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
-/* line 303, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 html body #main .boarding_pass div.modal {
   visibility: hidden;
   position: absolute;
@@ -767,7 +768,7 @@ html body #main .boarding_pass div.modal {
   -moz-perspective: 1300px;
   perspective: 1300px;
 }
-/* line 322, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content {
   height: 100%;
   background: #f3f0ed;
@@ -784,7 +785,7 @@ html body #main .boarding_pass div.modal div.content {
   transform: translate(30%) translateZ(600px) rotate(10deg);
   opacity: 0;
 }
-/* line 337, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content > p:first-child {
   line-height: 4.375em;
   vertical-align: middle;
@@ -793,7 +794,7 @@ html body #main .boarding_pass div.modal div.content > p:first-child {
   font-size: 0.875em;
   text-transform: uppercase;
 }
-/* line 345, ../sass/style.scss */
+/* line 346, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label {
   line-height: 2.500em;
   vertical-align: middle;
@@ -803,11 +804,11 @@ html body #main .boarding_pass div.modal div.content .label {
   font-size: 1.500em;
   color: #f3f0ed;
 }
-/* line 353, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label span {
   display: inline-block;
 }
-/* line 356, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label .icon {
   width: 0.833em;
   height: 0.833em;
@@ -818,25 +819,25 @@ html body #main .boarding_pass div.modal div.content .label .icon {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 364, ../sass/style.scss */
+/* line 365, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos {
   margin-top: 1.563em;
   vertical-align: middle;
   text-align: center;
 }
-/* line 368, ../sass/style.scss */
+/* line 369, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div {
   display: inline-block;
   padding: 0 0.750em;
   text-align: left;
 }
-/* line 372, ../sass/style.scss */
+/* line 373, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div .title {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
   font-size: 0.875em;
   text-transform: uppercase;
 }
-/* line 377, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input {
   display: inline-block;
   width: 1em;
@@ -847,71 +848,71 @@ html body #main .boarding_pass div.modal div.content .infos div input {
   border: none;
   background: transparent;
 }
-/* line 387, ../sass/style.scss */
+/* line 388, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input::-webkit-input-placeholder {
   color: #d6d3d1;
 }
-/* line 388, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input:-ms-input-placeholder {
   color: #d6d3d1;
 }
-/* line 389, ../sass/style.scss */
+/* line 390, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input:-moz-placeholder {
   color: #d6d3d1;
   opacity: 1;
 }
-/* line 393, ../sass/style.scss */
+/* line 394, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input::-moz-placeholder {
   color: #d6d3d1;
   opacity: 1;
 }
-/* line 397, ../sass/style.scss */
+/* line 398, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input[name="weight"] {
   width: 1.5em;
 }
-/* line 400, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div .unit {
   display: inline-block;
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.063em;
   text-transform: uppercase;
 }
-/* line 407, ../sass/style.scss */
+/* line 408, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div + div {
   border-left: 1px solid #d6d3d1;
 }
-/* line 411, ../sass/style.scss */
+/* line 412, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error .title, html body #main .boarding_pass div.modal div.content .infos div.error input {
   color: #e84c3d;
 }
-/* line 414, ../sass/style.scss */
+/* line 415, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error input::-webkit-input-placeholder {
   color: #e84c3d;
 }
-/* line 415, ../sass/style.scss */
+/* line 416, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error input:-ms-input-placeholder {
   color: #e84c3d;
 }
-/* line 416, ../sass/style.scss */
+/* line 417, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error input:-moz-placeholder {
   color: #e84c3d;
   opacity: 1;
 }
-/* line 420, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error input::-moz-placeholder {
   color: #e84c3d;
   opacity: 1;
 }
-/* line 426, ../sass/style.scss */
+/* line 427, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation {
   margin: 1.875em auto;
   text-align: center;
 }
-/* line 429, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation input[type="radio"] {
   display: none;
 }
-/* line 432, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation label {
   display: inline-block;
   width: 1.250em;
@@ -919,49 +920,49 @@ html body #main .boarding_pass div.modal div.content .transportation label {
   margin: 0 0.688em;
   cursor: pointer;
 }
-/* line 440, ../sass/style.scss */
+/* line 441, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #aircraft + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 445, ../sass/style.scss */
+/* line 446, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #aircraft:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 450, ../sass/style.scss */
+/* line 451, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #spacecraft + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 455, ../sass/style.scss */
+/* line 456, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #spacecraft:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 460, ../sass/style.scss */
+/* line 461, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #paper-plane + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 465, ../sass/style.scss */
+/* line 466, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #paper-plane:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 470, ../sass/style.scss */
+/* line 471, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content a {
   display: block;
   width: 62%;
@@ -976,7 +977,7 @@ html body #main .boarding_pass div.modal div.content a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 484, ../sass/style.scss */
+/* line 485, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content a:hover {
   background: #242424;
   color: #f3f0ed;
@@ -985,7 +986,7 @@ html body #main .boarding_pass div.modal div.content a:hover {
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
-/* line 492, ../sass/style.scss */
+/* line 493, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .barcode {
   width: 53.3333333%;
   height: 3.625em;
@@ -995,16 +996,16 @@ html body #main .boarding_pass div.modal div.content .barcode {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 501, ../sass/style.scss */
+/* line 502, ../sass/style.scss */
 html body #main .boarding_pass.on {
   height: 100%;
   opacity: 1;
 }
-/* line 504, ../sass/style.scss */
+/* line 505, ../sass/style.scss */
 html body #main .boarding_pass.on .modal {
   visibility: visible;
 }
-/* line 506, ../sass/style.scss */
+/* line 507, ../sass/style.scss */
 html body #main .boarding_pass.on .modal .content {
   -webkit-transition: all 0.3s ease-in 0.1s;
   -moz-transition: all 0.3s ease-in 0.1s;
@@ -1016,39 +1017,39 @@ html body #main .boarding_pass.on .modal .content {
   opacity: 1;
   perspective: 1300px;
 }
-/* line 520, ../sass/style.scss */
+/* line 521, ../sass/style.scss */
 html body #main .distances_graph h3 {
   max-width: 30em;
   margin: .8em auto 0 auto;
   font-size: 1.125em;
 }
-/* line 527, ../sass/style.scss */
+/* line 528, ../sass/style.scss */
 html body #main .distances_graph .distances_comparison .svg svg {
   display: block;
   margin: 1em auto 0 auto;
 }
-/* line 530, ../sass/style.scss */
+/* line 531, ../sass/style.scss */
 html body #main .distances_graph .distances_comparison .svg svg .planet_name {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   text-transform: uppercase;
 }
-/* line 537, ../sass/style.scss */
+/* line 538, ../sass/style.scss */
 html body #main .distances_graph .legend {
   margin: 2.188em auto;
   text-align: center;
 }
-/* line 540, ../sass/style.scss */
+/* line 541, ../sass/style.scss */
 html body #main .distances_graph .legend p, html body #main .distances_graph .legend span, html body #main .distances_graph .legend img {
   display: inline-block;
   vertical-align: middle;
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 1.125em;
 }
-/* line 546, ../sass/style.scss */
+/* line 547, ../sass/style.scss */
 html body #main .distances_graph .legend p:first-child {
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
-/* line 549, ../sass/style.scss */
+/* line 550, ../sass/style.scss */
 html body #main .distances_graph .legend span.arrow {
   width: 5.625em;
   height: 1.375em;
@@ -1057,43 +1058,43 @@ html body #main .distances_graph .legend span.arrow {
   background-repeat: repeat-x;
   background-size: auto auto;
 }
-/* line 554, ../sass/style.scss */
+/* line 555, ../sass/style.scss */
 html body #main .distances_graph .legend .sun {
   width: 1.313em;
   height: 1.313em;
 }
-/* line 558, ../sass/style.scss */
+/* line 559, ../sass/style.scss */
 html body #main .distances_graph .legend .earth {
   width: 0.813em;
   height: 0.813em;
 }
-/* line 563, ../sass/style.scss */
+/* line 564, ../sass/style.scss */
 html body #main .distances_graph .planet_infos {
   margin: 3.750em auto 0 auto;
   text-align: center;
 }
-/* line 566, ../sass/style.scss */
+/* line 567, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 1.125em;
 }
-/* line 569, ../sass/style.scss */
+/* line 570, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p .ua_distance {
   font-family: 'MohaveBold', Arial, sans-serif;
 }
-/* line 573, ../sass/style.scss */
+/* line 574, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p + p {
   margin-top: .863em;
   text-transform: uppercase;
   font-family: 'MohaveRegular', Arial, sans-serif;
   font-size: 1.625em;
 }
-/* line 578, ../sass/style.scss */
+/* line 579, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p + p .km_distance {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.615em;
 }
-/* line 588, ../sass/style.scss */
+/* line 589, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg {
   position: absolute;
   top: 0;
@@ -1101,51 +1102,51 @@ html body #main .compare_graph .graph .svg svg {
   bottom: 0;
   left: 0;
 }
-/* line 591, ../sass/style.scss */
+/* line 592, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg text {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
 }
-/* line 594, ../sass/style.scss */
+/* line 595, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator {
   -webkit-transition: opacity 0.3s ease-in;
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
-/* line 599, ../sass/style.scss */
+/* line 600, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator_container, html body #main .compare_graph .graph .svg svg .display_all_container {
   cursor: pointer;
 }
-/* line 603, ../sass/style.scss */
+/* line 604, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator.selected .planet {
   cursor: pointer;
 }
-/* line 607, ../sass/style.scss */
+/* line 608, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .planet_name {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
   font-size: 0.625em;
   text-transform: uppercase;
 }
-/* line 612, ../sass/style.scss */
+/* line 613, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .banner_value, html body #main .compare_graph .graph .svg svg .banner_compare {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.250em;
   text-transform: uppercase;
 }
-/* line 617, ../sass/style.scss */
+/* line 618, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_label, html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 0.625em;
   text-transform: uppercase;
 }
-/* line 622, ../sass/style.scss */
+/* line 623, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
 }
-/* line 625, ../sass/style.scss */
+/* line 626, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_icon, html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item, html body #main .compare_graph .graph .svg svg .previous_planet, html body #main .compare_graph .graph .svg svg .next_planet {
   cursor: pointer;
 }
-/* line 628, ../sass/style.scss */
+/* line 629, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_icon {
   transform-origin: center center;
   -ms-transform-origin: center center;
@@ -1154,7 +1155,7 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 649, ../sass/style.scss */
+  /* line 650, ../sass/style.scss */
   html body #main .boarding_pass div.modal .barcode {
     background-image: url('../images/codebar@2x.png');
     background-position: center center;
@@ -1164,19 +1165,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 656, ../sass/style.scss */
+  /* line 657, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 657, ../sass/style.scss */
+  /* line 658, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 658, ../sass/style.scss */
+  /* line 659, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1184,19 +1185,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @-moz-keyframes glitter {
-  /* line 661, ../sass/style.scss */
+  /* line 662, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 662, ../sass/style.scss */
+  /* line 663, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 663, ../sass/style.scss */
+  /* line 664, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1204,19 +1205,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @-o-keyframes glitter {
-  /* line 666, ../sass/style.scss */
+  /* line 667, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 667, ../sass/style.scss */
+  /* line 668, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 668, ../sass/style.scss */
+  /* line 669, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1224,19 +1225,19 @@ html body #main .compare_graph .graph .svg svg .select_icon {
 }
 
 @keyframes glitter {
-  /* line 671, ../sass/style.scss */
+  /* line 672, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 672, ../sass/style.scss */
+  /* line 673, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 673, ../sass/style.scss */
+  /* line 674, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;

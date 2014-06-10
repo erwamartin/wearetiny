@@ -18,7 +18,7 @@ define([
       _this.$el.html(compiledTemplate);
 
       $('.right_sidebar li a').on('click', function(evt){
-        if((!localStorage.getItem('age') || !localStorage.getItem('weight')) && $(this).parents('li').attr('class')!='compare'){
+        if((!localStorage.getItem('age') || !localStorage.getItem('weight') || !localStorage.getItem('transportation')) && $(this).parents('li').attr('class')!='compare'){
           evt.preventDefault();
           $('.boarding_pass').addClass('on');
           $('.boarding_pass .modal .planet_code').text($(this).parents('li').attr('class').substring(0, 3));
