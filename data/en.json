@@ -99,7 +99,6 @@
 				"planet_subtitle" : "Our pretty little home in space",
 				"planet_funfact" : [
 					"Mercury goes around the sun twice as fast as it rotates on itself.",
-					"One Mercury day lasts two Mercury years.",
 					"On Mercury the Sun looks 3 times bigger than on Earth.",
 					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
 					"You’ll feel very light on Mercury, because its gravity is third of Earth’s gravity.",
@@ -140,7 +139,7 @@
 				"planet_funfact" : [
 					"Wanna go climbing? Olympus Mons is almost 3 times higher than the Everest.",
 					"The Red Planet owes its nickname to the iron oxide (aka rust) on its surface",
-					"You can follow Curiosity Rovers’s journey on Mars on twitter!"
+					"You can follow Curiosity Rovers’s journey on Mars on Twitter!"
 				],
 				"weather_title" : "It's pretty much like Earth, without water, or breathable air",
 				"weather_subtitle" : "weather_subtitle"
