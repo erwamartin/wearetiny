@@ -33,15 +33,14 @@
 		"solar_system" : {
  			"title" : "Bienvenue dans le Système Solaire !",
 			"subtitle" : "Notre petit chez-nous dans l'espace",
-			"leave_time_top_sentence" : "Lorem ipsum !",
-			"leave_time_value" : "<span class='number'>29004</span> months",
-			"leave_time_bottom_sentence" : "Pour en sortir avec une <span>fusée</span> !",
-			"leave_distance_value" : "<span class='number'>4503000000</span> km",
-			"leave_distance_sentence" : "Pour en sortir, soit",
+			"leave_time_top_sentence" : "Les humains sont trop petits pour espérer le parcourir en entier !",
+			"leave_time_bottom_sentence" : "Pour atteindre ses limites avec <span>[spacecraft]</span> !",
+			"leave_distance_sentence" : "Avant d'en sortir, soit",
 			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>vols Paris-New York</span>",
 			"compare" : "Comparer",
 			"real_distance" : "Distances à l'échelle",
 			"boarding_pass" : {
+				"instructions" : "Merci d'indiquer votre âge, votre poids, ainsi que votre mode de transport favori. Bon voyage !",
 				"title" : "Votre carte d'embarquement",
 				"boarding_code_prefix" : "TER",
 				"y_o" : "ans",
@@ -94,6 +93,7 @@
 		"planets" : {
 			"left_earth_sentence" : "Votre voyage a duré",
 			"left_earth_value" : "mois",
+			"left_earth_value_plural" : "mois",
 			"age_sentence" : "Vous avez maintenant",
 			"weight_sentence" : "Et votre poids sur cette planète est de",
 			"weight_value" : "kg",
@@ -197,6 +197,17 @@
 				"weather_title" : "Attention, le vent souffle fort dans le coin",
 				"weather_subtitle" : "weather_subtitle"
 			}
+		}
+	},
+	"spaceships" : {
+		"SpaceShipTwo" : {
+			"name" : "SpaceShipTwo"
+		},
+		"Voyager2" : {
+			"name" : "Voyager 2"
+		},
+		"SolarProbePlus" : {
+			"name" : "Solar Probe Plus"
 		}
 	}
 }
