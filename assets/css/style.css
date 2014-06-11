@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 /* Imports */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -110,7 +110,7 @@ table {
 .planet h2 {
   margin-top: .5em;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 3.125em;
 }
 /* line 28, ../sass/planet.scss */
 .planet h3 {
