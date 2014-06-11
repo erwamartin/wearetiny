@@ -57,7 +57,7 @@ define([
             'moons' : {},
             'revolution_period' : {},
             'size' : {},
-            'day_length' : {},
+            'rotation' : {},
             'mass' : {},
             'gravity' : {},
             'temperature' : {},
