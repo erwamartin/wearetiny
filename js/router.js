@@ -19,27 +19,28 @@ define([
       '*actions': 'default'
     },
     landingPage : function(){
-      renderView.call(this, {
-        view : new LandingPageView()
+      loadView.call(this, {
+        view : new LandingPageView(), 
+        init : true
       });
     },
     solarSystem : function(){
-      renderView.call(this, {
+      loadView.call(this, {
         view : new SolarSystemView()
       });
     },
     distanceGraph : function(){
-      renderView.call(this, {
+      loadView.call(this, {
         view : new DistancesGraphView()
       });
     },
     compareGraph : function(){
-      renderView.call(this, {
+      loadView.call(this, {
         view : new CompareGraphView()
       });
     },
     planet : function(planet){
-      renderView.call(this, {
+      loadView.call(this, {
         view : new PlanetView(), 
         params : {
           'planet' : planet
@@ -56,12 +57,26 @@ define([
     return app_router;
   };
 
-  var renderView = function(params_in){
-    var params = {params : {}};
+  var loadView = function(params_in){
+    var params = {params : {
+      init : false
+    }};
     $.extend(true, params, params_in);
+    // Display loader
+    if(params.init){
+      $('.loader').show(0, function (){
+        renderView.call(this, params);        
+      });
+    }else{
+      $('.loader').fadeIn(300, function (){
+        renderView.call(this, params);
+      });
+    }
+  }
+
+  var renderView = function(params){
     getTranslations.call(this, {
-      callback : function(translations){
-        
+      callback : function(translations){   
         // Callback of last view
         if(AppRouter.current_view && AppRouter.current_view.close)
            AppRouter.current_view.close.call(this, AppRouter.current_view); 

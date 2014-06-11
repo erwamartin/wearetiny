@@ -386,6 +386,11 @@ define([
             this.maxTextCenter = maxValue.append('text').attr('class','maxText').text(this.config.maxValue);
 
             this.update(newValue === undefined ? 0 : newValue);
+
+            // Hide loader
+            setTimeout(function() {
+              $('.loader').fadeOut()
+            }, 1500);
            }
 
            
@@ -438,14 +443,9 @@ define([
            
           };
 
-           var powerGauge = new gauge('.weather-graph');
-            powerGauge.render(); 
-            powerGauge.update(data.planets[params.params.planet].temperature);
-
-
-
-
-
+          var powerGauge = new gauge('.weather-graph');
+          powerGauge.render(); 
+          powerGauge.update(data.planets[params.params.planet].temperature);
  
       });
     },

@@ -185,6 +185,11 @@ define([
               .attr("font-size", distances_graph.scale.y.font_size+"px")
               .attr("fill", "white");
           }
+
+          // Hide loader
+          setTimeout(function() {
+            $('.loader').fadeOut()
+          }, 3000);
         
 
       });

@@ -22,9 +22,6 @@ define([
 
       var _this = params._this;
 
-      // Display loader
-      $('.loader').addClass('on');
-
       $('.right_sidebar li a').on('click', function(evt){
         if((!localStorage.getItem('age') || !localStorage.getItem('weight') || !localStorage.getItem('transportation')) && $(this).parents('li').attr('class')!='compare'){
           evt.preventDefault();
@@ -229,7 +226,7 @@ define([
 
         // Hide loader
         setTimeout(function() {
-          $('.loader').removeClass('on');
+          $('.loader').fadeOut()
         }, 3000);
 
       });

@@ -988,6 +988,12 @@ define([
         $(document).on('keydown', function(e){
           _this.compare_graph.keyboard_dispatcher.call(this, e);
         });
+
+        // Hide loader
+        setTimeout(function() {
+          //$('.loader').removeClass('on');
+          $('.loader').fadeOut()
+        }, 3000);
     },
     close: function(view){
       // Remove keyboard events

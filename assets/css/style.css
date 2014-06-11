@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 /* Imports */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -452,7 +452,7 @@ html body #main .landing_page h2 span {
   font-family: 'MohaveBold', Arial, sans-serif;
 }
 /* line 73, ../sass/style.scss */
-html body #main .landing_page .solar_system {
+html body #main .landing_page .solar_system_button {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -465,7 +465,7 @@ html body #main .landing_page .solar_system {
   background-size: auto auto;
 }
 /* line 81, ../sass/style.scss */
-html body #main .landing_page .solar_system span {
+html body #main .landing_page .solar_system_button span {
   float: left;
   width: .65em;
   height: .65em;
@@ -480,7 +480,7 @@ html body #main .landing_page .solar_system span {
   -o-animation: glitter 1.5s linear 0s infinite normal;
 }
 /* line 95, ../sass/style.scss */
-html body #main .landing_page .solar_system p {
+html body #main .landing_page .solar_system_button p {
   float: right;
   margin-left: 4.5em;
   font-family: 'PacificoRegular', Arial, sans-serif;
@@ -1172,8 +1172,8 @@ html body #main .compare_graph .graph .svg svg .comparator.hide {
 html body #main .compare_graph .graph .svg svg .comparator.dimmed {
   opacity: 0.4;
 }
-/* line 653, ../sass/style.scss */
-html body #main .loader {
+/* line 654, ../sass/style.scss */
+html body .loader {
   opacity: 0;
   position: fixed;
   top: 0;
@@ -1185,12 +1185,9 @@ html body #main .loader {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto auto;
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
 }
-/* line 665, ../sass/style.scss */
-html body #main .loader p {
+/* line 663, ../sass/style.scss */
+html body .loader p {
   position: absolute;
   top: 50%;
   margin-top: 5.5em;
@@ -1199,13 +1196,13 @@ html body #main .loader p {
   font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   font-size: .85em;
 }
-/* line 675, ../sass/style.scss */
-html body #main .loader.on {
+/* line 673, ../sass/style.scss */
+html body .loader.on {
   height: 100%;
   opacity: 1;
 }
-/* line 679, ../sass/style.scss */
-html body #main .loader.on div .sun {
+/* line 677, ../sass/style.scss */
+html body .loader.on div .sun {
   width: 3.125em;
   height: 3.125em;
   background-color: white;
@@ -1216,8 +1213,8 @@ html body #main .loader.on div .sun {
   margin-left: -1.5625em;
   margin-top: -1.5625em;
 }
-/* line 690, ../sass/style.scss */
-html body #main .loader.on div .earth {
+/* line 688, ../sass/style.scss */
+html body .loader.on div .earth {
   width: 0.875em;
   height: 0.875em;
   background-color: white;
@@ -1237,8 +1234,8 @@ html body #main .loader.on div .earth {
   animation: orbit 1.5s linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Safari 5 */
 }
-/* line 706, ../sass/style.scss */
-html body #main .loader.on div .mercury {
+/* line 704, ../sass/style.scss */
+html body .loader.on div .mercury {
   width: 0.375em;
   height: 0.375em;
   background-color: white;
@@ -1258,8 +1255,8 @@ html body #main .loader.on div .mercury {
   animation: orbit2 0.8s linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Safari 5 */
 }
-/* line 722, ../sass/style.scss */
-html body #main .loader.on div .venus {
+/* line 720, ../sass/style.scss */
+html body .loader.on div .venus {
   width: 0.500em;
   height: 0.500em;
   background-color: white;
@@ -1279,8 +1276,8 @@ html body #main .loader.on div .venus {
   animation: orbit3 1.4s linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Safari 5 */
 }
-/* line 738, ../sass/style.scss */
-html body #main .loader.on div .mars {
+/* line 736, ../sass/style.scss */
+html body .loader.on div .mars {
   width: 0.625em;
   height: 0.625em;
   background-color: white;
@@ -1303,7 +1300,7 @@ html body #main .loader.on div .mars {
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 769, ../sass/style.scss */
+  /* line 766, ../sass/style.scss */
   html body #main .boarding_pass div.modal .barcode {
     background-image: url('../images/codebar@2x.png');
     background-position: center center;
@@ -1313,19 +1310,19 @@ html body #main .loader.on div .mars {
 }
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 776, ../sass/style.scss */
+  /* line 773, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 777, ../sass/style.scss */
+  /* line 774, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 778, ../sass/style.scss */
+  /* line 775, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1333,19 +1330,19 @@ html body #main .loader.on div .mars {
 }
 
 @-moz-keyframes glitter {
-  /* line 781, ../sass/style.scss */
+  /* line 778, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 782, ../sass/style.scss */
+  /* line 779, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 783, ../sass/style.scss */
+  /* line 780, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1353,19 +1350,19 @@ html body #main .loader.on div .mars {
 }
 
 @-o-keyframes glitter {
-  /* line 786, ../sass/style.scss */
+  /* line 783, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 787, ../sass/style.scss */
+  /* line 784, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 788, ../sass/style.scss */
+  /* line 785, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1373,19 +1370,19 @@ html body #main .loader.on div .mars {
 }
 
 @keyframes glitter {
-  /* line 791, ../sass/style.scss */
+  /* line 788, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 792, ../sass/style.scss */
+  /* line 789, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 793, ../sass/style.scss */
+  /* line 790, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1395,48 +1392,48 @@ html body #main .loader.on div .mars {
 /**********Keyframes de rotation planètes**************/
 /***EARTH*****/
 @-webkit-keyframes orbit {
-  /* line 801, ../sass/style.scss */
+  /* line 798, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 802, ../sass/style.scss */
+  /* line 799, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit {
-  /* line 806, ../sass/style.scss */
+  /* line 803, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 807, ../sass/style.scss */
+  /* line 804, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit {
-  /* line 811, ../sass/style.scss */
+  /* line 808, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 812, ../sass/style.scss */
+  /* line 809, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @keyframes orbit {
-  /* line 816, ../sass/style.scss */
+  /* line 813, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 817, ../sass/style.scss */
+  /* line 814, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
@@ -1444,48 +1441,48 @@ html body #main .loader.on div .mars {
 
 /***MERCURY*****/
 @-webkit-keyframes orbit2 {
-  /* line 824, ../sass/style.scss */
+  /* line 821, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 825, ../sass/style.scss */
+  /* line 822, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit2 {
-  /* line 829, ../sass/style.scss */
+  /* line 826, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 830, ../sass/style.scss */
+  /* line 827, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit2 {
-  /* line 834, ../sass/style.scss */
+  /* line 831, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 835, ../sass/style.scss */
+  /* line 832, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @keyframes orbit2 {
-  /* line 839, ../sass/style.scss */
+  /* line 836, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 840, ../sass/style.scss */
+  /* line 837, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
@@ -1493,48 +1490,48 @@ html body #main .loader.on div .mars {
 
 /***VENUS****/
 @-webkit-keyframes orbit3 {
-  /* line 847, ../sass/style.scss */
+  /* line 844, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 848, ../sass/style.scss */
+  /* line 845, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit3 {
-  /* line 852, ../sass/style.scss */
+  /* line 849, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 853, ../sass/style.scss */
+  /* line 850, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit3 {
-  /* line 857, ../sass/style.scss */
+  /* line 854, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 858, ../sass/style.scss */
+  /* line 855, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @keyframes orbit3 {
-  /* line 862, ../sass/style.scss */
+  /* line 859, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 863, ../sass/style.scss */
+  /* line 860, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
@@ -1542,48 +1539,48 @@ html body #main .loader.on div .mars {
 
 /***MARS****/
 @-webkit-keyframes orbit4 {
-  /* line 870, ../sass/style.scss */
+  /* line 867, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 871, ../sass/style.scss */
+  /* line 868, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit4 {
-  /* line 875, ../sass/style.scss */
+  /* line 872, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 876, ../sass/style.scss */
+  /* line 873, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit4 {
-  /* line 880, ../sass/style.scss */
+  /* line 877, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 881, ../sass/style.scss */
+  /* line 878, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @keyframes orbit4 {
-  /* line 885, ../sass/style.scss */
+  /* line 882, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 886, ../sass/style.scss */
+  /* line 883, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
