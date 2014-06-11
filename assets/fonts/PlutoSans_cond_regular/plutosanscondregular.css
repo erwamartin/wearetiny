@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PlutoSansCondRegular';
+    src: url('plutosanscondregular.eot');
+    src: url('plutosanscondregular.eot') format('embedded-opentype'),
+         url('plutosanscondregular.woff') format('woff'),
+         url('plutosanscondregular.ttf') format('truetype'),
+         url('plutosanscondregular.svg#PlutoSansCondRegular') format('svg');
+}

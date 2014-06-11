@@ -17,15 +17,22 @@
 }
 
 @font-face {
-  font-family: 'PlutoSansCondMedium';
-  src: url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.eot");
-  src: url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.eot?#iefix") format("embedded-opentype"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.woff") format("woff"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.ttf") format("truetype"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.svg#PlutoSansCondMedium") format("svg");
-}
-
-@font-face {
   font-family: 'PlutoSansCondLight';
   src: url("../fonts/PlutoSans_cond_light/plutosanscondlight.eot");
   src: url("../fonts/PlutoSans_cond_light/plutosanscondlight.eot?#iefix") format("embedded-opentype"), url("../fonts/PlutoSans_cond_light/plutosanscondlight.woff") format("woff"), url("../fonts/PlutoSans_cond_light/plutosanscondlight.ttf") format("truetype"), url("../fonts/PlutoSans_cond_light/plutosanscondlight.svg#PlutoSansCondLight") format("svg");
+}
+
+@font-face {
+  font-family: 'PlutoSansCondRegular';
+  src: url("../fonts/PlutoSans_cond_regular/plutosanscondregular.eot");
+  src: url("../fonts/PlutoSans_cond_regular/plutosanscondregular.eot?#iefix") format("embedded-opentype"), url("../fonts/PlutoSans_cond_regular/plutosanscondregular.woff") format("woff"), url("../fonts/PlutoSans_cond_regular/plutosanscondregular.ttf") format("truetype"), url("../fonts/PlutoSans_cond_regular/plutosanscondregular.svg#PlutoSansCondRegular") format("svg");
+}
+
+
+@font-face {
+  font-family: 'PlutoSansCondMedium';
+  src: url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.eot");
+  src: url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.eot?#iefix") format("embedded-opentype"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.woff") format("woff"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.ttf") format("truetype"), url("../fonts/PlutoSans_cond_medium/plutosanscondmedium.svg#PlutoSansCondMedium") format("svg");
 }
 
 @font-face {

@@ -28,6 +28,7 @@ html{
 		height: 100%;
 		color: $main-font-color;
 		@include background('background.jpg', center center, 100% 100%);
+		background-color: #040f15;
 		-webkit-font-smoothing: antialiased;
 		font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
@@ -64,7 +65,7 @@ html{
 					line-height: 100%;
 					text-align: center;
 					font-family: 'MohaveRegular', Arial, sans-serif;
-					font-size : 4em;
+					font-size : 3.125em;
 					span {
 						font-family: 'MohaveBold', Arial, sans-serif;
 					}
@@ -117,7 +118,7 @@ html{
 						border-top: 2px solid #FFF;
 					}
 					p{
-						font-family: 'PlutoSansCondLight', Arial, sans-serif;
+						font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 						font-size: 0.875em;
 						color: #FFF;
 					}
@@ -269,7 +270,7 @@ html{
 								line-height: 1.875em;
 								vertical-align: middle;
 								text-align: center;
-								font-family: 'PlutoSansCondLight', Arial, sans-serif;
+								font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 								font-size: 0.925em;
 							}
 							a{
@@ -531,7 +532,7 @@ html{
 							display: block;
 							margin: 1em auto 0 auto;
 							.planet_name{
-								font-family: 'PlutoSansCondLight', Arial, sans-serif;
+								font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 								text-transform: uppercase;
 							}
 						}
@@ -543,7 +544,7 @@ html{
 					p, span, img{
 						display: inline-block;
 						vertical-align: middle;
-						font-family: 'PlutoSansCondLight', Arial, sans-serif;
+						font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 						font-size: 1.125em;
 					}
 					p:first-child{
@@ -567,7 +568,7 @@ html{
 					margin: 3.750em auto 0 auto;
 					text-align: center;
 					p{
-						font-family: 'PlutoSansCondLight', Arial, sans-serif;
+						font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 						font-size: 1.125em;
 						.ua_distance{
 							font-family: 'MohaveBold', Arial, sans-serif;
@@ -592,7 +593,7 @@ html{
 							position : absolute;
 							top: 0; right: 0; bottom: 0; left: 0;
 							text{
-								font-family: 'PlutoSansCondLight', Arial, sans-serif;
+								font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 							}
 							.comparator{
 								-webkit-transition: opacity 0.3s ease-in;
@@ -621,7 +622,7 @@ html{
 								text-transform: uppercase;
 							}
 							.select_label, .select_value, .select_item{
-								font-family: 'PlutoSansCondLight', Arial, sans-serif;
+								font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 								font-size: 0.625em;
 								text-transform: uppercase;
 							}
@@ -667,7 +668,7 @@ html{
 					margin-top:5.5em;
 					width: 100%;
 					text-align: center;
-					font-family: 'PlutoSansCondLight', Arial, sans-serif;
+					font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 					font-size: .85em;
 				}
 			}

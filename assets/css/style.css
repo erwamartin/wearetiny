@@ -397,45 +397,46 @@ html body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-color: #040f15;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-/* line 34, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 html body #main {
   height: 100%;
   overflow: hidden;
 }
-/* line 38, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 html body #main header h2, html body #main header h3 {
   width: 100%;
   text-align: center;
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
-/* line 43, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 html body #main header h2 {
   padding-top: .5em;
   text-transform: uppercase;
   font-size: 3.125em;
 }
-/* line 48, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 html body #main header h3 {
   padding-top: .2em;
   font-size: 1.125em;
 }
-/* line 53, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 html body #main section {
   width: 100%;
   height: 100%;
 }
-/* line 57, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 html body #main .landing_page {
   background-image: url('../images/background_landing.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
 }
-/* line 59, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 html body #main .landing_page h2 {
   position: absolute;
   top: 50%;
@@ -444,13 +445,13 @@ html body #main .landing_page h2 {
   line-height: 100%;
   text-align: center;
   font-family: 'MohaveRegular', Arial, sans-serif;
-  font-size: 4em;
+  font-size: 3.125em;
 }
-/* line 68, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 html body #main .landing_page h2 span {
   font-family: 'MohaveBold', Arial, sans-serif;
 }
-/* line 72, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 html body #main .landing_page .solar_system {
   position: absolute;
   left: 50%;
@@ -463,7 +464,7 @@ html body #main .landing_page .solar_system {
   background-repeat: no-repeat;
   background-size: auto auto;
 }
-/* line 80, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 html body #main .landing_page .solar_system span {
   float: left;
   width: .65em;
@@ -478,19 +479,19 @@ html body #main .landing_page .solar_system span {
   -ms-animation: glitter 1.5s linear 0s infinite normal;
   -o-animation: glitter 1.5s linear 0s infinite normal;
 }
-/* line 94, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 html body #main .landing_page .solar_system p {
   float: right;
   margin-left: 4.5em;
   font-family: 'PacificoRegular', Arial, sans-serif;
   font-size: 14px;
 }
-/* line 104, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 html body #main .solar_system .solar_system_orbits svg {
   display: block;
   margin: 1em auto 0 auto;
 }
-/* line 109, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 html body #main .solar_system .left_sidebar {
   position: absolute;
   z-index: 5;
@@ -499,80 +500,80 @@ html body #main .solar_system .left_sidebar {
   margin-top: -10.688em;
   padding-left: 1.5em;
 }
-/* line 116, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 html body #main .solar_system .left_sidebar div + div {
   border-top: 2px solid #FFF;
 }
-/* line 119, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 html body #main .solar_system .left_sidebar p {
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   font-size: 0.875em;
   color: #FFF;
 }
-/* line 124, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .blue span {
   color: #addee0;
 }
-/* line 127, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value {
   margin: .650em 0;
 }
-/* line 129, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value .number {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 2.625em;
   letter-spacing: .05em;
 }
-/* line 134, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value .number + span {
   margin-left: .5em;
 }
-/* line 138, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value.uppercase {
   font-family: 'MohaveRegular', Arial, sans-serif;
   font-size: 1.625em;
 }
-/* line 141, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 html body #main .solar_system .left_sidebar .value.uppercase .number {
   font-size: 1.615em;
 }
-/* line 145, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules {
   margin: 1.25em 0;
 }
-/* line 147, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li {
   display: inline-block;
   margin-right: .5em;
 }
-/* line 150, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li a {
   display: block;
   width: 2.313em;
   height: 2.313em;
 }
-/* line 155, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li .spacecraft {
   background-image: url('../images/icons/spacecraft.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 158, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li .aircraft {
   background-image: url('../images/icons/aircraft.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 161, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 html body #main .solar_system .left_sidebar ul.vehicules li .paper-plane {
   background-image: url('../images/icons/paper-plane.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 167, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 html body #main .solar_system .right_sidebar {
   position: absolute;
   z-index: 5;
@@ -580,18 +581,18 @@ html body #main .solar_system .right_sidebar {
   right: 0;
   margin-top: -15em;
 }
-/* line 173, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul {
   padding: 2.500em 0.938em;
   background: #19262c;
 }
-/* line 176, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li {
   position: relative;
   display: block;
   margin: 0.719em 0;
 }
-/* line 180, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li a {
   display: block;
   color: #FFF;
@@ -599,12 +600,12 @@ html body #main .solar_system .right_sidebar ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 187, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li a.icon {
   width: 2.313em;
   height: 2.313em;
 }
-/* line 191, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li a.name {
   position: absolute;
   right: 6.5em;
@@ -615,102 +616,102 @@ html body #main .solar_system .right_sidebar ul li a.name {
   text-align: right;
   white-space: nowrap;
 }
-/* line 203, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li:hover a {
   color: #8f8f8f;
 }
-/* line 208, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.mercury .icon {
   background-image: url('../images/planets/mercury.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 213, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.venus .icon {
   background-image: url('../images/planets/venus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 218, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.earth .icon {
   background-image: url('../images/planets/earth.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 223, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.mars .icon {
   background-image: url('../images/planets/mars.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 228, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.jupiter .icon {
   background-image: url('../images/planets/jupiter.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 233, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.saturn .icon {
   background-image: url('../images/planets/saturn.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 238, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.uranus .icon {
   background-image: url('../images/planets/uranus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 243, ../sass/style.scss */
+/* line 244, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.neptune .icon {
   background-image: url('../images/planets/neptune.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 248, ../sass/style.scss */
+/* line 249, ../sass/style.scss */
 html body #main .solar_system .right_sidebar ul li.compare .icon {
   background-image: url('../images/planets/compare.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 254, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 html body #main .solar_system footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100px;
 }
-/* line 259, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales {
   position: relative;
   width: 100%;
 }
-/* line 262, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div {
   position: absolute;
   width: 100%;
   text-align: center;
   z-index: 3;
 }
-/* line 267, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div p {
   display: inline-block;
   line-height: 1.875em;
   vertical-align: middle;
   text-align: center;
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   font-size: 0.925em;
 }
-/* line 275, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div a {
   display: inline-block;
   width: 1.875em;
@@ -724,16 +725,16 @@ html body #main .solar_system footer .distance_scales div a {
   background-size: 100% 100%;
   cursor: pointer;
 }
-/* line 286, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales div.svg {
   z-index: 2;
 }
-/* line 289, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 html body #main .solar_system footer .distance_scales svg {
   display: block;
   margin: 0 auto 0 auto;
 }
-/* line 296, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 html body #main .boarding_pass {
   opacity: 0;
   position: fixed;
@@ -750,7 +751,7 @@ html body #main .boarding_pass {
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
-/* line 306, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 html body #main .boarding_pass div.modal {
   visibility: hidden;
   position: absolute;
@@ -771,7 +772,7 @@ html body #main .boarding_pass div.modal {
   -moz-perspective: 1300px;
   perspective: 1300px;
 }
-/* line 325, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content {
   height: 100%;
   background: #f3f0ed;
@@ -788,7 +789,7 @@ html body #main .boarding_pass div.modal div.content {
   transform: translate(30%) translateZ(600px) rotate(10deg);
   opacity: 0;
 }
-/* line 340, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content > p:first-child {
   line-height: 4.375em;
   vertical-align: middle;
@@ -797,7 +798,7 @@ html body #main .boarding_pass div.modal div.content > p:first-child {
   font-size: 0.875em;
   text-transform: uppercase;
 }
-/* line 348, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label {
   line-height: 2.500em;
   vertical-align: middle;
@@ -807,11 +808,11 @@ html body #main .boarding_pass div.modal div.content .label {
   font-size: 1.500em;
   color: #f3f0ed;
 }
-/* line 356, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label span {
   display: inline-block;
 }
-/* line 359, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .label .icon {
   width: 0.833em;
   height: 0.833em;
@@ -822,25 +823,25 @@ html body #main .boarding_pass div.modal div.content .label .icon {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 367, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos {
   margin-top: 1.563em;
   vertical-align: middle;
   text-align: center;
 }
-/* line 371, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div {
   display: inline-block;
   padding: 0 0.750em;
   text-align: left;
 }
-/* line 375, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div .title {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
   font-size: 0.875em;
   text-transform: uppercase;
 }
-/* line 380, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input {
   display: inline-block;
   width: 1em;
@@ -851,71 +852,71 @@ html body #main .boarding_pass div.modal div.content .infos div input {
   border: none;
   background: transparent;
 }
-/* line 390, ../sass/style.scss */
+/* line 391, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input::-webkit-input-placeholder {
   color: #d6d3d1;
 }
-/* line 391, ../sass/style.scss */
+/* line 392, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input:-ms-input-placeholder {
   color: #d6d3d1;
 }
-/* line 392, ../sass/style.scss */
+/* line 393, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input:-moz-placeholder {
   color: #d6d3d1;
   opacity: 1;
 }
-/* line 396, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input::-moz-placeholder {
   color: #d6d3d1;
   opacity: 1;
 }
-/* line 400, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div input[name="weight"] {
   width: 1.5em;
 }
-/* line 403, ../sass/style.scss */
+/* line 404, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div .unit {
   display: inline-block;
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.063em;
   text-transform: uppercase;
 }
-/* line 410, ../sass/style.scss */
+/* line 411, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div + div {
   border-left: 1px solid #d6d3d1;
 }
-/* line 414, ../sass/style.scss */
+/* line 415, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error .title, html body #main .boarding_pass div.modal div.content .infos div.error input {
   color: #e84c3d;
 }
-/* line 417, ../sass/style.scss */
+/* line 418, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error input::-webkit-input-placeholder {
   color: #e84c3d;
 }
-/* line 418, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error input:-ms-input-placeholder {
   color: #e84c3d;
 }
-/* line 419, ../sass/style.scss */
+/* line 420, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error input:-moz-placeholder {
   color: #e84c3d;
   opacity: 1;
 }
-/* line 423, ../sass/style.scss */
+/* line 424, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .infos div.error input::-moz-placeholder {
   color: #e84c3d;
   opacity: 1;
 }
-/* line 429, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation {
   margin: 1.875em auto;
   text-align: center;
 }
-/* line 432, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation input[type="radio"] {
   display: none;
 }
-/* line 435, ../sass/style.scss */
+/* line 436, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation label {
   display: inline-block;
   width: 1.250em;
@@ -923,49 +924,49 @@ html body #main .boarding_pass div.modal div.content .transportation label {
   margin: 0 0.688em;
   cursor: pointer;
 }
-/* line 443, ../sass/style.scss */
+/* line 444, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #aircraft + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 448, ../sass/style.scss */
+/* line 449, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #aircraft:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 453, ../sass/style.scss */
+/* line 454, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #spacecraft + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 458, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #spacecraft:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 463, ../sass/style.scss */
+/* line 464, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #paper-plane + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 468, ../sass/style.scss */
+/* line 469, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .transportation #paper-plane:checked + label {
   background-image: url('../images/./icons/spacecraft_boarding_pass_on.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 473, ../sass/style.scss */
+/* line 474, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content a {
   display: block;
   width: 62%;
@@ -980,7 +981,7 @@ html body #main .boarding_pass div.modal div.content a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 487, ../sass/style.scss */
+/* line 488, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content a:hover {
   background: #242424;
   color: #f3f0ed;
@@ -989,7 +990,7 @@ html body #main .boarding_pass div.modal div.content a:hover {
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
-/* line 495, ../sass/style.scss */
+/* line 496, ../sass/style.scss */
 html body #main .boarding_pass div.modal div.content .barcode {
   width: 53.3333333%;
   height: 3.625em;
@@ -999,16 +1000,16 @@ html body #main .boarding_pass div.modal div.content .barcode {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 504, ../sass/style.scss */
+/* line 505, ../sass/style.scss */
 html body #main .boarding_pass.on {
   height: 100%;
   opacity: 1;
 }
-/* line 507, ../sass/style.scss */
+/* line 508, ../sass/style.scss */
 html body #main .boarding_pass.on .modal {
   visibility: visible;
 }
-/* line 509, ../sass/style.scss */
+/* line 510, ../sass/style.scss */
 html body #main .boarding_pass.on .modal .content {
   -webkit-transition: all 0.3s ease-in 0.1s;
   -moz-transition: all 0.3s ease-in 0.1s;
@@ -1020,39 +1021,39 @@ html body #main .boarding_pass.on .modal .content {
   opacity: 1;
   perspective: 1300px;
 }
-/* line 523, ../sass/style.scss */
+/* line 524, ../sass/style.scss */
 html body #main .distances_graph h3 {
   max-width: 30em;
   margin: .8em auto 0 auto;
   font-size: 1.125em;
 }
-/* line 530, ../sass/style.scss */
+/* line 531, ../sass/style.scss */
 html body #main .distances_graph .distances_comparison .svg svg {
   display: block;
   margin: 1em auto 0 auto;
 }
-/* line 533, ../sass/style.scss */
+/* line 534, ../sass/style.scss */
 html body #main .distances_graph .distances_comparison .svg svg .planet_name {
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   text-transform: uppercase;
 }
-/* line 540, ../sass/style.scss */
+/* line 541, ../sass/style.scss */
 html body #main .distances_graph .legend {
   margin: 2.188em auto;
   text-align: center;
 }
-/* line 543, ../sass/style.scss */
+/* line 544, ../sass/style.scss */
 html body #main .distances_graph .legend p, html body #main .distances_graph .legend span, html body #main .distances_graph .legend img {
   display: inline-block;
   vertical-align: middle;
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   font-size: 1.125em;
 }
-/* line 549, ../sass/style.scss */
+/* line 550, ../sass/style.scss */
 html body #main .distances_graph .legend p:first-child {
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
-/* line 552, ../sass/style.scss */
+/* line 553, ../sass/style.scss */
 html body #main .distances_graph .legend span.arrow {
   width: 5.625em;
   height: 1.375em;
@@ -1061,43 +1062,43 @@ html body #main .distances_graph .legend span.arrow {
   background-repeat: repeat-x;
   background-size: auto auto;
 }
-/* line 557, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 html body #main .distances_graph .legend .sun {
   width: 1.313em;
   height: 1.313em;
 }
-/* line 561, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 html body #main .distances_graph .legend .earth {
   width: 0.813em;
   height: 0.813em;
 }
-/* line 566, ../sass/style.scss */
+/* line 567, ../sass/style.scss */
 html body #main .distances_graph .planet_infos {
   margin: 3.750em auto 0 auto;
   text-align: center;
 }
-/* line 569, ../sass/style.scss */
+/* line 570, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p {
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   font-size: 1.125em;
 }
-/* line 572, ../sass/style.scss */
+/* line 573, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p .ua_distance {
   font-family: 'MohaveBold', Arial, sans-serif;
 }
-/* line 576, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p + p {
   margin-top: .863em;
   text-transform: uppercase;
   font-family: 'MohaveRegular', Arial, sans-serif;
   font-size: 1.625em;
 }
-/* line 581, ../sass/style.scss */
+/* line 582, ../sass/style.scss */
 html body #main .distances_graph .planet_infos p + p .km_distance {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.615em;
 }
-/* line 591, ../sass/style.scss */
+/* line 592, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg {
   position: absolute;
   top: 0;
@@ -1105,73 +1106,73 @@ html body #main .compare_graph .graph .svg svg {
   bottom: 0;
   left: 0;
 }
-/* line 594, ../sass/style.scss */
+/* line 595, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg text {
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 }
-/* line 597, ../sass/style.scss */
+/* line 598, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator {
   -webkit-transition: opacity 0.3s ease-in;
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
-/* line 602, ../sass/style.scss */
+/* line 603, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator_container, html body #main .compare_graph .graph .svg svg .display_all_container {
   cursor: pointer;
 }
-/* line 606, ../sass/style.scss */
+/* line 607, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator.selected .planet {
   cursor: pointer;
 }
-/* line 610, ../sass/style.scss */
+/* line 611, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator_label.selected {
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
-/* line 613, ../sass/style.scss */
+/* line 614, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .planet_name {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
   font-size: 0.625em;
   text-transform: uppercase;
 }
-/* line 618, ../sass/style.scss */
+/* line 619, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .banner_value, html body #main .compare_graph .graph .svg svg .banner_compare {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 1.250em;
   text-transform: uppercase;
 }
-/* line 623, ../sass/style.scss */
+/* line 624, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_label, html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item {
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   font-size: 0.625em;
   text-transform: uppercase;
 }
-/* line 628, ../sass/style.scss */
+/* line 629, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item {
   font-family: 'PlutoSansCondBold', Arial, sans-serif;
 }
-/* line 631, ../sass/style.scss */
+/* line 632, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_icon, html body #main .compare_graph .graph .svg svg .select_value, html body #main .compare_graph .graph .svg svg .select_item, html body #main .compare_graph .graph .svg svg .previous_planet, html body #main .compare_graph .graph .svg svg .next_planet {
   cursor: pointer;
 }
-/* line 634, ../sass/style.scss */
+/* line 635, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .select_icon {
   transform-origin: center center;
   -ms-transform-origin: center center;
   -webkit-transform-origin: center center;
 }
-/* line 639, ../sass/style.scss */
+/* line 640, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator {
   opacity: 1;
 }
-/* line 642, ../sass/style.scss */
+/* line 643, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator.hide {
   opacity: 0;
 }
-/* line 645, ../sass/style.scss */
+/* line 646, ../sass/style.scss */
 html body #main .compare_graph .graph .svg svg .comparator.dimmed {
   opacity: 0.4;
 }
-/* line 652, ../sass/style.scss */
+/* line 653, ../sass/style.scss */
 html body #main .loader {
   opacity: 0;
   position: fixed;
@@ -1188,22 +1189,22 @@ html body #main .loader {
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
-/* line 664, ../sass/style.scss */
+/* line 665, ../sass/style.scss */
 html body #main .loader p {
   position: absolute;
   top: 50%;
   margin-top: 5.5em;
   width: 100%;
   text-align: center;
-  font-family: 'PlutoSansCondLight', Arial, sans-serif;
+  font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   font-size: .85em;
 }
-/* line 674, ../sass/style.scss */
+/* line 675, ../sass/style.scss */
 html body #main .loader.on {
   height: 100%;
   opacity: 1;
 }
-/* line 678, ../sass/style.scss */
+/* line 679, ../sass/style.scss */
 html body #main .loader.on div .sun {
   width: 3.125em;
   height: 3.125em;
@@ -1215,7 +1216,7 @@ html body #main .loader.on div .sun {
   margin-left: -1.5625em;
   margin-top: -1.5625em;
 }
-/* line 689, ../sass/style.scss */
+/* line 690, ../sass/style.scss */
 html body #main .loader.on div .earth {
   width: 0.875em;
   height: 0.875em;
@@ -1236,7 +1237,7 @@ html body #main .loader.on div .earth {
   animation: orbit 1.5s linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Safari 5 */
 }
-/* line 705, ../sass/style.scss */
+/* line 706, ../sass/style.scss */
 html body #main .loader.on div .mercury {
   width: 0.375em;
   height: 0.375em;
@@ -1257,7 +1258,7 @@ html body #main .loader.on div .mercury {
   animation: orbit2 0.8s linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Safari 5 */
 }
-/* line 721, ../sass/style.scss */
+/* line 722, ../sass/style.scss */
 html body #main .loader.on div .venus {
   width: 0.500em;
   height: 0.500em;
@@ -1278,7 +1279,7 @@ html body #main .loader.on div .venus {
   animation: orbit3 1.4s linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Safari 5 */
 }
-/* line 737, ../sass/style.scss */
+/* line 738, ../sass/style.scss */
 html body #main .loader.on div .mars {
   width: 0.625em;
   height: 0.625em;
@@ -1302,7 +1303,7 @@ html body #main .loader.on div .mars {
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 768, ../sass/style.scss */
+  /* line 769, ../sass/style.scss */
   html body #main .boarding_pass div.modal .barcode {
     background-image: url('../images/codebar@2x.png');
     background-position: center center;
@@ -1312,19 +1313,19 @@ html body #main .loader.on div .mars {
 }
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
-  /* line 775, ../sass/style.scss */
+  /* line 776, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 776, ../sass/style.scss */
+  /* line 777, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 777, ../sass/style.scss */
+  /* line 778, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1332,19 +1333,19 @@ html body #main .loader.on div .mars {
 }
 
 @-moz-keyframes glitter {
-  /* line 780, ../sass/style.scss */
+  /* line 781, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 781, ../sass/style.scss */
+  /* line 782, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 782, ../sass/style.scss */
+  /* line 783, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1352,19 +1353,19 @@ html body #main .loader.on div .mars {
 }
 
 @-o-keyframes glitter {
-  /* line 785, ../sass/style.scss */
+  /* line 786, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 786, ../sass/style.scss */
+  /* line 787, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 787, ../sass/style.scss */
+  /* line 788, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1372,19 +1373,19 @@ html body #main .loader.on div .mars {
 }
 
 @keyframes glitter {
-  /* line 790, ../sass/style.scss */
+  /* line 791, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
   }
 
-  /* line 791, ../sass/style.scss */
+  /* line 792, ../sass/style.scss */
   50% {
     -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
     opacity: 0.95;
   }
 
-  /* line 792, ../sass/style.scss */
+  /* line 793, ../sass/style.scss */
   100% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
     opacity: 0.8;
@@ -1394,48 +1395,48 @@ html body #main .loader.on div .mars {
 /**********Keyframes de rotation planètes**************/
 /***EARTH*****/
 @-webkit-keyframes orbit {
-  /* line 800, ../sass/style.scss */
+  /* line 801, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 801, ../sass/style.scss */
+  /* line 802, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit {
-  /* line 805, ../sass/style.scss */
+  /* line 806, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 806, ../sass/style.scss */
+  /* line 807, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit {
-  /* line 810, ../sass/style.scss */
+  /* line 811, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 811, ../sass/style.scss */
+  /* line 812, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @keyframes orbit {
-  /* line 815, ../sass/style.scss */
+  /* line 816, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 816, ../sass/style.scss */
+  /* line 817, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
@@ -1443,48 +1444,48 @@ html body #main .loader.on div .mars {
 
 /***MERCURY*****/
 @-webkit-keyframes orbit2 {
-  /* line 823, ../sass/style.scss */
+  /* line 824, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 824, ../sass/style.scss */
+  /* line 825, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit2 {
-  /* line 828, ../sass/style.scss */
+  /* line 829, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 829, ../sass/style.scss */
+  /* line 830, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit2 {
-  /* line 833, ../sass/style.scss */
+  /* line 834, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 834, ../sass/style.scss */
+  /* line 835, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @keyframes orbit2 {
-  /* line 838, ../sass/style.scss */
+  /* line 839, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 839, ../sass/style.scss */
+  /* line 840, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
@@ -1492,48 +1493,48 @@ html body #main .loader.on div .mars {
 
 /***VENUS****/
 @-webkit-keyframes orbit3 {
-  /* line 846, ../sass/style.scss */
+  /* line 847, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 847, ../sass/style.scss */
+  /* line 848, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit3 {
-  /* line 851, ../sass/style.scss */
+  /* line 852, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 852, ../sass/style.scss */
+  /* line 853, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit3 {
-  /* line 856, ../sass/style.scss */
+  /* line 857, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 857, ../sass/style.scss */
+  /* line 858, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @keyframes orbit3 {
-  /* line 861, ../sass/style.scss */
+  /* line 862, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 862, ../sass/style.scss */
+  /* line 863, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
@@ -1541,48 +1542,48 @@ html body #main .loader.on div .mars {
 
 /***MARS****/
 @-webkit-keyframes orbit4 {
-  /* line 869, ../sass/style.scss */
+  /* line 870, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 870, ../sass/style.scss */
+  /* line 871, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit4 {
-  /* line 874, ../sass/style.scss */
+  /* line 875, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 875, ../sass/style.scss */
+  /* line 876, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit4 {
-  /* line 879, ../sass/style.scss */
+  /* line 880, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 880, ../sass/style.scss */
+  /* line 881, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @keyframes orbit4 {
-  /* line 884, ../sass/style.scss */
+  /* line 885, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 885, ../sass/style.scss */
+  /* line 886, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
