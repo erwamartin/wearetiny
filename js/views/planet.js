@@ -119,7 +119,7 @@ define([
           //var interpolateDay = d3.interpolate(day.endAngle()(), (2 * Math.PI * d3.time.seconds(d3.time.day.floor(now), now).length / d3.time.seconds(d3.time.day.floor(now), d3.time.day.ceil(now)).length));
           
          
-          d3.transition().tween("orbit", function () {
+          d3.transition().duration(2000).tween("orbit", function () {
             return function (t) {
 
               var last_angle = ((newAngle(origin, now, data.planets[params.params.planet].revolution_period, data.planets[params.params.planet].sun_angle)*6.28)/360);
@@ -457,9 +457,9 @@ define([
       planet_infos.left_earth = Math.round(parseFloat((((params.planets[params.planet_name].distance_earth/params.spaceships[transportation].speed)/24)/30)));
       planet_infos.age = Math.round(age+planet_infos.left_earth/12);
       planet_infos.weight = Math.round((weight/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity);
-      planet_infos.temperature = params.planets[params.planet_name].temperature;
-      planet_infos.revolution_period = params.planets[params.planet_name].revolution_period;
-      planet_infos.rotation = params.planets[params.planet_name].rotation*24;
+      planet_infos.temperature = Math.round(parseFloat(params.planets[params.planet_name].temperature));
+      planet_infos.revolution_period = Math.round(parseFloat(params.planets[params.planet_name].revolution_period));
+      planet_infos.rotation = Math.round(parseFloat(params.planets[params.planet_name].rotation*24));
       
       return planet_infos;
     },
