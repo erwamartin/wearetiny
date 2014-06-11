@@ -1,7 +1,6 @@
 /* Imports */
 @import 'reset';
 @import 'fonts';
-@import 'planet';
 
 /* Mixins */
 @mixin background($imgpath, $position:0 0, $size: auto auto, $repeat: no-repeat){
@@ -28,7 +27,7 @@ html{
 		height: 100%;
 		color: $main-font-color;
 		@include background('background.jpg', center center, 100% 100%);
-		background-color: #040f15;
+		background-color: #021620;
 		-webkit-font-smoothing: antialiased;
 		font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
@@ -157,35 +156,23 @@ html{
 								height: 2.313em;
 								cursor: pointer;
 							}
-							#v_spacecraft1{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
-								}
+							#v_spacecraft1+label{
+								@include background('./icons/spaceship2.svg', center center, 100% 100%);
 							}
-							#v_spacecraft1:checked{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
-								}
+							#v_spacecraft1:checked+label, #v_spacecraft1+label:hover{
+								@include background('./icons/hover-spaceship2.svg', center center, 100% 100%);
 							}
-							#v_spacecraft2{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
-								}
+							#v_spacecraft2+label{
+								@include background('./icons/voyager2.svg', center center, 100% 100%);
 							}
-							#v_spacecraft2:checked{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
-								}
+							#v_spacecraft2:checked+label, #v_spacecraft2+label:hover{
+								@include background('./icons/hover-voyager2.svg', center center, 100% 100%);
 							}
-							#v_spacecraft3{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
-								}
+							#v_spacecraft3+label{
+								@include background('./icons/solarprobe.svg', center center, 100% 100%);
 							}
-							#v_spacecraft3:checked{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
-								}
+							#v_spacecraft3:checked+label, #v_spacecraft3+label:hover{
+								@include background('./icons/hover-solarprobe.svg', center center, 100% 100%);
 							}
 						}
 					}
@@ -329,6 +316,17 @@ html{
 				-webkit-transition: opacity 0.3s ease-in;
 				-moz-transition: opacity 0.3s ease-in;
 				transition: opacity 0.3s ease-in;
+				p.instructions{
+					position: absolute;
+					width: 100%;
+					top: 50%; 
+					margin-top: -21em;
+					color: #FFF;
+					font-family: 'PlutoSansCondBold', Arial, sans-serif;
+					font-size: 0.875em;
+					letter-spacing: .1em;
+					text-align: center;
+				}
 				div.modal{
 					visibility: hidden;
 					position: absolute;
@@ -370,6 +368,7 @@ html{
 							font-family: 'PlutoSansCondBold', Arial, sans-serif;
 							font-size: 0.875em;
 							text-transform: uppercase;
+							letter-spacing: .1em;
 						}
 						.label{
 							line-height: 2.500em;
@@ -379,6 +378,7 @@ html{
 							font-family: 'MohaveBold', Arial, sans-serif;
 							font-size: 1.500em;
 							color: #f3f0ed;
+							letter-spacing: .1em;
 							span{
 								display: inline-block;
 							}
@@ -402,6 +402,7 @@ html{
 									font-family: 'PlutoSansCondBold', Arial, sans-serif;
 									font-size: 0.875em;
 									text-transform: uppercase;
+									letter-spacing: .1em;
 								}
 								input{
 									display: inline-block;
@@ -431,6 +432,7 @@ html{
 									font-family: 'MohaveBold', Arial, sans-serif;
 									font-size: 1.063em;
 									text-transform: uppercase;
+									letter-spacing: .1em;
 								}
 							}
 							div+div{
@@ -460,40 +462,34 @@ html{
 							}
 							label{
 								display: inline-block;
-								width: 1.250em;
-								height: 1.250em;
+								width: 1.563em;
+								height: 1.563em;
 								margin: 0 0.688em;
 								cursor: pointer;
 							}
-							#t_spacecraft1{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
-								}
+							#t_spacecraft1+label{
+								opacity: .3;
+								@include background('./icons/boarding-spaceshiptwo.svg', center center, 100% 100%);
 							}
-							#t_spacecraft1:checked{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
-								}
+							#t_spacecraft1:checked+label, #t_spacecraft1+label:hover{
+								opacity: 1;
+								@include background('./icons/boarding-spaceshiptwo.svg', center center, 100% 100%);
 							}
-							#t_spacecraft2{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
-								}
+							#t_spacecraft2+label{
+								opacity: .3;
+								@include background('./icons/boarding-voyager2.svg', center center, 100% 100%);
 							}
-							#t_spacecraft2:checked{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
-								}
+							#t_spacecraft2:checked+label, #t_spacecraft2+label:hover{
+								opacity: 1;
+								@include background('./icons/boarding-voyager2.svg', center center, 100% 100%);
 							}
-							#t_spacecraft3{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
-								}
+							#t_spacecraft3+label{
+								opacity: .3;
+								@include background('./icons/boarding-solarprobe.svg', center center, 100% 100%);
 							}
-							#t_spacecraft3:checked{
-								+ label{
-									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
-								}
+							#t_spacecraft3:checked+label, #t_spacecraft3+label:hover{
+								opacity: 1;
+								@include background('./icons/boarding-solarprobe.svg', center center, 100% 100%);
 							}
 						}
 						input[type="submit"]{
@@ -686,7 +682,8 @@ html{
 			left: 0;
 			height: 0;
 			z-index: 9;
-			@include background('./background.jpg', center center, auto auto);
+			/*@include background('./background.jpg', center center, auto auto);*/
+			background-color: #021620;
 			p{
 				position:absolute;
 				top:50%;
@@ -781,6 +778,8 @@ html{
 		
 	}
 }
+
+@import 'planet';
 
 /* Retina */
 @media

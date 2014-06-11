@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="84.812px" height="84.132px" viewBox="209.624 0 84.812 84.132" enable-background="new 209.624 0 84.812 84.132"
+	 xml:space="preserve">
+<g id="Calque_2_1_">
+</g>
+<g id="Calque_1">
+	<circle fill="#1A1A1A" cx="251.53" cy="42.066" r="41.406"/>
+	<g>
+		<polygon fill="#FFFFFF" points="244.5,54.998 235.5,66.497 226.5,54.998 226.5,32.002 235.5,20.503 244.5,32.002 		"/>
+		<polygon fill="#FFFFFF" points="262.5,48.338 246.5,54.329 246.5,32.378 262.5,38.309 		"/>
+		<rect x="262.5" y="38.5" fill="#FFFFFF" width="13" height="10"/>
+		
+			<ellipse transform="matrix(0.983 0.1835 -0.1835 0.983 10.2892 -47.6517)" fill="#FFFFFF" cx="262.674" cy="31.781" rx="4.802" ry="3.348"/>
+		
+			<ellipse transform="matrix(0.983 0.1835 -0.1835 0.983 10.2892 -47.6517)" fill="#FFFFFF" cx="262.674" cy="31.781" rx="2.1" ry="1.464"/>
+		<g>
+			<line fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2" stroke-miterlimit="10" x1="272.5" y1="40.5" x2="283.5" y2="40.5"/>
+			<line fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2" stroke-miterlimit="10" x1="267.5" y1="43.5" x2="277.5" y2="43.5"/>
+			<line fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2" stroke-miterlimit="10" x1="275.5" y1="46.5" x2="285.5" y2="46.5"/>
+		</g>
+		<g>
+			<polygon fill="#FFFFFF" stroke="#1A1A1A" stroke-miterlimit="10" points="254.853,62.874 260.152,59.283 260.186,52.058 
+				254.884,55.749 			"/>
+			
+				<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="257.52" y1="53.914" x2="253.29" y2="50.454"/>
+		</g>
+	</g>
+</g>
+</svg>
