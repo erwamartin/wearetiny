@@ -166,56 +166,57 @@ define([
             }
           ];
 
+          
+              var area = {
+                svg_element : d3.select('.area-graph'),
+                params : {
+                  width : ($('.area').innerWidth()-20),
+                  height : 172,
+                }
+              }
+ 
+              var y = d3.scale.linear()
+                  .range([area.params.height, 0]) 
+                  .domain([0, d3.max(area_data, function(d) { return d.value; })]);
 
-          var area = {
-            svg_element : d3.select('.area-graph'),
-            params : {
-              width : ($('.area').innerWidth()-20),
-              height : 172,
-            }
-          }
+             area.svg = area.svg_element.append("svg")
+                  .attr("width", area.params.width)
+                  .attr("height", area.params.height);
 
-          var y = d3.scale.linear()
-              .range([area.params.height, 0]) 
-              .domain([0, d3.max(area_data, function(d) { return d.value; })]);
+              var barWidth = 112;
 
-         area.svg = area.svg_element.append("svg")
-              .attr("width", area.params.width)
-              .attr("height", area.params.height);
+              var bar = area.svg.selectAll("g")
+                  .data(area_data)
+                  .enter().append("g")
+                  .attr("transform", function(d, i) { return "translate(" + i * barWidth + ",0)"; });
 
-          var barWidth = 112;
+            _this.animation2_timer = setInterval(function () {
+              bar.append("rect")
+                  .attr("x", 45)
+                  .attr("y", function(d) { return y(d.value); })
+                  .attr("height", 0)
+                  .attr("width", barWidth - 4)
+                  .style("fill",  function(d) { return d.color; })
+                  .transition()
+                    .duration(1000)
+                    .ease("linear")
+                    .attr("height", function(d) { return area.params.height - y(d.value); });
 
-          var bar = area.svg.selectAll("g")
-              .data(area_data)
-              .enter().append("g")
-              .attr("transform", function(d, i) { return "translate(" + i * barWidth + ",0)"; });
-
-          bar.append("rect")
-              .attr("x", 45)
-              .attr("y", function(d) { return y(d.value); })
-              .attr("height", 0)
-              .attr("width", barWidth - 4)
-              .style("fill",  function(d) { return d.color; })
-              .transition()
-                .duration(1000)
-                .ease("linear")
-                .attr("height", function(d) { return area.params.height - y(d.value); });
-
-              d3.max(area_data, function(d) { return area.params.height - y(d.value); })
+                  d3.max(area_data, function(d) { return area.params.height - y(d.value); })
 
 
-          bar.append("rect")
-             
-              .attr("y",  d3.max(area_data, function(d) { return area.params.height - y(d.value); })-2)
-              .attr("height", 2 )
-              .attr("width", 290)
-              .style("fill", "rgba(255, 255, 255,  1)")
-              .style("stroke", "rgba(255, 255, 255,  1)");
+              bar.append("rect")
+                  .attr("y",  d3.max(area_data, function(d) { return area.params.height - y(d.value); })-2)
+                  .attr("height", 2 )
+                  .attr("width", 290)
+                  .style("fill", "rgba(255, 255, 255,  1)")
+                  .style("stroke", "rgba(255, 255, 255,  1)");
 
-          function type(d) {
-            d.value = +d.value; // coerce to number
-            return d;
-          }
+              function type(d) {
+                d.value = +d.value; // coerce to number
+                return d;
+              }
+          }, 1250);
 
 
         /********************************************/
@@ -390,7 +391,7 @@ define([
             // Hide loader
             setTimeout(function() {
               $('#loader').fadeOut()
-            }, 1500);
+            }, 1000);
            }
 
            
@@ -410,12 +411,13 @@ define([
             .attrTween('d', function(a){
              
                var i = d3.interpolate(value.previous, a);
-               //this._current = i(0);
+               this._current = i(0);
                return function(t) {
               return that.arcPointer(i(t));
                };
 
             });
+
             indicator.transition()
                .ease("linear")
                .duration(this.config.transitionMs)
@@ -431,22 +433,22 @@ define([
                 if(d<0){
                   return 'rgba(66,183,227,1)';
                 }else if(d>0){
-                    return 'rgba(243,68,58,1)';
+                  return 'rgba(243,68,58,1)';
                 }
             });
-             
-
            }
 
            this.configure(configuration);
            
           };
-
           var powerGauge = new gauge('.weather-graph');
           powerGauge.render(); 
-          powerGauge.update(data.planets[params.params.planet].temperature);
- 
+          _this.animation3_timer = setInterval(function () {
+              powerGauge.update(data.planets[params.params.planet].temperature);
+          }, 1000);
       });
+
+
     },
     get_planet_infos : function(params){
       var age = parseFloat(localStorage.getItem("age"));
@@ -459,7 +461,27 @@ define([
       planet_infos.temperature = Math.round(parseFloat(params.planets[params.planet_name].temperature));
       planet_infos.revolution_period = Math.round(parseFloat(params.planets[params.planet_name].revolution_period));
       planet_infos.rotation = Math.round(parseFloat(params.planets[params.planet_name].rotation*24));
-      
+      planet_infos.earthTall = params.planets[params.planet_name].size/params.planets['earth'].size;
+
+      animateTextNumber(".left_earthNumber", planet_infos.left_earth);
+      animateTextNumber(".ageNumber", planet_infos.age);
+      animateTextNumber(".weightNumber", planet_infos.weight);
+      animateTextNumber(".rotationNumber", planet_infos.rotation);
+      animateTextNumber(".revolution_periodNumber", planet_infos.revolution_period);
+      animateTextNumber(".temperatureNumber", planet_infos.temperature);
+      animateTextNumber(".earthTallNumber", planet_infos.earthTall);
+
+      function animateTextNumber(attr, data) {
+          jQuery({dataValue: 0}).animate({dataValue: data}, {
+            duration: 4000,
+            delay : 3000,
+            easing:'swing', 
+            step: function() { 
+              $(attr).text(Math.ceil(this.dataValue));
+            }
+          });
+        };
+
       return planet_infos;
     },
     close: function(view){

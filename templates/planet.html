@@ -6,16 +6,16 @@
 		<div class="top-content">
 			<div class="old_age">
 				<p class="text"><%= translations.views.planets.left_earth_sentence %></p>
-				<p class="value uppercase"><span class='number'> <%= planet_page.planet.left_earth %></span> <% print((planet_page.planet.left_earth > 1) ?  translations.views.global.months : translations.views.global.month) %></p>
+				<p class="value uppercase"><span class='number left_earthNumber'> <%= planet_page.planet.left_earth %></span> <% print((planet_page.planet.left_earth > 1) ?  translations.views.global.months : translations.views.global.month) %></p>
 
 			</div>
 			<div class="new_age">
 				<p class="text"><%= translations.views.planets.age_sentence %></p>
-				<p class="value uppercase"><span class='number'><%= planet_page.planet.age %></span> <% print((planet_page.planet.age > 1) ?  translations.views.global.ages : translations.views.global.age) %></p>
+				<p class="value uppercase"><span class='number ageNumber'><%= planet_page.planet.age %></span> <% print((planet_page.planet.age > 1) ?  translations.views.global.ages : translations.views.global.age) %></p>
 			</div>
 			<div class="weight">
 				<p class="text"><%= translations.views.planets.weight_sentence %></p>
-				<p class="value uppercase"><span class='number'><%= planet_page.planet.weight %></span> <%= translations.views.planets.weight_value %></p>
+				<p class="value uppercase"><span class='number weightNumber'><%= planet_page.planet.weight %></span> <%= translations.views.planets.weight_value %></p>
 			</div>
 		</div>
 		<div class="bottom-content">
@@ -23,14 +23,17 @@
 				<h3><%= translations.views.planets.calendar_title %></h3>
 				<div class="calendar-graph graph"></div>
 
-				<p><span class="text"> <%= translations.views.global.planet_year.replace('[planet]', translations.views.planets[params.planet].planet_name) %>  <%= translations.views.global.is %></span> <span class='value uppercase'><%= planet_page.planet.revolution_period %></span> <span class="uppercase"><% print((planet_page.planet.revolution_period  > 1) ?  translations.views.global.days : translations.views.global.day) %></span></p>
+				<p><span class="text"> <%= translations.views.global.planet_year.replace('[planet]', translations.views.planets[params.planet].planet_name) %>  <%= translations.views.global.is %></span> <span class='value uppercase revolution_periodNumber'><%= planet_page.planet.revolution_period %></span> <span class="uppercase"><% print((planet_page.planet.rotation  > 1) ?  translations.views.global.days : translations.views.global.day) %></span></p>
 
-				<p><span class="text"><%= translations.views.global.one_day_on %> <%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %></span> <span class='value uppercase'><%= planet_page.planet.rotation %></span> <span class="uppercase"><% print((planet_page.planet.rotation  > 1) ?  translations.views.global.hours : translations.views.global.hour) %></span></p>
+				<p>
+					<span class="text"><%= translations.views.global.one_day_on %> <%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %></span> 
+					<span class="value uppercase rotationNumber"><%= planet_page.planet.rotation %></span> 
+					<span class="uppercase"><% print((planet_page.planet.rotation  > 1) ?  translations.views.global.hours : translations.views.global.hour) %></span></p>
 			</div>
 			<div class="area bottom-content-block">
 				<h3><%= translations.views.planets.area_title %></h3>
 				<div class="area-graph graph "></div>
-				<p><span class="text"><%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %></span> <span class='value uppercase'><% planet_page.planet.tall %> </span> <span class="uppercase"><%= translations.views.global.earth_tall %></span></p>
+				<p><span class="text"><%= translations.views.planets[params.planet].planet_name%> <%= translations.views.global.is %> </span> <span class='value uppercase earthTallNumber'><% planet_page.planet.earthTall %> </span> <span class="uppercase"> <%=  translations.views.global.earth_tall %></span></p>
 			</div>
 			<div class="weather bottom-content-block">
 				<h3><%= translations.views.planets.weather_title %></h3>
@@ -38,7 +41,7 @@
 			<!-- 	<p class="text"><%= translations.views.planets[params.planet].weather_subtitle %></p> -->
 				<div class="weather-graph graph"></div>			
 				<p class="text third-type"><%= translations.views.planets.temperature_average %></p>
-				<p><span class='value uppercase'><%= planet_page.planet.temperature %></span><span class='value uppercase'><%= translations.views.planets.temperature_value %></span></p>
+				<p><span class='value uppercase temperatureNumber'><%= planet_page.planet.temperature %></span><span class='value uppercase'><%= translations.views.planets.temperature_value %></span></p>
 
 			</div>
 		</div>
@@ -57,4 +60,14 @@
 			<li class="compare"><a href="#solar-system/compare" class="name"><%= translations.views.solar_system.compare %></a><a href="#solar-system/compare" class="icon"></a></li>
 		</ul>
 	</div>
+</section>
+<section class="loader">
+	<div>
+		<div class="sun"></div>
+		<div class="earth"></div>
+		<div class="mercury"></div>
+		<div class="venus"></div>
+		<div class="mars"></div>
+	</div>
+	<p><%= translations.views.global.loading %></p>
 </section>
