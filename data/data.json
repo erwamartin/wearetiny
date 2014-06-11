@@ -59,7 +59,7 @@
 			"temperature" : 15,
 			"missions" : 73,
 			"moons" : 1,
-			"univers_end" : 403000000,
+			"univers_end" : 14960000000,
 			"solar_system" : {
 				"size_coef" : 0.5,
 				"distance_solar_coef" : 0.27

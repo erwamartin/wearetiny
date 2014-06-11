@@ -5,6 +5,7 @@
 			"number_separator" : ",",
 			"or" : "or",
 			"is" : "is",
+			"is_distance":"is",
 			"from_us" : "from us",
 			"away" : "away",
 			"age" : "age",
@@ -30,15 +31,16 @@
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
 		"solar_system" : {
- 			"title" : "Welcome in the solar system",
-			"subtitle" : "Our pretty little home in space",
-			"leave_time_top_sentence" : "Humans live a little bit too far to leave it soon!",
-			"leave_time_bottom_sentence" : "For us to leave it with <span>[spacecraft]</span> !",
-			"leave_distance_sentence" : "To get ouside, which means",
+ 			"title" : "Welcome to the solar system",
+			"subtitle" : "Our sweet little home in space",
+			"leave_time_top_sentence" : "Humans are too tiny to reach its boundaries!",
+			"leave_time_bottom_sentence" : "To go to the heliopause with <span>[spacecraft]</span> !",
+			"leave_distance_sentence" : "Before you're out, which means",
 			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights",
 			"compare" : "Compare",
-			"real_distance":"Real Distance Scales",
+			"real_distance":"To scale distances",
 			"boarding_pass" : {
+				"instructions" : "Please fill in your personal information and select your spaceship. Have a nice trip!",
 				"title" : "Your boarding pass",
 				"boarding_code_prefix" : "EAR",
 				"y_o" : "Y-O",
@@ -89,8 +91,9 @@
 			}
 		},
 		"planets" : {
-			"left_earth_sentence" : "You've left",
-			"left_earth_value" : "months ago",
+			"left_earth_sentence" : "You left",
+			"left_earth_value" : "month ago",
+			"left_earth_value_plural" : "months ago",
 			"age_sentence" : "You're now",
 			"weight_sentence" : "And your weight on the planet is",
 			"weight_value" : "kg",
