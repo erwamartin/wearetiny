@@ -110,7 +110,7 @@ table {
 .planet h2 {
   margin-top: .5em;
   text-transform: uppercase;
-  font-size: 3.125em;
+  font-size: 2.4em;
 }
 /* line 28, ../sass/planet.scss */
 .planet h3 {
@@ -144,7 +144,7 @@ table {
   margin-left: 24px;
   background: rgba(255, 255, 255, 0.1);
   text-align: center;
-  padding: 2em 1em 2em 1em;
+  padding: 1em 1em 1em 1em;
 }
 /* line 57, ../sass/planet.scss */
 .planet .content-planet .top-content div {
