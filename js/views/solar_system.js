@@ -9,13 +9,21 @@ define([
     el: $('#main'),
     initialize : function(){
     },
-
     render: function(params){
 
-      var _this = this;
+      var _this = params._this = this;
 
       var compiledTemplate = _.template( SolarSystemTemplate, params );
       _this.$el.html(compiledTemplate);
+
+      _this.render_graph.call(this, params);
+    },
+    render_graph: function(params){
+
+      var _this = params._this;
+
+      // Display loader
+      $('.loader').addClass('on');
 
       $('.right_sidebar li a').on('click', function(evt){
         if((!localStorage.getItem('age') || !localStorage.getItem('weight') || !localStorage.getItem('transportation')) && $(this).parents('li').attr('class')!='compare'){
@@ -218,6 +226,11 @@ define([
             .attr("transform", "translate(" + ((data.planets[planet].distance_solar*distance_scales.params.coef_distance)+distance_scales.sun.radius) + ", 0)")
             .style("fill", data.planets[planet].color1);
         }
+
+        // Hide loader
+        setTimeout(function() {
+          $('.loader').removeClass('on');
+        }, 3000);
 
       });
     },

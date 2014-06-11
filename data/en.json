@@ -1,6 +1,7 @@
 {
 	"views" : {
 		"global" : {
+			"loading" : "Loading...",
 			"number_separator" : ",",
 			"or" : "or",
 			"is" : "is",
