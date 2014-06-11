@@ -73,7 +73,7 @@
 					"name" : "GRAVITY",
 					"unit" : "M/S²"
 				},
-				"day_length" : {
+				"rotation" : {
 					"name" : "DAY LENGTH",
 					"unit" : "DAYS"
 				},
