@@ -299,7 +299,7 @@ html{
 				position: fixed;
 				top: 0; right: 0; left: 0;
 				height: 0;
-				z-index: 4;
+				z-index: 6;
 				@include background('background.jpg', center center, 100% 100%);
 				-webkit-transition: opacity 0.3s ease-in;
 				-moz-transition: opacity 0.3s ease-in;

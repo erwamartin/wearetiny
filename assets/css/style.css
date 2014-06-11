@@ -742,7 +742,7 @@ html body #main .boarding_pass {
   right: 0;
   left: 0;
   height: 0;
-  z-index: 4;
+  z-index: 6;
   background-image: url('../images/background.jpg');
   background-position: center center;
   background-repeat: no-repeat;
