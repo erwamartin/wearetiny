@@ -62,13 +62,12 @@ define([
       init : false
     }};
     $.extend(true, params, params_in);
-    // Display loader
     if(params.init){
-      $('.loader').show(0, function (){
+      $('#loader').show(0, function (){
         renderView.call(this, params);        
       });
     }else{
-      $('.loader').fadeIn(300, function (){
+      $('#loader').fadeIn(300, function (){
         renderView.call(this, params);
       });
     }

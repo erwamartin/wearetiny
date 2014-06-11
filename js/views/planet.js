@@ -389,7 +389,7 @@ define([
 
             // Hide loader
             setTimeout(function() {
-              $('.loader').fadeOut()
+              $('#loader').fadeOut()
             }, 1500);
            }
 
@@ -401,7 +401,6 @@ define([
             }
             value.previous = value.value;
             value.value = newValue;
-            //this.valueTextCenter.text(newValue.toFixed(0));
             var ratio = scale(newValue);
             var newAngle = this.config.minAngle + (ratio * range);
             

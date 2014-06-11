@@ -188,7 +188,7 @@ define([
 
           // Hide loader
           setTimeout(function() {
-            $('.loader').fadeOut()
+            $('#loader').fadeOut()
           }, 3000);
         
 

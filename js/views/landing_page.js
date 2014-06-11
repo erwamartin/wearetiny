@@ -16,7 +16,7 @@ define([
 
       // Hide loader
       setTimeout(function() {
-        $('.loader').fadeOut();
+        $('#loader').fadeOut();
       }, 300);
     },
     loadSolarSystem : function(evt){

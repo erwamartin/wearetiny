@@ -46,7 +46,7 @@
 </section>
 <section class="boarding_pass">
 	<div class="modal">
-		<div class="content">
+		<form class="content">
 			<p><%= translations.views.solar_system.boarding_pass.title %></p>
 			<p class="label">
 				<span><%= translations.views.solar_system.boarding_pass.boarding_code_prefix %></span>
@@ -73,8 +73,8 @@
 				<input type="radio" name="transportation" value="SolarProbePlus" id="paper-plane">
 				<label for="paper-plane"></label>
 			</div>
-			<a href="" id="travel"><%= translations.views.solar_system.boarding_pass.travel %></a>
+			<input type="submit" value="<%= translations.views.solar_system.boarding_pass.travel %>">
 			<div class="barcode"></div>
-		</div>
+		</form>
 	</div>
 </section>

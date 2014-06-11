@@ -991,8 +991,7 @@ define([
 
         // Hide loader
         setTimeout(function() {
-          //$('.loader').removeClass('on');
-          $('.loader').fadeOut()
+          $('#loader').fadeOut()
         }, 3000);
     },
     close: function(view){

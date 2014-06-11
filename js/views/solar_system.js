@@ -27,7 +27,7 @@ define([
           evt.preventDefault();
           $('.boarding_pass').addClass('on');
           $('.boarding_pass .modal .planet_code').text($(this).parents('li').attr('class').substring(0, 3));
-          $('.boarding_pass .modal a#travel').attr('href', $(this).attr('href'));
+          $('.boarding_pass .modal form').attr('data-action', $(this).attr('href'));
         }
       });
 
@@ -45,7 +45,9 @@ define([
         $(this).attr('placeholder', $(this).data('placeholder'));
       });
 
-      $('.boarding_pass .modal #travel').on('click', function(evt){
+      $('.boarding_pass .modal form').on('submit', function(evt){
+        evt.preventDefault();
+
         $('.boarding_pass .modal div').removeClass('error');
         var age = parseInt($('.boarding_pass .modal input[name="age"]').val());
         var weight = parseInt($('.boarding_pass .modal input[name="weight"]').val());
@@ -58,9 +60,8 @@ define([
           localStorage.setItem('age', age);
           localStorage.setItem('weight', weight);
           localStorage.setItem('transportation', transportation);
-          return true;
+          window.location.href = $(this).data('action');
         }
-        evt.preventDefault();
       });
 
       $.getJSON('data/data.json', function(data){
@@ -226,7 +227,7 @@ define([
 
         // Hide loader
         setTimeout(function() {
-          $('.loader').fadeOut()
+          $('#loader').fadeOut()
         }, 3000);
 
       });
@@ -239,7 +240,6 @@ define([
 });
 
 function newAngle(origin, now, rotation, oldAngle){
-  // console.log(origin+" "+now+" "+rotation+" "+oldAngle);
   timeInterval = (now.getTime() - origin.getTime())/(1000*3600*24); //temps en jours
   return (oldAngle+((timeInterval*360)/rotation))%360;
 }
