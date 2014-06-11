@@ -33,9 +33,7 @@
  			"title" : "Welcome in the solar system",
 			"subtitle" : "Our pretty little home in space",
 			"leave_time_top_sentence" : "Humans live a little bit too far to leave it soon!",
-			"leave_time_value" : "<span class='number'>29004</span> months",
-			"leave_time_bottom_sentence" : "For us to leave it with a  <span>spacecraft</span> !",
-			"leave_distance_value" : "<span class='number'>4503000000</span> km",
+			"leave_time_bottom_sentence" : "For us to leave it with <span>[spacecraft]</span> !",
 			"leave_distance_sentence" : "To get ouside, which means",
 			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights",
 			"compare" : "Compare",
@@ -206,6 +204,17 @@
 				"weather_title" : "Be careful, the wind is blowing hard",
 				"weather_subtitle" : "weather_subtitle"
 			}
+		}
+	},
+	"spaceships" : {
+		"SpaceShipTwo" : {
+			"name" : "SpaceShipTwo"
+		},
+		"Voyager2" : {
+			"name" : "Voyager 2"
+		},
+		"SolarProbePlus" : {
+			"name" : "Solar Probe Plus"
 		}
 	}
 }

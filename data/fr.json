@@ -34,9 +34,7 @@
  			"title" : "Bienvenue dans le Système Solaire !",
 			"subtitle" : "Notre petit chez-nous dans l'espace",
 			"leave_time_top_sentence" : "Lorem ipsum !",
-			"leave_time_value" : "<span class='number'>29004</span> months",
-			"leave_time_bottom_sentence" : "Pour en sortir avec une <span>fusée</span> !",
-			"leave_distance_value" : "<span class='number'>4503000000</span> km",
+			"leave_time_bottom_sentence" : "Pour en sortir avec <span>[spacecraft]</span> !",
 			"leave_distance_sentence" : "Pour en sortir, soit",
 			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>vols Paris-New York</span>",
 			"compare" : "Comparer",
@@ -197,6 +195,17 @@
 				"weather_title" : "Attention, le vent souffle fort dans le coin",
 				"weather_subtitle" : "weather_subtitle"
 			}
+		}
+	},
+	"spaceships" : {
+		"SpaceShipTwo" : {
+			"name" : "SpaceShipTwo"
+		},
+		"Voyager2" : {
+			"name" : "Voyager 2"
+		},
+		"SolarProbePlus" : {
+			"name" : "Solar Probe Plus"
 		}
 	}
 }

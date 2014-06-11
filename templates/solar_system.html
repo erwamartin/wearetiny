@@ -5,18 +5,20 @@
 	</header>
 	<div class="solar_system_orbits"></div>
 	<div class="left_sidebar">
-		<div>
+		<div class="transportation">
 			<p class="text"><%= translations.views.solar_system.leave_time_top_sentence %></p>
-			<p class="value blue uppercase"><%= functions.formatNumber(translations.views.solar_system.leave_time_value, translations.views.global.number_separator) %></p>
-			<p class="text blue"><%= translations.views.solar_system.leave_time_bottom_sentence %></p>
+			<p class="value blue uppercase duration"><span class='number'><%= functions.formatNumber(transportation.duration, translations.views.global.number_separator) %></span> <%= translations.views.global.months %></p>
+			<p class="text blue vehicule"><%= translations.views.solar_system.leave_time_bottom_sentence.replace('[spacecraft]', translations.spaceships[transportation.id].name) %></p>
 			<ul class="vehicules">
-				<li><a href="" class="spacecraft"></a></li>
-				<li><a href="" class="aircraft"></a></li>
-				<li><a href="" class="paper-plane"></a></li>
+				<li><input type="radio" name="transportation" value="SpaceShipTwo" id="v_spacecraft1" <%= (transportation.id=="SpaceShipTwo") ? "checked" : "" %>><label for="v_spacecraft1"></label></li>
+				<li><input type="radio" name="transportation" value="Voyager2" id="v_spacecraft2" <%= (transportation.id=="Voyager2") ? "checked" : "" %>>
+				<label for="v_spacecraft2"></label></li>
+				<li><input type="radio" name="transportation" value="SolarProbePlus" id="v_spacecraft3" <%= (transportation.id=="SolarProbePlus") ? "checked" : "" %>>
+				<label for="v_spacecraft3"></label></li>
 			</ul>
 		</div>
 		<div>
-			<p class="value uppercase"><%= functions.formatNumber(translations.views.solar_system.leave_distance_value, translations.views.global.number_separator) %></p>
+			<p class="value uppercase"><span class='number'><%= functions.formatNumber(earth_to_end_univers, translations.views.global.number_separator) %></span> km</p>
 			<p class="text"><%= translations.views.solar_system.leave_distance_sentence %></p>
 			<p class="value blue"><%= functions.formatNumber(translations.views.solar_system.leave_distance_flights_value, translations.views.global.number_separator) %></p>
 		</div>
@@ -66,12 +68,12 @@
 				</div>
 			</div>
 			<div class="transportation">
-				<input type="radio" name="transportation" value="SpaceShipTwo" id="aircraft">
-				<label for="aircraft"></label>
-				<input type="radio" name="transportation" value="Voyager2" id="spacecraft" checked>
-				<label for="spacecraft"></label>
-				<input type="radio" name="transportation" value="SolarProbePlus" id="paper-plane">
-				<label for="paper-plane"></label>
+				<input type="radio" name="transportation" value="SpaceShipTwo" id="t_spacecraft1" <%= (transportation.id=="SpaceShipTwo") ? "checked" : "" %>>
+				<label for="t_spacecraft1"></label>
+				<input type="radio" name="transportation" value="Voyager2" id="t_spacecraft2" <%= (transportation.id=="Voyager2") ? "checked" : "" %>>
+				<label for="t_spacecraft2"></label>
+				<input type="radio" name="transportation" value="SolarProbePlus" id="t_spacecraft3" <%= (transportation.id=="SolarProbePlus") ? "checked" : "" %>>
+				<label for="t_spacecraft3"></label>
 			</div>
 			<input type="submit" value="<%= translations.views.solar_system.boarding_pass.travel %>">
 			<div class="barcode"></div>

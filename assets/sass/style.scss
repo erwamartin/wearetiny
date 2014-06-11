@@ -148,19 +148,44 @@ html{
 						li{
 							display: inline-block;
 							margin-right: .5em;
-							a{
+							input[type="radio"]{
+								display: none;
+							}
+							label{
 								display: block;
 								width: 2.313em;
 								height: 2.313em;
+								cursor: pointer;
 							}
-							.spacecraft{
-								@include background('icons/spacecraft.svg', center center, 100% 100%);
+							#v_spacecraft1{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
+								}
 							}
-							.aircraft{
-								@include background('icons/aircraft.svg', center center, 100% 100%);
+							#v_spacecraft1:checked{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
+								}
 							}
-							.paper-plane{
-								@include background('icons/paper-plane.svg', center center, 100% 100%);
+							#v_spacecraft2{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
+								}
+							}
+							#v_spacecraft2:checked{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
+								}
+							}
+							#v_spacecraft3{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
+								}
+							}
+							#v_spacecraft3:checked{
+								+ label{
+									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
+								}
 							}
 						}
 					}
@@ -440,32 +465,32 @@ html{
 								margin: 0 0.688em;
 								cursor: pointer;
 							}
-							#aircraft{
+							#t_spacecraft1{
 								+ label{
 									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
 								}
 							}
-							#aircraft:checked{
+							#t_spacecraft1:checked{
 								+ label{
 									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
 								}
 							}
-							#spacecraft{
+							#t_spacecraft2{
 								+ label{
 									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
 								}
 							}
-							#spacecraft:checked{
+							#t_spacecraft2:checked{
 								+ label{
 									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
 								}
 							}
-							#paper-plane{
+							#t_spacecraft3{
 								+ label{
 									@include background('./icons/spacecraft_boarding_pass.png', center center, 100% 100%);
 								}
 							}
-							#paper-plane:checked{
+							#t_spacecraft3:checked{
 								+ label{
 									@include background('./icons/spacecraft_boarding_pass_on.png', center center, 100% 100%);
 								}
