@@ -174,6 +174,7 @@ define([
               params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".planet_infos .km_distance", value : planet_infos.solar_distance.km, duration : 650});
             });
             $('.planet_infos .planet_name').text(planet_infos.name);
+            $('.planet_infos .ua_distance .value').text(planet_infos.solar_distance.ua);
           });
 
           line.on('mouseout', function(){
