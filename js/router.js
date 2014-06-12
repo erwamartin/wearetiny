@@ -7,8 +7,9 @@ define([
   'views/distances_graph',
   'views/compare_graph',
   'views/planet',
-  'views/error'
-], function($, _, Backbone, LandingPageView, SolarSystemView, DistancesGraphView, CompareGraphView, PlanetView, ErrorView){
+  'views/error',
+  'views/mobile'
+], function($, _, Backbone, LandingPageView, SolarSystemView, DistancesGraphView, CompareGraphView, PlanetView, ErrorView, MobileView){
   var AppRouter = Backbone.Router.extend({
     current_view : null,
     routes: {
@@ -17,7 +18,7 @@ define([
       'solar-system/distances': 'distanceGraph',
       'solar-system/compare': 'compareGraph',
       'solar-system/:planet': 'planet',
-      'error': 'error',
+      'mobile': 'mobile',
       '*actions': 'default'
     },
     landingPage : function(){
@@ -50,6 +51,12 @@ define([
         }
       });
     },
+    mobile : function(){
+      loadView.call(this, {
+        view : new MobileView(), 
+        mobile : true
+      });
+    },
     default : function(actions){
       loadView.call(this, {
         view : new ErrorView()
@@ -66,9 +73,17 @@ define([
 
   var loadView = function(params_in){
     var params = {params : {
-      init : false
+      init : false,
+      mobile : false
     }};
     $.extend(true, params, params_in);
+
+    if($('body').innerWidth()<1200 && !params.mobile){
+      window.location.href = '#mobile';
+    }else if(params.mobile && $('body').innerWidth()>=1200){
+      window.location.href = '#solar-system';
+    }
+
     if(params.init){
       $('#loader').show(0, function (){
         renderView.call(this, params);        
