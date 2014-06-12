@@ -91,7 +91,7 @@ define([
 
         // Earth
         space_time.svg.append("circle")
-          .attr("class", "earth")
+          .attr("class", "planet_s")
           .attr("r", radii.earth)
           .attr("transform", "translate(0," + -radii.earthOrbit + ")")
           .style("fill", data.planets[params.params.planet].color2);
@@ -137,7 +137,7 @@ define([
               d3.select(".earthOrbitPosition").attr("d", earthOrbitPosition.endAngle(interpolateEarthOrbitPosition(t)));
 
               // Transition Earth
-              d3.select(".earth")
+              d3.select(".planet_s")
                 .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
 
               // Animate day
@@ -288,7 +288,6 @@ define([
              
             ticks = scale.ticks(this.config.majorTicks);
             tickData=[1];
-            console.log("Tickdata:"+tickData);
 
             this.arc = d3.svg.arc()
              .innerRadius(r - this.config.ringWidth - this.config.ringInset)
@@ -296,14 +295,11 @@ define([
              .startAngle(function(d, i) {
               var ratio = d * i;
               var value =that.deg2rad(that.config.minAngle + (ratio * range));
-              console.log('start angle:'+value);
               return value;
              })
              .endAngle(function(d, i) {
               var ratio = d * (i+1);
-              console.log('minAngle='+that.config.minAngle+', ratio='+ratio+' , range='+range);
               var value =that.deg2rad(that.config.minAngle + (ratio * range));
-              console.log('end angle:'+value);
               return that.deg2rad(that.config.minAngle + (ratio * range));
              });
              
@@ -472,15 +468,15 @@ define([
       animateTextNumber(".earthTallNumber", planet_infos.earthTall);
 
       function animateTextNumber(attr, data) {
-          jQuery({dataValue: 0}).animate({dataValue: data}, {
-            duration: 4000,
-            delay : 3000,
-            easing:'swing', 
-            step: function() { 
-              $(attr).text(Math.ceil(this.dataValue));
-            }
-          });
-        };
+        jQuery({dataValue: 0}).animate({dataValue: data}, {
+          duration: 4000,
+          delay : 3000,
+          easing:'swing', 
+          step: function() { 
+            $(attr).text(Math.ceil(this.dataValue));
+          }
+        });
+      };
 
       return planet_infos;
     },
