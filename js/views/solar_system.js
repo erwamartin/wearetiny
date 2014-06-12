@@ -93,7 +93,7 @@ define([
       var distance_comparison_id = 0;
       var timer = setInterval(function(){
         distance_comparison_id++;
-        if(distance_comparison_id>params.translations.views.solar_system.distances_comparisons.length) distance_comparison_id=0;
+        if(distance_comparison_id>params.translations.views.solar_system.distances_comparisons.length-1) distance_comparison_id=0;
         var new_distance_comparison = params.functions.formatNumber(params.translations.views.solar_system.distances_comparisons[distance_comparison_id], params.translations.views.global.number_separator);
         $(".distances_comparisons").fadeOut(function() {
           $(this).html(new_distance_comparison)
