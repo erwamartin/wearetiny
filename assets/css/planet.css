@@ -2,18 +2,18 @@
 /* Variables */
 /* Styles */
 /* line 18, ../sass/planet.scss */
+.planet header h2 {
+  margin-top: .5em;
+  text-transform: uppercase;
+  font-size: 2.4em;
+}
+/* line 25, ../sass/planet.scss */
 .planet h2, .planet h3, .planet h4 {
   width: 100%;
   text-align: center;
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
-/* line 23, ../sass/planet.scss */
-.planet h2 {
-  margin-top: .5em;
-  text-transform: uppercase;
-  font-size: 2.4em;
-}
-/* line 28, ../sass/planet.scss */
+/* line 30, ../sass/planet.scss */
 .planet h3 {
   text-align: center;
   margin-top: .5em;
@@ -22,16 +22,16 @@
   border-bottom: 3px solid rgba(255, 255, 255, 0.1);
   display: block;
 }
-/* line 36, ../sass/planet.scss */
+/* line 38, ../sass/planet.scss */
 .planet h4 {
   margin-top: .2em;
   font-size: 1.125em;
 }
-/* line 41, ../sass/planet.scss */
+/* line 43, ../sass/planet.scss */
 .planet svg {
   display: block;
 }
-/* line 45, ../sass/planet.scss */
+/* line 47, ../sass/planet.scss */
 .planet .content-planet {
   width: 1100px;
   height: 500px;
@@ -42,7 +42,7 @@
   margin-top: -250px;
   margin-left: -550px;
 }
-/* line 54, ../sass/planet.scss */
+/* line 56, ../sass/planet.scss */
 .planet .content-planet .top-content {
   width: 1020px;
   margin-left: 24px;
@@ -50,84 +50,84 @@
   text-align: center;
   padding: 1em 1em 1em 1em;
 }
-/* line 60, ../sass/planet.scss */
+/* line 62, ../sass/planet.scss */
 .planet .content-planet .top-content div {
   width: 336px;
   display: inline-block;
 }
-/* line 64, ../sass/planet.scss */
+/* line 66, ../sass/planet.scss */
 .planet .content-planet .top-content p {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 0.875em;
   color: #FFF;
 }
-/* line 69, ../sass/planet.scss */
+/* line 71, ../sass/planet.scss */
 .planet .content-planet .top-content .value {
   margin: .650em 0;
 }
-/* line 71, ../sass/planet.scss */
+/* line 73, ../sass/planet.scss */
 .planet .content-planet .top-content .value .number {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 2.625em;
   letter-spacing: .05em;
 }
-/* line 76, ../sass/planet.scss */
+/* line 78, ../sass/planet.scss */
 .planet .content-planet .top-content .value .number + span {
   margin-left: .5em;
 }
-/* line 80, ../sass/planet.scss */
+/* line 82, ../sass/planet.scss */
 .planet .content-planet .top-content .value.uppercase {
   font-family: 'MohaveRegular', Arial, sans-serif;
   font-size: 1.625em;
 }
-/* line 83, ../sass/planet.scss */
+/* line 85, ../sass/planet.scss */
 .planet .content-planet .top-content .value.uppercase .number {
   font-size: 1.615em;
 }
-/* line 88, ../sass/planet.scss */
+/* line 90, ../sass/planet.scss */
 .planet .content-planet .bottom-content {
   left: 14%;
   padding: 2em 1em 0em 1em;
 }
-/* line 93, ../sass/planet.scss */
+/* line 95, ../sass/planet.scss */
 .planet .content-planet .bottom-content .bottom-content-block {
   width: 332px;
   display: inline-table;
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 98, ../sass/planet.scss */
+/* line 100, ../sass/planet.scss */
 .planet .content-planet .bottom-content .bottom-content-block .graph {
   height: 185px;
   width: 332px;
   display: inline-block;
 }
-/* line 103, ../sass/planet.scss */
+/* line 105, ../sass/planet.scss */
 .planet .content-planet .bottom-content .bottom-content-block p:first-child {
   margin-top: 3em;
 }
-/* line 108, ../sass/planet.scss */
+/* line 110, ../sass/planet.scss */
 .planet .content-planet .bottom-content .calendar svg {
   margin-top: 1.25em;
 }
-/* line 111, ../sass/planet.scss */
+/* line 113, ../sass/planet.scss */
 .planet .content-planet .bottom-content .calendar p:first-of-type {
   margin-top: 2.70em;
 }
-/* line 116, ../sass/planet.scss */
+/* line 118, ../sass/planet.scss */
 .planet .content-planet .bottom-content .area svg {
   margin-top: 1.5em;
 }
-/* line 120, ../sass/planet.scss */
+/* line 122, ../sass/planet.scss */
 .planet .content-planet .bottom-content .area p:first-of-type {
   margin-top: 2em;
 }
-/* line 126, ../sass/planet.scss */
+/* line 128, ../sass/planet.scss */
 .planet .content-planet .bottom-content .weather svg {
   margin-top: -2.2em;
   margin-left: 1em;
 }
-/* line 130, ../sass/planet.scss */
+/* line 132, ../sass/planet.scss */
 .planet .content-planet .bottom-content .weather text {
   fill: #FFF;
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
@@ -135,16 +135,16 @@
   color: #FFF;
   padding-top: 0.5em;
 }
-/* line 138, ../sass/planet.scss */
+/* line 140, ../sass/planet.scss */
 .planet .content-planet .bottom-content .weather p:first-of-type {
   padding-top: 1.5em;
   padding-bottom: 0.3em;
 }
-/* line 143, ../sass/planet.scss */
+/* line 145, ../sass/planet.scss */
 .planet .content-planet .bottom-content .weather p.third-type {
   margin-top: -1.50em;
 }
-/* line 148, ../sass/planet.scss */
+/* line 150, ../sass/planet.scss */
 .planet .content-planet .bottom-content p {
   font-family: 'PlutoSansCondLight', Arial, sans-serif;
   font-size: 0.875em;
@@ -152,44 +152,44 @@
   padding-top: 0.5em;
   text-align: center;
 }
-/* line 157, ../sass/planet.scss */
+/* line 159, ../sass/planet.scss */
 .planet .content-planet .bottom-content .value .number {
   font-family: 'MohaveBold', Arial, sans-serif;
   font-size: 2.625em;
   letter-spacing: .05em;
 }
-/* line 162, ../sass/planet.scss */
+/* line 164, ../sass/planet.scss */
 .planet .content-planet .bottom-content .value .number + span {
   margin-left: .5em;
 }
-/* line 166, ../sass/planet.scss */
+/* line 168, ../sass/planet.scss */
 .planet .content-planet .bottom-content .value.uppercase {
   font-family: 'MohaveRegular', Arial, sans-serif;
   font-size: 1.625em;
 }
-/* line 169, ../sass/planet.scss */
+/* line 171, ../sass/planet.scss */
 .planet .content-planet .bottom-content .value.uppercase .number {
   font-size: 1.615em;
 }
-/* line 178, ../sass/planet.scss */
+/* line 180, ../sass/planet.scss */
 .planet .right_sidebar {
   position: absolute;
   top: 50%;
   right: 0;
   margin-top: -15em;
 }
-/* line 183, ../sass/planet.scss */
+/* line 185, ../sass/planet.scss */
 .planet .right_sidebar ul {
   padding: 2.500em 0.938em;
   background: #19262c;
 }
-/* line 186, ../sass/planet.scss */
+/* line 188, ../sass/planet.scss */
 .planet .right_sidebar ul li {
   position: relative;
   display: block;
   margin: 0.719em 0;
 }
-/* line 190, ../sass/planet.scss */
+/* line 192, ../sass/planet.scss */
 .planet .right_sidebar ul li a {
   display: block;
   color: #FFF;
@@ -197,12 +197,12 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 197, ../sass/planet.scss */
+/* line 199, ../sass/planet.scss */
 .planet .right_sidebar ul li a.icon {
   width: 2.313em;
   height: 2.313em;
 }
-/* line 201, ../sass/planet.scss */
+/* line 203, ../sass/planet.scss */
 .planet .right_sidebar ul li a.name {
   position: absolute;
   right: 6.5em;
@@ -213,67 +213,67 @@
   text-align: right;
   width: 5em;
 }
-/* line 213, ../sass/planet.scss */
+/* line 215, ../sass/planet.scss */
 .planet .right_sidebar ul li:hover a {
   color: #8f8f8f;
 }
-/* line 218, ../sass/planet.scss */
+/* line 220, ../sass/planet.scss */
 .planet .right_sidebar ul li.mercury .icon {
   background-image: url('../images/planets/mercury.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 223, ../sass/planet.scss */
+/* line 225, ../sass/planet.scss */
 .planet .right_sidebar ul li.venus .icon {
   background-image: url('../images/planets/venus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 228, ../sass/planet.scss */
+/* line 230, ../sass/planet.scss */
 .planet .right_sidebar ul li.earth .icon {
   background-image: url('../images/planets/earth.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 233, ../sass/planet.scss */
+/* line 235, ../sass/planet.scss */
 .planet .right_sidebar ul li.mars .icon {
   background-image: url('../images/planets/mars.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 238, ../sass/planet.scss */
+/* line 240, ../sass/planet.scss */
 .planet .right_sidebar ul li.jupiter .icon {
   background-image: url('../images/planets/jupiter.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 243, ../sass/planet.scss */
+/* line 245, ../sass/planet.scss */
 .planet .right_sidebar ul li.saturn .icon {
   background-image: url('../images/planets/saturn.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 248, ../sass/planet.scss */
+/* line 250, ../sass/planet.scss */
 .planet .right_sidebar ul li.uranus .icon {
   background-image: url('../images/planets/uranus.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 253, ../sass/planet.scss */
+/* line 255, ../sass/planet.scss */
 .planet .right_sidebar ul li.neptune .icon {
   background-image: url('../images/planets/neptune.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* line 258, ../sass/planet.scss */
+/* line 260, ../sass/planet.scss */
 .planet .right_sidebar ul li.compare .icon {
   background-image: url('../images/planets/compare.svg');
   background-position: center center;
