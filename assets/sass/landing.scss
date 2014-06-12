@@ -1,3 +1,7 @@
+.fb_iframe_widget {
+	bottom: 2px;
+}
+
 .landing_page{
 	font-family: 'PlutoSansCondRegular', Arial, sans-serif;
 	background-color:#0B1B24;
@@ -5,7 +9,7 @@
 		display:block;
 		width:29px;
 		height:29px;
-		background:url('img/info.png') no-repeat;
+		background:url('../images/info.png') no-repeat;
 		position:absolute;
 		top:20px;
 		right:20px;
@@ -56,7 +60,7 @@
 	}
 
 	#lang a:nth-of-type(2){
-		padding:10px;
+		padding:12px 10px;
 	}
 
 	#lang a:hover{
@@ -90,11 +94,11 @@
 	}
 
 	.twitter{
-		background:url('img/twitter_icon.svg') no-repeat;
+		background:url('../images/twitter_icon.svg') no-repeat;
 	}
 
 	.contact{
-		background:url('img/contact_icon.svg') no-repeat;
+		background:url('../images/contact_icon.svg') no-repeat;
 	}
 
 	.twitter:hover, .contact:hover{
