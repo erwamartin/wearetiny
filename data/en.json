@@ -27,8 +27,8 @@
 			"planet_year" : "A [planet] year" 
 		},
 		"error" : {
- 			"title" : "Oops, seems that you've got lost in an unknown asteroid!",
-			"subtitle" : "It seems quite empty here... ",
+ 			"title" : "Oops, seems that you've got lost on an unknown asteroid!",
+			"subtitle" : "It seems quite empty here...",
 			"link" : "Fly back on familiar ground"
 		},
 		"solar_system" : {
