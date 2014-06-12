@@ -297,36 +297,44 @@ define([
 
       distance_scales.params.distance_first_point = distance_scales.sun.radius+(distance_scales.params.innerWidth/distance_scales.points.number-distance_scales.points.radius/2);
 
-      // Points
-      for(var cpt=0; cpt<distance_scales.points.number; cpt++){
-        distance_scales.svg.append("circle")
-          .attr("class", "point")
-          .attr("r", distance_scales.points.radius)
-          .attr("transform", "translate(" + ((((distance_scales.params.innerWidth-distance_scales.params.distance_first_point)/distance_scales.points.number)*cpt)+distance_scales.points.radius+distance_scales.params.distance_first_point) + ", 0)")
-          .style("fill", "rgba(156, 163, 157, 1.0)");
-      }
-
-      // Sun
-      distance_scales.svg.append("circle")
-          .attr("class", "sun")
-          .attr("r", distance_scales.sun.radius)
-          .style("fill", "rgba(255, 215, 71, 1.0)");
-
-      //distance_scales.params.coef_size = (distance_scales.sun.radius*2/data.sun.size);
       distance_scales.params.coef_distance = (distance_scales.params.innerWidth-distance_scales.sun.radius)/params.data.planets['neptune'].distance_solar;
-
-      for(var planet in params.data.planets){
-        distance_scales.svg.append("circle")
-          .attr("class", planet)
-          .attr("r", distance_scales.planets.radius)
-          .attr("transform", "translate(" + ((params.data.planets[planet].distance_solar*distance_scales.params.coef_distance)+distance_scales.sun.radius) + ", 0)")
-          .style("fill", params.data.planets[planet].color1);
-      }
 
       // Hide loader
       setTimeout(function() {
-        $('#loader').fadeOut()
-      }, 3000);
+        $('#loader').fadeOut(300, function(){
+
+          // Points
+          for(var cpt=0; cpt<distance_scales.points.number; cpt++){
+            distance_scales.svg.append("circle")
+              .attr("class", "point")
+              .attr("r", distance_scales.points.radius)
+              .style("fill", "rgba(156, 163, 157, 1.0)")
+              .transition('bounce')
+              .duration(1500)
+              .attr("transform", "translate(" + ((((distance_scales.params.innerWidth-distance_scales.params.distance_first_point)/distance_scales.points.number)*cpt)+distance_scales.points.radius+distance_scales.params.distance_first_point) + ", 0)");
+          }
+
+          var planets_counter = 0;
+          for(var planet in params.data.planets){
+            var planet_circle = distance_scales.svg.append("circle")
+              .attr("class", planet)
+              .attr("r", distance_scales.planets.radius)
+              .style("fill", params.data.planets[planet].color1);
+
+            planet_circle         
+              .transition('bounce')
+              .duration(1500)
+              .attr("transform", "translate(" + ((params.data.planets[planet].distance_solar*distance_scales.params.coef_distance)+distance_scales.sun.radius) + ", 0)");
+            
+            planets_counter++;
+          }
+          // Sun
+          distance_scales.svg.append("circle")
+          .attr("class", "sun")
+          .attr("r", distance_scales.sun.radius)
+          .style("fill", "rgba(255, 215, 71, 1.0)");
+        });
+      }, 1500);
     },
     close: function(view){
       if(view.animation_timer) clearInterval(view.animation_timer);
