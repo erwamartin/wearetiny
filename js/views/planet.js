@@ -91,7 +91,7 @@ define([
 
         // Earth
         space_time.svg.append("circle")
-          .attr("class", "earth")
+          .attr("class", "planet_s")
           .attr("r", radii.earth)
           .attr("transform", "translate(0," + -radii.earthOrbit + ")")
           .style("fill", data.planets[params.params.planet].color2);
@@ -137,7 +137,7 @@ define([
               d3.select(".earthOrbitPosition").attr("d", earthOrbitPosition.endAngle(interpolateEarthOrbitPosition(t)));
 
               // Transition Earth
-              d3.select(".earth")
+              d3.select(".planet_s")
                 .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
 
               // Animate day
@@ -288,7 +288,6 @@ define([
              
             ticks = scale.ticks(this.config.majorTicks);
             tickData=[1];
-            console.log("Tickdata:"+tickData);
 
             this.arc = d3.svg.arc()
              .innerRadius(r - this.config.ringWidth - this.config.ringInset)
@@ -296,14 +295,11 @@ define([
              .startAngle(function(d, i) {
               var ratio = d * i;
               var value =that.deg2rad(that.config.minAngle + (ratio * range));
-              console.log('start angle:'+value);
               return value;
              })
              .endAngle(function(d, i) {
               var ratio = d * (i+1);
-              console.log('minAngle='+that.config.minAngle+', ratio='+ratio+' , range='+range);
               var value =that.deg2rad(that.config.minAngle + (ratio * range));
-              console.log('end angle:'+value);
               return that.deg2rad(that.config.minAngle + (ratio * range));
              });
              
@@ -458,16 +454,16 @@ define([
       planet_infos.left_earth = Math.round(parseFloat((((params.planets[params.planet_name].distance_earth/params.spaceships[transportation].speed)/24)/30)));
       planet_infos.age = Math.round(age+planet_infos.left_earth/12);
       planet_infos.weight = Math.round((weight/params.planets['earth'].gravity)*params.planets[params.planet_name].gravity);
-      planet_infos.temperature = Math.round(parseFloat(params.planets[params.planet_name].temperature));
+      planet_infos.temperature = params.planets[params.planet_name].temperature;
       planet_infos.revolution_period = Math.round(parseFloat(params.planets[params.planet_name].revolution_period));
       planet_infos.rotation = Math.round(parseFloat(params.planets[params.planet_name].rotation*24));
-      planet_infos.earthTall = parseFloat(params.planets[params.planet_name].size/params.planets['earth'].size);
+      planet_infos.earthTall = params.planets[params.planet_name].size/params.planets['earth'].size;
 
       animateTextNumber(".left_earthNumber", planet_infos.left_earth);
       animateTextNumber(".ageNumber", planet_infos.age);
       animateTextNumber(".weightNumber", planet_infos.weight);
-      animateTextNumber(".rotationNumber", planet_infos.rotation);
-      animateTextNumber(".revolution_periodNumber", planet_infos.revolution_period);
+      animateTextNumber(".rotationNumber", Math.round(planet_infos.rotation));
+      animateTextNumber(".revolution_periodNumber", Math.round(planet_infos.revolution_period));
       animateTextNumber(".temperatureNumber", planet_infos.temperature);
       animateTextNumber(".earthTallNumber", planet_infos.earthTall);
 
@@ -475,9 +471,10 @@ define([
           jQuery({dataValue: 0}).animate({dataValue: data}, {
             duration: 4000,
             delay : 3000,
+
             easing:'swing', 
             step: function() { 
-              $(attr).text(Math.ceil(this.dataValue));
+              $(attr).text((Math.round(this.dataValue*100))/100);
             }
           });
         };

@@ -26,9 +26,9 @@
 			"away_from" : "away from the Sun",
 			"planet_year" : "A [planet] year" 
 		},
-		"landing_page" : {
-			"punchline" : "We live among <span>14 billions</span> of stars",
-			"solar_system_arrow" : "Somewhere over there  in this tiny county"
+		"error" : {
+ 			"title" : "Where are our neighbours?",
+			"subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called AU:"
 		},
 		"solar_system" : {
  			"title" : "Welcome to the solar system",

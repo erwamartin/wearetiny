@@ -82,7 +82,7 @@ define([
 
   var renderView = function(params){
     getTranslations.call(this, {
-      callback : function(translations){   
+      callback : function(translations){
         // Callback of last view
         if(AppRouter.current_view && AppRouter.current_view.close)
            AppRouter.current_view.close.call(this, AppRouter.current_view); 
