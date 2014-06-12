@@ -49,6 +49,14 @@ html{
 					padding-top: .2em;
 					font-size : 1.125em;
 				}
+				.close{
+					position: absolute;
+					top: 1.875em;
+					right: 1.875em;
+					width: 1.250em;
+					height: 1.250em;
+					@include background('icons/close.svg', center center, 100% 100%);
+				}
 			}
 			section{
 				width: 100%;
