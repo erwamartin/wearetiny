@@ -56,7 +56,7 @@ define([
         }
       });
 
-      $('.boarding_pass').on('click', function(evt){
+      $('.boarding_pass, .boarding_pass .close').on('click', function(evt){
         if( evt.target !== this ) return;
         $('.boarding_pass').removeClass('on');
       });
