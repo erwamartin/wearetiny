@@ -62,19 +62,20 @@ html{
 
 				h2 {
 					padding-top: .5em;
-					text-transform: uppercase;
-					font-size : 2.4em;
+					/* text-transform: uppercase; */
+					padding-bottom: 0.5em;
+					font-size: 2.4em;
 					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 				}
 
 				h3 {
-					font-size : 2.4em;
-					font-family: 'PlutoSansCondLight', Arial, sans-serif;
+					font-size: 1.4em;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 				}
 
 				a{
 					position: relative;
-					top: 325px;
+					top: 385px;
 					display:inline-block;
 					border:2px solid #FFF;
 					color:#FFF;
@@ -116,8 +117,8 @@ html{
 					-ms-transform:rotate(-30deg); 
 					-webkit-transform:rotate(-30deg); 
 					@include background('404/spacecraft.svg', center center, 100% 100%);
-					margin-top: 131px;
-					margin-left: 318px;
+					margin-top: 135px;
+					margin-left: 322px;
 				    position: absolute;
 				}
 
@@ -129,8 +130,8 @@ html{
 					-ms-transform:rotate(-30deg); 
 					-webkit-transform:rotate(-30deg); 
 					@include background('404/spacecraft.svg', center center, 100% 100%);
-					margin-top: 131px;
-					margin-left: 318px;
+					margin-top: 135px;
+					margin-left: 322px;
 				    position: absolute;
 				    
 				    animation-name: bobbingAnim;
@@ -140,6 +141,8 @@ html{
 				    -webkit-animation-duration: 4s;
 				    -webkit-animation-play-state: running;
 				}
+
+
 			}
 
 			.solar_system{
