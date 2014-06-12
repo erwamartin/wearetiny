@@ -12,6 +12,7 @@ define([
     render: function(params){
 
       var _this = params._this = this;
+      _this.interval_timers = [];
 
       $.getJSON('data/data.json', function(data){
 
@@ -88,6 +89,17 @@ define([
           window.location.href = $(this).data('action');
         }
       });
+
+      var distance_comparison_id = 0;
+      var timer = setInterval(function(){
+        distance_comparison_id++;
+        if(distance_comparison_id>params.translations.views.solar_system.distances_comparisons.length) distance_comparison_id=0;
+        var new_distance_comparison = params.functions.formatNumber(params.translations.views.solar_system.distances_comparisons[distance_comparison_id], params.translations.views.global.number_separator);
+        $(".distances_comparisons").fadeOut(function() {
+          $(this).html(new_distance_comparison)
+        }).fadeIn();
+      }, 5000);
+      _this.interval_timers.push(timer);
 
 
       /******************************************/
@@ -236,7 +248,7 @@ define([
       var origin = new Date(2014, 0, 1, 1, 0, 0, 0);
       var now = new Date();
 
-      _this.animation_timer = setInterval(function () {
+      var timer = setInterval(function () {
         d3.transition().duration(50).tween("orbit", function () {
             return function (t) {
               for(var planet in params.data.planets){
@@ -262,6 +274,7 @@ define([
             }
           });
       }, 50); 
+      _this.interval_timers.push(timer);
 
 
       /******************************************/
@@ -337,7 +350,12 @@ define([
       }, 1500);
     },
     close: function(view){
-      if(view.animation_timer) clearInterval(view.animation_timer);
+      if(view.interval_timers.length>0){
+        for(var i in view.interval_timers){
+          clearInterval(view.interval_timers[i]);
+        }
+      }
+      view.interval_timers = [];
     },
     getDurationTrip : function(params){
       return Math.round(((params.earth_to_end_univers/params.data.spaceships[params.transportation.id].speed)/24/30)*100)/100;

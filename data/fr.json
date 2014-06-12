@@ -36,7 +36,13 @@
 			"leave_time_top_sentence" : "Les humains sont trop petits pour espérer le parcourir en entier !",
 			"leave_time_bottom_sentence" : "Pour atteindre ses limites avec <span>[spacecraft]</span> !",
 			"leave_distance_sentence" : "Avant d'en sortir, soit",
-			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>vols Paris-New York</span>",
+			"distances_comparisons" : [
+				"<span class='number'>3,33</span> <span>voyages Soleil - Neptune</span>",
+				"<span class='number'>100</span> <span>voyages Soleil - Terre</span>",
+				"<span class='number'>38958</span> <span>voyages Terre -Lune</span>",
+				"<span class='number'>373300</span> <span>tours du monde</span>",
+				"<span class='number'>2563399</span> <span>vols Paris-New York</span>"
+			],
 			"compare" : "Comparer",
 			"real_distance" : "Distances à l'échelle",
 			"planet_infos_title" : "Vitesse de rotation",
