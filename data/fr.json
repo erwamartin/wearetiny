@@ -28,7 +28,8 @@
 		},
 		"error" : {
  			"title" : "Oups, il semblerait que vous vous soyez perdu sur une astéroïde !",
-			"subtitle" : "C'est bien calme par ici... "
+			"subtitle" : "C'est bien calme par ici... ",
+			"link" : "Fly back on familiar ground"
 		},
 		"solar_system" : {
  			"title" : "Bienvenue dans le Système Solaire !",

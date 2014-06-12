@@ -28,7 +28,8 @@
 		},
 		"error" : {
  			"title" : "Oops, seems that you've got lost in an unknown asteroid!",
-			"subtitle" : "It seems quite empty here... "
+			"subtitle" : "It seems quite empty here... ",
+			"link" : "Fly back on familiar ground"
 		},
 		"solar_system" : {
  			"title" : "Welcome to the solar system",
