@@ -459,25 +459,13 @@ define([
       planet_infos.rotation = Math.round(parseFloat(params.planets[params.planet_name].rotation*24));
       planet_infos.earthTall = params.planets[params.planet_name].size/params.planets['earth'].size;
 
-      animateTextNumber(".left_earthNumber", planet_infos.left_earth);
-      animateTextNumber(".ageNumber", planet_infos.age);
-      animateTextNumber(".weightNumber", planet_infos.weight);
-      animateTextNumber(".rotationNumber", Math.round(planet_infos.rotation));
-      animateTextNumber(".revolution_periodNumber", Math.round(planet_infos.revolution_period));
-      animateTextNumber(".temperatureNumber", planet_infos.temperature);
-      animateTextNumber(".earthTallNumber", planet_infos.earthTall);
-
-      function animateTextNumber(attr, data) {
-          jQuery({dataValue: 0}).animate({dataValue: data}, {
-            duration: 4000,
-            delay : 3000,
-
-            easing:'swing', 
-            step: function() { 
-              $(attr).text((Math.round(this.dataValue*100))/100);
-            }
-          });
-        };
+      params.functions.animateTextNumber.call(this, ".left_earthNumber", planet_infos.left_earth);
+      params.functions.animateTextNumber.call(this, ".ageNumber", planet_infos.age);
+      params.functions.animateTextNumber.call(this, ".weightNumber", planet_infos.weight);
+      params.functions.animateTextNumber.call(this, ".rotationNumber", Math.round(planet_infos.rotation));
+      params.functions.animateTextNumber.call(this, ".revolution_periodNumber", Math.round(planet_infos.revolution_period));
+      params.functions.animateTextNumber.call(this, ".temperatureNumber", planet_infos.temperature);
+      params.functions.animateTextNumber.call(this, ".earthTallNumber", planet_infos.earthTall);
 
       return planet_infos;
     },

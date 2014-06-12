@@ -2,9 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'libs/jquery.zoomooz',
   'text!templates/landing_page.html'
-], function($, _, Backbone, Zoomooz,LandingPageTemplate){
+], function($, _, Backbone, LandingPageTemplate){
   var LandingPageView = Backbone.View.extend({
     el: $('#main'),
     events : {
