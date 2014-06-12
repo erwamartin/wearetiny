@@ -27,14 +27,14 @@
 			"planet_year" : "Une année sur [planet]" 
 		},
 		"error" : {
- 			"title" : "Oups, il semblerait que vous vous soyez perdu sur une astéroïde !",
-			"subtitle" : "C'est bien calme par ici... ",
-			"link" : "Fly back on familiar ground"
+ 			"title" : "Oups, il semblerait que vous vous soyez égaré sur un astéroïde !",
+			"subtitle" : "C'est bien calme par ici...",
+			"link" : "Repartir pour de nouvelles aventures"
 		},
 		"solar_system" : {
  			"title" : "Bienvenue dans le Système Solaire !",
 			"subtitle" : "Notre petit chez-nous dans l'espace",
-			"leave_time_top_sentence" : "Les humains sont trop petits pour espérer le parcourir en entier !",
+			"leave_time_top_sentence" : "Les humains sont trop petits le parcourir !",
 			"leave_time_bottom_sentence" : "Pour atteindre ses limites avec <span>[spacecraft]</span> !",
 			"leave_distance_sentence" : "Avant d'en sortir, soit",
 			"distances_comparisons" : [
