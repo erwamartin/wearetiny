@@ -1,21 +1,23 @@
 <section class="distances_graph">
-	<header>
-		<h2><%= translations.views.distances_graph.title %></h2>
-		<h3><%= translations.views.distances_graph.subtitle %></h3>
-		<a href="#solar-system" class="close"></a>
-	</header>
-	<div class="legend">
-		<p>1 <%= translations.views.global.unite_astro %> = </p>
-		<img src="assets/images/planets/sun.svg" class="sun" />
-		<span class="arrow"></span>
-		<img src="assets/images/planets/earth.svg" class="earth" />
-		<p><%= translations.views.global.or %> <%= distances_graph.planet.solar_distance.km %> km</p>
-	</div>
-	<div class="distances_comparison">
-		<div class="svg"></div>	
-	</div>
-	<div class="planet_infos">
-		<p><span class="planet_name"><%= distances_graph.planet.name %></span> <%= translations.views.global.is_distance %> <span class="ua_distance"><span class="value"><%= distances_graph.planet.solar_distance.ua %></span> <%= translations.views.global.unite_astro %></span> <%= translations.views.global.away_from %>, <%= translations.views.global.or %></p>
-		<p><span class='km_distance'><%= distances_graph.planet.solar_distance.km %></span> km <%= translations.views.global.away_from %></p>
+	<a href="#solar-system" class="close"></a>
+	<div class="container">
+		<header>
+			<h2><%= translations.views.distances_graph.title %></h2>
+			<h3><%= translations.views.distances_graph.subtitle %></h3>
+		</header>
+		<div class="legend">
+			<p>1 <%= translations.views.global.unite_astro %> = </p>
+			<img src="assets/images/planets/sun.svg" class="sun" />
+			<span class="arrow"></span>
+			<img src="assets/images/planets/earth.svg" class="earth" />
+			<p><%= translations.views.global.or %> <%= distances_graph.planet.solar_distance.km %> km</p>
+		</div>
+		<div class="distances_comparison">
+			<div class="svg"></div>	
+		</div>
+		<div class="planet_infos">
+			<p><span class="planet_name"><%= distances_graph.planet.name %></span> <%= translations.views.global.is_distance %> <span class="ua_distance"><span class="value"><%= distances_graph.planet.solar_distance.ua %></span> <%= translations.views.global.unite_astro %></span> <%= translations.views.global.away_from %>, <%= translations.views.global.or %></p>
+			<p><span class='km_distance'><%= distances_graph.planet.solar_distance.km %></span> km <%= translations.views.global.away_from %></p>
+		</div>
 	</div>
 </section>

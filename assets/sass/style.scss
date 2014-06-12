@@ -57,7 +57,7 @@ html{
 			}
 			.close{
 				position: absolute;
-				z-index: 10;
+				z-index: 8;
 				top: 1.875em;
 				right: 1.875em;
 				width: 1.250em;
@@ -594,67 +594,87 @@ html{
 				}
 			}
 			.distances_graph{
-				h3{
-					max-width: 30em;
-					margin: .8em auto 0 auto;
-					font-size : 1.125em;
-				}
-				.distances_comparison{
-					.svg{
-						svg{
-							display: block;
-							margin: 1em auto 0 auto;
-							.planet_name{
-								font-family: 'PlutoSansCondRegular', Arial, sans-serif;
-								text-transform: uppercase;
+				.container{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translateX(-50%) translateY(-50%);
+					-moz-transform: translateX(-50%) translateY(-50%);
+					-ms-transform: translateX(-50%) translateY(-50%);
+					transform: translateX(-50%) translateY(-50%);
+					h3{
+						max-width: 30em;
+						margin: .8em auto 0 auto;
+						font-size : 1.125em;
+					}
+					.distances_comparison{
+						.svg{
+							svg{
+								display: block;
+								margin: 1em auto 0 auto;
+								.planet_name{
+									font-family: 'PlutoSansCondRegular', Arial, sans-serif;
+									text-transform: uppercase;
+								}
 							}
 						}
 					}
-				}
-				.legend{
-					margin: 2.188em auto;
-					text-align: center;
-					p, span, img{
-						display: inline-block;
-						vertical-align: middle;
-						font-family: 'PlutoSansCondRegular', Arial, sans-serif;
-						font-size: 1.125em;
-					}
-					p:first-child{
-						font-family: 'PlutoSansCondMedium', Arial, sans-serif;
-					}
-					span.arrow{
-						width: 5.625em;
-						height: 1.375em;
-						@include background('./icons/ua-arrow.png', center center, auto auto, repeat-x);
-					}
-					.sun{
-						width: 1.313em;
-						height: 1.313em;
-					}
-					.earth{
-						width: 0.813em;
-						height: 0.813em;
-					}
-				}
-				.planet_infos{
-					margin: 3.750em auto 0 auto;
-					text-align: center;
-					p{
-						font-family: 'PlutoSansCondRegular', Arial, sans-serif;
-						font-size: 1.125em;
-						.ua_distance{
-							font-family: 'MohaveBold', Arial, sans-serif;
+					.legend{
+						margin: 2.188em auto;
+						text-align: center;
+						p, span, img{
+							display: inline-block;
+							vertical-align: middle;
+							font-family: 'PlutoSansCondRegular', Arial, sans-serif;
+							font-size: 1.125em;
+						}
+						p:first-child{
+							font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+						}
+						span.arrow{
+							width: 5.625em;
+							height: 1.375em;
+							@include background('./icons/ua-arrow.png', center center, auto auto, repeat-x);
+						}
+						.sun{
+							width: 1.313em;
+							height: 1.313em;
+						}
+						.earth{
+							width: 0.813em;
+							height: 0.813em;
 						}
 					}
-					p+p{
-						margin-top: .863em;
-						text-transform: uppercase;
-						font-family: 'MohaveRegular', Arial, sans-serif;
-						font-size: 1.625em;
-						.km_distance{
-							font-family: 'MohaveBold', Arial, sans-serif;
-							font-size: 1.615em;
+					.planet_infos{
+						margin: 3.750em auto 0 auto;
+						text-align: center;
+						p{
+							font-family: 'PlutoSansCondRegular', Arial, sans-serif;
+							font-size: 1.125em;
+							.planet_name{
+								display: inline-block;
+								width: 90px;
+								text-align: right;
+							}
+							.ua_distance{
+								display: inline-block;
+								width: 60px;
+								text-align: center;
+								font-family: 'MohaveBold', Arial, sans-serif;
+							}
+						}
+						p+p{
+							margin-top: .863em;
+							text-transform: uppercase;
+							font-family: 'MohaveRegular', Arial, sans-serif;
+							font-size: 1.625em;
+							.km_distance{
+								display: inline-block;
+								width: 300px;
+								text-align: right;
+								font-family: 'MohaveBold', Arial, sans-serif;
+								font-size: 1.615em;
+							}
 						}
 					}
 				}
