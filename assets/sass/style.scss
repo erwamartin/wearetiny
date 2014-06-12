@@ -31,16 +31,16 @@ html{
 		-webkit-font-smoothing: antialiased;
 		font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
-		#main {
+		#main{
 			height: 100%;
 			overflow: hidden;
-			header {
+			header{
 				h2, h3{
 					width: 100%;
 					text-align: center;
 					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 				}
-				h2 :not(.planet){
+				h2{
 					padding-top: .5em;
 					text-transform: uppercase;
 					font-size : 3.125em;
