@@ -80,8 +80,10 @@ define([
 
     if($('body').innerWidth()<1200 && !params.mobile){
       window.location.href = '#mobile';
+      return;
     }else if(params.mobile && $('body').innerWidth()>=1200){
       window.location.href = '#solar-system';
+      return;
     }
 
     if(params.init){
