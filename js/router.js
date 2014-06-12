@@ -82,7 +82,7 @@ define([
 
   var renderView = function(params){
     getTranslations.call(this, {
-      callback : function(translations){   
+      callback : function(translations){
         // Callback of last view
         if(AppRouter.current_view && AppRouter.current_view.close)
            AppRouter.current_view.close.call(this, AppRouter.current_view); 
@@ -92,6 +92,7 @@ define([
           translations : translations,
           functions : {
             formatNumber : formatNumber, 
+            animateTextNumber : animateTextNumber,
             getNextKey : getNextKey,
             getPreviousKey : getPreviousKey
           },
@@ -136,6 +137,18 @@ define([
     var nextKey = keys[nextIndex];
     return nextKey;
   }
+
+  var animateTextNumber = function(attr, data) {
+    jQuery({dataValue: 0}).animate({dataValue: data}, {
+      duration: 4000,
+      delay : 3000,
+
+      easing:'swing', 
+      step: function() { 
+        $(attr).text((Math.round(this.dataValue*100))/100);
+      }
+    });
+  };
 
 
   return {

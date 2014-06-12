@@ -117,7 +117,7 @@ define([
 
           for(var cpt=0; cpt<distances_graph.points.number; cpt++){
             var x_transform = distances_graph.sun.width+(distances_graph.points.distance_w*cpt)-distances_graph.points.radius;
-            var fill_color = "rgb(156, 163, 157)";
+            var fill_color = "rgba(255, 255, 255, 0.15)";
             // 1 UA == data.planets['earth'].distance_solar
             // 0.75 => 0.5 + round of 0.25
             var classs = "";
@@ -206,7 +206,7 @@ define([
             if(cpt<10)  text_width = text_width/2;
             var text_height = 10;
 
-            var x_transform = distances_graph.sun.width+(distances_graph.points.distance_w*((cpt*2)-1))-text_width/2;
+            var x_transform = distances_graph.sun.width+(distances_graph.points.distance_w*((cpt*2)-1))-text_width/1.65;
             var y_transform = distances_graph.scale.x.height/2+text_height/2;
 
             distances_graph.scale.x.g.append("text")

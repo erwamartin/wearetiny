@@ -27,7 +27,7 @@ html{
 		height: 100%;
 		color: $main-font-color;
 		@include background('background.jpg', center center, 100% 100%);
-		background-color: #021620;
+		background-color: #0b1b24;
 		-webkit-font-smoothing: antialiased;
 		font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
@@ -141,51 +141,7 @@ html{
 				    -webkit-animation-play-state: running;
 				}
 			}
-			.landing_page{
-				@include background('background_landing.jpg', center center, auto);
-				h2{
-					position : absolute;
-					top: 50%;
-					margin-top: -.5em;
-					width: 100%;
-					line-height: 100%;
-					text-align: center;
-					font-family: 'MohaveRegular', Arial, sans-serif;
-					font-size : 3.125em;
-					span {
-						font-family: 'MohaveBold', Arial, sans-serif;
-					}
-				}
-				.solar_system_button{
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					margin-left: 195px;
-					margin-top: 312px;
-					padding-top: 2em;
-					@include background('solarsystem-location-arrow.png', top left);
-					span{
-						float: left;
-						width: .65em;
-						height: .65em;
-						margin-top: 1em;
-						border-radius: 50%;
-						background: #FFF;
-						cursor: pointer;
-						animation: glitter 1.5s linear 0s infinite normal;
-						-webkit-animation: glitter 1.5s linear 0s infinite normal;
-						-moz-animation: glitter 1.5s linear 0s infinite normal;
-						-ms-animation: glitter 1.5s linear 0s infinite normal;
-						-o-animation: glitter 1.5s linear 0s infinite normal;
-					}
-					p{
-						float: right;
-						margin-left: 4.5em; 
-						font-family: 'PacificoRegular', Arial, sans-serif;
-						font-size: 14px;
-					}
-				}
-			}
+
 			.solar_system{
 				.solar_system_orbits{
 					position: relative;

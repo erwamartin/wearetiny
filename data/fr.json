@@ -12,8 +12,8 @@
 			"weight" : "poids",
 			"year" : "année", 
 			"years" : "années",
-			"age" : "an",
-			"ages" : "ans",
+			"year_old" : "an",
+			"years_old" : "ans",
 			"earth_tall" : "fois la Terre",
 			"one_day_on": "Un jour sur",
 			"lasts" : "dure", 
@@ -25,10 +25,6 @@
 			"unite_astro" : "UA",
 			"away_from" : "du Soleil",
 			"planet_year" : "Une année sur [planet]" 
-		},
-		"landing_page" : {
-			"punchline" : "We live among <span>14 billions</span> of stars",
-			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
 		"error" : {
 			"title" : "We live among <span>14 billions</span> of stars",

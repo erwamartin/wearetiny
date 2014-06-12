@@ -12,8 +12,8 @@
 			"weight" : "weight",
 			"year" : "year", 
 			"years" : "years",
-			"age" : "year old",
-			"ages" : "years old", 
+			"year_old" : "year old",
+			"years_old" : "years old", 
 			"earth_tall" : "earth tall",
 			"one_day_on": "One day on",
 			"lasts" : "lasts", 
@@ -26,13 +26,7 @@
 			"away_from" : "away from the Sun",
 			"planet_year" : "A [planet] year" 
 		},
-		"landing_page" : {
-			"title" : "We live among <span>14 billions</span> of stars",
-			"subtitle" : "We live among <span>14 billions</span> of stars",
-			"link" : "Somewhere over there  in this tiny county"
-		},
-		"error,
-		" : {
+		"error" : {
  			"title" : "Where are our neighbours?",
 			"subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called AU:"
 		},
@@ -110,7 +104,7 @@
 			"temperature_sentence" : "Average temperature on surface is",
 			"temperature_value" : "°C",
 			"temperature_average" : "Average temperature",
-			"fun_fact" : "Fun fact:",
+			"fun_fact" : "Fun fact: ",
 			"mercury" : {
 				"planet_name" : "Mercury",
 				"planet_title" : "Mercury : mind the gap between the sun and the planet",
