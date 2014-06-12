@@ -49,20 +49,54 @@ html{
 					padding-top: .2em;
 					font-size : 1.125em;
 				}
-				.close{
-					position: absolute;
-					top: 1.875em;
-					right: 1.875em;
-					width: 1.250em;
-					height: 1.250em;
-					@include background('icons/close.svg', center center, 100% 100%);
-				}
+				
 			}
 			section{
 				width: 100%;
 				height: 100%;
 			}
+			.close{
+				position: absolute;
+				z-index: 8;
+				top: 1.875em;
+				right: 1.875em;
+				width: 1.250em;
+				height: 1.250em;
+				@include background('icons/close.svg', center center, 100% 100%);
+			}
 			.error {
+				h2, h3{
+					width: 100%;
+					text-align: center;
+				}
+
+				h2 {
+					padding-top: .8em;
+					/* text-transform: uppercase; */
+					padding-bottom: 0.5em;
+					font-size: 2em;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+				}
+
+				h3 {
+					font-size: 1.5em;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+				}
+
+				a{
+					position: relative;
+					top: 385px;
+					display:inline-block;
+					border:2px solid #FFF;
+					color:#FFF;
+					font-size:1.188em;
+					text-decoration:none;
+					margin:11px;
+					padding:10px 10px;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+				}
+
+
 				position: absolute;
 				width: 900px;
 				height: 550px;
@@ -77,7 +111,7 @@ html{
 				
 				.asteroid {
 					position: absolute;
-					top: 30%;
+					top: 50%;
 					left : 50%;
 					height: 234px;
 					width:  234px;
@@ -86,15 +120,28 @@ html{
 					@include background('404/asteroid.svg', center center, 100% 100%);
 				}
 
+				#spacecraft {
+					height: 31px;
+					width:  20px;
+					transform:rotate(-36deg);
+					-ms-transform:rotate(-36deg); 
+					-webkit-transform:rotate(-36deg); 
+					@include background('404/spacecraft.svg', center center, 100% 100%);
+					margin-top: 135px;
+					margin-left: 322px;
+				    position: absolute;
+				}
+
+
 				.spacecraft {
 					height: 31px;
 					width:  20px;
-					transform:rotate(-30deg);
-					-ms-transform:rotate(-30deg); 
-					-webkit-transform:rotate(-30deg); 
+					transform:rotate(-36deg);
+					-ms-transform:rotate(-36deg); 
+					-webkit-transform:rotate(-36deg); 
 					@include background('404/spacecraft.svg', center center, 100% 100%);
-					margin-top: 85px;
-					margin-left: 318px;
+					margin-top: 135px;
+					margin-left: 322px;
 				    position: absolute;
 				    
 				    animation-name: bobbingAnim;
@@ -104,6 +151,8 @@ html{
 				    -webkit-animation-duration: 4s;
 				    -webkit-animation-play-state: running;
 				}
+
+
 			}
 
 			.solar_system{
@@ -118,7 +167,7 @@ html{
 						position: absolute;
 						background: rgba(255, 255, 255, 0.05);
 						width: 150px;
-						height: 120px;
+						height: 130px;
 						padding: 5px;
 						-webkit-transition: opacity 0.15s ease-in;
 						-moz-transition: opacity 0.15s ease-in;
@@ -486,7 +535,7 @@ html{
 							div+div{
 								border-left: 1px solid #d6d3d1;
 							}
-							div.error{
+							div.error_message{
 								.title, input{
 									color: #e84c3d;
 								}
@@ -592,67 +641,87 @@ html{
 				}
 			}
 			.distances_graph{
-				h3{
-					max-width: 30em;
-					margin: .8em auto 0 auto;
-					font-size : 1.125em;
-				}
-				.distances_comparison{
-					.svg{
-						svg{
-							display: block;
-							margin: 1em auto 0 auto;
-							.planet_name{
-								font-family: 'PlutoSansCondRegular', Arial, sans-serif;
-								text-transform: uppercase;
+				.container{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translateX(-50%) translateY(-50%);
+					-moz-transform: translateX(-50%) translateY(-50%);
+					-ms-transform: translateX(-50%) translateY(-50%);
+					transform: translateX(-50%) translateY(-50%);
+					h3{
+						max-width: 30em;
+						margin: .8em auto 0 auto;
+						font-size : 1.125em;
+					}
+					.distances_comparison{
+						.svg{
+							svg{
+								display: block;
+								margin: 1em auto 0 auto;
+								.planet_name{
+									font-family: 'PlutoSansCondRegular', Arial, sans-serif;
+									text-transform: uppercase;
+								}
 							}
 						}
 					}
-				}
-				.legend{
-					margin: 2.188em auto;
-					text-align: center;
-					p, span, img{
-						display: inline-block;
-						vertical-align: middle;
-						font-family: 'PlutoSansCondRegular', Arial, sans-serif;
-						font-size: 1.125em;
-					}
-					p:first-child{
-						font-family: 'PlutoSansCondMedium', Arial, sans-serif;
-					}
-					span.arrow{
-						width: 5.625em;
-						height: 1.375em;
-						@include background('./icons/ua-arrow.png', center center, auto auto, repeat-x);
-					}
-					.sun{
-						width: 1.313em;
-						height: 1.313em;
-					}
-					.earth{
-						width: 0.813em;
-						height: 0.813em;
-					}
-				}
-				.planet_infos{
-					margin: 3.750em auto 0 auto;
-					text-align: center;
-					p{
-						font-family: 'PlutoSansCondRegular', Arial, sans-serif;
-						font-size: 1.125em;
-						.ua_distance{
-							font-family: 'MohaveBold', Arial, sans-serif;
+					.legend{
+						margin: 2.188em auto;
+						text-align: center;
+						p, span, img{
+							display: inline-block;
+							vertical-align: middle;
+							font-family: 'PlutoSansCondRegular', Arial, sans-serif;
+							font-size: 1.125em;
+						}
+						p:first-child{
+							font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+						}
+						span.arrow{
+							width: 5.625em;
+							height: 1.375em;
+							@include background('./icons/ua-arrow.png', center center, auto auto, repeat-x);
+						}
+						.sun{
+							width: 1.313em;
+							height: 1.313em;
+						}
+						.earth{
+							width: 0.813em;
+							height: 0.813em;
 						}
 					}
-					p+p{
-						margin-top: .863em;
-						text-transform: uppercase;
-						font-family: 'MohaveRegular', Arial, sans-serif;
-						font-size: 1.625em;
-						.km_distance{
-							font-family: 'MohaveBold', Arial, sans-serif;
-							font-size: 1.615em;
+					.planet_infos{
+						margin: 3.750em auto 0 auto;
+						text-align: center;
+						p{
+							font-family: 'PlutoSansCondRegular', Arial, sans-serif;
+							font-size: 1.125em;
+							.planet_name{
+								display: inline-block;
+								width: 90px;
+								text-align: right;
+							}
+							.ua_distance{
+								display: inline-block;
+								width: 60px;
+								text-align: center;
+								font-family: 'MohaveBold', Arial, sans-serif;
+							}
+						}
+						p+p{
+							margin-top: .863em;
+							text-transform: uppercase;
+							font-family: 'MohaveRegular', Arial, sans-serif;
+							font-size: 1.625em;
+							.km_distance{
+								display: inline-block;
+								width: 300px;
+								text-align: right;
+								font-family: 'MohaveBold', Arial, sans-serif;
+								font-size: 1.615em;
+							}
 						}
 					}
 				}
@@ -662,6 +731,7 @@ html{
 					.svg{
 						svg{
 							position : absolute;
+							z-index: 5;
 							top: 0; right: 0; bottom: 0; left: 0;
 							text{
 								font-family: 'PlutoSansCondRegular', Arial, sans-serif;
@@ -976,7 +1046,7 @@ only screen and (                min-resolution: 192dpi){}
    }
 
    100% {
-       -webkit-transform: translate(-240px, -240px) rotate(-5deg) scale(0) ;
+       -webkit-transform: translate(-240px, -240px) rotate(2deg) scale(0) ;
        -webkit-animation-timing-function:ease-in-out
    }
 }

@@ -138,14 +138,19 @@ define([
     return nextKey;
   }
 
-  var animateTextNumber = function(attr, data) {
-    jQuery({dataValue: 0}).animate({dataValue: data}, {
-      duration: 4000,
-      delay : 3000,
-
+  var animateTextNumber = function(params) {
+    console.log(params);
+    if(!params.delay) params.delay = 3000;
+    if(!params.duration) params.duration = 4000;
+    jQuery({dataValue: 0}).animate({dataValue: params.value}, {
+      duration: params.duration,
+      delay : params.delay,
       easing:'swing', 
       step: function() { 
-        $(attr).text((Math.round(this.dataValue*100))/100);
+        $(params.selector).text(formatNumber.call(this, (Math.round(this.dataValue*100))/100, params.separator));
+      },
+      complete : function(){
+        $(params.selector).text(formatNumber.call(this, params.value, params.separator));
       }
     });
   };

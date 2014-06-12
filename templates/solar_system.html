@@ -5,10 +5,10 @@
 	</header>
 	<div class="solar_system_orbits">
 		<div class="planet_infos">
-			<p class="planet_name">Test</p>
-			<p class="rotation_speed">Rotation speed</p>
-			<p class="rotation_speed_value"><span>43.9</span> km/s</p>
-			<p class="rotation_speed_duration"><span>88</span> days</p>
+			<p class="planet_name"></p>
+			<p class="rotation_speed"><%= translations.views.solar_system.planet_infos_title %></p>
+			<p class="rotation_speed_value"><span></span> km/s</p>
+			<p class="rotation_speed_duration"><span></span> <%= translations.views.global.days %></p>
 		</div>
 	</div>
 	<div class="left_sidebar">
@@ -27,7 +27,7 @@
 		<div>
 			<p class="value uppercase"><span class='number'><%= functions.formatNumber(earth_to_end_univers, translations.views.global.number_separator) %></span> km</p>
 			<p class="text"><%= translations.views.solar_system.leave_distance_sentence %></p>
-			<p class="value blue"><%= functions.formatNumber(translations.views.solar_system.leave_distance_flights_value, translations.views.global.number_separator) %></p>
+			<p class="value blue distances_comparisons"><%= functions.formatNumber(translations.views.solar_system.distances_comparisons[0], translations.views.global.number_separator) %></p>
 		</div>
 	</div>
 	<div class="right_sidebar">
@@ -54,6 +54,7 @@
 	</footer>
 </section>
 <section class="boarding_pass">
+	<a href="#solar-system" class="close"></a>
 	<p class="instructions"><%= translations.views.solar_system.boarding_pass.instructions %></p>
 	<div class="modal">
 		<form class="content">
