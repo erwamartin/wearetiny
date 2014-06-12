@@ -181,15 +181,15 @@ html body #main .error h2, html body #main .error h3 {
 }
 /* line 73, ../sass/style.scss */
 html body #main .error h2 {
-  padding-top: .5em;
+  padding-top: .8em;
   /* text-transform: uppercase; */
   padding-bottom: 0.5em;
-  font-size: 2.4em;
+  font-size: 2em;
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
 /* line 81, ../sass/style.scss */
 html body #main .error h3 {
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 }
 /* line 86, ../sass/style.scss */
@@ -223,9 +223,9 @@ html body #main .error .asteroid {
 html body #main .error #spacecraft {
   height: 31px;
   width: 20px;
-  transform: rotate(-30deg);
-  -ms-transform: rotate(-30deg);
-  -webkit-transform: rotate(-30deg);
+  transform: rotate(-36deg);
+  -ms-transform: rotate(-36deg);
+  -webkit-transform: rotate(-36deg);
   background-image: url('../images/404/spacecraft.svg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -238,9 +238,9 @@ html body #main .error #spacecraft {
 html body #main .error .spacecraft {
   height: 31px;
   width: 20px;
-  transform: rotate(-30deg);
-  -ms-transform: rotate(-30deg);
-  -webkit-transform: rotate(-30deg);
+  transform: rotate(-36deg);
+  -ms-transform: rotate(-36deg);
+  -webkit-transform: rotate(-36deg);
   background-image: url('../images/404/spacecraft.svg');
   background-position: center center;
   background-repeat: no-repeat;
