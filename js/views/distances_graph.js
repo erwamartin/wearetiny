@@ -23,7 +23,7 @@ define([
             translations : params.translations,
             functions : params.functions,
             planets : data.planets,
-            planet_name : 'uranus'
+            planet_name : 'earth'
           })
         }
 

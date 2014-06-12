@@ -461,7 +461,7 @@ define([
       planet_infos.temperature = Math.round(parseFloat(params.planets[params.planet_name].temperature));
       planet_infos.revolution_period = Math.round(parseFloat(params.planets[params.planet_name].revolution_period));
       planet_infos.rotation = Math.round(parseFloat(params.planets[params.planet_name].rotation*24));
-      planet_infos.earthTall = params.planets[params.planet_name].size/params.planets['earth'].size;
+      planet_infos.earthTall = parseFloat(params.planets[params.planet_name].size/params.planets['earth'].size);
 
       animateTextNumber(".left_earthNumber", planet_infos.left_earth);
       animateTextNumber(".ageNumber", planet_infos.age);

@@ -14,16 +14,18 @@ $main-font-color : #FFF;
 /* Styles */
 
 .planet{
+	header {
+		h2{
+			margin-top: .5em;
+			text-transform: uppercase;
+			font-size : 2.4em;
+		}
+	}
 
 	h2, h3, h4{
 		width: 100%;
 		text-align: center;
 		font-family: 'PlutoSansCondMedium', Arial, sans-serif;
-	}
-	h2{
-		margin-top: .5em;
-		text-transform: uppercase;
-		font-size : 2.4em;
 	}
 	h3{
 		text-align: center;
