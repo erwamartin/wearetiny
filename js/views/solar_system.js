@@ -73,14 +73,14 @@ define([
       $('.boarding_pass .modal form').on('submit', function(evt){
         evt.preventDefault();
 
-        $('.boarding_pass .modal div').removeClass('error');
+        $('.boarding_pass .modal div').removeClass('error_message');
         var age = parseInt($('.boarding_pass .modal input[name="age"]').val());
         var weight = parseInt($('.boarding_pass .modal input[name="weight"]').val());
         var transportation = $('.boarding_pass .modal input[name="transportation"]:checked').val();
         if(isNaN(age) || age<1 || age>122){
-          $('.boarding_pass .modal div.age').addClass('error');
+          $('.boarding_pass .modal div.age').addClass('error_message');
         }else if(isNaN(weight) || weight<1 || weight>600){
-          $('.boarding_pass .modal div.weight').addClass('error');
+          $('.boarding_pass .modal div.weight').addClass('error_message');
         }else{
           localStorage.setItem('age', age);
           localStorage.setItem('weight', weight);

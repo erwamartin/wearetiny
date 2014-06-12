@@ -223,7 +223,7 @@ html body #main .solar_system .solar_system_orbits .planet_infos {
   position: absolute;
   background: rgba(255, 255, 255, 0.05);
   width: 150px;
-  height: 120px;
+  height: 130px;
   padding: 5px;
   -webkit-transition: opacity 0.15s ease-in;
   -moz-transition: opacity 0.15s ease-in;
@@ -702,24 +702,24 @@ html body #main .boarding_pass div.modal form.content .infos div + div {
   border-left: 1px solid #d6d3d1;
 }
 /* line 490, ../sass/style.scss */
-html body #main .boarding_pass div.modal form.content .infos div.error .title, html body #main .boarding_pass div.modal form.content .infos div.error input {
+html body #main .boarding_pass div.modal form.content .infos div.error_message .title, html body #main .boarding_pass div.modal form.content .infos div.error_message input {
   color: #e84c3d;
 }
 /* line 493, ../sass/style.scss */
-html body #main .boarding_pass div.modal form.content .infos div.error input::-webkit-input-placeholder {
+html body #main .boarding_pass div.modal form.content .infos div.error_message input::-webkit-input-placeholder {
   color: #e84c3d;
 }
 /* line 494, ../sass/style.scss */
-html body #main .boarding_pass div.modal form.content .infos div.error input:-ms-input-placeholder {
+html body #main .boarding_pass div.modal form.content .infos div.error_message input:-ms-input-placeholder {
   color: #e84c3d;
 }
 /* line 495, ../sass/style.scss */
-html body #main .boarding_pass div.modal form.content .infos div.error input:-moz-placeholder {
+html body #main .boarding_pass div.modal form.content .infos div.error_message input:-moz-placeholder {
   color: #e84c3d;
   opacity: 1;
 }
 /* line 499, ../sass/style.scss */
-html body #main .boarding_pass div.modal form.content .infos div.error input::-moz-placeholder {
+html body #main .boarding_pass div.modal form.content .infos div.error_message input::-moz-placeholder {
   color: #e84c3d;
   opacity: 1;
 }
