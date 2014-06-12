@@ -1,7 +1,7 @@
 <section class="planet">
 	<header>
 		<h2><%= translations.views.planets[params.planet].planet_title %></h2>
-		<h4><%= translations.views.planets[params.planet].planet_funfact[0] %></h4>
+		<h4><%= translations.views.planets.fun_fact %><%= translations.views.planets[params.planet].planet_funfact[0] %></h4>
 	</header>
 	
 	<div class="content-planet">
@@ -13,7 +13,7 @@
 			</div>
 			<div class="new_age">
 				<p class="text"><%= translations.views.planets.age_sentence %></p>
-				<p class="value uppercase"><span class='number ageNumber'><%= planet_page.planet.age %></span> <% print((planet_page.planet.age > 1) ?  translations.views.global.ages : translations.views.global.age) %></p>
+				<p class="value uppercase"><span class='number ageNumber'><%= planet_page.planet.age %></span> <% print((planet_page.planet.age > 1) ?  translations.views.global.years_old : translations.views.global.year_old) %></p>
 			</div>
 			<div class="weight">
 				<p class="text"><%= translations.views.planets.weight_sentence %></p>

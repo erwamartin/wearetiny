@@ -104,7 +104,7 @@
 			"temperature_sentence" : "Average temperature on surface is",
 			"temperature_value" : "°C",
 			"temperature_average" : "Average temperature",
-			"fun_fact" : "Fun fact:",
+			"fun_fact" : "Fun fact: ",
 			"mercury" : {
 				"planet_name" : "Mercury",
 				"planet_title" : "Mercury : mind the gap between the sun and the planet",
