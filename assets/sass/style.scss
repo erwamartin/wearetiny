@@ -55,6 +55,37 @@ html{
 				height: 100%;
 			}
 			.error {
+				h2, h3{
+					width: 100%;
+					text-align: center;
+				}
+
+				h2 {
+					padding-top: .5em;
+					text-transform: uppercase;
+					font-size : 2.4em;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+				}
+
+				h3 {
+					font-size : 2.4em;
+					font-family: 'PlutoSansCondLight', Arial, sans-serif;
+				}
+
+				a{
+					position: relative;
+					top: 325px;
+					display:inline-block;
+					border:2px solid #FFF;
+					color:#FFF;
+					font-size:1.188em;
+					text-decoration:none;
+					margin:11px;
+					padding:10px 10px;
+					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+				}
+
+
 				position: absolute;
 				width: 900px;
 				height: 550px;
@@ -69,7 +100,7 @@ html{
 				
 				.asteroid {
 					position: absolute;
-					top: 30%;
+					top: 50%;
 					left : 50%;
 					height: 234px;
 					width:  234px;
@@ -78,6 +109,19 @@ html{
 					@include background('404/asteroid.svg', center center, 100% 100%);
 				}
 
+				#spacecraft {
+					height: 31px;
+					width:  20px;
+					transform:rotate(-30deg);
+					-ms-transform:rotate(-30deg); 
+					-webkit-transform:rotate(-30deg); 
+					@include background('404/spacecraft.svg', center center, 100% 100%);
+					margin-top: 131px;
+					margin-left: 318px;
+				    position: absolute;
+				}
+
+
 				.spacecraft {
 					height: 31px;
 					width:  20px;
@@ -85,7 +129,7 @@ html{
 					-ms-transform:rotate(-30deg); 
 					-webkit-transform:rotate(-30deg); 
 					@include background('404/spacecraft.svg', center center, 100% 100%);
-					margin-top: 85px;
+					margin-top: 131px;
 					margin-left: 318px;
 				    position: absolute;
 				    
@@ -1012,7 +1056,7 @@ only screen and (                min-resolution: 192dpi){}
    }
 
    100% {
-       -webkit-transform: translate(-240px, -240px) rotate(-5deg) scale(0) ;
+       -webkit-transform: translate(-240px, -240px) rotate(2deg) scale(0) ;
        -webkit-animation-timing-function:ease-in-out
    }
 }
