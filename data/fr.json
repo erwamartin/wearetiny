@@ -30,6 +30,11 @@
 			"punchline" : "We live among <span>14 billions</span> of stars",
 			"solar_system_arrow" : "Somewhere over there  in this tiny county"
 		},
+		"error" : {
+			"title" : "We live among <span>14 billions</span> of stars",
+			"subtitle" : "We live among <span>14 billions</span> of stars",
+			"link" : "Somewhere over there  in this tiny county"
+		},
 		"solar_system" : {
  			"title" : "Bienvenue dans le Système Solaire !",
 			"subtitle" : "Notre petit chez-nous dans l'espace",
