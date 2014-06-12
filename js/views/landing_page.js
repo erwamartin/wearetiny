@@ -13,19 +13,28 @@ define([
       var compiledTemplate = _.template( LandingPageTemplate, params );
       this.$el.html(compiledTemplate);
 
+      // Lang selection
+      $('#lang-choice a').on('click', function(){
+        localStorage.setItem('locale', $(this).data('lang'));
+      });
 
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=310613592396790&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
+      var video = $('.landing_page video').get(0);
+      var page_showed = false;
 
-      // Hide loader
-      setTimeout(function() {
-        $('#loader').fadeOut();
-      }, 300);
+      video.addEventListener('timeupdate', function() {
+        if(this.currentTime >= 5 && !page_showed) {
+          $('.landing_page #lang, .landing_page footer, .landing_page .about').fadeIn(1500);
+          page_showed=true;
+        }
+      }, false);
+
+      video.addEventListener('loadeddata', function() {
+        $('#loader').fadeOut(300, function(){
+          video.play();
+        });
+      });
+
+      video.load();
     },
     loadSolarSystem : function(evt){
       window.location.href = '#solar-system';

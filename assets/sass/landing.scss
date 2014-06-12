@@ -13,7 +13,7 @@
 		position:absolute;
 		top:20px;
 		right:20px;
-		z-index:1000;
+		z-index:6;
 	}
 
 	video{
@@ -22,6 +22,10 @@
 		left:50%;
 		margin-left:-640px;
 		margin-top:-360px;
+	}
+
+	#lang, footer, .about{
+		display: none;
 	}
 
 	#lang{
@@ -56,7 +60,7 @@
 	}
 
 	#lang a:nth-of-type(1){
-		padding:10px 10px;
+		padding:12px 9px;
 	}
 
 	#lang a:nth-of-type(2){

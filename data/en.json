@@ -27,8 +27,8 @@
 			"planet_year" : "A [planet] year" 
 		},
 		"error" : {
- 			"title" : "Where are our neighbours?",
-			"subtitle" : "It’s way too hard to visualize distances in the solar system in km. Have a look a Astronomical units, usually called AU:"
+ 			"title" : "Oops, seems that you've got lost in an unknown asteroid!",
+			"subtitle" : "It seems quite empty here... "
 		},
 		"solar_system" : {
  			"title" : "Welcome to the solar system",
@@ -36,7 +36,13 @@
 			"leave_time_top_sentence" : "Humans are too tiny to reach its boundaries!",
 			"leave_time_bottom_sentence" : "To go to the heliopause with <span>[spacecraft]</span> !",
 			"leave_distance_sentence" : "Before you're out, which means",
-			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights",
+			"distances_comparisons" : [
+				"<span class='number'>3,33</span> <span>Sun to Neptune trip</span>",
+				"<span class='number'>100</span> <span>Sun to Earth trip</span>",
+				"<span class='number'>38958</span> <span>Earth to Moon trip</span>",
+				"<span class='number'>373300</span> <span>round the world trips</span>",
+				"<span class='number'>2563399</span> <span>Paris to New-York flights</span>"
+			],
 			"compare" : "Compare",
 			"real_distance":"To scale distances",
 			"planet_infos_title" : "Rotation speed",
