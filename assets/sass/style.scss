@@ -101,9 +101,50 @@ html{
 			}
 			.solar_system{
 				.solar_system_orbits{
+					position: relative;
 					svg{
 						display: block;
 						margin: 1em auto 0 auto;
+					}
+					.planet_infos{
+						opacity: 0;
+						position: absolute;
+						background: rgba(255, 255, 255, 0.05);
+						width: 150px;
+						height: 120px;
+						padding: 5px;
+						-webkit-transition: opacity 0.15s ease-in;
+						-moz-transition: opacity 0.15s ease-in;
+						transition: opacity 0.15s ease-in;
+						p{
+							font-family: 'PlutoSansCondRegular', Arial, sans-serif;
+							text-transform: uppercase;
+						}
+						.planet_name{
+							display: block;
+							font-family: 'PlutoSansCondBold', Arial, sans-serif;
+							font-size: 1.375em;
+							padding: 0.325em 0;
+							border-bottom: 2px solid #FFF;
+							margin-bottom: 0.325em;
+						}
+						.rotation_speed{
+							margin-bottom: 0.325em;
+						}
+						.rotation_speed_value{
+							margin-bottom: 0.325em;
+						}
+						.rotation_speed_value, .rotation_speed_duration{
+							font-family: 'PlutoSansCondRegular', Arial, sans-serif;
+							font-size: 1em;
+							span{
+								font-family: 'MohaveBold', Arial, sans-serif;
+								font-size: 1.250em;
+							}
+						}
+					}
+					.planet_infos.on{
+						opacity: 1;
 					}
 				}
 				.left_sidebar{
@@ -520,7 +561,7 @@ html{
 							width: 53.3333333%;
 							height: 3.625em;
 							margin: 1.875em auto;
-							@include background('codebar.png', center center, 100% 100%);
+							@include background('codebar.svg', center center, 100% 100%);
 						}
 					}
 				}
@@ -787,12 +828,7 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
-	html body #main .boarding_pass div.modal .barcode{
-		@include background('codebar@2x.png', center center, 100% 100%);
-	}
-}
+only screen and (                min-resolution: 192dpi)
 
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {

@@ -23,7 +23,7 @@
 			"day" : "day", 
 			"days" : "days", 
 			"unite_astro" : "AU",
-			"away_from" : "away from The Sun",
+			"away_from" : "away from the Sun",
 			"planet_year" : "A [planet] year" 
 		},
 		"landing_page" : {
@@ -39,6 +39,7 @@
 			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>Paris-New York</span> flights",
 			"compare" : "Compare",
 			"real_distance":"To scale distances",
+			"planet_infos_title" : "Rotation speed",
 			"boarding_pass" : {
 				"instructions" : "Please fill in your personal information and select your spaceship. Have a nice trip!",
 				"title" : "Your boarding pass",
