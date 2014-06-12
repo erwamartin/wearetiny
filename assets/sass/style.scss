@@ -561,7 +561,7 @@ html{
 							width: 53.3333333%;
 							height: 3.625em;
 							margin: 1.875em auto;
-							@include background('codebar.png', center center, 100% 100%);
+							@include background('codebar.svg', center center, 100% 100%);
 						}
 					}
 				}
@@ -828,12 +828,7 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
-	html body #main .boarding_pass div.modal .barcode{
-		@include background('codebar@2x.png', center center, 100% 100%);
-	}
-}
+only screen and (                min-resolution: 192dpi)
 
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
