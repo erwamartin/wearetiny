@@ -1392,22 +1392,27 @@ html body #loader.on div .mars {
 }
 
 /* line 1, ../sass/landing.scss */
+.fb_iframe_widget {
+  bottom: 2px;
+}
+
+/* line 5, ../sass/landing.scss */
 .landing_page {
   font-family: 'PlutoSansCondRegular', Arial, sans-serif;
   background-color: #0B1B24;
 }
-/* line 4, ../sass/landing.scss */
+/* line 8, ../sass/landing.scss */
 .landing_page .about {
   display: block;
   width: 29px;
   height: 29px;
-  background: url("img/info.png") no-repeat;
+  background: url("../images/info.png") no-repeat;
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 1000;
 }
-/* line 15, ../sass/landing.scss */
+/* line 19, ../sass/landing.scss */
 .landing_page video {
   position: absolute;
   top: 50%;
@@ -1415,7 +1420,7 @@ html body #loader.on div .mars {
   margin-left: -640px;
   margin-top: -360px;
 }
-/* line 23, ../sass/landing.scss */
+/* line 27, ../sass/landing.scss */
 .landing_page #lang {
   width: 350px;
   height: 130px;
@@ -1426,18 +1431,18 @@ html body #loader.on div .mars {
   margin-top: -65px;
   text-transform: uppercase;
 }
-/* line 34, ../sass/landing.scss */
+/* line 38, ../sass/landing.scss */
 .landing_page #lang p {
   font-size: 1.375em;
   padding: 0;
   margin: 20px auto 10px auto;
 }
-/* line 40, ../sass/landing.scss */
+/* line 44, ../sass/landing.scss */
 .landing_page #lang-choice {
   margin: 0 auto;
   width: 150px;
 }
-/* line 45, ../sass/landing.scss */
+/* line 49, ../sass/landing.scss */
 .landing_page #lang a {
   display: inline-block;
   border: 2px solid #FFF;
@@ -1446,19 +1451,19 @@ html body #loader.on div .mars {
   text-decoration: none;
   margin: 11px;
 }
-/* line 54, ../sass/landing.scss */
+/* line 58, ../sass/landing.scss */
 .landing_page #lang a:nth-of-type(1) {
   padding: 10px 10px;
 }
-/* line 58, ../sass/landing.scss */
-.landing_page #lang a:nth-of-type(2) {
-  padding: 10px;
-}
 /* line 62, ../sass/landing.scss */
+.landing_page #lang a:nth-of-type(2) {
+  padding: 12px 10px;
+}
+/* line 66, ../sass/landing.scss */
 .landing_page #lang a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
-/* line 67, ../sass/landing.scss */
+/* line 71, ../sass/landing.scss */
 .landing_page footer {
   position: absolute;
   bottom: 0%;
@@ -1466,11 +1471,11 @@ html body #loader.on div .mars {
   height: 40px;
   /* background-color:#FFF; */
 }
-/* line 75, ../sass/landing.scss */
+/* line 79, ../sass/landing.scss */
 .landing_page .twitter-share-button {
   margin-left: 20px;
 }
-/* line 79, ../sass/landing.scss */
+/* line 83, ../sass/landing.scss */
 .landing_page #social_media a {
   display: inline-block;
   margin: 0px 4px 0px 4px;
@@ -1482,21 +1487,21 @@ html body #loader.on div .mars {
   -webkit-transition: all 0.8s;
   -o-transition: all 0.8s;
 }
-/* line 92, ../sass/landing.scss */
-.landing_page .twitter {
-  background: url("img/twitter_icon.svg") no-repeat;
-}
 /* line 96, ../sass/landing.scss */
-.landing_page .contact {
-  background: url("img/contact_icon.svg") no-repeat;
+.landing_page .twitter {
+  background: url("../images/twitter_icon.svg") no-repeat;
 }
 /* line 100, ../sass/landing.scss */
+.landing_page .contact {
+  background: url("../images/contact_icon.svg") no-repeat;
+}
+/* line 104, ../sass/landing.scss */
 .landing_page .twitter:hover, .landing_page .contact:hover {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -o-transform: rotate(360deg);
 }
-/* line 106, ../sass/landing.scss */
+/* line 110, ../sass/landing.scss */
 .landing_page #social_media {
   position: absolute;
   bottom: 20px;
