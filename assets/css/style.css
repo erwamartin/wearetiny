@@ -818,7 +818,7 @@ html body #main .boarding_pass div.modal form.content .barcode {
   width: 53.3333333%;
   height: 3.625em;
   margin: 1.875em auto;
-  background-image: url('../images/codebar.png');
+  background-image: url('../images/codebar.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1403,17 +1403,28 @@ html body #loader.on div .mars {
 }
 
 /* Retina */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 833, ../sass/style.scss */
-  html body #main .boarding_pass div.modal .barcode {
-    background-image: url('../images/codebar@2x.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-}
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
+  /* line 835, ../sass/style.scss */
+  0% {
+    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
+    opacity: 0.8;
+  }
+
+  /* line 836, ../sass/style.scss */
+  50% {
+    -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
+    opacity: 0.95;
+  }
+
+  /* line 837, ../sass/style.scss */
+  100% {
+    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes glitter {
   /* line 840, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1433,7 +1444,7 @@ html body #loader.on div .mars {
   }
 }
 
-@-moz-keyframes glitter {
+@-o-keyframes glitter {
   /* line 845, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1453,7 +1464,7 @@ html body #loader.on div .mars {
   }
 }
 
-@-o-keyframes glitter {
+@keyframes glitter {
   /* line 850, ../sass/style.scss */
   0% {
     -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
@@ -1473,71 +1484,51 @@ html body #loader.on div .mars {
   }
 }
 
-@keyframes glitter {
-  /* line 855, ../sass/style.scss */
-  0% {
-    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
-    opacity: 0.8;
-  }
-
-  /* line 856, ../sass/style.scss */
-  50% {
-    -webkit-box-shadow: 0px 0px 15px 5px #ffffff;
-    opacity: 0.95;
-  }
-
-  /* line 857, ../sass/style.scss */
-  100% {
-    -webkit-box-shadow: 0px 0px 15px 1px #ffffff;
-    opacity: 0.8;
-  }
-}
-
 /**********Keyframes de rotation planètes**************/
 /***EARTH*****/
 @-webkit-keyframes orbit {
-  /* line 865, ../sass/style.scss */
+  /* line 860, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 866, ../sass/style.scss */
+  /* line 861, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit {
-  /* line 870, ../sass/style.scss */
+  /* line 865, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 871, ../sass/style.scss */
+  /* line 866, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit {
-  /* line 875, ../sass/style.scss */
+  /* line 870, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 876, ../sass/style.scss */
+  /* line 871, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
 }
 
 @keyframes orbit {
-  /* line 880, ../sass/style.scss */
+  /* line 875, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(54px) rotate(0deg);
   }
 
-  /* line 881, ../sass/style.scss */
+  /* line 876, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(54px) rotate(-360deg);
   }
@@ -1545,48 +1536,48 @@ html body #loader.on div .mars {
 
 /***MERCURY*****/
 @-webkit-keyframes orbit2 {
-  /* line 888, ../sass/style.scss */
+  /* line 883, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 889, ../sass/style.scss */
+  /* line 884, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit2 {
-  /* line 893, ../sass/style.scss */
+  /* line 888, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 894, ../sass/style.scss */
+  /* line 889, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit2 {
-  /* line 898, ../sass/style.scss */
+  /* line 893, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 899, ../sass/style.scss */
+  /* line 894, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
 }
 
 @keyframes orbit2 {
-  /* line 903, ../sass/style.scss */
+  /* line 898, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(30px) rotate(0deg);
   }
 
-  /* line 904, ../sass/style.scss */
+  /* line 899, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(30px) rotate(-360deg);
   }
@@ -1594,48 +1585,48 @@ html body #loader.on div .mars {
 
 /***VENUS****/
 @-webkit-keyframes orbit3 {
-  /* line 911, ../sass/style.scss */
+  /* line 906, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 912, ../sass/style.scss */
+  /* line 907, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit3 {
-  /* line 916, ../sass/style.scss */
+  /* line 911, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 917, ../sass/style.scss */
+  /* line 912, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit3 {
-  /* line 921, ../sass/style.scss */
+  /* line 916, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 922, ../sass/style.scss */
+  /* line 917, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
 }
 
 @keyframes orbit3 {
-  /* line 926, ../sass/style.scss */
+  /* line 921, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(42px) rotate(0deg);
   }
 
-  /* line 927, ../sass/style.scss */
+  /* line 922, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(42px) rotate(-360deg);
   }
@@ -1643,48 +1634,48 @@ html body #loader.on div .mars {
 
 /***MARS****/
 @-webkit-keyframes orbit4 {
-  /* line 934, ../sass/style.scss */
+  /* line 929, ../sass/style.scss */
   from {
     -webkit-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 935, ../sass/style.scss */
+  /* line 930, ../sass/style.scss */
   to {
     -webkit-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @-moz-keyframes orbit4 {
-  /* line 939, ../sass/style.scss */
+  /* line 934, ../sass/style.scss */
   from {
     -moz-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 940, ../sass/style.scss */
+  /* line 935, ../sass/style.scss */
   to {
     -moz-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @-o-keyframes orbit4 {
-  /* line 944, ../sass/style.scss */
+  /* line 939, ../sass/style.scss */
   from {
     -o-transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 945, ../sass/style.scss */
+  /* line 940, ../sass/style.scss */
   to {
     -o-transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
 }
 
 @keyframes orbit4 {
-  /* line 949, ../sass/style.scss */
+  /* line 944, ../sass/style.scss */
   from {
     transform: rotate(0deg) translateX(68px) rotate(0deg);
   }
 
-  /* line 950, ../sass/style.scss */
+  /* line 945, ../sass/style.scss */
   to {
     transform: rotate(360deg) translateX(68px) rotate(-360deg);
   }
