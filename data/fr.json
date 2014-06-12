@@ -27,9 +27,8 @@
 			"planet_year" : "Une année sur [planet]" 
 		},
 		"error" : {
-			"title" : "We live among <span>14 billions</span> of stars",
-			"subtitle" : "We live among <span>14 billions</span> of stars",
-			"link" : "Somewhere over there  in this tiny county"
+ 			"title" : "Oups, il semblerait que vous vous soyez perdu sur une astéroïde !",
+			"subtitle" : "C'est bien calme par ici... "
 		},
 		"solar_system" : {
  			"title" : "Bienvenue dans le Système Solaire !",
@@ -40,7 +39,7 @@
 			"leave_distance_flights_value" : "<span class='number'>375250</span> <span>vols Paris-New York</span>",
 			"compare" : "Comparer",
 			"real_distance" : "Distances à l'échelle",
-			"planet_infos_title" : "Vitesse de roation",
+			"planet_infos_title" : "Vitesse de rotation",
 			"boarding_pass" : {
 				"instructions" : "Merci d'indiquer votre âge, votre poids, ainsi que votre mode de transport favori. Bon voyage !",
 				"title" : "Votre carte d'embarquement",
