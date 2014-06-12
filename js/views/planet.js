@@ -457,7 +457,7 @@ define([
       planet_infos.temperature = params.planets[params.planet_name].temperature;
       planet_infos.revolution_period = Math.round(parseFloat(params.planets[params.planet_name].revolution_period));
       planet_infos.rotation = Math.round(parseFloat(params.planets[params.planet_name].rotation*24));
-      planet_infos.earthTall = params.planets[params.planet_name].size/params.planets['earth'].size;
+      planet_infos.earthTall = Math.round((params.planets[params.planet_name].size/params.planets['earth'].size)*100)/100;
 
       params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".left_earthNumber", value : planet_infos.left_earth});
       params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".ageNumber", value : planet_infos.age});
