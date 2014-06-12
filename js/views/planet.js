@@ -11,6 +11,8 @@ define([
     },
     render: function(params){
       var _this = this;
+      _this.interval_timers = [];
+
 
       if(!localStorage.getItem('age') || !localStorage.getItem('weight') || !localStorage.getItem('transportation')){
         window.location.href = '#solar-system';
@@ -442,7 +444,23 @@ define([
           _this.animation3_timer = setInterval(function () {
               powerGauge.update(data.planets[params.params.planet].temperature);
           }, 1000);
-      });
+
+          
+        var planet_funfact_id = 0;
+        var timer2 = setInterval(function(){
+          planet_funfact_id++;
+          //console.log(params.translations.views.planets[params.params.planet].planet_funfact.length-1);
+          if(planet_funfact_id>params.translations.views.planets[params.params.planet].planet_funfact.length-1) planet_funfact_id=0;
+
+          $(".planet_funfact").fadeOut(function() {
+            //console.log(params.translations.views.planets[params.params.planet].planet_funfact[planet_funfact_id]);
+            $(this).html(params.translations.views.planets[params.params.planet].planet_funfact[planet_funfact_id]);
+
+          }).fadeIn();
+        }, 5000);
+
+        _this.interval_timers.push(timer2);
+        });
 
 
     },
@@ -471,6 +489,13 @@ define([
     },
     close: function(view){
       if(view.animation_timer) clearInterval(view.animation_timer);
+       if(view.interval_timers.length>0){
+        for(var i in view.interval_timers){
+          clearInterval(view.interval_timers[i]);
+        }
+      }
+      view.interval_timers = [];
+
     }
   });
   return PlanetView;
