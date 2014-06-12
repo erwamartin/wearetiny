@@ -18,10 +18,23 @@ define([
         localStorage.setItem('locale', $(this).data('lang'));
       });
 
-      // Hide loader
-      setTimeout(function(){
-        $('#loader').fadeOut();
-      }, 300);
+      var video = $('.landing_page video').get(0);
+      var page_showed = false;
+
+      video.addEventListener('timeupdate', function() {
+        if(this.currentTime >= 5 && !page_showed) {
+          $('.landing_page #lang, .landing_page footer, .landing_page .about').fadeIn(1500);
+          page_showed=true;
+        }
+      }, false);
+
+      video.addEventListener('loadeddata', function() {
+        $('#loader').fadeOut(300, function(){
+          video.play();
+        });
+      });
+
+      video.load();
     },
     loadSolarSystem : function(evt){
       window.location.href = '#solar-system';
