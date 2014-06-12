@@ -99,24 +99,36 @@ define([
         params : {
           width : ($('body').innerWidth()-$('.left_sidebar').innerWidth()-$('.right_sidebar').innerWidth())*80/100,
           height : (($('body').innerHeight()-$('h2').innerHeight()-$('h3').innerHeight())-100)*85/100,
+          margin : {}
+        },
+        planet_infos : {
+          width : 160,
+          height : 130
         }
       }
       solar_system.params.radius = Math.min(solar_system.params.width, solar_system.params.height)/2;
+      solar_system.params.margin.left = solar_system.params.margin.right = ($('body').innerWidth()-solar_system.params.width)/2;
 
       var sun = {
         radius : solar_system.params.radius*0.075
       }
 
       // Solar System
+      var solar_system_svg_params = {
+        width : solar_system.params.width+(sun.radius*2)+solar_system.params.margin.left+solar_system.params.margin.right,
+        height : solar_system.params.height+(sun.radius*2),
+        x : (((solar_system.params.width+(sun.radius*2)) / 2) + solar_system.params.margin.left),
+        y : (solar_system.params.height+(sun.radius*2)) / 2
+      }
       solar_system.svg = solar_system.svg_element.append("svg")
-        .attr("width", solar_system.params.width+(sun.radius*2))
-        .attr("height", solar_system.params.height+(sun.radius*2))
-        .append("g")
+        .attr("width", solar_system_svg_params.width)
+        .attr("height", solar_system_svg_params.height);
+      solar_system.g = solar_system.svg.append("g")
           .attr("class", "solar_system_g")
-          .attr("transform", "translate(" + (solar_system.params.width+(sun.radius*2)) / 2 + "," + (solar_system.params.height+(sun.radius*2)) / 2 + ")");
+          .attr("transform", "translate(" + solar_system_svg_params.x + "," + solar_system_svg_params.y + ")");
 
       // Sun
-      solar_system.svg.append("image")
+      solar_system.g.append("image")
         .attr("class", "sun")
         .attr("width", sun.radius*2)
         .attr("height", sun.radius*2)
@@ -124,12 +136,41 @@ define([
         .attr("y",  - sun.radius)
         .attr("xlink:href", "assets/images/planets/sun.svg");
 
+      var planet_infos_params = {
+        x : solar_system_svg_params.x+solar_system.params.radius*params.data.planets['neptune'].solar_system.distance_solar_coef,
+        y : solar_system_svg_params.y,
+        margin : {
+          left : 15,
+          top : 15
+        }
+      }
+      planet_infos_params.x += (($('body').innerWidth()-planet_infos_params.x)-$('.right_sidebar').innerWidth()*2)/2;
+      planet_infos_params.x -= solar_system.planet_infos.width/2;
+      planet_infos_params.y -= solar_system.planet_infos.height/2;
+
+      $('.solar_system .planet_infos').css({
+        top :  planet_infos_params.y,
+        left :  planet_infos_params.x
+      });
+
+       solar_system.display_planet_info = function(params){
+          $('.solar_system .planet_infos .planet_name').text(params.planet_name);
+          $('.solar_system .planet_infos .rotation_speed_value span').text(params.rotation_speed_value);
+          $('.solar_system .planet_infos .rotation_speed_duration span').text(params.rotation_speed_duration);
+          $('.solar_system .planet_infos').addClass('on');
+       } 
+
+       solar_system.hide_planet_info = function(params){
+          $('.solar_system .planet_infos').removeClass('on');
+       } 
+
+
       for(var planet in params.data.planets){
 
         params.data.planets[planet].distance_px = solar_system.params.radius*params.data.planets[planet].solar_system.distance_solar_coef;
         params.data.planets[planet].size_px = sun.radius*params.data.planets[planet].solar_system.size_coef;
 
-        solar_system.svg.append("circle")
+        solar_system.g.append("circle")
           .attr("class", planet+"Orbit")
           .attr("r", params.data.planets[planet].distance_px)
           .attr("stroke-width", 2)
@@ -142,20 +183,54 @@ define([
           .startAngle(0)
           .endAngle(0);
 
-        solar_system.svg.append("path")
+        solar_system.g.append("path")
           .attr("class", planet+"OrbitPosition")
           .attr("d", params.data.planets[planet].orbitPosition)
           .style("fill", "rgba(22, 68, 90, 0.75)");
 
+        solar_system.g.append("circle")
+          .attr("class", planet+"Orbit")
+          .attr("data-planet", planet)
+          .attr("r", params.data.planets[planet].distance_px)
+          .attr("stroke-width", 20)
+          .style("fill", "none")
+          .style("stroke", "rgba(22, 68, 90, 0.75)")
+          .attr("stroke-opacity", 0)
+          .on('mouseover', function(){
+            var planet_name = d3.select(this).attr('data-planet');
+            solar_system.display_planet_info.call(this, {
+              planet_name : params.translations.views.planets[planet_name].planet_name,
+              rotation_speed_value : params.data.planets[planet_name].speed,
+              rotation_speed_duration : params.data.planets[planet_name].revolution_period
+            });
+          })
+          .on('mouseout', function(){
+            solar_system.hide_planet_info.call(this);
+          });
+
+
         // Planet
-        solar_system.svg.append("image")
+        solar_system.g.append("image")
           .attr("class", planet)
           .attr("width", params.data.planets[planet].size_px*2)
           .attr("height", params.data.planets[planet].size_px*2)
+          .attr("data-planet", planet)
           .attr("x", -params.data.planets[planet].size_px)
           .attr("y", -params.data.planets[planet].size_px)
           .attr("transform", "translate(0," +(params.data.planets[planet].distance_px*-1)+ ")")
-          .attr("xlink:href", "assets/images/planets/"+planet+".svg");
+          .attr("xlink:href", "assets/images/planets/"+planet+".svg")
+          .on('mouseover', function(){
+            var planet_name = d3.select(this).attr('data-planet');
+            solar_system.display_planet_info.call(this, {
+              planet_name : params.translations.views.planets[planet_name].planet_name,
+              rotation_speed_value : params.data.planets[planet_name].speed,
+              rotation_speed_duration : params.data.planets[planet_name].revolution_period
+            });
+          })
+          .on('mouseout', function(){
+            solar_system.hide_planet_info.call(this);
+          });
+
       }
       
       var origin = new Date(2014, 0, 1, 1, 0, 0, 0);
