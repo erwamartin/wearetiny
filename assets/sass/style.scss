@@ -57,6 +57,7 @@ html{
 			}
 			.close{
 				position: absolute;
+				z-index: 10;
 				top: 1.875em;
 				right: 1.875em;
 				width: 1.250em;
@@ -663,6 +664,7 @@ html{
 					.svg{
 						svg{
 							position : absolute;
+							z-index: 5;
 							top: 0; right: 0; bottom: 0; left: 0;
 							text{
 								font-family: 'PlutoSansCondRegular', Arial, sans-serif;

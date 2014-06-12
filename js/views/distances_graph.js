@@ -169,9 +169,11 @@ define([
               .duration(300)
               .attr("r", distances_graph.points.radius*2);
 
+            $(".planet_infos .km_distance").fadeOut(100, function() {
+              $(".planet_infos .km_distance").fadeIn(100);
+              params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".planet_infos .km_distance", value : planet_infos.solar_distance.km, duration : 650});
+            });
             $('.planet_infos .planet_name').text(planet_infos.name);
-            $('.planet_infos .ua_distance .value').text(planet_infos.solar_distance.ua);
-            $('.planet_infos .km_distance').text(planet_infos.solar_distance.km);
           });
 
           line.on('mouseout', function(){
@@ -230,7 +232,7 @@ define([
         name : params.translations.views.planets[params.planet_name].planet_name,
         solar_distance : {
           ua : Math.round(params.planets[params.planet_name].distance_solar/params.planets['earth'].distance_solar*100)/100,
-          km : params.functions.formatNumber.call(this, params.planets[params.planet_name].distance_solar, params.translations.views.global.number_separator)
+          km : params.planets[params.planet_name].distance_solar
         }
       };
     },

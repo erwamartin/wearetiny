@@ -362,7 +362,10 @@ define([
     },
     setTransportation : function(params){
       $('.transportation .vehicule span').text(params.transportation.id);
-      $('.transportation .duration span').text(params.transportation.duration);
+      $(".transportation .duration span").fadeOut(100, function() {
+        $(".transportation .duration span").fadeIn(100);
+        params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".transportation .duration span", value : params.transportation.duration, duration : 650});
+      });
     }
   });
   return SolarSystemView;
