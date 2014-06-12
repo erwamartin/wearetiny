@@ -54,7 +54,7 @@ define([
               height : 25
             },
             y : {
-              width : 35,
+              width : 70,
               font_size : 15
             }
           }
@@ -120,15 +120,18 @@ define([
             var fill_color = "rgb(156, 163, 157)";
             // 1 UA == data.planets['earth'].distance_solar
             // 0.75 => 0.5 + round of 0.25
+            var classs = "";
             if(data.planets[planet].distance_solar/ua>cpt/2+0.75){
+              classs = " selected";
               fill_color = "#FFF";
             }else if(in_way){
+              classs = " planet";
               fill_color = data.planets[planet].color1;
               in_way = false;
             }
 
             line.append("circle")
-              .attr("class", "point")
+              .attr("class", "point"+classs)
               .attr("r", distances_graph.points.radius)
               .attr("fill", fill_color)
               .attr("transform", "translate(" +x_transform+ ", "+y_transform+")");
@@ -141,6 +144,13 @@ define([
             .attr("font-size", distances_graph.scale.y.font_size+"px")
             .attr("fill", "white");
 
+          line.append("image")
+            .attr("class", planet)
+            .attr("width", distances_graph.points.distance_h*70/100)
+            .attr("height", distances_graph.points.distance_h*70/100)
+            .attr("transform", "translate("+(x_transform+50)+", "+(y_transform-(distances_graph.points.distance_h/2)+(distances_graph.points.distance_h*30/100)/2)+")")
+            .attr("xlink:href", "assets/images/planets/"+planet+".svg");
+
           line.on('mouseover', function(){
             var planet_name = d3.select(this).attr('id');
             var planet_infos = _this.get_planet_infos({
@@ -149,9 +159,30 @@ define([
               planets : data.planets,
               planet_name : planet_name
             });
+
+            d3.select(this).selectAll('.selected')
+              .transition()
+              .duration(300)
+              .attr("r", distances_graph.points.radius*2);
+            d3.select(this).selectAll('.planet')
+              .transition()
+              .duration(300)
+              .attr("r", distances_graph.points.radius*2);
+
             $('.planet_infos .planet_name').text(planet_infos.name);
             $('.planet_infos .ua_distance .value').text(planet_infos.solar_distance.ua);
             $('.planet_infos .km_distance').text(planet_infos.solar_distance.km);
+          });
+
+          line.on('mouseout', function(){
+            d3.select(this).selectAll('.selected')
+              .transition()
+              .duration(300)
+              .attr("r", distances_graph.points.radius);
+            d3.select(this).selectAll('.planet')
+              .transition()
+              .duration(300)
+              .attr("r", distances_graph.points.radius);
           });
 
           count_planets++;
