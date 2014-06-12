@@ -23,7 +23,7 @@
 			"day" : "day", 
 			"days" : "days", 
 			"unite_astro" : "AU",
-			"away_from" : "away from The Sun",
+			"away_from" : "away from the Sun",
 			"planet_year" : "A [planet] year" 
 		},
 		"landing_page" : {

@@ -23,7 +23,7 @@
 			"day" : "jour", 
 			"days" : "jours", 
 			"unite_astro" : "UA",
-			"away_from" : "du soleil",
+			"away_from" : "du Soleil",
 			"planet_year" : "Une année sur [planet]" 
 		},
 		"landing_page" : {
