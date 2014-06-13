@@ -64,6 +64,15 @@ html{
 				height: 1.250em;
 				@include background('icons/close.svg', center center, 100% 100%);
 			}
+			.about{
+				position: absolute;
+				z-index: 8;
+				top: 1.813em;
+				right: 1.875em;
+				width: 1.250em;
+				height: 1.250em;
+				@include background('icons/info.png', center center, 100% 100%);
+			}
 			.error {
 				h2, h3{
 					width: 100%;
