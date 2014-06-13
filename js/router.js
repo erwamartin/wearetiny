@@ -21,6 +21,13 @@ define([
       'mobile': 'mobile',
       '*actions': 'default'
     },
+    initialize : function(){
+      this.bind('route', this.trackPageview);
+    },
+    trackPageview: function (){
+      var path = Backbone.history.getFragment();
+      ga('send', 'pageview', {page: "/" + path});
+    },
     landingPage : function(){
       loadView.call(this, {
         view : new LandingPageView(), 
