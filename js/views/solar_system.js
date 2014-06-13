@@ -167,8 +167,8 @@ define([
 
        solar_system.display_planet_info = function(params){
           $('.solar_system .planet_infos .planet_name').text(params.planet_name);
-          $('.solar_system .planet_infos .rotation_speed_value span').text(params.rotation_speed_value);
-          $('.solar_system .planet_infos .rotation_speed_duration span').text(params.rotation_speed_duration);
+          params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".solar_system .planet_infos .rotation_speed_value span", value : params.rotation_speed_value, duration : 650});
+          params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".rotation_speed_duration span", value : params.rotation_speed_duration, duration : 650});
           $('.solar_system .planet_infos').addClass('on');
        } 
 
@@ -213,7 +213,9 @@ define([
             solar_system.display_planet_info.call(this, {
               planet_name : params.translations.views.planets[planet_name].planet_name,
               rotation_speed_value : params.data.planets[planet_name].speed,
-              rotation_speed_duration : params.data.planets[planet_name].revolution_period
+              rotation_speed_duration : params.data.planets[planet_name].revolution_period,
+              functions : params.functions,
+              translations : params.translations
             });
           })
           .on('mouseout', function(){
@@ -236,7 +238,9 @@ define([
             solar_system.display_planet_info.call(this, {
               planet_name : params.translations.views.planets[planet_name].planet_name,
               rotation_speed_value : params.data.planets[planet_name].speed,
-              rotation_speed_duration : params.data.planets[planet_name].revolution_period
+              rotation_speed_duration : params.data.planets[planet_name].revolution_period,
+              functions : params.functions,
+              translations : params.translations
             });
           })
           .on('mouseout', function(){
