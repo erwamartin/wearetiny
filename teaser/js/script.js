@@ -4,7 +4,7 @@ var hours = countdown.getElementsByClassName("hours")[0];
 var minutes = countdown.getElementsByClassName("minutes")[0];
 var secondes = countdown.getElementsByClassName("secondes")[0];
 
-var deadline = new Date(2014, 5, 13, 9, 0, 0, 0);  
+var deadline = new Date(2014, 5, 13, 17, 0, 0, 0);  
 
 setInterval(function(){  
 	var now = new Date();
