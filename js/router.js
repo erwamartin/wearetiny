@@ -136,6 +136,9 @@ define([
     var locale = localStorage.getItem('locale');
     $.getJSON('data/' + locale + '.json', function(translations){
       params.callback.call(this, translations);
+    }).fail(function( jqxhr, textStatus, error ) {
+      console.log("Request Failed: " + error);
+      console.log(jqxhr);
     });
   };
 

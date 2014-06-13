@@ -303,7 +303,7 @@
 					"subtitle":"Comparaison des planètes",
 					"content": [ 
 						{
-							"Le nombre de missions renseigné pour la Terre correspond au nombre de missions sur la Lune"
+							"item" : "Le nombre de missions renseigné pour la Terre correspond au nombre de missions sur la Lune"
 						}
 					]
 				}

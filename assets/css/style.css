@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 /* Imports */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -166,11 +166,11 @@ html body #main .close {
 /* line 67, ../sass/style.scss */
 html body #main .about {
   position: absolute;
-  z-index: 8;
-  top: 1.875em;
-  right: 1.875em;
-  width: 1.250em;
-  height: 1.250em;
+  z-index: 5;
+  top: 1.9em;
+  right: 1.9em;
+  width: 1.9em;
+  height: 1.9em;
   background-image: url('../images/icons/info.png');
   background-position: center center;
   background-repeat: no-repeat;
