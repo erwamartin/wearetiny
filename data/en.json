@@ -255,7 +255,7 @@
 					}
 				],
 			"sources":"Sources",
-			"sources_subtitle":"All raw data for calculations come from: <a href='http://nssdc.gsfc.nasa.gov/' alt='http://nssdc.gsfc.nasa.gov/'>http://nssdc.gsfc.nasa.gov/</a>. Fun facts and other data come from the following links:",
+			"sources_subtitle":"All raw data for calculations come from: <a href='http://nssdc.gsfc.nasa.gov/' target='_blank' alt='http://nssdc.gsfc.nasa.gov/'>http://nssdc.gsfc.nasa.gov/</a>. Fun facts and other data come from the following links:",
 			"links" : [
 					{
 						"link":"http://space-facts.com/"
@@ -303,7 +303,7 @@
 					},
 					{
 						"subtitle":"Single Planet",
-						"content":"Planet Calendar: Day 0 for planets days is 01/01/2014. We used this d3.js script to make it: <a href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
+						"content":"Planet Calendar: Day 0 for planets days is 01/01/2014. We used this d3.js script to make it: <a href='http://bl.ocks.org/clayzermk1/9142407' target='_blank'>http://bl.ocks.org/clayzermk1/9142407</a>"
 					},
 					{
 						"subtitle":"Planet Comparison",

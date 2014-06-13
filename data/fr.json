@@ -245,7 +245,7 @@
 					}
 				],
 			"sources":"Sources",
-			"sources_subtitle":"Les données brutes utilisées pour les calculs viennent de : <a href='http://nssdc.gsfc.nasa.gov/' alt='http://nssdc.gsfc.nasa.gov/'>http://nssdc.gsfc.nasa.gov/</a>. Les \"fun facts\" et les autres données viennent de ces liens :",
+			"sources_subtitle":"Les données brutes utilisées pour les calculs viennent de : <a target='_blank' href='http://nssdc.gsfc.nasa.gov/' alt='http://nssdc.gsfc.nasa.gov/'>http://nssdc.gsfc.nasa.gov/</a>. Les \"fun facts\" et les autres données viennent de ces liens :",
 			"links" : [
 					{
 						"link":"http://space-facts.com/"
@@ -293,7 +293,7 @@
 					},
 					{
 						"subtitle":"Page planète",
-						"content":"Calendrier des Planètes : Jour 0 des planètes est fixé au 01/01/2014. Nous avons utilisé ce script pour le réaliser : <a href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
+						"content":"Calendrier des Planètes : Jour 0 des planètes est fixé au 01/01/2014. Nous avons utilisé ce script pour le réaliser : <a target='_blank' href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
 					},
 					{
 						"subtitle":"Comparaison des planètes",
