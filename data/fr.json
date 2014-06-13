@@ -89,7 +89,7 @@
 					"unit" : "M/S²"
 				},
 				"rotation" : {
-					"name" : "DURÉE D'UN JOUR",
+					"name" : "JOURNÉE",
 					"unit" : "DAYS"
 				},
 				"temperature" : {
@@ -152,7 +152,7 @@
 				"planet_title" : "Venez rencontrer Curiosity sur Mars",
 				"planet_funfact" : [
 					"Pour les grimpeur, Olympus Mons est presque 3 fois plus haut que l'Everest.",
-					"On appelle la Mars la Planète Rouge car elle est recouverte d'oxide de fer (c'est-à-dire de rouille).",
+					"On appelle Mars la Planète Rouge car elle est recouverte d'oxyde de fer (c'est-à-dire de rouille).",
 					"Vous pouvez suivre les aventures du robot Curiosity sur Twitter !"
 				],
 				"weather_title" : "Comme sur Terre, si on oublie l'eau et l'atmopshère respirable",
