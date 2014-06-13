@@ -205,6 +205,100 @@
 				"weather_title" : "Attention, le vent souffle fort dans le coin",
 				"weather_subtitle" : "weather_subtitle"
 			}
+		},
+		"credit" : {
+			"title":"About us",
+			"context" : "We Are Tiny is a school project for HETIC created by third-year students. We do not claim to be experts in astrophysics, so please feel free to contact us at <a href='mailto:contact@wearetiny.io'>contact@wearetiny.io</a> if you want more information about our calculations or if you think some data is wrong.",
+			"team":"Our team",
+			"team_subtitle":"The Web is no rocket science for us!",
+			"personnes" : [
+					{
+						"name" : "Sara Kol",
+						"twitter" : "https://twitter.com/sarakxl",
+						"role" : "Spatial Analyst (Data collector)"
+					},
+					{
+						"name" : "Erwan Martin",
+						"twitter" : "https://twitter.com/erwamartin",
+						"role" : "Rocket Scientist (Web Developer)"
+					},
+					{
+						"name" : "Matthieu Moreau",
+						"twitter" : "https://twitter.com/mattmoro",
+						"role" : "Rocket Scientist (Web Developer)"
+					},
+					{
+						"name" : "Lucie Reitz",
+						"twitter" : "https://twitter.com/ReitzLucie",
+						"role" : "Pilot (Project Manager and communication)"
+					},
+					{
+						"name" : "Nicolas Thomas",
+						"twitter" : "https://twitter.com/_NicolasTh",
+						"role" : "Rocket Painter (Web Designer)"
+					},
+					{
+						"name" : "Jérémy Zaloga",
+						"twitter" : "https://twitter.com/jzaloga",
+						"role" : "Datanerd (Data collector and calculation)"
+					}
+				],
+			"sources":"Sources",
+			"sources_subtitle":"All raw data for calculations come from: <a href='http://nssdc.gsfc.nasa.gov/' alt='http://nssdc.gsfc.nasa.gov/'>http://nssdc.gsfc.nasa.gov/</a>. Fun facts and other data come from the following links:",
+			"links" : [
+					{
+						"link":"http://space-facts.com/"
+					},
+					{
+						"link":"http://www.sciencekids.co.nz/sciencefacts/planets.html"
+					},
+					{
+						"link":"http://www.cnes.fr/web/CNES-fr/529-lexploration-duranus.php"
+					},
+					{
+						"link":"http://listverse.com/2013/04/27/10-fascinating-facts-about-our-solar-system/"
+					},
+					{
+						"link":"https://www.youtube.com/watch?v=KsF_hdjWJjo#t=84"
+					},
+					{
+						"link":"http://www.youtube.com/watch?v=xKKzIoJgMSQ"
+					}
+				],
+			"calculation":"Calculation & data quirks",
+			"calculation_subtitles" : [
+					{
+						"subtitle":"Solar System",
+						"content": [
+							{
+								"item":"Initial position of the planet is an approximate calculation based on the position of the planets on 01/01/2014. The end the Solar System is fixed at the Heliopause."
+							}
+						]
+					},
+					{
+						"subtitle":"Speeds of the spaceships",
+						"content": [
+							{
+								"item":"Virgin Galactic’s SpaceShipTwo: 4000 km/h"
+							},
+							{
+								"item":"Voyager 2 : 56000 km/h"
+							},
+							{
+								"item":"Solar Probe Plus (expected 2018): 720000 km/h"
+							}
+
+						]
+					},
+					{
+						"subtitle":"Single Planet",
+						"content":"Planet Calendar: Day 0 for planets days is 01/01/2014"
+					},
+					{
+						"subtitle":"Planet Comparison",
+						"content":"No of missions for Earth is the number of missions for the Moon"
+					}
+				]
 		}
 	},
 	"spaceships" : {
