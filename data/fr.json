@@ -116,11 +116,11 @@
 				"planet_name" : "Mercure",
 				"planet_title" : "Mercure, un peu plus près de notre étoile",
 				"planet_funfact" : [
-					"Mercure tourne autour du Soleil deux fois plus vite que sur elle-même.",
-					"Sur Mercure le Soleil paraît 3 fois plus grand que sur Terre.",
-					"Vous vous sentirez très léger sur Mercure, sa gravité ne vaut qu'un tiers de celle de la Terre.",
-					"Comme Mercure est la planète la plus proche du soleil, elle est soumise à de fortes radiations.",
-					"Il n'y a pas de vent sur Mercure puisqu'il n'y a pas d'atmosphère."
+					"À savoir : Mercure tourne autour du Soleil deux fois plus vite que sur elle-même.",
+					"À savoir : Sur Mercure le Soleil paraît 3 fois plus grand que sur Terre.",
+					"À savoir : Vous vous sentirez très léger sur Mercure, sa gravité ne vaut qu'un tiers de celle de la Terre.",
+					"À savoir : Comme Mercure est la planète la plus proche du soleil, elle est soumise à de fortes radiations.",
+					"À savoir : Il n'y a pas de vent sur Mercure puisqu'il n'y a pas d'atmosphère."
 				],
 				"weather_title" : "Sortez les lunettes de soleil, ça tape fort par ici",
 				"weather_subtitle" : "weather_subtitle"
@@ -129,10 +129,10 @@
 				"planet_name" : "Vénus",
 				"planet_title" : "Bons baisers de Vénus",
 				"planet_funfact" : [
-					"La pression atmosphérique sur Vénus vous aplatirait comme une crêpe.",
-					"Il est difficile de voir plus loin que le bout de son nez à cause de l'atmosphère très dense.",
-					"Bienvenue sur la planète la plus chaude du système solaire !",
-					"La surface de Vénus est un peu comme le Mordor, pleine de déserts et de volcans en activité."
+					"À savoir : La pression atmosphérique sur Vénus vous aplatirait comme une crêpe.",
+					"À savoir : Il est difficile de voir plus loin que le bout de son nez à cause de l'atmosphère très dense.",
+					"À savoir : Bienvenue sur la planète la plus chaude du système solaire !",
+					"À savoir : La surface de Vénus est un peu comme le Mordor, pleine de déserts et de volcans en activité."
 				],
 				"weather_title" : "Il fait un peu chaud par ici, besoin d'un rafraîchissement ?",
 				"weather_subtitle" : "weather_subtitle"
@@ -141,8 +141,8 @@
 				"planet_name" : "La Terre",
 				"planet_title" : "Objectif Terre : bienvenue chez vous",
 				"planet_funfact" : [
-					"Il y a la place d'aligner toutes les planètes entre la Terre et la Lune.",
-					"Saviez-vous que la Terre est recouverte d'eau à 70% ?"
+					"À savoir : Il y a la place d'aligner toutes les planètes entre la Terre et la Lune.",
+					"À savoir : Saviez-vous que la Terre est recouverte d'eau à 70% ?"
 				],
 				"weather_title" : "Êtes-vous équipé pour tous les temps ?",
 				"weather_subtitle" : "weather_subtitle"
@@ -151,9 +151,9 @@
 				"planet_name" : "Mars",
 				"planet_title" : "Venez rencontrer Curiosity sur Mars",
 				"planet_funfact" : [
-					"Pour les grimpeur, Olympus Mons est presque 3 fois plus haut que l'Everest.",
-					"On appelle Mars la Planète Rouge car elle est recouverte d'oxyde de fer (c'est-à-dire de rouille).",
-					"Vous pouvez suivre les aventures du robot Curiosity sur Twitter !"
+					"À savoir : Pour les grimpeurs, Olympus Mons est presque 3 fois plus haut que l'Everest.",
+					"À savoir : On appelle Mars la Planète Rouge car elle est recouverte d'oxyde de fer (c'est-à-dire de rouille).",
+					"À savoir : Vous pouvez suivre les aventures du robot Curiosity sur Twitter !"
 				],
 				"weather_title" : "Comme sur Terre, si on oublie l'eau et l'atmopshère respirable",
 				"weather_subtitle" : "weather_subtitle"
@@ -162,10 +162,10 @@
 				"planet_name" : "Jupiter",
 				"planet_title" : "Bienvenue sur Jupiter, l'immanquable",
 				"planet_funfact" : [
-					"Jupiter est tellement large qu'on pourrait y caser toutes les autres planètes.",
-					"Il est possible que la vie telle qu'on la connaît existe sur Europe, la plus grande lune de Jupiter.",
-					"La pression atmosphérique est si forte que tout corps serait broyé. ",
-					"La Grande tache rouge est la plus grosse tempête du Système Solaire : elle fait rage sur Jupiter depuis plus de 300 ans."
+					"À savoir : Jupiter est tellement large qu'on pourrait y caser toutes les autres planètes.",
+					"À savoir : Il est possible que la vie telle qu'on la connaît existe sur Europe, la plus grande lune de Jupiter.",
+					"À savoir : La pression atmosphérique est si forte que tout corps est immédiatement broyé. ",
+					"À savoir : La Grande tache rouge est la plus grosse tempête du Système Solaire : elle fait rage sur Jupiter depuis plus de 300 ans."
 				],
 				"weather_title" : "Orage imminent, parapluies déconseillés",
 				"weather_subtitle" : "weather_subtitle"
@@ -174,9 +174,9 @@
 				"planet_name" : "Saturne",
 				"planet_title" : "Partez en tournée sur Saturne !",
 				"planet_funfact" : [
-					"Les anneaux de Saturne se composent de poussières, de rochers et de glace en orbite autour de la planète.",
-					"Saturne est si peu dense qu'elle pourrait flotter sur l'eau.",
-					"Les éléments qui composent les anneaux de Saturne peuvent être minuscules ou plus grand que des bâtiments."
+					"À savoir : Les anneaux de Saturne se composent de poussières, de rochers et de glace en orbite autour de la planète.",
+					"À savoir : Saturne est si peu dense qu'elle pourrait flotter sur l'eau.",
+					"À savoir : Les éléments qui composent les anneaux de Saturne peuvent être minuscules comme plus grand que des bâtiments."
 				],
 				"weather_title" : "Impossible de voir les anneaux avec tous ces nuages",
 				"weather_subtitle" : "weather_subtitle"
@@ -185,10 +185,10 @@
 				"planet_name" : "Uranus",
 				"planet_title" : "Nous amorçons la descente vers Uranus !",
 				"planet_funfact" : [
-					"Uranus possède des anneaux, mais ils sont plus fin que ceux de Saturne.",
-					"L'intérieur de la planète est dissimulé par la forte présence de méthane dans l'atmosphère.",
-					"Uranus a été la première planète découverte grâce à un télescope, au XVIIIe siècle.",
-					"Uranus reçoit 370 fois de soleil que la Terre, et chaque été et chaque hiver durent 42 ans."
+					"À savoir : Uranus aussi possède des anneaux, mais ils sont plus fin que ceux de Saturne.",
+					"À savoir : L'intérieur de la planète est dissimulé par la forte présence de méthane dans l'atmosphère.",
+					"À savoir : Uranus a été la première planète découverte grâce à un télescope, au XVIIIe siècle.",
+					"À savoir : Uranus reçoit 370 fois plus de soleil que la Terre, et chaque été et chaque hiver durent 42 ans."
 				],
 				"weather_title" : "Couvrez-vous, le dégel n'est pas près d'arriver ici",
 				"weather_subtitle" : "weather_subtitle"
@@ -197,10 +197,10 @@
 				"planet_name" : "Neptune",
 				"planet_title" : "Neptune terminus, tous les voyageurs sont invités à descendre",
 				"planet_funfact" : [
-					"Neptune n'a pas toujours été la dernière planète du Système Solaire (coucou Pluton).",
-					"Neptune a été découverte par le calcul avant d'être effectivement observée.",
-					"Vous allez être soufflés par des vents 20 fois plus puissants qu'un ouragan.",
-					"Avec 165 ans pour faire le tour du Soleil, Neptune remporte le prix de planète la plus lente du Système Solaire."
+					"À savoir : Neptune n'a pas toujours été la dernière planète du Système Solaire (coucou Pluton !)",
+					"À savoir : Neptune a été découverte par le calcul avant d'être effectivement observée.",
+					"À savoir : Vous allez être soufflés par des vents 20 fois plus puissants qu'un ouragan.",
+					"À savoir : Avec 165 ans pour faire le tour du Soleil, Neptune remporte le prix de planète la plus lente du Système Solaire."
 				],
 				"weather_title" : "Attention, le vent souffle fort dans le coin",
 				"weather_subtitle" : "weather_subtitle"

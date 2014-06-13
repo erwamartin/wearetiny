@@ -117,12 +117,12 @@
 				"planet_title" : "Mercury : mind the gap between the sun and the planet",
 				"planet_subtitle" : "Our pretty little home in space",
 				"planet_funfact" : [
-					"Mercury goes around the sun twice as fast as it rotates on itself.",
-					"On Mercury the Sun looks 3 times bigger than on Earth.",
-					"It’s called the Swift Planet because it goes around the sun faster than any other planet.",
-					"You’ll feel very light on Mercury, because its gravity is third of Earth’s gravity.",
-					"Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
-					"There is no wind on Mercury since there is no atmosphere at all."
+					"Fun fact: Mercury goes around the sun twice as fast as it rotates on itself.",
+					"Fun fact: On Mercury the Sun looks 3 times bigger than on Earth.",
+					"Fun fact: It’s called the Swift Planet because it goes around the sun faster than any other planet.",
+					"Fun fact: You’ll feel very light on Mercury, because its gravity is third of Earth’s gravity.",
+					"Fun fact: Mercury is the closest planet to the sun, so you’ll face sun radiations and unbearable heat.",
+					"Fun fact: There is no wind on Mercury since there is no atmosphere at all."
 				],
 				"weather_title" : "Put your sunglasses on, it's sunny around here!",
 				"weather_subtitle" : "weather_subtitle"
@@ -132,10 +132,10 @@
 				"planet_title" : "From Venus with love",
 				"planet_subtitle" : "From Venus with love",
 				"planet_funfact" : [
-					"Have you ever felt like a pancake? Try withstanding the pressure on the surface of Venus.",
-					"It’s hard to see anything here, the atmosphere is too dense.",
-					"Welcome to the hottest planet of the Solar System!",
-					"It’s pretty much Mordor on the surface, with deserts and active volcanoes."
+					"Fun fact: Have you ever felt like a pancake? Try withstanding the pressure on the surface of Venus.",
+					"Fun fact: It’s hard to see anything here, the atmosphere is too dense.",
+					"Fun fact: Welcome to the hottest planet of the Solar System!",
+					"Fun fact: It’s pretty much Mordor on the surface, with deserts and active volcanoes."
 				],
 				"weather_title" : "Guess you'd like a refreshment considering the heat",
 				"weather_subtitle" : "weather_subtitle"
@@ -145,8 +145,8 @@
 				"planet_title" : "There is no place like Earth",
 				"planet_subtitle" : "There is no place like Earth",
 				"planet_funfact" : [
-					"You could fit all the other planets between the Earth and the Moon.",
-					"Did you know that 70% of Earth’s surface is water?"
+					"Fun fact: You could fit all the other planets between the Earth and the Moon.",
+					"Fun fact: Did you know that 70% of Earth’s surface is water?"
 				],
 				"weather_title" : "Are you prepared for all the different climates?",
 				"weather_subtitle" : "weather_subtitle"
@@ -156,9 +156,9 @@
 				"planet_title" : "Discover Mars and its many curiosities",
 				"planet_subtitle" : "Such a Curiosity",
 				"planet_funfact" : [
-					"Wanna go climbing? Olympus Mons is almost 3 times higher than the Everest.",
-					"The Red Planet owes its nickname to the iron oxide (aka rust) on its surface",
-					"You can follow Curiosity Rovers’s journey on Mars on Twitter!"
+					"Fun fact: Wanna go climbing? Olympus Mons is almost 3 times higher than the Everest.",
+					"Fun fact: The Red Planet owes its nickname to the iron oxide (aka rust) on its surface",
+					"Fun fact: You can follow Curiosity Rovers’s journey on Mars on Twitter!"
 				],
 				"weather_title" : "It's pretty much like Earth, without water, or breathable air",
 				"weather_subtitle" : "weather_subtitle"
@@ -168,10 +168,10 @@
 				"planet_title" : "Welcome to big old Jupiter",
 				"planet_subtitle" : "Our pretty little home in space",
 				"planet_funfact" : [
-					"Jupiter is so big all the other planets could fit inside it.",
-					"Life as we know it may exist on Europa, Jupiter’s largest moon.",
-					"Atmospheric pressure and temperature are so high that anyone would be crushed.",
-					"The Great Red Spot on Jupiter’s surface is a storm that has been raging for about 300 years."
+					"Fun fact: Jupiter is so big all the other planets could fit inside it.",
+					"Fun fact: Life as we know it may exist on Europa, Jupiter’s largest moon.",
+					"Fun fact: Atmospheric pressure and temperature are so high that anyone would be crushed.",
+					"Fun fact: The Great Red Spot on Jupiter’s surface is a storm that has been raging for about 300 years."
 				],
 				"weather_title" : "There's a storm coming and your umbrella won't help",
 				"weather_subtitle" : "weather_subtitle"
@@ -181,9 +181,9 @@
 				"planet_title" : "Take a tour of Saturn!",
 				"planet_subtitle" : "Our pretty little home in space",
 				"planet_funfact" : [
-					"Saturn’s rings are made of dust, rocks and ice orbiting around the planet.",
-					"The materials of Saturn’s rings can be smaller than dust or bigger than buildings.",
-					"Saturn’s density is so low that the planet could float on water."
+					"Fun fact: Saturn’s rings are made of dust, rocks and ice orbiting around the planet.",
+					"Fun fact: The materials of Saturn’s rings can be smaller than dust or bigger than buildings.",
+					"Fun fact: Saturn’s density is so low that the planet could float on water."
 				],
 				"weather_title" : "All those clouds are hiding the beautiful rings!",
 				"weather_subtitle" : "weather_subtitle"
@@ -193,10 +193,10 @@
 				"planet_title" : "Hello there, you've reached Uranus",
 				"planet_subtitle" : "Fun fact: Uranus receives 370 times less sunlight than Earth and each summer and winter last 42 years.",
 				"planet_funfact" : [
-					"Uranus also have rings, except much thinner than Saturn’s.",
-					"The inside of the planet is hidden from view by the methane in the atmosphere.",
-					"Uranus was the first planet to be discovered by telescope, during the 18th century.",
-					"Uranus receives 370 times less sunlight than Earth and each summer and winter last 42 years."
+					"Fun fact: Uranus also have rings, except much thinner than Saturn’s.",
+					"Fun fact: The inside of the planet is hidden from view by the methane in the atmosphere.",
+					"Fun fact: Uranus was the first planet to be discovered by telescope, during the 18th century.",
+					"Fun fact: Uranus receives 370 times less sunlight than Earth and each summer and winter last 42 years."
 				],
 				"weather_title" : "Put your coat on, it's freezing out there!",
 				"weather_subtitle" : "weather_subtitle"
@@ -206,11 +206,11 @@
 				"planet_title" : "Neptune : last stop, all change!",
 				"planet_subtitle" : "She's like the wind",
 				"planet_funfact" : [
-					"Once upon a time, Neptune wasn’t the last planet of the Solar System (hello Pluto!)",
-					"Neptune was discovered by mathematical calculation before being actually observed.",
-					"You’ll probably be blown away by winds 20 times stronger than your common hurricane.",
-					"It’s called the watery planet but don’t expect to go swimming: it’s all frozen!",
-					"Neptune is the slowest planet, taking 165 years to go around the Sun!"
+					"Fun fact: Once upon a time, Neptune wasn’t the last planet of the Solar System (hello Pluto!)",
+					"Fun fact: Neptune was discovered by mathematical calculation before being actually observed.",
+					"Fun fact: You’ll probably be blown away by winds 20 times stronger than your common hurricane.",
+					"Fun fact: It’s called the watery planet but don’t expect to go swimming: it’s all frozen!",
+					"Fun fact: Neptune is the slowest planet, taking 165 years to go around the Sun!"
 				],
 				"weather_title" : "Be careful, the wind is blowing hard",
 				"weather_subtitle" : "weather_subtitle"
