@@ -476,15 +476,15 @@ define([
       planet_infos.revolution_period = Math.round(parseFloat(params.planets[params.planet_name].revolution_period));
       planet_infos.rotation = Math.round(parseFloat(params.planets[params.planet_name].rotation*24));
       planet_infos.earthTall = Math.round((params.planets[params.planet_name].size/params.planets['earth'].size)*100)/100;
-
-      params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".left_earthNumber", value : planet_infos.left_earth});
-      params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".ageNumber", value : planet_infos.age});
-      params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".weightNumber", value : planet_infos.weight});
-      params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".rotationNumber", value : Math.round(planet_infos.rotation)});
-      params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".revolution_periodNumber", value : Math.round(planet_infos.revolution_period)});
-      params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".temperatureNumber", value : planet_infos.temperature});
-      params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".earthTallNumber", value : planet_infos.earthTall});
-
+      setTimeout(function() {
+        params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".left_earthNumber", value : planet_infos.left_earth});
+        params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".ageNumber", value : planet_infos.age});
+        params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".weightNumber", value : planet_infos.weight});
+        params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".rotationNumber", value : Math.round(planet_infos.rotation)});
+        params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".revolution_periodNumber", value : Math.round(planet_infos.revolution_period)});
+        params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".temperatureNumber", value : planet_infos.temperature});
+        params.functions.animateTextNumber.call(this, {separator : params.translations.views.global.number_separator, selector : ".earthTallNumber", value : planet_infos.earthTall});
+      }, 650);
       return planet_infos;
     },
     close: function(view){
