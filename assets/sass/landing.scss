@@ -7,12 +7,12 @@
 	background-color:#0B1B24;
 	.about{
 		display:block;
-		width:29px;
-		height:29px;
-		background:url('../images/info.png') no-repeat;
+		width:1.875em;
+		height:1.875em;
+		background:url('../images/icons/info.png') no-repeat;
 		position:absolute;
-		top:20px;
-		right:20px;
+		top:1.875em;
+		right:1.875em;
 		z-index:6;
 	}
 
@@ -60,11 +60,11 @@
 	}
 
 	#lang a:nth-of-type(1){
-		padding:12px 9px;
+		padding:12px 10px;
 	}
 
 	#lang a:nth-of-type(2){
-		padding:12px 10px;
+		padding:12px 9px;
 	}
 
 	#lang a:hover{
