@@ -165,7 +165,7 @@ define([
   var animateTextNumber = function(params) {
     console.log(params);
     if(!params.delay) params.delay = 3000;
-    if(!params.duration) params.duration = 4000;
+    if(!params.duration) params.duration = 650;
     jQuery({dataValue: 0}).animate({dataValue: params.value}, {
       duration: params.duration,
       delay : params.delay,
