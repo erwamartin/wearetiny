@@ -8,8 +8,9 @@ define([
   'views/compare_graph',
   'views/planet',
   'views/error',
-  'views/mobile'
-], function($, _, Backbone, LandingPageView, SolarSystemView, DistancesGraphView, CompareGraphView, PlanetView, ErrorView, MobileView){
+  'views/mobile',
+  'views/about'
+], function($, _, Backbone, LandingPageView, SolarSystemView, DistancesGraphView, CompareGraphView, PlanetView, ErrorView, MobileView, AboutView){
   var AppRouter = Backbone.Router.extend({
     current_view : null,
     routes: {
@@ -19,6 +20,7 @@ define([
       'solar-system/compare': 'compareGraph',
       'solar-system/:planet': 'planet',
       'mobile': 'mobile',
+      'about': 'about',
       '*actions': 'default'
     },
     initialize : function(){
@@ -49,7 +51,6 @@ define([
         view : new CompareGraphView()
       });
     },
-
     planet : function(planet){
       loadView.call(this, {
         view : new PlanetView(), 
@@ -62,6 +63,11 @@ define([
       loadView.call(this, {
         view : new MobileView(), 
         mobile : true
+      });
+    },
+    about : function(){
+      loadView.call(this, {
+        view : new AboutView()
       });
     },
     default : function(actions){

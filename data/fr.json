@@ -293,11 +293,19 @@
 					},
 					{
 						"subtitle":"Page planète",
-						"content":"Calendrier des Planètes : Jour 0 des planètes est fixé au 01/01/2014. Nous avons utilisé ce script pour le réaliser : <a href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
+						"content": [
+							{
+								"item" : "Calendrier des Planètes : Jour 0 des planètes est fixé au 01/01/2014. Nous avons utilisé ce script pour le réaliser : <a href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
+							}
+						]
 					},
 					{
 						"subtitle":"Comparaison des planètes",
-						"content":"Le nombre de missions renseigné pour la Terre correspond au nombre de missions sur la Lune"
+						"content": [ 
+							{
+								"Le nombre de missions renseigné pour la Terre correspond au nombre de missions sur la Lune"
+							}
+						]
 					}
 				]
 		}

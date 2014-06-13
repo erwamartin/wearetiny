@@ -303,11 +303,19 @@
 					},
 					{
 						"subtitle":"Single Planet",
-						"content":"Planet Calendar: Day 0 for planets days is 01/01/2014. We used this d3.js script to make it: <a href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
+						"content": [
+							{
+								"item":"Planet Calendar: Day 0 for planets days is 01/01/2014. We used this d3.js script to make it: <a href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
+							}
+						]
 					},
 					{
 						"subtitle":"Planet Comparison",
-						"content":"No of missions for Earth is the number of missions for the Moon"
+						"content": [
+							{
+								"item":"No of missions for Earth is the number of missions for the Moon"
+							}
+						]
 					}
 				]
 		}

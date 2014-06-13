@@ -1,0 +1,31 @@
+<section class="credits">
+	<a href="#solar-system" class="close"></a>
+	<div>
+		<h2><%= translations.views.credit.title %></h2>
+		<h3><%= translations.views.credit.context %></h3>
+		<p><%= translations.views.credit.context_subtitle %></p>
+		<h3><%= translations.views.credit.team %></h3>
+		<p class="subtitle"><%= translations.views.credit.team_subtitle %></p>
+		<% _.each(translations.views.credit.personnes, function(personne){ %>
+			<div class="personn">
+				<a href="<%= personne.twitter %>" target="_blank" class="twitter"></a>
+				<p><span class="name"><%= personne.name %></span> : <%= personne.role %></p>
+			</div>
+		<% }); %>
+		<h3><%= translations.views.credit.sources %></h3>
+		<p class="subtitle"><%= translations.views.credit.sources_subtitle %></p>
+		<% _.each(translations.views.credit.links, function(link){ %>
+			<div class="link">
+				<a href="<%= link.link %>" target="_blank" class="link"><%= link.link %></a>
+			</div>
+		<% }); %>
+		<h3><%= translations.views.credit.calculation %></h3>
+		<% _.each(translations.views.credit.calculation_subtitles, function(calculation_subtitle){ %>
+			<h4><%= calculation_subtitle.subtitle %></h4>
+			<% _.each(calculation_subtitle.content, function(text){ %>
+				<p><%= text.item %></p>
+			<% }); %>
+		<% }); %>
+
+	</div>
+</section>
