@@ -83,13 +83,16 @@ html{
 					padding-top: .8em;
 					/* text-transform: uppercase; */
 					padding-bottom: 0.5em;
-					font-size: 2em;
-					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+					font-size: 1.75em;
+					font-family: 'PlutoSansCondBold', Arial, sans-serif;
+					span {
+						font-size: 1.5em;
+					}
 				}
 
 				h3 {
-					font-size: 1.5em;
-					font-family: 'PlutoSansCondMedium', Arial, sans-serif;
+					font-size: 1.75em;
+					font-family: 'PlutoSansCond', Arial, sans-serif;
 				}
 
 				a{
@@ -115,7 +118,7 @@ html{
 				height: 550px;
 
 				left : 50%;
-				top : 50%;
+				top : 40%;
 
 				margin-top: -225px;
 				margin-left: -450px;
@@ -132,6 +135,26 @@ html{
 					margin-left: -117px;
 					@include background('404/asteroid.svg', center center, 100% 100%);
 				}
+
+				.box-shadow {
+					position: absolute;
+					background: #000;
+					height: 20px;
+					width: 196px;
+					top: 80%;
+					left : 50%;
+					margin-top: -10px;
+					margin-left: -98px;
+					display: block; 
+					border-radius: 8px 25px;
+			        filter: blur(15px);
+			        -webkit-filter: blur(15px);
+			        -moz-filter: blur(15px);
+			        -o-filter: blur(5px);
+			        -ms-filter: blur(5px);
+
+				}
+
 
 				#spacecraft {
 					height: 31px;

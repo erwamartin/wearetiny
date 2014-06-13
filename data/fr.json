@@ -27,7 +27,7 @@
 			"planet_year" : "Une année sur [planet]" 
 		},
 		"error" : {
- 			"title" : "Oups, il semblerait que vous vous soyez égaré sur un astéroïde !",
+ 			"title" : "Oups, il semblerait que vous vous soyez égaré sur un <span>astéroïde</span> !",
 			"subtitle" : "C'est bien calme par ici...",
 			"link" : "Repartir pour de nouvelles aventures"
 		},
