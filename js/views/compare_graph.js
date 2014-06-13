@@ -992,7 +992,7 @@ define([
         // Hide loader
         setTimeout(function() {
           $('#loader').fadeOut()
-        }, 3000);
+        }, 500);
     },
     close: function(view){
       // Remove keyboard events

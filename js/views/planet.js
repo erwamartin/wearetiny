@@ -389,7 +389,7 @@ define([
             // Hide loader
             setTimeout(function() {
               $('#loader').fadeOut()
-            }, 1000);
+            }, 500);
            }
 
            

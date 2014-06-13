@@ -223,7 +223,7 @@ define([
           // Hide loader
           setTimeout(function() {
             $('#loader').fadeOut()
-          }, 3000);
+          }, 500);
         
 
       });

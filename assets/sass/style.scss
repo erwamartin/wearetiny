@@ -441,6 +441,7 @@ html{
 			}
 			.boarding_pass{
 				opacity: 0;
+				overflow: hidden;
 				position: fixed;
 				top: 0; right: 0; left: 0;
 				height: 0;
