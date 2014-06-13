@@ -1578,11 +1578,11 @@ html body #loader.on div .mars {
 }
 /* line 62, ../sass/landing.scss */
 .landing_page #lang a:nth-of-type(1) {
-  padding: 12px 9px;
+  padding: 12px 10px;
 }
 /* line 66, ../sass/landing.scss */
 .landing_page #lang a:nth-of-type(2) {
-  padding: 12px 10px;
+  padding: 12px 9px;
 }
 /* line 70, ../sass/landing.scss */
 .landing_page #lang a:hover {
