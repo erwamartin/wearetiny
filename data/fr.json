@@ -207,44 +207,45 @@
 			}
 		},
 		"credit" : {
-			"title":"About us",
-			"context" : "We Are Tiny is a school project for HETIC created by third-year students. We do not claim to be experts in astrophysics, so please feel free to contact us at <a href='mailto:contact@wearetiny.io'>contact@wearetiny.io</a> if you want more information about our calculations or if you think some data is wrong.",
-			"team":"Our team",
+			"title":"À propos",
+			"context":"Contexte",
+			"context_subtitle" : "We Are Tiny est un projet réalisé par des troisièmes années à HETIC. Nous ne sommes pas des experts en astrophysique, donc n'hésitez pas à nous conctacter <a href='mailto:contact@wearetiny.io'>contact@wearetiny.io</a> si vous voulez en savoir plus sur les calculs, ou si vous pensez que des données sont fausses.",
+			"team":"Notre équipe",
 			"team_subtitle":"The Web is no rocket science for us!",
 			"personnes" : [
 					{
 						"name" : "Sara Kol",
 						"twitter" : "https://twitter.com/sarakxl",
-						"role" : "Spatial Analyst (Data collector)"
+						"role" : "Analyste de l'Espace (Récolte des données)"
 					},
 					{
 						"name" : "Erwan Martin",
 						"twitter" : "https://twitter.com/erwamartin",
-						"role" : "Rocket Scientist (Web Developer)"
+						"role" : "Ingénieur Aérospatial (Web Developer)"
 					},
 					{
 						"name" : "Matthieu Moreau",
 						"twitter" : "https://twitter.com/mattmoro",
-						"role" : "Rocket Scientist (Web Developer)"
+						"role" : "Ingénieur Aérospatial (Web Developer)"
 					},
 					{
 						"name" : "Lucie Reitz",
 						"twitter" : "https://twitter.com/ReitzLucie",
-						"role" : "Pilot (Project Manager and communication)"
+						"role" : "Pilote (Chef de Projet et communication)"
 					},
 					{
 						"name" : "Nicolas Thomas",
 						"twitter" : "https://twitter.com/_NicolasTh",
-						"role" : "Rocket Painter (Web Designer)"
+						"role" : "Designer de fusée (Web Designer)"
 					},
 					{
 						"name" : "Jérémy Zaloga",
 						"twitter" : "https://twitter.com/jzaloga",
-						"role" : "Datanerd (Data collector and calculation)"
+						"role" : "Mathématicien (Récolte des données et calculs)"
 					}
 				],
 			"sources":"Sources",
-			"sources_subtitle":"All raw data for calculations come from: <a href='http://nssdc.gsfc.nasa.gov/' alt='http://nssdc.gsfc.nasa.gov/'>http://nssdc.gsfc.nasa.gov/</a>. Fun facts and other data come from the following links:",
+			"sources_subtitle":"Les données brutes utilisées pour les calculs viennent de : <a href='http://nssdc.gsfc.nasa.gov/' alt='http://nssdc.gsfc.nasa.gov/'>http://nssdc.gsfc.nasa.gov/</a>. Les \"fun facts\" et les autres données viennent de ces liens :",
 			"links" : [
 					{
 						"link":"http://space-facts.com/"
@@ -265,18 +266,18 @@
 						"link":"http://www.youtube.com/watch?v=xKKzIoJgMSQ"
 					}
 				],
-			"calculation":"Calculation & data quirks",
+			"calculation":"À noter sur les calculs et données",
 			"calculation_subtitles" : [
 					{
-						"subtitle":"Solar System",
+						"subtitle":"Système Solaire",
 						"content": [
 							{
-								"item":"Initial position of the planet is an approximate calculation based on the position of the planets on 01/01/2014. The end the Solar System is fixed at the Heliopause."
+								"item":"Les positions initiales des planètes sont estimées à partir de la position réelle des planètes au 01/01/2014. Les limites du Système Solaire est fixé à l'Héliopause."
 							}
 						]
 					},
 					{
-						"subtitle":"Speeds of the spaceships",
+						"subtitle":"Vitesses des fusées",
 						"content": [
 							{
 								"item":"Virgin Galactic’s SpaceShipTwo: 4000 km/h"
@@ -291,12 +292,12 @@
 						]
 					},
 					{
-						"subtitle":"Single Planet",
-						"content":"Planet Calendar: Day 0 for planets days is 01/01/2014"
+						"subtitle":"Page planète",
+						"content":"Calendrier des Planètes : Jour 0 des planètes est fixé au 01/01/2014. Nous avons utilisé ce script pour le réaliser : <a href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
 					},
 					{
-						"subtitle":"Planet Comparison",
-						"content":"No of missions for Earth is the number of missions for the Moon"
+						"subtitle":"Comparaison des planètes",
+						"content":"Le nombre de missions renseigné pour la Terre correspond au nombre de missions sur la Lune"
 					}
 				]
 		}

@@ -218,7 +218,8 @@
 		},
 		"credit" : {
 			"title":"About us",
-			"context" : "We Are Tiny is a school project for HETIC created by third-year students. We do not claim to be experts in astrophysics, so please feel free to contact us at <a href='mailto:contact@wearetiny.io'>contact@wearetiny.io</a> if you want more information about our calculations or if you think some data is wrong.",
+			"context":"Context",
+			"context_subtitle" : "We Are Tiny is a school project for HETIC created by third-year students. We do not claim to be experts in astrophysics, so please feel free to contact us at <a href='mailto:contact@wearetiny.io'>contact@wearetiny.io</a> if you want more information about our calculations or if you think some data is wrong.",
 			"team":"Our team",
 			"team_subtitle":"The Web is no rocket science for us!",
 			"personnes" : [
@@ -302,7 +303,7 @@
 					},
 					{
 						"subtitle":"Single Planet",
-						"content":"Planet Calendar: Day 0 for planets days is 01/01/2014"
+						"content":"Planet Calendar: Day 0 for planets days is 01/01/2014. We used this d3.js script to make it: <a href='http://bl.ocks.org/clayzermk1/9142407'>http://bl.ocks.org/clayzermk1/9142407</a>"
 					},
 					{
 						"subtitle":"Planet Comparison",
