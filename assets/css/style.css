@@ -1478,10 +1478,9 @@ html body #loader.on div .mars {
 }
 .landing_page footer {
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   width: 100%;
   height: 40px;
-  /* background-color:#FFF; */
 }
 .landing_page .twitter-share-button {
   margin-left: 20px;
