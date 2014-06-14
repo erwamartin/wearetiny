@@ -34,7 +34,7 @@
 		"solar_system" : {
  			"title" : "Bienvenue dans le Système Solaire !",
 			"subtitle" : "Notre petit chez-nous dans l'espace",
-			"leave_time_top_sentence" : "Les humains sont trop petits le parcourir !",
+			"leave_time_top_sentence" : "Les humains sont trop petits pour le parcourir !",
 			"leave_time_bottom_sentence" : "Pour atteindre ses limites avec <span>[spacecraft]</span> !",
 			"leave_distance_sentence" : "Avant d'en sortir, soit",
 			"distances_comparisons" : [
