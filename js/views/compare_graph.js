@@ -523,6 +523,13 @@ define([
         icon_params.x = icon_params.width/2;
         icon_params.y = _this.compare_graph.sidebars.bottom.height/2-icon_params.height/2;
 
+        display_all_g.append("rect")
+            .attr("class", "display_all_background")
+            .attr("width", _this.compare_graph.graph.cols.width)
+            .attr("height", _this.compare_graph.sidebars.bottom.height)
+            .attr("fill", "rgba(36, 36, 36, 1)")
+            .attr("fill-opacity", 0);
+
         display_all_g.append("image")
             .attr("class", 'icon')
             .attr("width", icon_params.width)
@@ -547,6 +554,21 @@ define([
             _this.compare_graph.hide_planet_comparator.call(this);
 
             d3.selectAll('.planet').classed('click', false);
+        });
+
+        display_all_container.on('mouseover', function(){
+            display_all_g.select('.icon')
+              .attr("xlink:href", "assets/images/icons/all_planets_hover.svg");
+            display_all_g.select('.display_all_background')
+              .attr("fill-opacity", 1);
+
+        });
+
+        display_all_container.on('mouseout', function(){
+            display_all_g.select('.icon')
+              .attr("xlink:href", "assets/images/icons/all_planets.svg");
+            display_all_g.select('.display_all_background')
+              .attr("fill-opacity", 0);
         });
 
 
