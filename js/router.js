@@ -91,10 +91,10 @@ define([
     }};
     $.extend(true, params, params_in);
 
-    if($('body').innerWidth()<1200 && !params.mobile){
+    if($('body').innerWidth()<1000 && !params.mobile){
       window.location.href = '#mobile';
       return;
-    }else if(params.mobile && $('body').innerWidth()>=1200){
+    }else if(params.mobile && $('body').innerWidth()>=1000){
       window.location.href = '#solar-system';
       return;
     }
@@ -172,7 +172,6 @@ define([
   }
 
   var animateTextNumber = function(params) {
-    console.log(params);
     if(!params.delay) params.delay = 3000;
     if(!params.duration) params.duration = 650;
     jQuery({dataValue: 0}).animate({dataValue: params.value}, {

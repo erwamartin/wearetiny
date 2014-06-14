@@ -16,6 +16,8 @@ $main-font-color : #FFF;
 .planet{
 	.container{
 		position: absolute;
+		width: 80%;
+		max-width: 68.750em;
 		top: 50%;
 		left: 50%;
 		-webkit-transform: translateX(-50%) translateY(-50%);
@@ -53,17 +55,16 @@ $main-font-color : #FFF;
 			//margin: 1em auto 0 auto;
 		}
 		.content-planet {
-			width: 1100px;
-			height: 500px;
 			margin-top: 3.5em;
 			.top-content{
-				width: 1020px;
-				margin-left: 24px;
+				width: 100%;
 				background: rgba(255,255,255, 0.1);
 				text-align: center;
-				padding: 1em 1em 1em 1em ;
+				box-sizing: border-box;
+				padding: 1em 0;
+				text-align: center;
 				div{
-					width: 336px;
+					width: 33%;
 					display: inline-block;	
 				}
 				p{
@@ -90,22 +91,21 @@ $main-font-color : #FFF;
 				}
 			}
 			.bottom-content{
-				
-				left: 14%;
-				padding: 2em 1em 0em 1em ;
-
+				padding-top: 2em;
 				.bottom-content-block{
-					width: 332px;
-					display: inline-table;
-					margin-left: 10px;
-					margin-right: 10px;
+					width: 33%;
+					display: inline-block;
+					vertical-align: top;
+					box-sizing:border-box;
+					padding-left: 0.625em;
+					padding-right: 0.625em;
+					text-align: center;
 					.graph {
-						height: 185px;
-						width: 332px;
 						display: inline-block;
+						width: 100%;
 					}
 					p:first-child {
-						margin-top: 3em;
+						margin-top: 1.5em;
 					}
 				}
 				.calendar {
@@ -113,7 +113,7 @@ $main-font-color : #FFF;
 						margin-top: 1.25em;
 					}
 				 	p:first-of-type {
-						margin-top: 2.70em;
+						margin-top: 1.5em;
 
 					}			}
 				.area {
@@ -128,8 +128,7 @@ $main-font-color : #FFF;
 
 				.weather {
 					svg {
-						margin-top : -2.2em;
-						margin-left: 1em 
+						margin-top : -1.8em;
 					}
 				 	text {
 						fill: #FFF;
@@ -145,7 +144,7 @@ $main-font-color : #FFF;
 				 	}
 
 				 	p.third-type {
-						margin-top: -1.50em;
+						margin-top: 0;
 					}
 			 	}
 
@@ -176,95 +175,100 @@ $main-font-color : #FFF;
 				}
 			}
 		}
-		
+			
 	}
 
-		.right_sidebar{
-			position: absolute;
-			top:50%;
-			right: 0;
-			margin-top: -15em;
-			ul{
-				padding: 2.500em 0.938em;
-				background: #19262c;
-				li{
-					position: relative;
+	.right_sidebar{
+		position: absolute;
+		top:50%;
+		right: 0;
+		margin-top: -15em;
+		ul{
+			padding: 2.500em 0.938em;
+			background: #19262c;
+			li{
+				position: relative;
+				display: block;
+				margin: 0.719em 0;
+				a{
 					display: block;
-					margin: 0.719em 0;
-					a{
-						display: block;
-						color: #FFF;
-						font-family: 'PlutoSansCondBold', Arial, sans-serif;
-						text-transform: uppercase;
-						text-decoration: none;
-					}
-					a.icon{
-						width: 2.313em;
-						height: 2.313em;
-					}
+					color: #FFF;
+					font-family: 'PlutoSansCondBold', Arial, sans-serif;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+				a.icon{
+					width: 2.313em;
+					height: 2.313em;
+				}
+				a.name{
+					position: absolute;
+					right: 6.5em;
+					line-height: 4.02600em;
+					height: 3.82600em;
+					vertical-align: middle;
+					font-size: 0.625em;
+					text-align: right;
+					width: 5em;
+				}
+				@media screen and (max-width: 1200px){
 					a.name{
-						position: absolute;
-						right: 6.5em;
-						line-height: 4.02600em;
-						height: 3.82600em;
-						vertical-align: middle;
-						font-size: 0.625em;
-						text-align: right;
-						width: 5em;
-					}
-				}
-				li:hover{
-					a{
-						color: #8f8f8f;
-					}
-				}
-				li.mercury{
-					.icon{
-						@include background('planets/mercury.svg', center center, 100% 100%);
-					}
-				}
-				li.venus{
-					.icon{
-						@include background('planets/venus.svg', center center, 100% 100%);
-					}
-				}
-				li.earth{
-					.icon{
-						@include background('planets/earth.svg', center center, 100% 100%);
-					}
-				}
-				li.mars{
-					.icon{
-						@include background('planets/mars.svg', center center, 100% 100%);
-					}
-				}
-				li.jupiter{
-					.icon{
-						@include background('planets/jupiter.svg', center center, 100% 100%);
-					}
-				}
-				li.saturn{
-					.icon{
-						@include background('planets/saturn.svg', center center, 100% 100%);
-					}
-				}
-				li.uranus{
-					.icon{
-						@include background('planets/uranus.svg', center center, 100% 100%);
-					}
-				}
-				li.neptune{
-					.icon{
-						@include background('planets/neptune.svg', center center, 100% 100%);
-					}
-				}
-				li.compare{
-					.icon{
-						@include background('planets/compare.svg', center center, 100% 100%);
+						display: none;
 					}
 				}
 			}
+			li:hover{
+				a{
+					color: #8f8f8f;
+				}
+			}
+			li.mercury{
+				.icon{
+					@include background('planets/mercury.svg', center center, 100% 100%);
+				}
+			}
+			li.venus{
+				.icon{
+					@include background('planets/venus.svg', center center, 100% 100%);
+				}
+			}
+			li.earth{
+				.icon{
+					@include background('planets/earth.svg', center center, 100% 100%);
+				}
+			}
+			li.mars{
+				.icon{
+					@include background('planets/mars.svg', center center, 100% 100%);
+				}
+			}
+			li.jupiter{
+				.icon{
+					@include background('planets/jupiter.svg', center center, 100% 100%);
+				}
+			}
+			li.saturn{
+				.icon{
+					@include background('planets/saturn.svg', center center, 100% 100%);
+				}
+			}
+			li.uranus{
+				.icon{
+					@include background('planets/uranus.svg', center center, 100% 100%);
+				}
+			}
+			li.neptune{
+				.icon{
+					@include background('planets/neptune.svg', center center, 100% 100%);
+				}
+			}
+			li.compare{
+				.icon{
+					@include background('planets/compare.svg', center center, 100% 100%);
+				}
+			}
 		}
+	}
 }
 
 #main > section.planet > div.container > header > h2 {

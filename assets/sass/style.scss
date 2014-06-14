@@ -875,6 +875,11 @@ html{
 									cursor: pointer;
 								}
 							}
+							@media screen and (max-width: 1200px){
+								.comparator_label{
+									font-size: 0.875em;
+								}
+							}
 							.comparator_label.selected{
 								font-family: 'PlutoSansCondMedium', Arial, sans-serif;
 							}
