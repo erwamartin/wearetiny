@@ -117,3 +117,18 @@
 		height:30px;
 	}
 } 
+
+.csswinner{
+	display: none;
+	position:absolute;
+	top:50px;
+	left:0px;
+	z-index:7;
+}
+.csswinner a{
+	width:81px;
+	height:59px;
+	text-indent:-9000px;
+	display:block;
+	background:url('../images/csswinner-nominee-white-left.png') no-repeat;
+}
