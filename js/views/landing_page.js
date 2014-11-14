@@ -23,7 +23,7 @@ define([
 
       video.addEventListener('timeupdate', function() {
         if(this.currentTime >= 5 && !page_showed) {
-          $('.landing_page #lang, .landing_page footer, .landing_page .about').fadeIn(1500);
+          $('.landing_page #lang, .landing_page footer, .landing_page .about, .landing_page .csswinner').fadeIn(1500);
           page_showed=true;
         }
       }, false);
